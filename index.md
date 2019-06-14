@@ -23,7 +23,7 @@ OOMMF and Mumax3.
 Starting with an initiative from the University of Southampton /
 European XFEL GmbH by Marijan Beg, Ryan A. Pepper, and Hans Fangohr,
 the Mumax3 integration was started with Jeroen Mulkers and Jonathan
-Leliaert from the University of Ghent in 2019.
+Leliaert from Ghent University in 2019.
 
 We acknowledge additional support from Thomas Kluyver, Vanessa
 Nehruji, Min RK, Gary Downing, David Cortes, Mark Vousden, and Rebecca
