@@ -8,7 +8,7 @@ Source code: [github.com/ubermag](https://github.com/ubermag)
 
 Help: [github.com/ubermag/help](https://github.com/ubermag/help)
 
-Examples on binder: [](https://github.com/ubermag/help/issues?utf8=✓&q=is%3Aissue+)
+Examples on binder: [Interactive Demo](https://mybinder.org/v2/gh/ubermag/oommfc/master?filepath=index.ipynb)
 
 
 ## What is Ubermag?
