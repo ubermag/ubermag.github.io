@@ -23,7 +23,7 @@ OOMMF and Mumax3.
 Starting with an initiative from the University of Southampton /
 European XFEL GmbH by Marijan Beg, Ryan A. Pepper, and Hans Fangohr,
 the Mumax3 integration was started with Jeroen Mulkers and Jonathan
-Leliaert from Ghent University in 2019.
+Leliaert from the University of Ghent in 2019.
 
 We acknowledge additional support from Thomas Kluyver, Vanessa
 Nehruji, Min RK, Gary Downing, David Cortes, Mark Vousden, and Rebecca
@@ -34,6 +34,7 @@ webpages.
 
 Ubermag is a part of the Horizon 2020 European Research Infrastructure
 [OpenDreamKit](http://opendreamkit.org) project (Project ID 676541).
+This work was supported by the Fonds Wetenschappelijk Onderzoek (FWO-Vlaanderen) through Project No. G098917N (Jeroen Mulekers) and with a postdoctoral fellowship (Jonathan Leliaert).
 
 ## History
 
