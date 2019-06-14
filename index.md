@@ -1,4 +1,6 @@
-% Ubermag
+---
+pagetitle: Ubermag
+...
 
 ![](images/skyrmion.png "Skyrmion")
 
