@@ -14,6 +14,11 @@ Help: [github.com/ubermag/help](https://github.com/ubermag/help)
 
 Examples on binder: [Interactive Demo](https://mybinder.org/v2/gh/ubermag/oommfc/master?filepath=index.ipynb)
 
+# News
+
+As of 14 June 2019, we are moving from Jupyter OOMMF to Ubermag. In
+the process, repositories and documentation have to move and be update
+and are likely to be inoperable and inaccurate for some time.
 
 ## What is Ubermag?
 
