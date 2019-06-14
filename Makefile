@@ -1,5 +1,5 @@
 index.html:	index.md
-	pandoc index.md -o index.html -c pandoc.css
+	pandoc -s index.md -o index.html -c pandoc.css
 
 # get the sample css file
 pandoc.css:
