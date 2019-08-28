@@ -4,28 +4,32 @@ pagetitle: Ubermag
 
 ![](images/skyrmion.png "Skyrmion")
 
-# UBERMAG
-
-Documentation: [ubermag.readthedocs.io](http://ubermag.readthedocs.io)
-
-Source code: [github.com/ubermag](https://github.com/ubermag)
-
-Help: [github.com/ubermag/help](https://github.com/ubermag/help)
-
-Examples on binder: [Interactive Demo](https://mybinder.org/v2/gh/ubermag/oommfc/master?filepath=index.ipynb)
-
-# News
-
-As of 14 June 2019, we are moving from Jupyter OOMMF to Ubermag. In
-the process, repositories and documentation have to move and be update
-and are likely to be inoperable and inaccurate for some time.
+# Ubermag
 
 ## What is Ubermag?
 
-A framework to drive existing micromagnetic simulators from Python and
-from within the Jupyter Notebook. Current computational backends are
-OOMMF and mumax³.
+Ubermag is a framework to drive existing micromagnetic simulators from
+Python and from within the Jupyter Notebook. Current computational
+backends supported are OOMMF and mumax³. The project was initially
+called J-OOMMF (for Jupyter OOMMF). It was renamed "Ubermag" when the
+mumax³ integration started.
 
+## Where is it and how to use it?
+
+- How to install and how to learn using Ubermag can be found in the Ubermag [documentation](http://ubermag.readthedocs.io).
+
+- [Interactive tutorials](https://mybinder.org/badge_logo.svg)](https://mybinder.org/v2/gh/ubermag/oommfc/master?filepath=docs%2Fipynb%2Findex.ipynb) can be run in the cloud without a need to install anything on your machine.
+
+- The source code can be found in the [GitHub repository](https://github.com/ubermag)
+
+## Support
+
+If you need any assistance or you want to report a problem, please raise an issue in our [help repository](https://github.com/ubermag/help).
+
+## News
+
+As of 28 August 2019, the move from Jupyter OOMMF to Ubermag is
+complete and all subpackages should be fully functioning.
 
 ## Who is behind it?
 
@@ -43,9 +47,8 @@ webpages.
 
 Ubermag is a part of the Horizon 2020 European Research Infrastructure
 [OpenDreamKit](http://opendreamkit.org) project (Project ID 676541).
-This work was supported by the Fonds Wetenschappelijk Onderzoek (FWO-Vlaanderen) through Project No. G098917N (Jeroen Mulkers) and with a postdoctoral fellowship (Jonathan Leliaert).
+This work was supported by the Fonds Wetenschappelijk Onderzoek
+(FWO-Vlaanderen) through Project No. G098917N (Jeroen Mulkers) and
+with a postdoctoral fellowship (Jonathan Leliaert).
 
-## History
 
-The project was initially called J-OOMMF (for Jupyter OOMMF). It was
-renamed "Ubermag" when the mumax³ integration started.
