@@ -6,8 +6,6 @@ pagetitle: Ubermag
 
 # Ubermag
 
-## What is Ubermag?
-
 Ubermag is a framework to drive existing micromagnetic simulators from
 Python and from within the Jupyter Notebook. Current computational
 backends supported are OOMMF and mumax³. The project was initially
@@ -18,7 +16,7 @@ mumax³ integration started.
 
 - How to install and how to learn using Ubermag can be found in the Ubermag [documentation](http://ubermag.readthedocs.io).
 
-- [Interactive tutorials](https://mybinder.org/badge_logo.svg)](https://mybinder.org/v2/gh/ubermag/oommfc/master?filepath=docs%2Fipynb%2Findex.ipynb) can be run in the cloud without a need to install anything on your machine.
+- [Interactive tutorials](https://mybinder.org/v2/gh/ubermag/oommfc/master?filepath=docs%2Fipynb%2Findex.ipynb) can be run in the cloud without a need to install anything on your machine.
 
 - The source code can be found in the [GitHub repository](https://github.com/ubermag)
 
