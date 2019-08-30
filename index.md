@@ -16,7 +16,7 @@ mumax³ integration started.
 
 - How to install and how to learn using Ubermag can be found in the Ubermag [documentation](http://ubermag.readthedocs.io).
 
-- [Interactive tutorials](https://mybinder.org/v2/gh/ubermag/oommfc/master?filepath=docs%2Fipynb%2Findex.ipynb) can be run in the cloud without a need to install anything on your machine.
+- [Try Ubermag now](https://mybinder.org/v2/gh/ubermag/oommfc/master?filepath=docs%2Fipynb%2Findex.ipynb) with our cloud-hosted interactive tutorials (no need to install anything on your machine).
 
 - The source code can be found in the [GitHub repository](https://github.com/ubermag)
 
