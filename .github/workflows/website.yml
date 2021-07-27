@@ -1,0 +1,32 @@
+name: publish website
+
+on:
+  workflow_dispatch:
+
+jobs:
+  publish:
+    runs-on: ubuntu-latest
+    defaults:
+      run:
+        shell: bash -l {0}
+    steps:
+    - name: Initialisation
+      uses: actions/checkout@v2
+
+    - name: Setup conda
+      uses: conda-incubator/setup-miniconda@v2
+      with:
+        environment-file: environment.yml
+        auto-activate-base: false
+
+    - name: Prepare sources
+      run: make prepare
+
+    - name: Build website
+      run: make html
+
+    - name: Deploy changes
+      uses: JamesIves/github-pages-deploy-action@4.1.4
+      with:
+        branch: gh-pages
+        folder: build/html
