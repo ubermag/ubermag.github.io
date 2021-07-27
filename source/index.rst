@@ -31,7 +31,7 @@ Micromagnetic problem description -- ``micromagneticmodel``
 - Energy equation (Exchange energy, Zeeman energy, DMI, ...)
 - Dynamics equation (damping, precession, currents, ...)
 
-.. figure:: _static/interoperability.svg
+.. figure:: _static/interoperability.png
 
    Magnetic systems (left-to-right): Skyrmions, vortex, Bloch point [renderings created with Blender]
 
