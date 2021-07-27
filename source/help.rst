@@ -24,7 +24,7 @@ Please provide:
 - A detailed description of your problem
 - Explain what you have tried already
 - Ideally, upload a ``Jupyter notebook`` (zipped) containing what you have
-  achieved so far (**NOTE: remove any confident information**)
+  achieved so far (**NOTE: remove any confidential information**)
 
 By providing the above listed information you greatly enhance the chance to get
 help. Please be patient if we do not reply immediately.
