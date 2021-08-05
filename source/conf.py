@@ -62,7 +62,7 @@ exclude_patterns = []
 # a list of builtin themes.
 #
 html_theme = 'pydata_sphinx_theme'
-html_logo = "_static/logoL.svg"
+html_logo = "_static/logoL.png"
 html_sidebars = {
     "**": ["sidebar-nav-bs"],
     "installation": [],
