@@ -70,7 +70,7 @@ html_sidebars = {
     "help": [],
     "index": [],
 }
-html_favicon = "_static/logo.ico"
+html_favicon = "_static/favicon.ico"
 html_theme_options = {
     "icon_links": [
         {
