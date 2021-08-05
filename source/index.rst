@@ -31,9 +31,8 @@ Micromagnetic problem description -- ``micromagneticmodel``
 - Energy equation (Exchange energy, Zeeman energy, DMI, ...)
 - Dynamics equation (damping, precession, currents, ...)
 
-.. figure:: _static/interoperability.png
+.. image:: _static/micromagneticmodel.png
 
-   Magnetic systems (left-to-right): Skyrmions, vortex, Bloch point [renderings created with Blender]
 
 OOMMF-based micromagnetic simulations -- ``oommfc``
 ---------------------------------------------------
@@ -99,6 +98,10 @@ Design objectives of Ubermag are:
 3. Make it easier to compare simulation results obtained with different simulation packages, and
 
 4. Allow execution of micromagnetic simulation in the cloud.
+
+.. figure:: _static/interoperability.png
+
+   Magnetic systems (left-to-right): Skyrmions, vortex, Bloch point [renderings created with Blender]
 
 Documentation and tutorials
 ===========================
