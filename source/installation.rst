@@ -164,7 +164,7 @@ MacOS
 
 .. code-block:: bash
 
-   $ make build-with-dmi-extension-all
+   $ make build-with-all
 
 This command, apart from building OOMMF, will download and compile
 Dzyaloshinkii-Moriya extensions for different crystalographic classes. For more
@@ -225,7 +225,7 @@ it.)
 
 .. code-block:: bash
 
-   $ make build-with-dmi-extension-all
+   $ make build-with-all
 
 This command, apart from building OOMMF, will download and compile
 Dzyaloshinkii-Moriya extensions as well. For more information, please refer to
