@@ -15,14 +15,14 @@ help:
 prepare:
 	mkdir packages
 	mkdir source/documentation/ipynb
-	git clone --depth 1 "https://github.com/ubermag/discretisedfield.git" packages/discretisedfield
-	git clone --depth 1 "https://github.com/ubermag/micromagneticdata.git" packages/micromagneticdata
-	git clone --depth 1 "https://github.com/ubermag/micromagneticmodel.git" packages/micromagneticmodel
-	git clone --depth 1 "https://github.com/ubermag/micromagnetictests.git" packages/micromagnetictests
-	git clone --depth 1 "https://github.com/ubermag/oommfc.git" packages/oommfc
-	git clone --depth 1 "https://github.com/ubermag/ubermag.git" packages/ubermag
-	git clone --depth 1 "https://github.com/ubermag/ubermagtable.git" packages/ubermagtable
-	git clone --depth 1 "https://github.com/ubermag/ubermagutil.git" packages/ubermagutil
+	git clone -b stable --depth 1 "https://github.com/ubermag/discretisedfield.git" packages/discretisedfield
+	git clone -b stable --depth 1 "https://github.com/ubermag/micromagneticdata.git" packages/micromagneticdata
+	git clone -b stable --depth 1 "https://github.com/ubermag/micromagneticmodel.git" packages/micromagneticmodel
+	git clone -b stable --depth 1 "https://github.com/ubermag/micromagnetictests.git" packages/micromagnetictests
+	git clone -b stable --depth 1 "https://github.com/ubermag/oommfc.git" packages/oommfc
+	git clone --depth 1 "https://github.com/ubermag/ubermag.git" packages/ubermag  # CLONE FROM **STABLE** AFTER NEXT RELEASE
+	git clone -b stable --depth 1 "https://github.com/ubermag/ubermagtable.git" packages/ubermagtable
+	git clone -b stable --depth 1 "https://github.com/ubermag/ubermagutil.git" packages/ubermagutil
 	git clone --depth 1 "https://github.com/ubermag/workshop.git" packages/workshop
 
 	cp packages/ubermag/docs/changelog.rst source/changelog.rst
