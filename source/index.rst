@@ -71,6 +71,10 @@ Typesystem and utilities - ``ubermagutil``
 - Determining SI prefixes
 - Various convenience functions
 
+``mag2exp``
+-----------
+
+- ...
 
 What is ``ubermag``?
 --------------------

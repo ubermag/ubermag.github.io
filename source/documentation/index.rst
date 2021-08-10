@@ -10,6 +10,7 @@ Detailed documentation based on notebooks
     :caption: Packages
 
     discretisedfield
+    mag2exp
     micromagneticdata
     micromagneticmodel
     micromagnetictests
