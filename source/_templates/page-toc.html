@@ -2,7 +2,7 @@
 
 {%- if page_toc | length >= 1 %}
 <div class="tocsection onthispage pt-5 pb-3">
-    <i class="fas fa-list"></i> {{ _("On this page CUSTOM") }}
+    <i class="fas fa-list"></i> {{ _("On this page") }}
 </div>
 {%- endif %}
 
@@ -12,6 +12,7 @@
 
 {% if ('tutorials' in pagename or 'ipynb' in pagename) and not 'index' in pagename %}
 <div class="tocsection onthispace pt-5 bp-3">
+    <h5>Try online:</h5>
     {% if 'tutorials' in pagename %}
     <a href="https://mybinder.org/v2/gh/ubermag/workshop/HEAD?filepath=tutorials/{{ pagename.split('/')[-1] }}.ipynb"  target="_blank" rel="noopener noreferrer">
     {% endif %}
