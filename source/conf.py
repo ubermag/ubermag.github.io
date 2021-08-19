@@ -47,6 +47,14 @@ plot_formats = [("png", 90)]
 plot_html_show_formats = False
 plot_html_show_source_link = False
 
+# arguments for nbsphinx, see
+# https://nbsphinx.readthedocs.io/en/0.8.6/usage.html#nbsphinx_execute_arguments
+# TODO does not seem to have any effect
+nbsphinx_execute_arguments = [
+    "--InlineBackend.figure_formats={'svg'}",
+    "--InlineBackend.rc=figure.dpi=96",
+]
+
 # Add any paths that contain templates here, relative to this directory.
 templates_path = ['_templates']
 
