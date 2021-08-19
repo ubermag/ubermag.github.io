@@ -54,7 +54,7 @@ Some OOMMF extensions are not available on Windows. In order to use these
 extensions on Windows we recommend installing Docker - you can download it from:
 https://www.docker.com/products/docker-desktop. Ubermag will automatically
 recognise Docker and use it if required. More details can be found in the
-workshop: ``Choosing runner <workshop/choosing-runner.html>``_.
+workshop: `Choosing runner <workshop/choosing-runner.html>`_.
 
 Testing
 -------
@@ -91,7 +91,6 @@ Every ``PACKAGE`` can be updated by running:
 Advanced installation
 =====================
 
-
 To use ``ubermag`` for micromagnetic computations, you need to:
 
 1. Install Ubermag.
@@ -100,7 +99,10 @@ To use ``ubermag`` for micromagnetic computations, you need to:
 
 3. Ensure Ubermag knows where to find the computational backend.
 
-By installing Ubermag using ``conda``, all three steps would be carried out automatically (for OOMMF). However, if for some reason you need more freedom in choosing the computational backend, please follow the steps explained subsequently for your operating system.
+By installing Ubermag using ``conda``, all three steps would be carried out
+automatically (for OOMMF). However, if for some reason you need more freedom in
+choosing the computational backend, please follow the steps explained
+subsequently for your operating system.
 
 Windows
 -------
