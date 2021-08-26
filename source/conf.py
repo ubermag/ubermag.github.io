@@ -39,6 +39,7 @@ extensions = [
     'sphinx.ext.napoleon',
     'matplotlib.sphinxext.plot_directive',
     'nbsphinx',
+    'sphinx_copybutton',
 ]
 
 # matplotlib plot directive
@@ -54,6 +55,10 @@ nbsphinx_execute_arguments = [
     "--InlineBackend.figure_formats={'svg'}",
     "--InlineBackend.rc=figure.dpi=96",
 ]
+
+# Strip input prompts from code cells
+copybutton_prompt_text = r'>>> |\.\.\. |\$ '
+copybutton_prompt_is_regexp = True
 
 # Add any paths that contain templates here, relative to this directory.
 templates_path = ['_templates']

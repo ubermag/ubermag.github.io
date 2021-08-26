@@ -54,7 +54,7 @@ Some OOMMF extensions are not available on Windows. In order to use these
 extensions on Windows we recommend installing Docker - you can download it from:
 https://www.docker.com/products/docker-desktop. Ubermag will automatically
 recognise Docker and use it if required. More details can be found in the
-workshop: `Choosing runner <workshop/choosing-runner.html>`_.
+workshop: `Choosing runner <workshop/tutorials/choosing-runner.html>`_.
 
 Testing
 -------
