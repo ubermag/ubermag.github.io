@@ -288,3 +288,38 @@ successful:
 3. If ``docker`` is available and the docker deamon is running, then OOMMF is
    used in the Docker container. (The required docker image will be downloaded
    if necessary.)
+
+Development installation
+========================
+
+In the following we explain how to install ``ubermag`` and all subpackages for
+development. This information is only intended for people developing Ubermag or
+planning to contribute. For normal users we **highly** recommend following the
+steps under `Standard installation -- recommended`_.
+
+We expect a working Python environment ``python>=3.8`` and ``pip`` being
+available. The installation of OOMMF is not fully covered in this sections. The
+easiest solution is to use ``conda`` to install OOMMF and other dependencies (as
+described below). Possible options to get OOMMF are:
+
+- ``conda`` (default, see step 1 below)
+- Installation from source: https://github.com/fangohr/oommf
+- ``spack`` (currently under development: https://github.com/fangohr/oommf-in-spack/)
+
+The installation process consists of two steps. Two scripts can be downloaded
+from the `devtools repository <https://github.com/ubermag/devtools>`_ (links
+given below). Cloning the entire repository is generally not required.
+
+1. Install dependencies. In a ``conda`` environment this can be done using the
+   following script:
+   https://github.com/ubermag/devtools/blob/master/conda-setup.sh
+   The OOMMF conda package is part of these dependencies.
+
+   *NOTE*: The script does not create or activate a new conda environment. This
+   should be done separately (steps outlined under `Standard installation --
+   recommended`_).
+
+2. Install all packages in editable mode. Use the following script:
+   https://github.com/ubermag/devtools/blob/master/clone-and-install-repos.sh
+   The correct order of installation is important and using this script is
+   therefore highly recommended.
