@@ -29,9 +29,16 @@ have it installed, download `Anaconda <https://www.anaconda.com/download>`_ Pyth
 the installation is complete, in Terminal (Linux and MacOS) or in Anaconda
 Prompt (Windows), create a new conda environment and activate it.
 
+..
+   Two separate code blocks to avoid the creation of environments called ENVIRONMENT_NAME
+   when people use the copy_button functionality.
+
 .. code-block:: bash
 
    $ conda create -n ENVIRONMENT_NAME python=3.8
+
+.. code-block:: bash
+
    $ conda activate ENVIRONMENT_NAME
 
 Instead of ``ENVIRONMENT_NAME``, choose the name you want. Finally, you can
