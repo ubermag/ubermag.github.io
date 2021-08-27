@@ -8,7 +8,8 @@ called ``ubermag``. During installation of this packages all individual
 subpackages and additionally `OOMMF <https://math.nist.gov/oommf/>`_ are
 installed.
 
-To install any of the packages please follow the guidelines below and replace ``PACKAGE`` with one of the actual package names:
+To install any of the packages please follow the guidelines below and replace
+``PACKAGE`` with one of the actual package names:
 
 - ubermag (includes all packages listed below + OOMMF)
 - discretisedfield
@@ -25,7 +26,7 @@ Standard installation -- recommended
 
 We recommend installation using ``conda`` package manager. If you do not already
 have it installed, download `Anaconda <https://www.anaconda.com/download>`_ Python
-3+ for your operating system and follow the instructions to install it. After
+3.8+ for your operating system and follow the instructions to install it. After
 the installation is complete, in Terminal (Linux and MacOS) or in Anaconda
 Prompt (Windows), create a new conda environment and activate it.
 
@@ -41,6 +42,13 @@ Prompt (Windows), create a new conda environment and activate it.
 
    $ conda activate ENVIRONMENT_NAME
 
+.. topic:: Example for ``ENVIRONMENT_NAME=ubermag``
+
+   .. code-block:: bash
+
+      $ conda create -n ubermag python=3.8
+      $ conda activate ubermag
+
 Instead of ``ENVIRONMENT_NAME``, choose the name you want. Finally, you can
 install any ``PACKAGE`` by running:
 
@@ -48,7 +56,7 @@ install any ``PACKAGE`` by running:
 
    $ conda install --channel conda-forge PACKAGE
 
-.. topic:: Example for ``ubermag``
+.. topic:: Example for ``PACKAGE=ubermag``
 
    .. code-block:: bash
 
@@ -72,13 +80,13 @@ You can test the installation by running:
 
    $ python -c "import PACKAGE; PACKAGE.test()"
 
-.. topic:: Example for ``ubermag``
+.. topic:: Example for ``PACKAGE=ubermag``
 
    .. code-block:: bash
 
       $ python -c "import ubermag; ubermag.test()"
 
-If no errors are reported, the installation was sucessful.
+If no errors are reported, the installation was successful.
 
 Update
 ------
@@ -89,7 +97,7 @@ Every ``PACKAGE`` can be updated by running:
 
    $ conda update PACKAGE
 
-.. topic:: Example for ``ubermag``
+.. topic:: Example for ``PACKAGE=ubermag``
 
    .. code-block:: bash
 
