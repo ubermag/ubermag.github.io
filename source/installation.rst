@@ -302,32 +302,60 @@ Development installation
 
 In the following we explain how to install ``ubermag`` and all subpackages for
 development. This information is only intended for people developing Ubermag or
-planning to contribute. For normal users we **highly** recommend following the
-steps under `Standard installation -- recommended`_.
+planning to contribute. For normal users we recommend following the steps under
+`Standard installation -- recommended`_.
 
-We expect a working Python environment ``python>=3.8`` and ``pip`` being
-available. The installation of OOMMF is not fully covered in this sections. The
-easiest solution is to use ``conda`` to install OOMMF and other dependencies (as
-described below). Possible options to get OOMMF are:
+We expect a working Python environment ``python>=3.8``, ``conda``, and ``pip``
+being available. The installation of OOMMF is not fully covered in this
+sections. The easiest solution is to use ``conda`` to install OOMMF and other
+dependencies (as described below). Possible options to get OOMMF are:
 
 - ``conda`` (default, see step 1 below)
 - Installation from source: https://github.com/fangohr/oommf
 - ``spack`` (currently under development: https://github.com/fangohr/oommf-in-spack/)
 
-The installation process consists of two steps. Two scripts can be downloaded
-from the `devtools repository <https://github.com/ubermag/devtools>`_ (links
-given below). Cloning the entire repository is generally not required.
+The installation process consists of two steps. Two utility files can be
+downloaded from the `devtools repository
+<https://github.com/ubermag/devtools/installation>`_ (precise links given below).
+Cloning the entire repository is generally not required.
 
-1. Install dependencies. In a ``conda`` environment this can be done using the
-   following script:
-   https://github.com/ubermag/devtools/blob/master/conda-setup.sh
-   The OOMMF conda package is part of these dependencies.
+1. Install dependencies in a conda environment.
 
-   *NOTE*: The script does not create or activate a new conda environment. This
-   should be done separately (steps outlined under `Standard installation --
-   recommended`_).
+   The easiest way to install all required development dependencies is to use
+   ``conda`` and `this environment file
+   <https://github.com/ubermag/devtools/blob/master/installation/environment.yml>`_.
+   This can either be done in an existing environment or a new environment can
+   be created.
+   
+   - Using an existing environment (has to be activated first):
 
-2. Install all packages in editable mode. Use the following script:
-   https://github.com/ubermag/devtools/blob/master/clone-and-install-repos.sh
-   The correct order of installation is important and using this script is
-   therefore highly recommended.
+     .. code-block:: bash
+
+        $ conda env update --file environment.yml
+
+   - Creating a new environment:
+
+     .. code-block:: bash
+
+        $ conda env create -n ENVIRONMENT_NAME -f environment.yml
+        $ conda activate ENVIRONMENT_NAME
+
+2. Install all packages in editable mode.
+
+   Use the `clone-and-install-repos.bat script
+   <https://github.com/ubermag/devtools/blob/master/installation/clone-and-install-repos.bat>`_.
+
+   - on Mac/Linux:
+
+     .. code-block:: bash
+
+        $ sh clone-and-install-repos.bat
+
+   - on Windows:
+
+     .. code-block:: bash
+
+        $ call clone-and-install-repos.bat
+
+   The correct order of installation is important and using this script is therefore
+   recommended.
