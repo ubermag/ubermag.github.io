@@ -305,8 +305,8 @@ development. This information is only intended for people developing Ubermag or
 planning to contribute. For normal users we recommend following the steps under
 `Standard installation -- recommended`_.
 
-We expect a working Python environment ``python>=3.8``, ``conda``, and ``pip``
-being available. The installation of OOMMF is not fully covered in this
+We expect a working Python environment ``python>=3.8``, ``conda``, ``pip``, and
+``git`` being available. The installation of OOMMF is not fully covered in this
 sections. The easiest solution is to use ``conda`` to install OOMMF and other
 dependencies (as described below). Possible options to get OOMMF are:
 
