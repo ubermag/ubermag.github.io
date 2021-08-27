@@ -17,3 +17,4 @@ Detailed documentation based on notebooks
     oommfc
     ubermagtable
     ubermagutil
+    ubermag

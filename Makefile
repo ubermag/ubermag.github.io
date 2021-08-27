@@ -27,7 +27,7 @@ prepare:
 	git clone --depth 1 "https://github.com/ubermag/workshop.git" packages/workshop
 
 	cp packages/ubermag/docs/changelog.rst source/changelog.rst
-	for PKG in discretisedfield mag2exp micromagneticdata micromagneticmodel micromagnetictests oommfc ubermagtable ubermagutil ; do \
+	for PKG in discretisedfield mag2exp micromagneticdata micromagneticmodel micromagnetictests oommfc ubermagtable ubermagutil ubermag ; do \
 		cp -r "packages/$$PKG/docs/ipynb" "source/documentation/ipynb/$$PKG" ; \
 	done
 	cp -r packages/workshop/tutorials source/workshop/tutorials
