@@ -21,7 +21,7 @@ prepare:
 	git clone -b stable --depth 1 "https://github.com/ubermag/micromagnetictests.git" packages/micromagnetictests
 	git clone -b stable --depth 1 "https://github.com/ubermag/oommfc.git" packages/oommfc
 	git clone --depth 1 "https://github.com/ubermag/ubermag.git" packages/ubermag  # CLONE FROM **STABLE** AFTER NEXT RELEASE
-	git clone --depth 1 "https://github.com/ubermag/mag2exp.git" packages/mag2exp  # CLONE FROM **STABLE** AFTER NEXT RELEASE
+	git clone -b stable --depth 1 "https://github.com/ubermag/mag2exp.git" packages/mag2exp
 	git clone -b stable --depth 1 "https://github.com/ubermag/ubermagtable.git" packages/ubermagtable
 	git clone -b stable --depth 1 "https://github.com/ubermag/ubermagutil.git" packages/ubermagutil
 	git clone --depth 1 "https://github.com/ubermag/workshop.git" packages/workshop
