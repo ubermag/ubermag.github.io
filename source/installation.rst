@@ -342,20 +342,24 @@ Cloning the entire repository is generally not required.
 
 2. Install all packages in editable mode.
 
-   Use the `clone-and-install-repos.bat script
-   <https://github.com/ubermag/devtools/blob/master/installation/clone-and-install-repos.bat>`_.
+   We provide a script to clone and install all packages in editable mode. You
+   have to replace ``METHOD`` either with ``https`` (`https script
+   <https://github.com/ubermag/devtools/blob/master/installation/clone-and-install-https.bat>`_)
+   or with ``ssh`` (`ssh script
+   <https://github.com/ubermag/devtools/blob/master/installation/clone-and-install-ssh.bat>`_)
+   in the following command. (If you don't know which method to choose use ``https``.)
 
    - on Mac/Linux:
 
      .. code-block:: bash
 
-        $ sh clone-and-install-repos.bat
+        $ sh clone-and-install-METHOD.bat
 
    - on Windows:
 
      .. code-block:: bash
 
-        $ call clone-and-install-repos.bat
+        $ call clone-and-install-METHOD.bat
 
    The correct order of installation is important and using this script is therefore
    recommended.
