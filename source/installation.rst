@@ -316,8 +316,8 @@ dependencies (as described below). Possible options to get OOMMF are:
 
 The installation process consists of two steps. Two utility files can be
 downloaded from the `devtools repository
-<https://github.com/ubermag/devtools/installation>`_ (precise links given below).
-Cloning the entire repository is generally not required.
+<https://github.com/ubermag/devtools/tree/master/installation>`_ (precise links
+given below). Cloning the entire repository is generally not required.
 
 1. Install dependencies in a conda environment.
 
