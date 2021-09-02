@@ -349,10 +349,6 @@ given below). Cloning the entire repository is generally not required.
    <../packages/devtools/installation/clone-and-install-ssh.bat>`) in the
    following command. (If you don't know which method to choose use ``https``.)
 
-   We provide a script to clone and install all packages in editable mode. You
-   have to replace ``METHOD`` either with ``https`` (:download:`https script
-   <../packages/devtools/installation/clone-and-install-ssh.bat>`) or with
- 
    - on Mac/Linux:
 
      .. code-block:: bash
