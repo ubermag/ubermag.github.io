@@ -316,16 +316,16 @@ dependencies (as described below). Possible options to get OOMMF are:
 
 The installation process consists of two steps. Two utility files can be
 downloaded from the `devtools repository
-<https://github.com/ubermag/devtools/tree/master/installation>`_ (precise links
+<https://github.com/ubermag/devtools/tree/master/installation>`_ (direct download links
 given below). Cloning the entire repository is generally not required.
 
 1. Install dependencies in a conda environment.
 
    The easiest way to install all required development dependencies is to use
-   ``conda`` and `this environment file
-   <https://github.com/ubermag/devtools/blob/master/installation/environment.yml>`_.
-   This can either be done in an existing environment or a new environment can
-   be created.
+   ``conda`` and :download:`this environment file
+   <../packages/devtools/installation/environment.yml>`. This can
+   either be done in an existing environment or a new environment can be
+   created.
    
    - Using an existing environment (has to be activated first):
 
@@ -343,12 +343,16 @@ given below). Cloning the entire repository is generally not required.
 2. Install all packages in editable mode.
 
    We provide a script to clone and install all packages in editable mode. You
-   have to replace ``METHOD`` either with ``https`` (`https script
-   <https://github.com/ubermag/devtools/blob/master/installation/clone-and-install-https.bat>`_)
-   or with ``ssh`` (`ssh script
-   <https://github.com/ubermag/devtools/blob/master/installation/clone-and-install-ssh.bat>`_)
-   in the following command. (If you don't know which method to choose use ``https``.)
+   have to replace ``METHOD`` either with ``https`` (:download:`https script
+   <../packages/devtools/installation/clone-and-install-https.bat>`) or with
+   ``ssh`` (:download:`ssh script
+   <../packages/devtools/installation/clone-and-install-ssh.bat>`) in the
+   following command. (If you don't know which method to choose use ``https``.)
 
+   We provide a script to clone and install all packages in editable mode. You
+   have to replace ``METHOD`` either with ``https`` (:download:`https script
+   <../packages/devtools/installation/clone-and-install-ssh.bat>`) or with
+ 
    - on Mac/Linux:
 
      .. code-block:: bash
