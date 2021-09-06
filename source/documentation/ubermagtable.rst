@@ -11,3 +11,4 @@ ubermagtable
     ipynb/ubermagtable/table-visualisation
     ipynb/ubermagtable/table-widgets
     ipynb/ubermagtable/table-interactive-plot
+    ipynb/ubermagtable/table-fft
