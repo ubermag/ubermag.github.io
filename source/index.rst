@@ -50,6 +50,7 @@ Analysis of micromagnetic simulations -- ``micromagneticdata``
    Simulations of magnetic measurements -- ``mag2exp``
    ---------------------------------------------------
    .. image:: _static/exsim-examples.svg
+   
 
 Reading scalar simulation data files - ``ubermagtable``
 -------------------------------------------------------
@@ -77,7 +78,15 @@ Typesystem and utilities - ``ubermagutil``
 
 .. image:: _static/mag2exp-examples.svg
 
-- ...
+- Simulations of experimental techniques used to study magnetism
+- Provides techniques such as
+   - Lorentz Transmission Electron Microscopy
+   - Magnetic Force Microscopy
+   - DC and Torque Magnetometry
+   - X-ray Holography
+   - Small Angle X-ray Scattering
+   - Small Angle Neutron Scattering
+   - Magneto-Optical Kerr Effect Microscopy
 
 What is ``ubermag``?
 --------------------
