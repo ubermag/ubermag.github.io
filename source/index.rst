@@ -38,6 +38,7 @@ OOMMF-based micromagnetic simulations -- ``oommfc``
 ---------------------------------------------------
 
 .. image:: _static/oommfc-examples.svg
+
 - An Object Oriented MicroMagnetic Framework OOMMF calculator for computational
   magnetism models defined with ``micromagneticmodel``
 

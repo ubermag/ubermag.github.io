@@ -7,4 +7,5 @@ dependencies:
   - nbsphinx>=0.8.5
   - pydata-sphinx-theme>=0.6.3
   - sphinx>=4.1
+  - sphinx-copybutton>=0.4
   - ubermag==0.51

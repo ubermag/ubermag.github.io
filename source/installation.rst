@@ -8,7 +8,8 @@ called ``ubermag``. During installation of this packages all individual
 subpackages and additionally `OOMMF <https://math.nist.gov/oommf/>`_ are
 installed.
 
-To install any of the packages please follow the guidelines below and replace ``PACKAGE`` with one of the actual package names:
+To install any of the packages please follow the guidelines below and replace
+``PACKAGE`` with one of the actual package names:
 
 - ubermag (includes all packages listed below + OOMMF)
 - discretisedfield
@@ -25,14 +26,28 @@ Standard installation -- recommended
 
 We recommend installation using ``conda`` package manager. If you do not already
 have it installed, download `Anaconda <https://www.anaconda.com/download>`_ Python
-3+ for your operating system and follow the instructions to install it. After
+3.8+ for your operating system and follow the instructions to install it. After
 the installation is complete, in Terminal (Linux and MacOS) or in Anaconda
 Prompt (Windows), create a new conda environment and activate it.
+
+..
+   Two separate code blocks to avoid the creation of environments called ENVIRONMENT_NAME
+   when people use the copy_button functionality.
 
 .. code-block:: bash
 
    $ conda create -n ENVIRONMENT_NAME python=3.8
+
+.. code-block:: bash
+
    $ conda activate ENVIRONMENT_NAME
+
+.. topic:: Example for ``ENVIRONMENT_NAME=ubermag``
+
+   .. code-block:: bash
+
+      $ conda create -n ubermag python=3.8
+      $ conda activate ubermag
 
 Instead of ``ENVIRONMENT_NAME``, choose the name you want. Finally, you can
 install any ``PACKAGE`` by running:
@@ -41,7 +56,7 @@ install any ``PACKAGE`` by running:
 
    $ conda install --channel conda-forge PACKAGE
 
-.. topic:: Example for ``ubermag``
+.. topic:: Example for ``PACKAGE=ubermag``
 
    .. code-block:: bash
 
@@ -54,7 +69,7 @@ Some OOMMF extensions are not available on Windows. In order to use these
 extensions on Windows we recommend installing Docker - you can download it from:
 https://www.docker.com/products/docker-desktop. Ubermag will automatically
 recognise Docker and use it if required. More details can be found in the
-workshop: ``Choosing runner <workshop/choosing-runner.html>``_.
+workshop: `Choosing runner <workshop/tutorials/choosing-runner.html>`_.
 
 Testing
 -------
@@ -65,13 +80,13 @@ You can test the installation by running:
 
    $ python -c "import PACKAGE; PACKAGE.test()"
 
-.. topic:: Example for ``ubermag``
+.. topic:: Example for ``PACKAGE=ubermag``
 
    .. code-block:: bash
 
       $ python -c "import ubermag; ubermag.test()"
 
-If no errors are reported, the installation was sucessful.
+If no errors are reported, the installation was successful.
 
 Update
 ------
@@ -82,7 +97,7 @@ Every ``PACKAGE`` can be updated by running:
 
    $ conda update PACKAGE
 
-.. topic:: Example for ``ubermag``
+.. topic:: Example for ``PACKAGE=ubermag``
 
    .. code-block:: bash
 
@@ -90,7 +105,6 @@ Every ``PACKAGE`` can be updated by running:
 
 Advanced installation
 =====================
-
 
 To use ``ubermag`` for micromagnetic computations, you need to:
 
@@ -100,7 +114,10 @@ To use ``ubermag`` for micromagnetic computations, you need to:
 
 3. Ensure Ubermag knows where to find the computational backend.
 
-By installing Ubermag using ``conda``, all three steps would be carried out automatically (for OOMMF). However, if for some reason you need more freedom in choosing the computational backend, please follow the steps explained subsequently for your operating system.
+By installing Ubermag using ``conda``, all three steps would be carried out
+automatically (for OOMMF). However, if for some reason you need more freedom in
+choosing the computational backend, please follow the steps explained
+subsequently for your operating system.
 
 Windows
 -------
@@ -279,3 +296,70 @@ successful:
 3. If ``docker`` is available and the docker deamon is running, then OOMMF is
    used in the Docker container. (The required docker image will be downloaded
    if necessary.)
+
+Development installation
+========================
+
+In the following we explain how to install ``ubermag`` and all subpackages for
+development. This information is only intended for people developing Ubermag or
+planning to contribute. For normal users we recommend following the steps under
+`Standard installation -- recommended`_.
+
+We expect a working Python environment ``python>=3.8``, ``conda``, ``pip``, and
+``git`` being available. The installation of OOMMF is not fully covered in this
+sections. The easiest solution is to use ``conda`` to install OOMMF and other
+dependencies (as described below). Possible options to get OOMMF are:
+
+- ``conda`` (default, see step 1 below)
+- Installation from source: https://github.com/fangohr/oommf
+- ``spack`` (currently under development: https://github.com/fangohr/oommf-in-spack/)
+
+The installation process consists of two steps. Two utility files can be
+downloaded from the `devtools repository
+<https://github.com/ubermag/devtools/tree/master/installation>`_ (direct download links
+given below). Cloning the entire repository is generally not required.
+
+1. Install dependencies in a conda environment.
+
+   The easiest way to install all required development dependencies is to use
+   ``conda`` and :download:`this environment file
+   <../packages/devtools/installation/environment.yml>`. This can
+   either be done in an existing environment or a new environment can be
+   created.
+   
+   - Using an existing environment (has to be activated first):
+
+     .. code-block:: bash
+
+        $ conda env update --file environment.yml
+
+   - Creating a new environment:
+
+     .. code-block:: bash
+
+        $ conda env create -n ENVIRONMENT_NAME -f environment.yml
+        $ conda activate ENVIRONMENT_NAME
+
+2. Install all packages in editable mode.
+
+   We provide a script to clone and install all packages in editable mode. You
+   have to replace ``METHOD`` either with ``https`` (:download:`https script
+   <../packages/devtools/installation/clone-and-install-https.bat>`) or with
+   ``ssh`` (:download:`ssh script
+   <../packages/devtools/installation/clone-and-install-ssh.bat>`) in the
+   following command. (If you don't know which method to choose use ``https``.)
+
+   - on Mac/Linux:
+
+     .. code-block:: bash
+
+        $ sh clone-and-install-METHOD.bat
+
+   - on Windows:
+
+     .. code-block:: bash
+
+        $ call clone-and-install-METHOD.bat
+
+   The correct order of installation is important and using this script is therefore
+   recommended.
