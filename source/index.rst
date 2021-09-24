@@ -75,6 +75,8 @@ Typesystem and utilities - ``ubermagutil``
 ``mag2exp``
 -----------
 
+.. image:: _static/mag2exp-examples.svg
+
 - ...
 
 What is ``ubermag``?
