@@ -29,7 +29,7 @@ prepare:
 
 	cp packages/ubermag/docs/changelog.rst source/changelog.rst
 	for PKG in discretisedfield mag2exp micromagneticdata micromagneticmodel micromagnetictests oommfc ubermagtable ubermagutil ubermag ; do \
-		cp -r "packages/$$PKG/docs/ipynb" "source/documentation/ipynb/$$PKG" ; \
+		cp -r "packages/$$PKG/docs" "source/documentation/ipynb/$$PKG" ; \
 	done
 	cp -r packages/workshop/tutorials source/workshop/tutorials
 
