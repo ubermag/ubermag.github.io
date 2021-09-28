@@ -130,7 +130,7 @@ machine and no files will be created. To access it, please use the following
 badge:
 
 .. image:: https://mybinder.org/badge_logo.svg
-   :target: https://mybinder.org/v2/gh/ubermag/ubermag/master?filepath=docs%2Fipynb%2Findex.ipynb
+   :target: https://mybinder.org/v2/gh/ubermag/ubermag/stable?urlpath=lab/tree/docs/ipynb/index.ipynb
 
 You can setup your own simulation from scratch or upload the notebook you
 prepared previouly. Please remember to download the notebook after you are done,
