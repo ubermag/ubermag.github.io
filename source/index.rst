@@ -69,7 +69,7 @@ Typesystem and utilities - ``ubermagutil``
 - Various convenience functions
 
 Simulations of experimental measurements -- ``mag2exp``
----------------------------------------------------
+-------------------------------------------------------
 
 .. image:: _static/mag2exp-examples.svg
 
