@@ -114,7 +114,9 @@ Design objectives of Ubermag are:
 
 .. figure:: _static/interoperability.png
 
-   Magnetic systems (left-to-right): Skyrmions, vortex, Bloch point [renderings created with Blender]
+   Magnetic systems (left-to-right): `Skyrmions
+   <https://github.com/lang-m/ubermag-skyrmion-demo>`_, vortex, Bloch point
+   [renderings created with Blender]
 
 Documentation and tutorials
 ===========================
