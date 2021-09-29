@@ -68,8 +68,8 @@ Typesystem and utilities - ``ubermagutil``
 - Determining SI prefixes
 - Various convenience functions
 
-Simulations of experimental measurements -- ``mag2exp``
--------------------------------------------------------
+Simulations of experimental measurements - ``mag2exp``
+------------------------------------------------------
 
 .. image:: _static/mag2exp-examples.svg
 
