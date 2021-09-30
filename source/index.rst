@@ -153,9 +153,10 @@ so that you can upload it again when you start a new online session.
 Authors
 =======
 
-Marijan Beg\ :sup:`1, 2`, Martin Lang\ :sup:`2, 3`, Samuel Holt\ :sup:`2, 4`, Ryan A. Pepper\ :sup:`2`,
-Thomas Kluyver\ :sup:`5`, James Loudon\ :sup:`6`, Thomas Hicken\ :sup:`7`, David Cortés Ortuño\ :sup:`2`,
-Jeroen Mulkers\ :sup:`8`, Jonathan Leliaert\ :sup:`8`, and Hans Fangohr\ :sup:`2, 3, 9`
+Marijan Beg\ :sup:`1, 2`, Martin Lang\ :sup:`2, 3`, Samuel Holt\ :sup:`2, 4`,
+Ryan A. Pepper\ :sup:`2`, Thomas Kluyver\ :sup:`5`, James Loudon\ :sup:`6`,
+Thomas Hicken\ :sup:`7`, David Cortés Ortuño\ :sup:`2`, Jeroen Mulkers\
+:sup:`8`, Jonathan Leliaert\ :sup:`8`, and Hans Fangohr\ :sup:`2, 3, 9`
 
 - :sup:`1` Department of Earth Science and Engineering, Imperial College London,
   London SW7 2AZ, United Kingdom
@@ -163,10 +164,13 @@ Jeroen Mulkers\ :sup:`8`, Jonathan Leliaert\ :sup:`8`, and Hans Fangohr\ :sup:`2
   Southampton, Southampton SO17 1BJ, United Kingdom
 - :sup:`3` Max Planck Institute for the Structure and Dynamics of Matter,
   Luruper Chaussee 149, 22761 Hamburg, Germany
-- :sup:`4` Department of Physics, University of Warwick, Coventry CV4 7AL, United Kingdom
+- :sup:`4` Department of Physics, University of Warwick, Coventry CV4 7AL,
+  United Kingdom
 - :sup:`5` European XFEL GmbH, Holzkoppel 4, 22869 Schenefeld, Germany
-- :sup:`6` Department of Materials Science and Metallurgy, University of Cambridge, Cambridge, CB3 0FS, United Kingdom
-- :sup:`7` Department of Physics, Durham University, Durham, DH1 3LE, United Kingdom
+- :sup:`6` Department of Materials Science and Metallurgy, University of
+  Cambridge, Cambridge, CB3 0FS, United Kingdom
+- :sup:`7` Department of Physics, Durham University, Durham, DH1 3LE, United
+  Kingdom
 - :sup:`8` Faculty of Sciences, Ghent University, Krijgslaan 281, S12, 9000
   Ghent, Belgium
 - :sup:`9` Center for Free-Electron Laser Science, Luruper Chaussee 149, 22761
