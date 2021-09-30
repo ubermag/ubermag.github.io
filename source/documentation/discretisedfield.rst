@@ -23,5 +23,6 @@ discretisedfield
     ipynb/discretisedfield/field-matplotlib-visualisation
     ipynb/discretisedfield/field-k3d-visualisation
     ipynb/discretisedfield/field-read-write
+    ipynb/discretisedfield/field-rotations
     ipynb/discretisedfield/field-tools
     ipynb/discretisedfield/ovf2vtk
