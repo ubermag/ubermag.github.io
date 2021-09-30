@@ -303,7 +303,7 @@ Development installation
 In the following we explain how to install ``ubermag`` and all subpackages for
 development. This information is only intended for people developing Ubermag or
 planning to contribute. For normal users we recommend following the steps under
-`Standard installation -- recommended`__.
+`Standard installation -- recommended`_.
 
 We expect a working Python environment ``python>=3.8``, ``conda``, ``pip``, and
 ``git`` being available. The installation of OOMMF is not fully covered in this
