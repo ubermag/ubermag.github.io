@@ -6,14 +6,14 @@ Support
 -------
 
 If you encounter a problem that is not explained in the
-`workshop <workshop/index.html>`_ or the `documentation
-<documentation/index.html>`_ you can raise an issue in our `help repository
-<https://github.com/ubermag/help>`_.
+`workshop <workshop/index.html>`__ or the `documentation
+<documentation/index.html>`__ you can raise an issue in our `help repository
+<https://github.com/ubermag/help>`__.
 
 ..  MABYE THIS LINK COULD DIRECTLY OPEN A NEW ISSUE BASED ON A (YET TO BE CREATED) TEMPLATE
 
 Please first have a look at the `existing issues
-<https://github.com/ubermag/help/issues?q=is%3Aissue+>`_, maybe your question
+<https://github.com/ubermag/help/issues?q=is%3Aissue+>`__, maybe your question
 has been answered already.
 
 How to ask
@@ -43,7 +43,7 @@ Bugs
 ----
 
 If you encounter a bug please open an issue in the `help repository
-<https://github.com/ubermag/help>`_.
+<https://github.com/ubermag/help>`__.
 
 Please include:
 
@@ -59,7 +59,7 @@ Feature requests
 ----------------
 
 If something is missing in Ubermag or any of its sub-packages you can open an
-issue in the `help repository <https://github.com/ubermag/help>`_.
+issue in the `help repository <https://github.com/ubermag/help>`__.
 
 Please include:
 

@@ -115,25 +115,25 @@ Design objectives of Ubermag are:
 .. figure:: _static/interoperability.png
 
    Magnetic systems (left-to-right): `Skyrmions
-   <https://github.com/lang-m/ubermag-skyrmion-demo>`_, vortex, Bloch point
+   <https://github.com/lang-m/ubermag-skyrmion-demo>`__, vortex, Bloch point
    [renderings created with Blender]
 
 Documentation and tutorials
 ===========================
 
-The examples shown in `quickstart <quickstart.html>`_ and the `workshop
-<workshop/index.html>`_ are tight to micromagnetic simulations.
+The examples shown in `quickstart <quickstart.html>`__ and the `workshop
+<workshop/index.html>`__ are tight to micromagnetic simulations.
 Only the more commonly used features are covered in there.
-`Documentation <documentation/index.html>`_ and `API
-Reference <api/index.html>`_ provide the full documentation for the
+`Documentation <documentation/index.html>`__ and `API
+Reference <api/index.html>`__ provide the full documentation for the
 individual packages.
 
 If you are new and plan to use Ubermag for micromagnetic simulations please
-start with the `workshop <workshop/index.html>`_ or the `quickstart
-<quickstart.html>`_ example.
+start with the `workshop <workshop/index.html>`__ or the `quickstart
+<quickstart.html>`__ example.
 
 Otherwise, please directly refer to the `documentation 
-<documentation/index.html>`_ or the `API reference <api/index.html>`_.
+<documentation/index.html>`__ or the `API reference <api/index.html>`__.
 
 ``ubermag`` in the cloud
 ========================
@@ -183,7 +183,7 @@ If you use Ubermag or any of its sub-packages for your research please cite:
 
 M. Beg, M. Lang and H. Fangohr, "Ubermag: Towards more effective micromagnetic
 workflows," in `IEEE Transactions on Magnetics
-<https://doi.org/10.1109/TMAG.2021.3078896>`_.
+<https://doi.org/10.1109/TMAG.2021.3078896>`__.
 
 .. code-block:: bib
 
@@ -207,7 +207,7 @@ Acknowledgements
 ================
 
 Ubermag is a part of the Horizon 2020 European Research Infrastructure
-`OpenDreamKit <https://opendreamkit.org>`_ project (Project ID 676541). This work was supported by the Fonds
+`OpenDreamKit <https://opendreamkit.org>`__ project (Project ID 676541). This work was supported by the Fonds
 Wetenschappelijk Onderzoek (FWO-Vlaanderen) through Project No. G098917N (Jeroen
 Mulkers) and with a postdoctoral fellowship (Jonathan Leliaert).
 
