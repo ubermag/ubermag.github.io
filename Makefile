@@ -27,14 +27,13 @@ prepare:
 	git clone --depth 1 "https://github.com/ubermag/workshop.git" packages/workshop
 	git clone --depth 1 "https://github.com/ubermag/devtools.git" packages/devtools
 
-	cp packages/ubermag/docs/changelog.rst source/changelog.rst
 	for PKG in discretisedfield mag2exp micromagneticdata micromagneticmodel micromagnetictests oommfc ubermagtable ubermagutil ubermag ; do \
 		cp -r "packages/$$PKG/docs" "source/documentation/ipynb/$$PKG" ; \
 	done
 	cp -r packages/workshop/tutorials source/workshop/tutorials
 
 clean:
-	rm -rf packages source/changelog.rst source/workshop/tutorials source/documentation/ipynb source/api/_autosummary
+	rm -rf packages source/workshop/tutorials source/documentation/ipynb source/api/_autosummary
 
 .PHONY: help prepare clean Makefile
 
