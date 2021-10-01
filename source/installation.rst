@@ -5,7 +5,7 @@ All packages in Ubermag are available on both ``conda-forge`` and ``PyPI``. All
 packages can be installed independently using ``conda`` or ``pip``. To simplify the
 installation for users doing micromagnetic simulations we provide a metapackage
 called ``ubermag``. During installation of this packages all individual
-subpackages and additionally `OOMMF <https://math.nist.gov/oommf/>`_ are
+subpackages and additionally `OOMMF <https://math.nist.gov/oommf/>`__ are
 installed.
 
 To install any of the packages please follow the guidelines below and replace
@@ -25,7 +25,7 @@ Standard installation -- recommended
 ====================================
 
 We recommend installation using ``conda`` package manager. If you do not already
-have it installed, download `Anaconda <https://www.anaconda.com/download>`_ Python
+have it installed, download `Anaconda <https://www.anaconda.com/download>`__ Python
 3.8+ for your operating system and follow the instructions to install it. After
 the installation is complete, in Terminal (Linux and MacOS) or in Anaconda
 Prompt (Windows), create a new conda environment and activate it.
@@ -69,7 +69,7 @@ Some OOMMF extensions are not available on Windows. In order to use these
 extensions on Windows we recommend installing Docker - you can download it from:
 https://www.docker.com/products/docker-desktop. Ubermag will automatically
 recognise Docker and use it if required. More details can be found in the
-workshop: `Choosing runner <workshop/tutorials/choosing-runner.html>`_.
+workshop: `Choosing runner <workshop/tutorials/choosing-runner.html>`__.
 
 Testing
 -------
@@ -124,7 +124,7 @@ Windows
 
 1. Before we install ``ubermag``, we need to install ``Python3`` Anaconda
    package manager. If you do not already have it installed, download `Anaconda
-   <https://www.anaconda.com/download>`_ Python 3.8+ for your operating system
+   <https://www.anaconda.com/download>`__ Python 3.8+ for your operating system
    and follow the instructions to install it.
 
 2. Now we have everything required to install ``ubermag``. Run in Command Prompt:
@@ -135,13 +135,13 @@ Windows
 
 3. To install OOMMF as a computational backend, first, you need to install
    ``tcl`` on your machine. To do this, download the ``.exe`` file from this
-   `link <http://www.activestate.com/activetcl/downloads>`_, appropriate for
+   `link <http://www.activestate.com/activetcl/downloads>`__, appropriate for
    your operating system (32-bit or 64-bit). After the download is complete, run
    the downloaded file and follow the instructions to complete the installation.
 
 4. Download the ``.zip`` file for the latest OOMMF version which is appropriate
    for your Windows OS (32-bit or 64-bit) from this `link
-   <https://math.nist.gov/oommf/software-20.html>`_. After the download is
+   <https://math.nist.gov/oommf/software-20.html>`__. After the download is
    complete, unzip (extract) it. Locate among the the unzipped files
    ``oommf.tcl`` and remember its location - we are going to need it in step 3.
 
@@ -158,7 +158,7 @@ MacOS
 
 1. Before we install ``ubermag``, we need to install ``Python3`` Anaconda
    package manager. If you do not already have it installed, download `Anaconda
-   <https://www.anaconda.com/download>`_ Python 3.8+ for your operating system
+   <https://www.anaconda.com/download>`__ Python 3.8+ for your operating system
    and follow the instructions to install it.
 
 2. Now we have everything required to install ``ubermag``. Therefore, run in
@@ -169,7 +169,7 @@ MacOS
    $ pip install ubermag
 
 3. To compile OOMMF on MacOS, make sure you have ``XCode`` (from AppStore) and
-   `Git <https://git-scm.com/download/mac>`_ installed.
+   `Git <https://git-scm.com/download/mac>`__ installed.
 
 4. Clone the repository by typing
 
@@ -186,7 +186,7 @@ MacOS
 This command, apart from building OOMMF, will download and compile
 Dzyaloshinkii-Moriya extensions for different crystalographic classes. For more
 information, please refer to the OOMMF `repository
-<https://github.com/fangohr/oommf>`_.
+<https://github.com/fangohr/oommf>`__.
 
 6. Finally, we have to set the environment variable ``OOMMFTCL``, so that
    Ubermag knows where to find OOMMF. Consequently, in your home directory, add
@@ -213,7 +213,7 @@ Linux (Ubuntu)
    $ apt-get install python3-pip
 
 (Alternatively, you can use Anaconda Python3 distribution. If you do not already
-have it installed, download `Anaconda <https://www.anaconda.com/download>`_
+have it installed, download `Anaconda <https://www.anaconda.com/download>`__
 Python 3.8+ for your operating system and follow the instructions to install
 it.)
 
@@ -246,7 +246,7 @@ it.)
 
 This command, apart from building OOMMF, will download and compile
 Dzyaloshinkii-Moriya extensions as well. For more information, please refer to
-the `OOMMF reporsitory <https://github.com/fangohr/oommf>`_.
+the `OOMMF reporsitory <https://github.com/fangohr/oommf>`__.
 
 6. Finally, we have to set the environment variable ``OOMMFTCL``, so that
    previously installed Ubermag knows where to find OOMMF. Consequently, in your
@@ -316,7 +316,7 @@ dependencies (as described below). Possible options to get OOMMF are:
 
 The installation process consists of two steps. Two utility files can be
 downloaded from the `devtools repository
-<https://github.com/ubermag/devtools/tree/master/installation>`_ (direct download links
+<https://github.com/ubermag/devtools/tree/master/installation>`__ (direct download links
 given below). Cloning the entire repository is generally not required.
 
 1. Install dependencies in a conda environment.

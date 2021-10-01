@@ -19,4 +19,5 @@ oommfc
     ipynb/oommfc/12-tutorial-stray-field
     ipynb/oommfc/13-tutorial-skyrmion
     ipynb/oommfc/14-tutorial-periodic-boundary-conditions
+    ipynb/oommfc/controlling-default-runner
     ipynb/oommfc/finite-temperature

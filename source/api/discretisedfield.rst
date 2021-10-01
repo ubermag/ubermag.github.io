@@ -9,5 +9,6 @@ discretisedfield
     :recursive:
  
     discretisedfield
+    discretisedfield.plotting
     discretisedfield.tools
     discretisedfield.ovf2vtk

@@ -7,6 +7,7 @@ API Reference
     :caption: Packages
 
     discretisedfield
+    mag2exp
     micromagneticdata
     micromagneticmodel
     micromagnetictests

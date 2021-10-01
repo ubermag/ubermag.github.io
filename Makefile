@@ -21,19 +21,19 @@ prepare:
 	git clone -b stable --depth 1 "https://github.com/ubermag/micromagnetictests.git" packages/micromagnetictests
 	git clone -b stable --depth 1 "https://github.com/ubermag/oommfc.git" packages/oommfc
 	git clone -b stable --depth 1 "https://github.com/ubermag/ubermag.git" packages/ubermag
+	git clone -b stable --depth 1 "https://github.com/ubermag/mag2exp.git" packages/mag2exp
 	git clone -b stable --depth 1 "https://github.com/ubermag/ubermagtable.git" packages/ubermagtable
 	git clone -b stable --depth 1 "https://github.com/ubermag/ubermagutil.git" packages/ubermagutil
 	git clone --depth 1 "https://github.com/ubermag/workshop.git" packages/workshop
 	git clone --depth 1 "https://github.com/ubermag/devtools.git" packages/devtools
 
-	cp packages/ubermag/docs/changelog.rst source/changelog.rst
-	for PKG in discretisedfield micromagneticdata micromagneticmodel micromagnetictests oommfc ubermagtable ubermagutil ; do \
-		cp -r "packages/$$PKG/docs/ipynb" "source/documentation/ipynb/$$PKG" ; \
+	for PKG in discretisedfield mag2exp micromagneticdata micromagneticmodel micromagnetictests oommfc ubermagtable ubermagutil ubermag ; do \
+		cp -r "packages/$$PKG/docs" "source/documentation/ipynb/$$PKG" ; \
 	done
 	cp -r packages/workshop/tutorials source/workshop/tutorials
 
 clean:
-	rm -rf packages source/changelog.rst source/workshop/tutorials source/documentation/ipynb source/api/_autosummary
+	rm -rf packages source/workshop/tutorials source/documentation/ipynb source/api/_autosummary
 
 .PHONY: help prepare clean Makefile
 

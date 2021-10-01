@@ -2,7 +2,7 @@
 Workshop
 ========
 
-This workshop will guide you through the basics and some advanced features of using ``ubermag`` for micromagnetic simulations. The workshop has been presented ... . A recording of the sessions is available on `YouTube <https://youtube.com/channel/UC7MSqVQSMFV42R1jAYmKGLg>`_.
+This workshop will guide you through the basics and some advanced features of using ``ubermag`` for micromagnetic simulations. The workshop has been presented ... . A recording of the sessions is available on `YouTube <https://youtube.com/channel/UC7MSqVQSMFV42R1jAYmKGLg>`__.
 
 You can execute all notebooks in the cloud without the need to install anything. Please use the respective ``Binder`` badges shown on the individual tutorial pages.
 
@@ -12,7 +12,7 @@ Session 1
 In this session, we are going to familiarise ourselves with micromagnetics,
 Python, and Jupyter and we are going to spend most of the time looking at
 slides. Slides can be found in `slides` directory in the workshop `repository
-<https://github.com/ubermag/workshop>`_. After slides, we are going to write our
+<https://github.com/ubermag/workshop>`__. After slides, we are going to write our
 first Ubermag simulation and have a look at some Python basics.
 
 .. toctree::
