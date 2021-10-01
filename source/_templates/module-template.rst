@@ -14,7 +14,7 @@
    {% endblock %}
 
    {% block classes %}
-   {% if classes %}
+   {% if classes and classes != excluded_classes %}
    .. rubric:: {{ ('Classes') }}
 
    .. autosummary::
@@ -22,7 +22,9 @@
       :template: class-template.rst
       :nosignatures:
    {% for item in classes %}
-      {{ item }}
+      {% if item not in excluded_classes %}
+         {{ item }}
+      {% endif %}
    {%- endfor %}
    {% endif %}
    {% endblock %}
