@@ -54,6 +54,7 @@ Reading scalar simulation data files - ``ubermagtable``
 - Merging multiple tables
 - Visualisation of scalar table data
 
+.. image:: _static/ubermagtable.png
 
 ``micromagnetictests``
 ----------------------
@@ -62,6 +63,8 @@ Reading scalar simulation data files - ``ubermagtable``
 
 Typesystem and utilities - ``ubermagutil``
 ------------------------------------------
+
+.. image:: _static/ubermagutil.png
 
 - Definition of typesystem descriptors and decorators
 - Documentation inheritance decorators
@@ -83,7 +86,6 @@ Simulations of experimental measurements - ``mag2exp``
   - Small Angle X-ray Scattering
   - Small Angle Neutron Scattering
   - Magneto-Optical Kerr Effect Microscopy
-
 
 What is ``ubermag``?
 --------------------
