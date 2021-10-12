@@ -2,9 +2,19 @@
 Workshop
 ========
 
-This workshop will guide you through the basics and some advanced features of using ``ubermag`` for micromagnetic simulations. The workshop has been presented ... . A recording of the sessions is available on `YouTube <https://youtube.com/channel/UC7MSqVQSMFV42R1jAYmKGLg>`__.
+This workshop will guide you through the basics of using ``ubermag`` for
+micromagnetic simulations. More details on the individual functionality and
+advanced/more specialised functionality can be found in the `documentation
+<https://github.com/ubermag/documentation/index.html>`__. You can execute all
+notebooks in the cloud without the need to install anything. Please use the
+respective ``Binder`` badges shown on the individual tutorial pages.
 
-You can execute all notebooks in the cloud without the need to install anything. Please use the respective ``Binder`` badges shown on the individual tutorial pages.
+An extended version of this workshop has been presented online in June 2020 for
+spintalks (spintalks.org), supported by IEEE Magnetics Society
+(ieeemagnetics.org). A recording of these sessions is available on `YouTube
+<https://youtube.com/channel/UC7MSqVQSMFV42R1jAYmKGLg>`__. Please note that some
+functionality in Ubermag has been changed and extended since the workshop
+recording.
 
 Session 1
 =========
@@ -88,9 +98,7 @@ micromagnetic concepts as well.
     tutorials/table-interactive-plot
     tutorials/region-visualisation
     tutorials/mesh-visualisation
-    tutorials/mpl-visualisation
     tutorials/k3d-visualisation
-    tutorials/interactive-plotting
     tutorials/various-topics
 
 Session 4
@@ -104,7 +112,6 @@ simulation techniques.
     :caption: Session 4
     :numbered:
     
-    tutorials/angle-hls-plot
     tutorials/hysteresis
     tutorials/dirname
     tutorials/fixed-subregions
