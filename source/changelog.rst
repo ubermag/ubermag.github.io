@@ -2,6 +2,20 @@
 Changelog
 =========
 
+In progress
+===========
+
+General
+-------
+
+- Support Cnv, D2d, and T(O) crystallographic class DMI extensions in conda-installed Ubermag on Windows, in addition to MacOS and Linux.
+
+New functionality
+-----------------
+
+``oommf``
+  - Cnv, D2d, and T(O) crystallographic class DMI extensions conda-packaged on Windows.
+
 0.60.0
 ======
 
