@@ -13,8 +13,18 @@ General
 New functionality
 -----------------
 
+``discretisedfield``
+  - Support for ``filter_field`` in plotting method ``Field.mpl.lighness``.
+  - HTML representation for ``Region``, ``Mesh``, ``Field``, and ``FieldRotator`` inside Jupyter notebook.
+
 ``oommfc``
-  - enables Cnv, D2d, and T(O) crystallographic class DMI and magneto-elastic (MEL) extensions on Windows hosts.
+  - Enables Cnv, D2d, and T(O) crystallographic class DMI and magneto-elastic (MEL) extensions on Windows hosts (no more need for Docker).
+
+Bug fixes
+---------
+
+``discretisedfield``
+  - Simultaneous use of ``fielder_field`` and ``symmetric_clim`` in ``Field.mpl.scalar`` resulted in wrong colorbar limits (`#106 <https://github.com/ubermag/discretisedfield/issues/106>`__).
 
 0.60.0
 ======
