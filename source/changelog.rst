@@ -20,6 +20,15 @@ New functionality
 ``oommfc``
   - Enables Cnv, D2d, and T(O) crystallographic class DMI and magneto-elastic (MEL) extensions on Windows hosts (no more need for Docker).
 
+Backwards-incompatible changes
+------------------------------
+
+``discretisedfield``
+  - Keywords for ``Field.mpl()`` renamed to ``scalar_kw`` and ``vector_kw``.
+  
+``micromagneticmodel``
+  - Consistent names for time-dependent fields and currents.
+
 Bug fixes
 ---------
 
@@ -69,7 +78,7 @@ New functionality
     <https://ubermag.github.io/documentation/ipynb/micromagneticmodel/energy-terms.html#5.-Dzyaloshinskii-Moriya-energy>`__).
   - Support for arbitrary time-dependence for external magnetic fields
     (``micromagneticmodel.Zeeman``) and spin-polarised currents
-    (``micromagneticmodel.Slonczewski`` and ``micromagneticmodel.ZhangLi``).
+    (``micromagneticmodel.Slonczewski`` and ``micromagneticmodel.ZhangLi``) (`documentation <https://ubermag.github.io/documentation/ipynb/oommfc/time-dependent-field-current.html>`__)
 
 ``oommfc``
   - Support for OOMMF extension ``Xf_ThermHeunEvolver``,
