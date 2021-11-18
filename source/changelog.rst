@@ -78,7 +78,8 @@ New functionality
     <https://ubermag.github.io/documentation/ipynb/micromagneticmodel/energy-terms.html#5.-Dzyaloshinskii-Moriya-energy>`__).
   - Support for arbitrary time-dependence for external magnetic fields
     (``micromagneticmodel.Zeeman``) and spin-polarised currents
-    (``micromagneticmodel.Slonczewski`` and ``micromagneticmodel.ZhangLi``) (`documentation <https://ubermag.github.io/documentation/ipynb/oommfc/time-dependent-field-current.html>`__)
+    (``micromagneticmodel.Slonczewski`` and ``micromagneticmodel.ZhangLi``)
+    (`documentation <https://ubermag.github.io/documentation/ipynb/oommfc/time-dependent-field-current.html>`__).
 
 ``oommfc``
   - Support for OOMMF extension ``Xf_ThermHeunEvolver``,
