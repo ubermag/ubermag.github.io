@@ -19,6 +19,8 @@ New functionality
 
 ``oommfc``
   - Enables Cnv, D2d, and T(O) crystallographic class DMI and magneto-elastic (MEL) extensions on Windows hosts (no more need for Docker).
+    ``ExeOOMMFRunner`` can be used on Windows. *Limitation*: On Windows it is not possible to run multiple simulations in parallel without
+    using Docker.
 
 Backwards-incompatible changes
 ------------------------------
@@ -27,7 +29,7 @@ Backwards-incompatible changes
   - Keywords for ``Field.mpl()`` renamed to ``scalar_kw`` and ``vector_kw``.
   
 ``micromagneticmodel``
-  - Consistent names for time-dependent fields and currents.
+  - Variable names for time-dependent fields and currents changed (for consistency reasons).
 
 Bug fixes
 ---------
