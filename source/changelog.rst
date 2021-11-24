@@ -15,7 +15,7 @@ New functionality
 
 ``discretisedfield``
   - Support for ``filter_field`` in plotting method ``Field.mpl.lighness``.
-  - HTML representation for ``Region``, ``Mesh``, ``Field``, and ``FieldRotator`` inside Jupyter notebook.
+  - HTML representation for ``Region``, ``Mesh``, ``Field``, and ``FieldRotator`` inside Jupyter notebook (`#105 <https://github.com/ubermag/discretisedfield/pull/105>`__).
 
 ``oommfc``
   - Enables Cnv, D2d, and T(O) crystallographic class DMI and magneto-elastic (MEL) extensions on Windows hosts (no more need for Docker).
@@ -26,7 +26,7 @@ Backwards-incompatible changes
 ------------------------------
 
 ``discretisedfield``
-  - Keywords for ``Field.mpl()`` renamed to ``scalar_kw`` and ``vector_kw``.
+  - Keywords for ``Field.mpl()`` renamed to ``scalar_kw`` and ``vector_kw`` (`#108 <https://github.com/ubermag/discretisedfield/pull/108>`__).
   
 ``micromagneticmodel``
   - Variable names for time-dependent fields and currents changed (for consistency reasons).
