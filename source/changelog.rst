@@ -16,6 +16,7 @@ New functionality
 ``discretisedfield``
   - Support for ``filter_field`` in plotting method ``Field.mpl.lighness``.
   - HTML representation for ``Region``, ``Mesh``, ``Field``, and ``FieldRotator`` inside Jupyter notebook (`#105 <https://github.com/ubermag/discretisedfield/pull/105>`__).
+  - Datatype for ``Field`` can be specified (`#114 <https://github.com/ubermag/discretisedfield/pull/114>`__).
 
 ``oommfc``
   - Enables Cnv, D2d, and T(O) crystallographic class DMI and magneto-elastic (MEL) extensions on Windows hosts (no more need for Docker).
