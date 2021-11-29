@@ -25,6 +25,54 @@ Please provide:
 - Explain what you have tried already
 - Ideally, upload a ``Jupyter notebook`` (zipped) containing what you have
   achieved so far (**NOTE: remove any confidential information**)
+- Please enclose inline-code snippets with single backticks and multi-line
+  (code) blocks with lines containing three backticks (optionally specifying the
+  programming language) as shown in the following examples::
+
+    Here is some `inline_code`.
+
+  .. admonition:: rendered output is similar to
+
+     Here is some ``inline_code``.
+
+  ::
+
+    To get the current ubermag version, we can use:
+    ```python
+    # multi-line python
+    import ubermag
+    print(ubermag.__version__)
+    ```
+    In a notebook cell `print` can be omitted.
+
+  .. admonition:: rendered output is similar to
+
+    To get the current ubermag version, we can use:
+
+    .. code-block:: python
+
+       # multi-line python
+       import ubermag
+       print(ubermag.__version__)
+
+    In a notebook cell ``print`` can be omitted.
+
+  ::
+
+    Here is a second multi-line block without specifying a programming language
+    ```
+    # any other code
+    # e.g. mif-file excerpt
+    ```
+
+  .. admonition:: rendered output is similar to
+
+    Here is a second multi-line block without specifying a programming language
+
+    .. code-block::
+
+       # any other code
+       # e.g. mif-file excerpt
 
 By providing the above listed information you greatly enhance the chance to get
 help. Please be patient if we do not reply immediately.
