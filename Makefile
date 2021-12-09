@@ -32,6 +32,16 @@ prepare:
 	done
 	cp -r packages/workshop/tutorials source/workshop/tutorials
 
+prepare-local:
+	if [ ! -d source/documentation/ipynb ]; then \
+		mkdir source/documentation/ipynb; \
+	fi
+
+	for PKG in discretisedfield mag2exp micromagneticdata micromagneticmodel micromagnetictests oommfc ubermagtable ubermagutil ubermag ; do \
+		ln -s "$(shell pwd)/../$$PKG/docs" "source/documentation/ipynb/$$PKG" ; \
+	done
+	ln -s "$(shell pwd)/../workshop/tutorials" source/workshop/tutorials
+
 clean:
 	rm -rf packages source/workshop/tutorials source/documentation/ipynb source/api/_autosummary
 
