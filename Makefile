@@ -32,6 +32,14 @@ prepare:
 	done
 	cp -r packages/workshop/tutorials source/workshop/tutorials
 
+prepare-local:
+	mkdir source/documentation/ipynb
+
+	for PKG in discretisedfield mag2exp micromagneticdata micromagneticmodel micromagnetictests oommfc ubermagtable ubermagutil ubermag ; do \
+		rsync -a "../$$PKG/docs" "source/documentation/ipynb/$$PKG" ; \
+	done
+	rsync -a ../workshop/tutorials source/workshop/tutorials
+
 clean:
 	rm -rf packages source/workshop/tutorials source/documentation/ipynb source/api/_autosummary
 

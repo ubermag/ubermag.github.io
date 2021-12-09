@@ -4,7 +4,7 @@
 
 ```bash
 conda env update
-make prepare
+make prepare  # alternatively: make prepare-local
 make html
 make clean  # optional
 ```
