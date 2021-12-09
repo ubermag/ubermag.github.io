@@ -113,7 +113,24 @@ autosummary_context = {
                          '__ne__', '__new__', '__reduce__', '__reduce_ex__',
                          '__setattr__', '__sizeof__', '__str__',
                          '__subclasshook__', '__hash__'],
-    'excluded_classes': ['Rotation']  # hide mag2exp.sans.Rotation (from scipy)
+    'excluded_classes': ['Rotation'],  # hide mag2exp.sans.Rotation (from scipy)
+    'included_submodules': ['discretisedfield.plotting',
+                            'discretisedfield.tools',
+                            'discretisedfield.ovf2vtk',
+                            'mag2exp.ltem',
+                            'mag2exp.x_ray',
+                            'mag2exp.sans',
+                            'mag2exp.mfm',
+                            'mag2exp.magnetometry',
+                            'mag2exp.quick_plots',
+                            'micromagneticmodel.abstract',
+                            'micromagneticmodel.consts',
+                            'micromagneticmodel.examples',
+                            'micromagnetictests.calculatortests',
+                            'oommfc.oommf',
+                            'bermagtable.util',
+                            'ubermagutil.typesystem',
+                            'bermagutil.units']
 }
 
 autoclass_content = 'class'
