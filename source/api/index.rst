@@ -2,9 +2,11 @@
 API Reference
 =============
 
-.. toctree::
-    :maxdepth: 1
-    :caption: Packages
+.. autosummary::
+    :toctree: _autosummary
+    :caption: packages
+    :template: module-template.rst
+    :recursive:
 
     discretisedfield
     mag2exp
