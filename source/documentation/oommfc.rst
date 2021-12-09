@@ -21,3 +21,4 @@ oommfc
     ipynb/oommfc/14-tutorial-periodic-boundary-conditions
     ipynb/oommfc/controlling-default-runner
     ipynb/oommfc/finite-temperature
+    ipynb/oommfc/time-dependent-field-current
