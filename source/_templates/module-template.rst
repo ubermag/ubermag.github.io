@@ -1,6 +1,7 @@
 {{ fullname | escape | underline}}
 
 .. automodule:: {{ fullname }}
+
    {% block attributes %}
    {%- if attributes -%}
    .. rubric:: Module attributes
@@ -52,20 +53,29 @@
       {{ item }}
    {%- endfor %}
    {%- endif -%}
-   {% endblock %}
+   {%- endblock %}
 
 {% block modules %}
 {%- if modules -%}
+{%- set ns = namespace(submodules=false) -%}
+{%- for item in modules -%}
+{%- if item in included_submodules -%}
+{%- set ns.submodules = true -%}
+{%- endif -%}
+{%- endfor -%}
+{%- if ns.submodules -%}
+
 .. rubric:: {{ ('Submodules') }}
 
 .. autosummary::
-   :toctree:
-   :template: module-template.rst
-   :recursive:
+    :toctree:
+    :template: module-template.rst
+    :recursive:
 {% for item in modules %}
 {%- if item in included_submodules %}
-   {{ item }}
-{% endif -%}
+    {{ item|replace(fullname, "", 1)|replace(".", "", 1) }}{# only submodule part of module.submodule; full name fails for micromagneticmodel, micromagnetictests and oommfc #}
+{%- endif -%}
 {%- endfor %}
+{%- endif -%}
 {%- endif -%}
 {% endblock %}
