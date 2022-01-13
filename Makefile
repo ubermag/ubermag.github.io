@@ -38,9 +38,18 @@ prepare-local:
 	fi
 
 	for PKG in discretisedfield mag2exp micromagneticdata micromagneticmodel micromagnetictests oommfc ubermagtable ubermagutil ubermag ; do \
-		ln -s "$(shell pwd)/../$$PKG/docs" "source/documentation/ipynb/$$PKG" ; \
+		rsync -a "../$$PKG/docs/" "source/documentation/ipynb/$$PKG" ;\
 	done
-	ln -s "$(shell pwd)/../workshop/tutorials" source/workshop/tutorials
+
+	if [ ! -d source/workshop/tutorials ]; then \
+		mkdir source/workshop/tutorials; \
+	fi
+	rsync -a ../workshop/tutorials/ source/workshop/tutorials
+
+	if [ ! -d packages ]; then \
+		mkdir packages; \
+	fi
+	rsync -a ../devtools/ packages/devtools
 
 clean:
 	rm -rf packages source/workshop/tutorials source/documentation/ipynb source/api/_autosummary
