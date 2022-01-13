@@ -73,7 +73,7 @@
     :recursive:
 {% for item in modules %}
 {%- if item in included_submodules %}
-    {{ item|replace(fullname, "", 1)|replace(".", "", 1) }}{# only submodule part of module.submodule; full name fails for micromagneticmodel, micromagnetictests and oommfc #}
+    {{ item|replace(fullname ~ ".", "", 1) }}{# only submodule part of module.submodule; full name fails for micromagneticmodel, micromagnetictests and oommfc #}
 {%- endif -%}
 {%- endfor %}
 {%- endif -%}
