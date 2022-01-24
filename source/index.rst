@@ -183,13 +183,10 @@ How to cite
 
 If you use Ubermag or any of its sub-packages for your research please cite:
 
-M. Beg, M. Lang and H. Fangohr, "Ubermag: Towards more effective micromagnetic
-workflows," in `IEEE Transactions on Magnetics
-<https://doi.org/10.1109/TMAG.2021.3078896>`__.
-
 M. Beg, M. Lang and H. Fangohr, "Ubermag: Toward More Effective Micromagnetic
 Workflows," in IEEE Transactions on Magnetics, vol. 58, no. 2, pp. 1-5, Feb.
-2022, Art no. 7300205, doi: 10.1109/TMAG.2021.3078896.
+2022, Art no. 7300205, doi: `10.1109/TMAG.2021.3078896
+<https://doi.org/10.1109/TMAG.2021.3078896>`__.
 
 .. code-block:: bib
 
