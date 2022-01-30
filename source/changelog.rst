@@ -18,12 +18,16 @@ New functionality
   - HTML representation for ``Region``, ``Mesh``, ``Field``, and ``FieldRotator`` inside Jupyter notebook (`#105 <https://github.com/ubermag/discretisedfield/pull/105>`__).
   - Datatype for ``Field`` can be specified (`#114 <https://github.com/ubermag/discretisedfield/pull/114>`__).
   - New implementation for the Field initialisation significantly improves performance when initialising a field with a dictionary
-    (`#114 <https://github.com/ubermag/discretisedfield/pull/114>`__, `# 117 <https://github.com/ubermag/discretisedfield/pull/117>`__) 
+    (`#114 <https://github.com/ubermag/discretisedfield/pull/114>`__, `#117 <https://github.com/ubermag/discretisedfield/pull/117>`__)
+  - New implementation for reading and writing `ovf` (`omf`) files with huge performance improvements. The new default is `bin8` (binary represenation
+    with double precision) instead of `txt` (`#121 <https://github.com/ubermag/discretisedfield/pull/121>`__).
 
 ``oommfc``
   - Enables Cnv, D2d, and T(O) crystallographic class DMI and magneto-elastic (MEL) extensions on Windows hosts (no more need for Docker).
     ``ExeOOMMFRunner`` can be used on Windows. *Limitation*: On Windows it is not possible to run multiple simulations in parallel without
     using Docker.
+  - OOMMF output is now by default written in binary format (double precision). There is a new option in the driver's `drive` method (`ovf_format`) to change
+    the output format (`#77 <https://github.com/ubermag/oommfc/pull/77>`__).
 
 Backwards-incompatible changes
 ------------------------------
