@@ -20,8 +20,8 @@ New functionality
     `#118 <https://github.com/ubermag/discretisedfield/pull/118>`__).
   - New implementation for the Field initialisation significantly improves performance when initialising a field with a dictionary
     (`#114 <https://github.com/ubermag/discretisedfield/pull/114>`__, `#117 <https://github.com/ubermag/discretisedfield/pull/117>`__)
-  - New implementation for reading and writing `ovf` (`omf`) files with huge performance improvements. The new default is `bin8` (binary represenation
-    with double precision) instead of `txt` (`#121 <https://github.com/ubermag/discretisedfield/pull/121>`__).
+  - New implementation for reading and writing ``ovf`` (``omf``) files with huge performance improvements. The new default is ``bin8`` (binary represenation
+    with double precision) instead of ``txt`` (`#121 <https://github.com/ubermag/discretisedfield/pull/121>`__).
 
 ``oommfc``
   - Enables Cnv, D2d, and T(O) crystallographic class DMI and magneto-elastic (MEL) extensions on Windows hosts (no more need for Docker).
