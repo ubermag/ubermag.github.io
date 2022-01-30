@@ -16,7 +16,8 @@ New functionality
 ``discretisedfield``
   - Support for ``filter_field`` in plotting method ``Field.mpl.lighness``.
   - HTML representation for ``Region``, ``Mesh``, ``Field``, and ``FieldRotator`` inside Jupyter notebook (`#105 <https://github.com/ubermag/discretisedfield/pull/105>`__).
-  - Datatype for ``Field`` can be specified (`#114 <https://github.com/ubermag/discretisedfield/pull/114>`__).
+  - Datatype for ``Field`` can be specified (`#114 <https://github.com/ubermag/discretisedfield/pull/114>`__,
+    `#118 <https://github.com/ubermag/discretisedfield/pull/118>`__).
   - New implementation for the Field initialisation significantly improves performance when initialising a field with a dictionary
     (`#114 <https://github.com/ubermag/discretisedfield/pull/114>`__, `#117 <https://github.com/ubermag/discretisedfield/pull/117>`__)
   - New implementation for reading and writing `ovf` (`omf`) files with huge performance improvements. The new default is `bin8` (binary represenation
