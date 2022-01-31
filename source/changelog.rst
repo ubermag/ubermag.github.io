@@ -8,46 +8,62 @@ In progress
 General
 -------
 
-- Support Cnv, D2d, and T(O) crystallographic class DMI and magneto-elastic (MEL) extensions in conda-installed Ubermag on Windows, in addition to MacOS and Linux.
+- Support Cnv, D2d, and T(O) crystallographic class DMI and magneto-elastic
+  (MEL) extensions in conda-installed Ubermag on Windows, in addition to MacOS
+  and Linux.
 
 New functionality
 -----------------
 
 ``discretisedfield``
   - Support for ``filter_field`` in plotting method ``Field.mpl.lighness``.
-  - HTML representation for ``Region``, ``Mesh``, ``Field``, and ``FieldRotator`` inside Jupyter notebook (`#105 <https://github.com/ubermag/discretisedfield/pull/105>`__).
-  - Datatype for ``Field`` can be specified (`#114 <https://github.com/ubermag/discretisedfield/pull/114>`__,
-    `#118 <https://github.com/ubermag/discretisedfield/pull/118>`__).
-  - New implementation for the Field initialisation significantly improves performance when initialising a field with a dictionary
-    (`#114 <https://github.com/ubermag/discretisedfield/pull/114>`__, `#117 <https://github.com/ubermag/discretisedfield/pull/117>`__)
-  - New implementation for reading and writing ``ovf`` (``omf``) files with huge performance improvements. The new default is ``bin8`` (binary represenation
-    with double precision) instead of ``txt`` (`#121 <https://github.com/ubermag/discretisedfield/pull/121>`__).
+  - HTML representation for ``Region``, ``Mesh``, ``Field``, and
+    ``FieldRotator`` inside Jupyter notebook (`#105
+    <https://github.com/ubermag/discretisedfield/pull/105>`__).
+  - Datatype for ``Field`` can be specified (`#114
+    <https://github.com/ubermag/discretisedfield/pull/114>`__, `#118
+    <https://github.com/ubermag/discretisedfield/pull/118>`__).
+  - New implementation for the Field initialisation significantly improves
+    performance when initialising a field with a dictionary (`#114
+    <https://github.com/ubermag/discretisedfield/pull/114>`__, `#117
+    <https://github.com/ubermag/discretisedfield/pull/117>`__)
+  - New implementation for reading and writing ``ovf`` (``omf``) files with huge
+    performance improvements. The new default is ``bin8`` (binary represenation
+    with double precision) instead of ``txt`` (`#121
+    <https://github.com/ubermag/discretisedfield/pull/121>`__).
 
 ``oommfc``
-  - Enables Cnv, D2d, and T(O) crystallographic class DMI and magneto-elastic (MEL) extensions on Windows hosts (no more need for Docker).
-    ``ExeOOMMFRunner`` can be used on Windows. *Limitation*: On Windows it is not possible to run multiple simulations in parallel without
-    using Docker.
-  - OOMMF output is now by default written in binary format (double precision). There is a new option in the driver's `drive` method (`ovf_format`) to change
-    the output format (`#77 <https://github.com/ubermag/oommfc/pull/77>`__).
+  - Enables Cnv, D2d, and T(O) crystallographic class DMI and magneto-elastic
+    (MEL) extensions on Windows hosts (no more need for Docker).
+    ``ExeOOMMFRunner`` can be used on Windows. *Limitation*: On Windows it is
+    not possible to run multiple simulations in parallel without using Docker.
+  - OOMMF output is now by default written in binary format (double precision).
+    There is a new option in the driver's `drive` method (`ovf_format`) to
+    change the output format (`#77
+    <https://github.com/ubermag/oommfc/pull/77>`__).
 
 Backwards-incompatible changes
 ------------------------------
 
 ``discretisedfield``
-  - Keywords for ``Field.mpl()`` renamed to ``scalar_kw`` and ``vector_kw`` (`#108 <https://github.com/ubermag/discretisedfield/pull/108>`__).
+  - Keywords for ``Field.mpl()`` renamed to ``scalar_kw`` and ``vector_kw``
+    (`#108 <https://github.com/ubermag/discretisedfield/pull/108>`__).
   
 ``micromagneticmodel``
-  - Variable names for time-dependent fields and currents changed (for consistency reasons).
+  - Variable names for time-dependent fields and currents changed (for
+    consistency reasons).
 
 Bug fixes
 ---------
 
 ``discretisedfield``
-  - Simultaneous use of ``fielder_field`` and ``symmetric_clim`` in ``Field.mpl.scalar`` resulted in wrong colorbar limits
-    (`#106 <https://github.com/ubermag/discretisedfield/issues/106>`__).
+  - Simultaneous use of ``fielder_field`` and ``symmetric_clim`` in
+    ``Field.mpl.scalar`` resulted in wrong colorbar limits (`#106
+    <https://github.com/ubermag/discretisedfield/issues/106>`__).
 
 ``oommfc``
-  - Specifying two Zeeman fields with H defined via a ``df.Field`` did crash the simulation (`#191 <https://github.com/ubermag/help/issues/191>`__)
+  - Specifying two Zeeman fields with H defined via a ``df.Field`` did crash the
+    simulation (`#191 <https://github.com/ubermag/help/issues/191>`__)
 
 0.60.0
 ======
