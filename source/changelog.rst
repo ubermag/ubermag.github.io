@@ -30,7 +30,7 @@ New functionality
     <https://github.com/ubermag/discretisedfield/pull/117>`__)
   - New implementation for reading and writing ``ovf`` (``omf``) files with huge
     performance improvements. For a ``Field`` containing 1 million cells we
-    obtained the following execution times:
+    obtained the following execution times (on a standard notebook):
 
     +------+----------+----------------------------+------------------------------+
     | mode | filesize | reading                    | writing                      |
