@@ -28,12 +28,8 @@ New functionality
     <https://github.com/ubermag/discretisedfield/pull/114>`__, `#117
     <https://github.com/ubermag/discretisedfield/pull/117>`__)
   - New implementation for reading and writing ``ovf`` (``omf``) files with huge
-    performance improvements. The new default is ``bin8`` (binary represenation
-    with double precision) instead of ``txt`` (`#121
-    <https://github.com/ubermag/discretisedfield/pull/121>`__).
-
-    To give some concrete numbers we performed tests for a `Field` with 1
-    million cells:
+    performance improvements. For a ``Field`` containing 1 million cells we
+    obtained the following execution times:
 
     +------+----------+----------------------------+------------------------------+
     | mode | filesize | reading                    | writing                      |
@@ -46,6 +42,10 @@ New functionality
     +------+----------+---------+--------+---------+----------+---------+---------+
     | text | 15M      | 4920 ms | 401 ms |      12 | 69000 ms | 4510 ms |      15 |
     +------+----------+---------+--------+---------+----------+---------+---------+
+    
+    The new default is ``bin8`` (binary represenation with double precision)
+    instead of ``txt`` (`#121
+    <https://github.com/ubermag/discretisedfield/pull/121>`__).
 
 ``oommfc``
   - Enables Cnv, D2d, and T(O) crystallographic class DMI and magneto-elastic
