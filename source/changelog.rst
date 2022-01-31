@@ -32,6 +32,21 @@ New functionality
     with double precision) instead of ``txt`` (`#121
     <https://github.com/ubermag/discretisedfield/pull/121>`__).
 
+    To give some concrete numbers we performed tests for a `Field` with 1
+    million cells:
+
+    +------+----------+----------------------------+------------------------------+
+    | mode | filesize | reading                      | writing                        |
+    |      |          +---------+--------+---------+----------+---------+---------+
+    |      |          | old     | new    | speedup | old      | new     | speedup |
+    +======+==========+=========+========+=========+==========+=========+=========+
+    | bin4 | 2.9M     | 1730 ms | 21 ms  |      82 | 63000 ms | 56 ms   |    1125 |
+    +------+----------+---------+--------+---------+----------+---------+---------+
+    | bin8 | 5.8M     | 1860 ms | 52 ms  |      52 | 64000 ms | 84 ms   |     762 |
+    +------+----------+---------+--------+---------+----------+---------+---------+
+    | text | 15M      | 4920 ms | 401 ms |      12 | 69000 ms | 4510 ms |      15 |
+    +------+----------+---------+--------+---------+----------+---------+---------+
+
 ``oommfc``
   - Enables Cnv, D2d, and T(O) crystallographic class DMI and magneto-elastic
     (MEL) extensions on Windows hosts (no more need for Docker).
