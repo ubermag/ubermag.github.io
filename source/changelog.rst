@@ -24,7 +24,8 @@ New functionality
     <https://github.com/ubermag/discretisedfield/pull/114>`__, `#118
     <https://github.com/ubermag/discretisedfield/pull/118>`__).
   - New implementation for the Field initialisation significantly improves
-    performance when initialising a field with a dictionary (`#114
+    performance when initialising a field with a dictionary. Speedups of up to
+    ~10_000 can be obtained if the dictionary does not contain callables. (`#114
     <https://github.com/ubermag/discretisedfield/pull/114>`__, `#117
     <https://github.com/ubermag/discretisedfield/pull/117>`__)
   - New implementation for reading and writing ``ovf`` (``omf``) files with huge
