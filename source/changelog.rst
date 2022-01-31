@@ -73,7 +73,7 @@ Bug fixes
 ---------
 
 ``discretisedfield``
-  - Simultaneous use of ``fielder_field`` and ``symmetric_clim`` in
+  - Simultaneous use of ``filter_field`` and ``symmetric_clim`` in
     ``Field.mpl.scalar`` resulted in wrong colorbar limits (`#106
     <https://github.com/ubermag/discretisedfield/issues/106>`__).
 
