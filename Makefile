@@ -25,7 +25,6 @@ prepare:
 	git clone -b stable --depth 1 "https://github.com/ubermag/ubermagtable.git" packages/ubermagtable
 	git clone -b stable --depth 1 "https://github.com/ubermag/ubermagutil.git" packages/ubermagutil
 	git clone --depth 1 "https://github.com/ubermag/workshop.git" packages/workshop
-	git clone --depth 1 "https://github.com/ubermag/devtools.git" packages/devtools
 
 	for PKG in discretisedfield mag2exp micromagneticdata micromagneticmodel micromagnetictests oommfc ubermagtable ubermagutil ubermag ; do \
 		cp -r "packages/$$PKG/docs" "source/documentation/ipynb/$$PKG" ; \
