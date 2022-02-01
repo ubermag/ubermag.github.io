@@ -48,7 +48,6 @@ prepare-local:
 	if [ ! -d packages ]; then \
 		mkdir packages; \
 	fi
-	rsync -a ../devtools/ packages/devtools
 
 clean:
 	rm -rf packages source/workshop/tutorials source/documentation/ipynb source/api/_autosummary
