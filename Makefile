@@ -45,10 +45,6 @@ prepare-local:
 	fi
 	rsync -a ../workshop/tutorials/ source/workshop/tutorials
 
-	if [ ! -d packages ]; then \
-		mkdir packages; \
-	fi
-
 clean:
 	rm -rf packages source/workshop/tutorials source/documentation/ipynb source/api/_autosummary
 
