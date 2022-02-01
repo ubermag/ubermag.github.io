@@ -300,66 +300,11 @@ successful:
 Development installation
 ========================
 
-In the following we explain how to install ``ubermag`` and all subpackages for
-development. This information is only intended for people developing Ubermag or
-planning to contribute. For normal users we recommend following the steps under
-`Standard installation -- recommended`_.
-
-We expect a working Python environment ``python>=3.8``, ``conda``, ``pip``, and
-``git`` being available. The installation of OOMMF is not fully covered in this
-sections. The easiest solution is to use ``conda`` to install OOMMF and other
-dependencies (as described below). Possible options to get OOMMF are:
-
-- ``conda`` (default, see step 1 below)
-- Installation from source: https://github.com/fangohr/oommf
-- ``spack`` (currently under development: https://github.com/fangohr/oommf-in-spack/)
-
-The installation process consists of two steps. Two utility files can be
-downloaded from the `devtools repository
-<https://github.com/ubermag/devtools/tree/master/installation>`__ (direct download links
-given below). Cloning the entire repository is generally not required.
-
-1. Install dependencies in a conda environment.
-
-   The easiest way to install all required development dependencies is to use
-   ``conda`` and :download:`this environment file
-   <../packages/devtools/installation/environment.yml>`. This can
-   either be done in an existing environment or a new environment can be
-   created.
-   
-   - Using an existing environment (has to be activated first):
-
-     .. code-block:: bash
-
-        $ conda env update --file environment.yml
-
-   - Creating a new environment:
-
-     .. code-block:: bash
-
-        $ conda env create -n ENVIRONMENT_NAME -f environment.yml
-        $ conda activate ENVIRONMENT_NAME
-
-2. Install all packages in editable mode.
-
-   We provide a script to clone and install all packages in editable mode. You
-   have to replace ``METHOD`` either with ``https`` (:download:`https script
-   <../packages/devtools/installation/clone-and-install-https.bat>`) or with
-   ``ssh`` (:download:`ssh script
-   <../packages/devtools/installation/clone-and-install-ssh.bat>`) in the
-   following command. (If you don't know which method to choose use ``https``.)
-
-   - on Mac/Linux:
-
-     .. code-block:: bash
-
-        $ sh clone-and-install-METHOD.bat
-
-   - on Windows:
-
-     .. code-block:: bash
-
-        $ call clone-and-install-METHOD.bat
-
-   The correct order of installation is important and using this script is therefore
-   recommended.
+The above-explained installation methods are not suitable for the development of
+the ``ubermag`` package collection. Detailed guidelines and additional helper
+scripts to clone and install all packages in a way that is feasible for package
+development are given in our `devtools repository
+<https://github.com/ubermag/devtools>`__. The information given there is only
+intended for people developing Ubermag or planning to contribute. For normal
+users we recommend following the steps under `Standard installation --
+recommended`_.
