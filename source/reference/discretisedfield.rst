@@ -26,6 +26,5 @@ discretisedfield
     ipynb/discretisedfield/field-read-write
     ipynb/discretisedfield/field-rotations
     ipynb/discretisedfield/field-tools
+    ipynb/discretisedfield/line
     ipynb/discretisedfield/ovf2vtk
-
-    ipynb/discretisedfield/*
