@@ -5,6 +5,7 @@ oommfc
 .. toctree::
     :maxdepth: 1
     :caption: oommfc
+    :glob:
 
     ipynb/oommfc/01-tutorial-zeeman
     ipynb/oommfc/02-tutorial-exchange
@@ -22,3 +23,5 @@ oommfc
     ipynb/oommfc/controlling-default-runner
     ipynb/oommfc/finite-temperature
     ipynb/oommfc/time-dependent-field-current
+
+    ipynb/oommfc/*

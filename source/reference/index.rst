@@ -1,8 +1,9 @@
-=============
-Documentation
-=============
+=========
+Reference
+=========
 
-Detailed documentation based on notebooks
+The notebooks show here contain “technical” documentation for specific features
+of the different packages.
 
 
 .. toctree::

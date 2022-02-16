@@ -5,6 +5,7 @@ discretisedfield
 .. toctree::
     :maxdepth: 1
     :caption: discretisedfield
+    :glob:
 
     ipynb/discretisedfield/region-basics
     ipynb/discretisedfield/region-visualisation
@@ -26,3 +27,5 @@ discretisedfield
     ipynb/discretisedfield/field-rotations
     ipynb/discretisedfield/field-tools
     ipynb/discretisedfield/ovf2vtk
+
+    ipynb/discretisedfield/*
