@@ -222,7 +222,7 @@ Mulkers) and with a postdoctoral fellowship (Jonathan Leliaert).
    :maxdepth: 1
 
    installation
-   vortex-dynamics
+   quickstart
    learn/index
    reference/index
    api/index

@@ -2,6 +2,13 @@
 Learn
 =====
 
+.. toctree::
+   :hidden:
+   :maxdepth: 1
+
+   first-steps/python-basics
+   
+
 .. _getting_started:
 
 -----------
@@ -22,30 +29,17 @@ and its subpackages.
    :maxdepth: 1
    :caption: First steps
 
-   first-steps/python-basics
-
-   first-steps/00*
    first-steps/first-ubermag-simulation
-
-   first-steps/01*
    first-steps/magnetisation-field
-
-   first-steps/02*
    first-steps/energy-equation
-
-   first-steps/03*
    first-steps/dynamics-equation
-
-   first-steps/04*
    first-steps/driving-dw
-
-   first-steps/05*
    first-steps/dw-pair-conversion
 
-We should think about adding an additional tutorial for:
+.. We should think about adding an additional tutorial for:
 
-- ubermagtable and micromagneticdata
-- mag2exp
+   - ubermagtable and micromagneticdata
+   - mag2exp
 
 .. _how_tos:
 
