@@ -1,5 +1,6 @@
-Installation
-============
+=======
+Install
+=======
 
 All packages in Ubermag are available on both ``conda-forge`` and ``PyPI``. All
 packages can be installed independently using ``conda`` or ``pip``. To simplify the

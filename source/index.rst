@@ -219,9 +219,9 @@ Mulkers) and with a postdoctoral fellowship (Jonathan Leliaert).
    :hidden:
 
    installation
-   quickstart
-   workshop/index
-   documentation/index
+   vortex-dynamics
+   learn/index
+   reference/index
    api/index
    changelog
    help
