@@ -10,11 +10,14 @@
     {{ page_toc }}
 </nav>
 
-{% if ('tutorials' in pagename or 'ipynb' in pagename) and not 'index' in pagename %}
+{% if ('learn' in pagename or 'quickstart' in pagename or 'ipynb' in pagename) and not 'index' in pagename %}
 <div class="tocsection onthispace pt-5 bp-3">
     <h5>Try online:</h5>
-    {% if 'tutorials' in pagename %}
-    <a href="https://mybinder.org/v2/gh/ubermag/workshop/HEAD?filepath=tutorials/{{ pagename.split('/')[-1] }}.ipynb"  target="_blank" rel="noopener noreferrer">
+    {% if 'learn' in pagename%}
+    <a href="https://mybinder.org/v2/gh/ubermag/tutorials/latest?urlpath=lab/tree/{{ pagename.split('/')[-2] }}/{{ pagename.split('/')[-1] }}.ipynb"  target="_blank" rel="noopener noreferrer">
+    {% endif %}
+    {% if 'quickstart' in pagename%}
+        <a href="https://mybinder.org/v2/gh/ubermag/tutorials/latest?urlpath=lab/tree/{{ pagename.split('/')[-1] }}.ipynb"  target="_blank" rel="noopener noreferrer">
     {% endif %}
     {% if 'ipynb' in pagename %}
         <a href="https://mybinder.org/v2/gh/ubermag/{{ pagename.split('/')[-2] }}/stable?urlpath=lab/tree/docs/{{ pagename.split('/')[-1] }}.ipynb" target="_blank" rel="noopener noreferrer">
