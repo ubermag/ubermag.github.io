@@ -7,12 +7,11 @@ oommfc
     :caption: oommfc
     :glob:
 
-    ipynb/oommfc/01-tutorial-zeeman
-    ipynb/oommfc/02-tutorial-exchange
-    ipynb/oommfc/03-tutorial-uniaxialanisotropy
-    ipynb/oommfc/04-tutorial-dmi
-    ipynb/oommfc/05-tutorial-cubicanisotropy
-    ipynb/oommfc/11-tutorial-deriving-fields
+    ipynb/oommfc/zeeman
+    ipynb/oommfc/exchange
+    ipynb/oommfc/uniaxialanisotropy
+    ipynb/oommfc/dmi
+    ipynb/oommfc/cubicanisotropy
     ipynb/oommfc/mindriver-steps
     ipynb/oommfc/dirname
     ipynb/oommfc/controlling-default-runner
