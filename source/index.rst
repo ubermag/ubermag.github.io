@@ -123,16 +123,15 @@ Design objectives of Ubermag are:
 Documentation and tutorials
 ===========================
 
-The examples shown in :doc:`quickstart` and :doc:`learn/index` are tight to
-micromagnetic simulations. Only the more commonly used features are covered in
-there. :doc:`reference/index` and :doc:`api/index` contain more technical
-details. for the individual packages.
+If you are new to ``ubermag`` you should consider first looking at
+:doc:`getting-started/index` which will give a gentle introduction into all
+the packages inside ``ubermag``.
 
-If you are new and plan to use Ubermag for micromagnetic simulations please
-start with the :ref:`getting_started` or the :doc:`quickstart`
-example.
-
-If you already know the basics of ``ubermag`` there is a collection of :ref:`how_tos` that show how to solve particular (physical) questions using ``ubermag`` and its subpackages. For a documentation of more technical questions please refer to the :doc:`reference/index` and the :doc:`api/index`.
+If you already know the basics of ``ubermag`` there is a collection of
+:doc:`how-tos/index` that show how to solve particular (physical) questions using
+``ubermag`` and its subpackages. For a documentation of more technical
+functionality of the different packages please refer to the
+:doc:`package-documentation/index` and the :doc:`api/index`.
 
 An online-workshop has been given in June 2020 for spintalks (spintalks.org),
 supported by IEEE Magnetics Society (ieeemagnetics.org). A recording of these
@@ -222,9 +221,10 @@ Mulkers) and with a postdoctoral fellowship (Jonathan Leliaert).
    :maxdepth: 1
 
    installation
-   quickstart
-   learn/index
-   reference/index
+   demo
+   getting-started/index
+   how-tos/index
+   package-documentation/index
    api/index
    changelog
    help

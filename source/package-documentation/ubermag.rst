@@ -6,4 +6,4 @@ ubermag
     :maxdepth: 1
     :caption: ubermag
 
-    ipynb/ubermag/logging
+    notebooks/ubermag/logging
