@@ -85,8 +85,8 @@ Bug fixes
   - Specifying two Zeeman fields with H defined via a ``df.Field`` did crash the
     simulation (`#191 <https://github.com/ubermag/help/issues/191>`__)
 
-0.60.0
-======
+0.60.0 (Oct 1, 2021)
+====================
 
 General
 -------
@@ -174,8 +174,8 @@ Bug fixes
   - Multiple columns with the same name in ``ubermagtable`` (`#118
     <https://github.com/ubermag/help/issues/118>`__).
 
-0.51
-====
+0.51 (Feb 10, 2021)
+===================
 
 - New subpackage ``discretisedfield.tools`` containing functions to operate on
   ``discretisedfield.Field`` objects.
