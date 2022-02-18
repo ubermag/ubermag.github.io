@@ -54,9 +54,13 @@ New functionality
     ``ExeOOMMFRunner`` can be used on Windows. *Limitation*: On Windows it is
     not possible to run multiple simulations in parallel without using Docker.
   - OOMMF output is now by default written in binary format (double precision).
-    There is a new option in the driver's `drive` method (`ovf_format`) to
+    There is a new option in the driver's ``drive`` method (``ovf_format``) to
     change the output format (`#77
     <https://github.com/ubermag/oommfc/pull/77>`__).
+  - OOMMF can now run silently without anything printed. To use it pass the
+    option ``verbose=0`` to ``<DRIVER>.drive``. The default is ``verbose=1``
+    which prints one summary line about the used runner and the runtime. This is
+    the old behaviour. (`#80 <https://github.com/ubermag/oommfc/pull/80>`__).
 
 Backwards-incompatible changes
 ------------------------------
