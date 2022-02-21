@@ -128,7 +128,7 @@ If you are new to ``ubermag`` you should consider first looking at
 the packages inside ``ubermag``.
 
 If you already know the basics of ``ubermag`` there is a collection of
-:doc:`how-tos/index` that show how to solve particular (physical) questions using
+:doc:`examples/index` that show how to solve particular (physical) questions using
 ``ubermag`` and its subpackages. For a documentation of more technical
 functionality of the different packages please refer to the
 :doc:`package-documentation/index` and the :doc:`api/index`.
@@ -223,8 +223,8 @@ Mulkers) and with a postdoctoral fellowship (Jonathan Leliaert).
    installation
    demo
    getting-started/index
-   how-tos/index
-   package-documentation/index
+   examples/index
+   documentation/index
    api/index
    changelog
    help

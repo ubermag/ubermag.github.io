@@ -1,5 +1,5 @@
 ========
-How-To's
+Examples
 ========
 
 The notebooks show in this section are all tailored to physical questions and

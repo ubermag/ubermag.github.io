@@ -32,7 +32,7 @@ and its subpackages.
 
 There are several places where you can find more advanced documentation:
 
-- The :doc:`../how-tos/index` show examples of how to solve specific physical
+- The :doc:`../examples/index` show examples of how to solve specific physical
   questions using ``ubermag``.
 - The :doc:`../package-documentation/index` contains explanations and examples
   of more technical functionality of the different packages, e.g. details about
