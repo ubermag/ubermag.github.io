@@ -14,7 +14,7 @@
 <div class="tocsection onthispace pt-5 bp-3">
     <h5>Try online:</h5>
     {% if 'examples' in pagename or 'getting-started' in pagename %}
-    <a href="https://mybinder.org/v2/gh/ubermag/tutorials/latest?urlpath=lab/tree/{{ pagename.split('/')[-2] }}/{{ pagename.split('/')[-1] }}.ipynb"  target="_blank" rel="noopener noreferrer">
+    <a href="https://mybinder.org/v2/gh/ubermag/tutorials/latest?urlpath=lab/tree/{{ pagename.split('/')[-3] }}/{{ pagename.split('/')[-1] }}.ipynb"  target="_blank" rel="noopener noreferrer">
     {% elif 'demo' in pagename %}
         <a href="https://mybinder.org/v2/gh/ubermag/tutorials/latest?urlpath=lab/tree/{{ pagename.split('/')[-1] }}.ipynb"  target="_blank" rel="noopener noreferrer">
     {% else %}
