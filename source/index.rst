@@ -146,7 +146,7 @@ machine and no files will be created. To access it, please use the following
 badge:
 
 .. image:: https://mybinder.org/badge_logo.svg
-   :target: https://mybinder.org/v2/gh/ubermag/ubermag/stable?urlpath=lab/tree/docs/index.ipynb
+   :target: https://mybinder.org/v2/gh/ubermag/oommfc/stable?urlpath=lab/tree/docs/index.ipynb
 
 You can setup your own simulation from scratch or upload the notebook you
 prepared previouly. Please remember to download the notebook after you are done,
