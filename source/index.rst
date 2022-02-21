@@ -219,7 +219,7 @@ Mulkers) and with a postdoctoral fellowship (Jonathan Leliaert).
    :hidden:
 
    installation
-   quickstart
+   demo
    workshop/index
    documentation/index
    api/index
