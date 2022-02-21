@@ -223,6 +223,7 @@ Wetenschappelijk Onderzoek (FWO-Vlaanderen) through Project No. G098917N (Jeroen
 Mulkers) and with a postdoctoral fellowship (Jonathan Leliaert).
 
 .. toctree::
+   :hidden:
    :maxdepth: 1
 
    installation
