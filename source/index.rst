@@ -128,10 +128,10 @@ If you are new to ``ubermag`` you should consider first looking at
 the packages inside ``ubermag``.
 
 If you already know the basics of ``ubermag`` there is a collection of
-:doc:`examples/index` that show how to solve particular (physical) questions using
-``ubermag`` and its subpackages. For a documentation of more technical
+:doc:`examples/index` that show how to solve particular (physical) questions
+using ``ubermag`` and its subpackages. For a documentation of more technical
 functionality of the different packages please refer to the
-:doc:`package-documentation/index` and the :doc:`api/index`.
+:doc:`documentation/index` and the :doc:`api/index`.
 
 An online-workshop has been given in June 2020 for spintalks (spintalks.org),
 supported by IEEE Magnetics Society (ieeemagnetics.org). A recording of these
