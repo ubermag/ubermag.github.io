@@ -153,13 +153,12 @@ recording.
 ``ubermag`` in the cloud
 ========================
 
-If you do not want to install `ubermag` on your machine, you can use it in the
+If you do not want to install ``ubermag`` on your machine, you can use it in the
 cloud via Binder. This does not require you to have anything installed on your
 machine and no files will be created. To access it, please use the following
 badge:
 
 .. raw html to open binder in a new tab
-
 .. raw:: html
 
    <a href="https://mybinder.org/v2/gh/ubermag/tutorials/latest?urlpath=lab/tree/demo.ipynb" target="_blank" rel="noopener noreferrer">
@@ -222,15 +221,18 @@ Workflows," in IEEE Transactions on Magnetics, vol. 58, no. 2, pp. 1-5, Feb.
 License
 =======
 
-Licensed under the BSD 3-Clause “New” or “Revised” License. For details, please refer to the LICENSE file.
+Licensed under the BSD 3-Clause “New” or “Revised” License. For details, please
+refer to the `LICENSE file
+<https://github.com/ubermag/ubermag/blob/master/LICENSE>`__.
 
 Acknowledgements
 ================
 
 Ubermag is a part of the Horizon 2020 European Research Infrastructure
-`OpenDreamKit <https://opendreamkit.org>`__ project (Project ID 676541). This work was supported by the Fonds
-Wetenschappelijk Onderzoek (FWO-Vlaanderen) through Project No. G098917N (Jeroen
-Mulkers) and with a postdoctoral fellowship (Jonathan Leliaert).
+`OpenDreamKit <https://opendreamkit.org>`__ project (Project ID 676541). This
+work was supported by the Fonds Wetenschappelijk Onderzoek (FWO-Vlaanderen)
+through Project No. G098917N (Jeroen Mulkers) and with a postdoctoral fellowship
+(Jonathan Leliaert).
 
 .. toctree::
    :hidden:
