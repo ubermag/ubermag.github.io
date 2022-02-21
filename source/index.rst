@@ -1,5 +1,15 @@
-Ubermag -- Features and packages
-================================
+=======
+Ubermag
+=======
+
+.. image:: https://anaconda.org/conda-forge/ubermag/badges/version.svg
+   :target: https://anaconda.org/conda-forge/ubermag
+
+.. image:: https://anaconda.org/conda-forge/ubermag/badges/latest_release_date.svg
+   :target: https://anaconda.org/conda-forge/ubermag
+
+Features and packages
+=====================
 
 Ubermag is a collection of several independent packages that can be used
 independently as well as in combination. The whole set of packages -- the
