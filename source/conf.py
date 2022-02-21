@@ -36,6 +36,7 @@ extensions = [
     'matplotlib.sphinxext.plot_directive',
     'nbsphinx',
     'sphinx_copybutton',
+    'sphinx_design',
 ]
 
 # matplotlib plot directive
