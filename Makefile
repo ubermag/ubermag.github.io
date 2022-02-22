@@ -32,8 +32,8 @@ prepare:
 	for PKG in discretisedfield mag2exp micromagneticdata micromagneticmodel micromagnetictests oommfc ubermagtable ubermagutil ubermag ; do \
 		cp -r "packages/$$PKG/docs" "source/documentation/notebooks/$$PKG" ; \
 	done
-	cp -r packages/tutorials/getting-started source/getting-started/notebooks
-	cp -r packages/tutorials/examples source/examples/notebooks
+	cp -r packages/tutorials/getting-started/ source/getting-started/notebooks
+	cp -r packages/tutorials/examples/ source/examples/notebooks
 	cp -r packages/tutorials/demo.ipynb source/demo.ipynb
 
 prepare-local:
