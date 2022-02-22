@@ -10,13 +10,9 @@
 # add these directories to sys.path here. If the directory is relative to the
 # documentation root, use os.path.abspath to make it absolute, like shown here.
 #
-import os
-import sys
-print(os.getcwd())
-sys.path.insert(0, os.path.abspath('..'))
-# Paths might be required in the future
-# sys.path.insert(0, os.path.abspath('../discretisedfield'))
-# sys.path.insert(0, os.path.abspath('../oommfc'))
+# import os
+# import sys
+# sys.path.insert(0, os.path.abspath('..'))
 
 # -- Project information -----------------------------------------------------
 
@@ -66,7 +62,7 @@ templates_path = ['_templates']
 # List of patterns, relative to source directory, that match files and
 # directories to ignore when looking for source files.
 # This pattern also affects html_static_path and html_extra_path.
-exclude_patterns = []
+exclude_patterns = ['**/*index.ipynb']
 
 
 # -- Options for HTML output -------------------------------------------------
@@ -114,7 +110,24 @@ autosummary_context = {
                          '__ne__', '__new__', '__reduce__', '__reduce_ex__',
                          '__setattr__', '__sizeof__', '__str__',
                          '__subclasshook__', '__hash__'],
-    'excluded_classes': ['Rotation']  # hide mag2exp.sans.Rotation (from scipy)
+    'excluded_classes': ['Rotation'],  # hide mag2exp.sans.Rotation (from scipy)
+    'included_submodules': ['discretisedfield.plotting',
+                            'discretisedfield.tools',
+                            'discretisedfield.ovf2vtk',
+                            'mag2exp.ltem',
+                            'mag2exp.x_ray',
+                            'mag2exp.sans',
+                            'mag2exp.mfm',
+                            'mag2exp.magnetometry',
+                            'mag2exp.quick_plots',
+                            'micromagneticmodel.abstract',
+                            'micromagneticmodel.consts',
+                            'micromagneticmodel.examples',
+                            'micromagnetictests.calculatortests',
+                            'oommfc.oommf',
+                            'ubermagtable.util',
+                            'ubermagutil.typesystem',
+                            'ubermagutil.units']
 }
 
 autoclass_content = 'class'

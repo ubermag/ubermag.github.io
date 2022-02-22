@@ -1,5 +1,5 @@
 Ubermag -- Features and packages
-===============================
+================================
 
 Ubermag is a collection of several independent packages that can be used
 independently as well as in combination. The whole set of packages -- the
@@ -48,7 +48,7 @@ Analysis of micromagnetic simulations -- ``micromagneticdata``
    
 
 Reading scalar simulation data files -- ``ubermagtable``
--------------------------------------------------------
+--------------------------------------------------------
 
 - Reading scalar data files (OOMMF ``.odt`` and mumax3 ``.txt``)
 - Merging multiple tables
@@ -62,7 +62,7 @@ Reading scalar simulation data files -- ``ubermagtable``
 - tests for ``oommfc``
 
 Typesystem and utilities -- ``ubermagutil``
-------------------------------------------
+-------------------------------------------
 
 .. image:: _static/ubermagutil.png
 
@@ -72,7 +72,7 @@ Typesystem and utilities -- ``ubermagutil``
 - Various convenience functions
 
 Simulations of experimental measurements -- ``mag2exp``
-------------------------------------------------------
+-------------------------------------------------------
 
 .. image:: _static/mag2exp-examples.svg
 

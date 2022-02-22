@@ -15,15 +15,15 @@ help:
 prepare:
 	mkdir packages
 	mkdir source/documentation/ipynb
-	git clone -b stable --depth 1 "https://github.com/ubermag/discretisedfield.git" packages/discretisedfield
-	git clone -b stable --depth 1 "https://github.com/ubermag/micromagneticdata.git" packages/micromagneticdata
-	git clone -b stable --depth 1 "https://github.com/ubermag/micromagneticmodel.git" packages/micromagneticmodel
-	git clone -b stable --depth 1 "https://github.com/ubermag/micromagnetictests.git" packages/micromagnetictests
-	git clone -b stable --depth 1 "https://github.com/ubermag/oommfc.git" packages/oommfc
-	git clone -b stable --depth 1 "https://github.com/ubermag/ubermag.git" packages/ubermag
-	git clone -b stable --depth 1 "https://github.com/ubermag/mag2exp.git" packages/mag2exp
-	git clone -b stable --depth 1 "https://github.com/ubermag/ubermagtable.git" packages/ubermagtable
-	git clone -b stable --depth 1 "https://github.com/ubermag/ubermagutil.git" packages/ubermagutil
+	git clone -b latest --depth 1 "https://github.com/ubermag/discretisedfield.git" packages/discretisedfield
+	git clone -b latest --depth 1 "https://github.com/ubermag/micromagneticdata.git" packages/micromagneticdata
+	git clone -b latest --depth 1 "https://github.com/ubermag/micromagneticmodel.git" packages/micromagneticmodel
+	git clone -b latest --depth 1 "https://github.com/ubermag/micromagnetictests.git" packages/micromagnetictests
+	git clone -b latest --depth 1 "https://github.com/ubermag/oommfc.git" packages/oommfc
+	git clone -b latest --depth 1 "https://github.com/ubermag/ubermag.git" packages/ubermag
+	git clone -b latest --depth 1 "https://github.com/ubermag/mag2exp.git" packages/mag2exp
+	git clone -b latest --depth 1 "https://github.com/ubermag/ubermagtable.git" packages/ubermagtable
+	git clone -b latest --depth 1 "https://github.com/ubermag/ubermagutil.git" packages/ubermagutil
 	git clone --depth 1 "https://github.com/ubermag/workshop.git" packages/workshop
 
 	for PKG in discretisedfield mag2exp micromagneticdata micromagneticmodel micromagnetictests oommfc ubermagtable ubermagutil ubermag ; do \
@@ -37,9 +37,13 @@ prepare-local:
 	fi
 
 	for PKG in discretisedfield mag2exp micromagneticdata micromagneticmodel micromagnetictests oommfc ubermagtable ubermagutil ubermag ; do \
-		ln -s "$(shell pwd)/../$$PKG/docs" "source/documentation/ipynb/$$PKG" ; \
+		rsync -a "../$$PKG/docs/" "source/documentation/ipynb/$$PKG" ;\
 	done
-	ln -s "$(shell pwd)/../workshop/tutorials" source/workshop/tutorials
+
+	if [ ! -d source/workshop/tutorials ]; then \
+		mkdir source/workshop/tutorials; \
+	fi
+	rsync -a ../workshop/tutorials/ source/workshop/tutorials
 
 clean:
 	rm -rf packages source/workshop/tutorials source/documentation/ipynb source/api/_autosummary
