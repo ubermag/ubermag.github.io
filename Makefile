@@ -30,11 +30,11 @@ prepare:
 	git clone -b latest --depth 1 "https://github.com/ubermag/tutorials.git" packages/tutorials
 
 	for PKG in discretisedfield mag2exp micromagneticdata micromagneticmodel micromagnetictests oommfc ubermagtable ubermagutil ubermag ; do \
-		cp -r "packages/$$PKG/docs" "source/documentation/notebooks/$$PKG" ; \
+		rsync -a "packages/$$PKG/docs/" "source/documentation/notebooks/$$PKG" ; \
 	done
-	cp -r packages/tutorials/getting-started/ source/getting-started/notebooks
-	cp -r packages/tutorials/examples/ source/examples/notebooks
-	cp -r packages/tutorials/demo.ipynb source/demo.ipynb
+	rsync -a packages/tutorials/getting-started/ source/getting-started/notebooks
+	rsync -a packages/tutorials/examples/ source/examples/notebooks
+	cp packages/tutorials/demo.ipynb source/demo.ipynb
 
 prepare-local:
 	if [ ! -d source/documentation/notebooks ]; then \
