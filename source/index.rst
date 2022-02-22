@@ -34,8 +34,8 @@ individual sub-packages can be used in other fields, e.g. fluid dynamics.
 
       Physics of the micromagnetic system
 
-      - Energy equation (Exchange energy, Zeeman energy, DMI, ...)
-      - Dynamics equation (damping, precession, currents)
+      - Energy equation (Exchange, Zeeman, DMI, ...)
+      - Dynamics equation (damping, precession, ...)
 
    .. grid-item-card:: ``oommfc``
       :img-top: _static/oommfc-examples.svg
@@ -61,7 +61,7 @@ individual sub-packages can be used in other fields, e.g. fluid dynamics.
    .. grid-item-card:: ``ubermagtable``
       :img-top: _static/ubermagtable.png
 
-      - Reading scalar data files (OOMMF ``.odt`` and mumax3 ``.txt``)
+      - Reading scalar data files (OOMMF ``odt`` and mumax3 ``txt``)
       - Merging multiple tables
       - Visualisation of scalar table data
 
