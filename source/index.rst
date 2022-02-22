@@ -46,15 +46,12 @@ individual sub-packages can be used in other fields, e.g. fluid dynamics.
    .. grid-item-card:: ``mag2exp``
       :img-top: _static/mag2exp-examples.svg
 
-      Simulations of experimental techniques used to study magnetism
+      Simulations of experimental techniques used to study magnetism such as
 
       - Lorentz Transmission Electron Microscopy
       - Magnetic Force Microscopy
-      - DC and Torque Magnetometry
       - X-ray Holography
-      - Small Angle X-ray Scattering
       - Small Angle Neutron Scattering
-      - Magneto-Optical Kerr Effect Microscopy
 
    .. grid-item-card:: ``micromagneticdata``
       :img-top: _static/analysis-examples.svg
