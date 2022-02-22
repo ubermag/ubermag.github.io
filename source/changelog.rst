@@ -2,8 +2,9 @@
 Changelog
 =========
 
-0.61.0 (...)
-============
+=====================
+0.61.0 (Feb 22, 2022)
+=====================
 
 General
 -------
@@ -82,8 +83,12 @@ Bug fixes
     <https://github.com/ubermag/discretisedfield/issues/106>`__).
 
 ``oommfc``
-  - Specifying two Zeeman fields with H defined via a ``df.Field`` did crash the
+  - Specifying two Zeeman fields with H defined via a ``df.Field`` broke the
     simulation (`#191 <https://github.com/ubermag/help/issues/191>`__)
+  - The name of the hysteresis field of the ``HysteresisDriver`` has been
+    renamed to ``B_hysteresis``. This solves an issue of having two magnetic
+    fields with the same name if a hysteresis simulation is performed with an
+    additional zeeman field.
 
 0.60.0 (Oct 1, 2021)
 ====================
