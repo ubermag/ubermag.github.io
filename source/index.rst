@@ -16,86 +16,64 @@ independently as well as in combination. The whole set of packages -- the
 ``ubermag`` meta-package -- is tight to micromagnetic simulations. The
 individual sub-packages can be used in other fields, e.g. fluid dynamics.
 
-Finite-difference fields -- ``discretisedfield``
-------------------------------------------------
-.. image:: _static/field-examples.svg
-   :alt: examples for a field visualisation
+.. grid:: 1 1 2 2
+   :gutter: 3
 
-- Three-dimensional finite-different scalar or vector fields independent of the underlying physics
-- It provides common field operations such as
+   .. grid-item-card:: ``discretisedfield``
+      :img-top: _static/field-examples.svg
 
-  - Mathematical operations (standard operations, derivatives, integration, ...)
-  - Specific tools, e.g. topological charge density (``discretisedfield.tools``)
-  - Visualisation with ``matplotlib`` and ``k3d``
-  - Reading and writing ``vtk``, ``ovf``, and ``hdf5`` files
+      Finite-differenc scalar and vector fields
 
-- Possible applications are amongs others
+      - common mathematical operations
+      - domain-specific tools (e.g. topological charge)
+      - reading and writing ``vtk``, ``ovf``, and ``hdf5``
+      - Visualisation with ``matplotlib`` and ``k3d``
 
-  - Micromagnetics
-  - Fluid dynamics
+   .. grid-item-card:: ``micromagneticmodel``
+      :img-top: _static/micromagneticmodel.png
 
-Micromagnetic problem description -- ``micromagneticmodel``
------------------------------------------------------------
+      Physics of the micromagnetic system
 
-- Physics of the micromagnetic system
-- Energy equation (Exchange energy, Zeeman energy, DMI, ...)
-- Dynamics equation (damping, precession, currents, ...)
+      - Energy equation (Exchange, Zeeman, DMI, ...)
+      - Dynamics equation (damping, precession, ...)
 
-.. image:: _static/micromagneticmodel.png
+   .. grid-item-card:: ``oommfc``
+      :img-top: _static/oommfc-examples.svg
 
+      An Object Oriented MicroMagnetic Framework OOMMF calculator for computational
+      magnetism models defined with ``micromagneticmodel``
 
-OOMMF-based micromagnetic simulations -- ``oommfc``
----------------------------------------------------
+   .. grid-item-card:: ``mag2exp``
+      :img-top: _static/mag2exp-examples.svg
 
-.. image:: _static/oommfc-examples.svg
+      Simulations of experimental techniques used to study magnetism such as
 
-- An Object Oriented MicroMagnetic Framework OOMMF calculator for computational
-  magnetism models defined with ``micromagneticmodel``
+      - Lorentz Transmission Electron Microscopy
+      - Magnetic Force Microscopy
+      - X-ray Holography
+      - Small Angle Neutron Scattering
 
-Analysis of micromagnetic simulations -- ``micromagneticdata``
---------------------------------------------------------------
-.. image:: _static/analysis-examples.svg
-   
+   .. grid-item-card:: ``micromagneticdata``
+      :img-top: _static/analysis-examples.svg
 
-Reading scalar simulation data files -- ``ubermagtable``
---------------------------------------------------------
+      Analysis of micromagnetic simulations
 
-- Reading scalar data files (OOMMF ``.odt`` and mumax3 ``.txt``)
-- Merging multiple tables
-- Visualisation of scalar table data
+   .. grid-item-card:: ``ubermagtable``
+      :img-top: _static/ubermagtable.png
 
-.. image:: _static/ubermagtable.png
+      - Reading scalar data files (OOMMF ``odt`` and mumax3 ``txt``)
+      - Merging multiple tables
+      - Visualisation of scalar table data
 
-``micromagnetictests``
-----------------------
+   .. grid-item-card:: ``micromagnetictests``
 
-- tests for ``oommfc``
+      Tests for micromagnetic calculators in ``ubermag`` (currently only ``oommfc``)
 
-Typesystem and utilities -- ``ubermagutil``
--------------------------------------------
+   .. grid-item-card:: ``ubermagutil``
 
-.. image:: _static/ubermagutil.png
-
-- Definition of typesystem descriptors and decorators
-- Documentation inheritance decorators
-- Determining SI prefixes
-- Various convenience functions
-
-Simulations of experimental measurements -- ``mag2exp``
--------------------------------------------------------
-
-.. image:: _static/mag2exp-examples.svg
-
-- Simulations of experimental techniques used to study magnetism
-- Provides techniques such as
-
-  - Lorentz Transmission Electron Microscopy
-  - Magnetic Force Microscopy
-  - DC and Torque Magnetometry
-  - X-ray Holography
-  - Small Angle X-ray Scattering
-  - Small Angle Neutron Scattering
-  - Magneto-Optical Kerr Effect Microscopy
+      - Definition of typesystem descriptors and decorators
+      - Determining SI prefixes
+      - Various convenience functions
 
 What is ``ubermag``?
 --------------------
