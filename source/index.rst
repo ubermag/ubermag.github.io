@@ -1,7 +1,17 @@
-Ubermag -- Features and packages
-================================
+=======
+Ubermag
+=======
 
-Ubermag is a collection of several independent packages that can be used
+.. image:: https://anaconda.org/conda-forge/ubermag/badges/version.svg
+   :target: https://anaconda.org/conda-forge/ubermag
+
+.. image:: https://anaconda.org/conda-forge/ubermag/badges/latest_release_date.svg
+   :target: https://anaconda.org/conda-forge/ubermag
+
+Features and packages
+=====================
+
+Ubermag is a collection of several independent Python packages that can be used
 independently as well as in combination. The whole set of packages -- the
 ``ubermag`` meta-package -- is tight to micromagnetic simulations. The
 individual sub-packages can be used in other fields, e.g. fluid dynamics.
@@ -123,30 +133,37 @@ Design objectives of Ubermag are:
 Documentation and tutorials
 ===========================
 
-The examples shown in `quickstart <quickstart.html>`__ and the `workshop
-<workshop/index.html>`__ are tight to micromagnetic simulations.
-Only the more commonly used features are covered in there.
-`Documentation <documentation/index.html>`__ and `API
-Reference <api/index.html>`__ provide the full documentation for the
-individual packages.
+If you are new to ``ubermag`` you should consider first looking at
+:doc:`getting-started/index` which will give a gentle introduction into all
+the packages inside ``ubermag``.
 
-If you are new and plan to use Ubermag for micromagnetic simulations please
-start with the `workshop <workshop/index.html>`__ or the `quickstart
-<quickstart.html>`__ example.
+If you already know the basics of ``ubermag`` there is a collection of
+:doc:`examples/index` that show how to solve particular (physical) questions
+using ``ubermag`` and its subpackages. For a documentation of more technical
+functionality of the different packages please refer to the
+:doc:`documentation/index` and the :doc:`api/index`.
 
-Otherwise, please directly refer to the `documentation 
-<documentation/index.html>`__ or the `API reference <api/index.html>`__.
+An online-workshop has been given in June 2020 for spintalks (spintalks.org),
+supported by IEEE Magnetics Society (ieeemagnetics.org). A recording of these
+sessions is available on `YouTube
+<https://youtube.com/channel/UC7MSqVQSMFV42R1jAYmKGLg>`__. Please note that some
+functionality in Ubermag has been changed and extended since the workshop
+recording.
 
 ``ubermag`` in the cloud
 ========================
 
-If you do not want to install `ubermag` on your machine, you can use it in the
+If you do not want to install ``ubermag`` on your machine, you can use it in the
 cloud via Binder. This does not require you to have anything installed on your
 machine and no files will be created. To access it, please use the following
 badge:
 
-.. image:: https://mybinder.org/badge_logo.svg
-   :target: https://mybinder.org/v2/gh/ubermag/oommfc/stable?urlpath=lab/tree/docs/index.ipynb
+.. raw html to open binder in a new tab
+.. raw:: html
+
+   <a href="https://mybinder.org/v2/gh/ubermag/tutorials/latest?urlpath=lab/tree/demo.ipynb" target="_blank" rel="noopener noreferrer">
+        <img src="https://img.shields.io/badge/launch-binder-579aca.svg?logo=data:image/png;base64,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">
+    </a>
 
 You can setup your own simulation from scratch or upload the notebook you
 prepared previouly. Please remember to download the notebook after you are done,
@@ -204,23 +221,27 @@ Workflows," in IEEE Transactions on Magnetics, vol. 58, no. 2, pp. 1-5, Feb.
 License
 =======
 
-Licensed under the BSD 3-Clause “New” or “Revised” License. For details, please refer to the LICENSE file.
+Licensed under the BSD 3-Clause “New” or “Revised” License. For details, please
+refer to the `LICENSE file
+<https://github.com/ubermag/ubermag/blob/master/LICENSE>`__.
 
 Acknowledgements
 ================
 
 Ubermag is a part of the Horizon 2020 European Research Infrastructure
-`OpenDreamKit <https://opendreamkit.org>`__ project (Project ID 676541). This work was supported by the Fonds
-Wetenschappelijk Onderzoek (FWO-Vlaanderen) through Project No. G098917N (Jeroen
-Mulkers) and with a postdoctoral fellowship (Jonathan Leliaert).
+`OpenDreamKit <https://opendreamkit.org>`__ project (Project ID 676541). This
+work was supported by the Fonds Wetenschappelijk Onderzoek (FWO-Vlaanderen)
+through Project No. G098917N (Jeroen Mulkers) and with a postdoctoral fellowship
+(Jonathan Leliaert).
 
 .. toctree::
-   :maxdepth: 1
    :hidden:
+   :maxdepth: 1
 
    installation
    demo
-   workshop/index
+   getting-started/index
+   examples/index
    documentation/index
    api/index
    changelog

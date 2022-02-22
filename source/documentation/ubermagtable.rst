@@ -6,9 +6,9 @@ ubermagtable
     :maxdepth: 1
     :caption: ubermagtable
 
-    ipynb/ubermagtable/table-basics
-    ipynb/ubermagtable/table-merge
-    ipynb/ubermagtable/table-visualisation
-    ipynb/ubermagtable/table-widgets
-    ipynb/ubermagtable/table-interactive-plot
-    ipynb/ubermagtable/table-fft
+    notebooks/ubermagtable/table-basics
+    notebooks/ubermagtable/table-merge
+    notebooks/ubermagtable/table-visualisation
+    notebooks/ubermagtable/table-widgets
+    notebooks/ubermagtable/table-interactive-plot
+    notebooks/ubermagtable/table-fft

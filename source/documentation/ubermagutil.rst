@@ -6,10 +6,10 @@ ubermagutil
     :maxdepth: 1
     :caption: ubermagutil
 
-    ipynb/ubermagutil/imposing-typesystem
-    ipynb/ubermagutil/constant-attributes
-    ipynb/ubermagutil/parameter-descriptor
-    ipynb/ubermagutil/otherwise-type
-    ipynb/ubermagutil/si-prefix
-    ipynb/ubermagutil/inherit-docs
-    ipynb/ubermagutil/hysteresis
+    notebooks/ubermagutil/imposing-typesystem
+    notebooks/ubermagutil/constant-attributes
+    notebooks/ubermagutil/parameter-descriptor
+    notebooks/ubermagutil/otherwise-type
+    notebooks/ubermagutil/si-prefix
+    notebooks/ubermagutil/inherit-docs
+    notebooks/ubermagutil/hysteresis

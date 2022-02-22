@@ -6,12 +6,12 @@ micromagneticmodel
     :maxdepth: 1
     :caption: micromagneticmodel
 
-    ipynb/micromagneticmodel/deriving-energy-term
-    ipynb/micromagneticmodel/deriving-dynamics-term
-    ipynb/micromagneticmodel/term-parameters
-    ipynb/micromagneticmodel/energy-terms
-    ipynb/micromagneticmodel/dynamics-terms
-    ipynb/micromagneticmodel/same-class-terms
-    ipynb/micromagneticmodel/evolver-driver
-    ipynb/micromagneticmodel/system
-    ipynb/micromagneticmodel/constants
+    notebooks/micromagneticmodel/deriving-energy-term
+    notebooks/micromagneticmodel/deriving-dynamics-term
+    notebooks/micromagneticmodel/term-parameters
+    notebooks/micromagneticmodel/energy-terms
+    notebooks/micromagneticmodel/dynamics-terms
+    notebooks/micromagneticmodel/same-class-terms
+    notebooks/micromagneticmodel/evolver-driver
+    notebooks/micromagneticmodel/system
+    notebooks/micromagneticmodel/constants

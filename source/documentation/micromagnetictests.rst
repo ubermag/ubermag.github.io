@@ -6,4 +6,4 @@ micromagnetictests
     :maxdepth: 1
     :caption: micromagnetictests
 
-    ipynb/micromagnetictests/usage
+    notebooks/micromagnetictests/usage

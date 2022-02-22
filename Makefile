@@ -14,7 +14,10 @@ help:
 
 prepare:
 	mkdir packages
-	mkdir source/documentation/ipynb
+	mkdir source/documentation/notebooks
+	mkdir source/examples/notebooks
+	mkdir source/getting-started/notebooks
+
 	git clone -b latest --depth 1 "https://github.com/ubermag/discretisedfield.git" packages/discretisedfield
 	git clone -b latest --depth 1 "https://github.com/ubermag/micromagneticdata.git" packages/micromagneticdata
 	git clone -b latest --depth 1 "https://github.com/ubermag/micromagneticmodel.git" packages/micromagneticmodel
@@ -24,29 +27,38 @@ prepare:
 	git clone -b latest --depth 1 "https://github.com/ubermag/mag2exp.git" packages/mag2exp
 	git clone -b latest --depth 1 "https://github.com/ubermag/ubermagtable.git" packages/ubermagtable
 	git clone -b latest --depth 1 "https://github.com/ubermag/ubermagutil.git" packages/ubermagutil
-	git clone --depth 1 "https://github.com/ubermag/workshop.git" packages/workshop
+	git clone -b latest --depth 1 "https://github.com/ubermag/tutorials.git" packages/tutorials
 
 	for PKG in discretisedfield mag2exp micromagneticdata micromagneticmodel micromagnetictests oommfc ubermagtable ubermagutil ubermag ; do \
-		cp -r "packages/$$PKG/docs" "source/documentation/ipynb/$$PKG" ; \
+		cp -r "packages/$$PKG/docs" "source/documentation/notebooks/$$PKG" ; \
 	done
-	cp -r packages/workshop/tutorials source/workshop/tutorials
+	cp -r packages/tutorials/getting-started source/getting-started/notebooks
+	cp -r packages/tutorials/examples source/examples/notebooks
+	cp -r packages/tutorials/demo.ipynb source/demo.ipynb
 
 prepare-local:
-	if [ ! -d source/documentation/ipynb ]; then \
-		mkdir source/documentation/ipynb; \
+	if [ ! -d source/documentation/notebooks ]; then \
+		mkdir source/documentation/notebooks; \
 	fi
 
 	for PKG in discretisedfield mag2exp micromagneticdata micromagneticmodel micromagnetictests oommfc ubermagtable ubermagutil ubermag ; do \
-		rsync -a "../$$PKG/docs/" "source/documentation/ipynb/$$PKG" ;\
+		rsync -a "../$$PKG/docs/" "source/documentation/notebooks/$$PKG" ;\
 	done
 
-	if [ ! -d source/workshop/tutorials ]; then \
-		mkdir source/workshop/tutorials; \
+	if [ ! -d source/getting-started/notebooks ]; then \
+		mkdir source/getting-started/notebooks; \
 	fi
-	rsync -a ../workshop/tutorials/ source/workshop/tutorials
+	rsync -a ../tutorials/getting-started/ source/getting-started/notebooks
+
+	if [ ! -d source/examples/notebooks ]; then \
+		mkdir source/examples/notebooks; \
+	fi
+	rsync -a ../tutorials/examples/ source/examples/notebooks
+
+	rsync -a ../tutorials/demo.ipynb source/demo.ipynb
 
 clean:
-	rm -rf packages source/workshop/tutorials source/documentation/ipynb source/api/_autosummary
+	rm -rf packages source/documentation/notebooks source/examples/notebooks source/getting-started/notebooks source/api/_autosummary source/demo.ipynb
 
 .PHONY: help prepare clean Makefile
 
