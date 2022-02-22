@@ -9,5 +9,5 @@ dependencies:
   - sphinx>=4.1
   - sphinx-copybutton>=0.4
   - sphinx-design
-  - ubermag==0.60.0
+  - ubermag==0.61.0
   - astropy  # for the unit conversion tutorial in mag2exp
