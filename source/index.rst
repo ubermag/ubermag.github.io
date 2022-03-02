@@ -10,6 +10,7 @@ communicates with low-level simulation tools such as OOMMF.
 
 .. button-link:: https://mybinder.org/v2/gh/ubermag/tutorials/latest?urlpath=lab/tree/demo.ipynb
    :color: warning
+   :shadow:
 
    **Try it in your browser**
 
