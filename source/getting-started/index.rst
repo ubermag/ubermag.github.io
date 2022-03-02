@@ -13,7 +13,6 @@ and its subpackages.
    notebooks/python-basics
 
 .. toctree::
-   :numbered:
    :maxdepth: 1
 
    notebooks/first-ubermag-simulation
