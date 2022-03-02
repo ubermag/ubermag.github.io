@@ -2,18 +2,29 @@
 Ubermag
 =======
 
-.. image:: https://anaconda.org/conda-forge/ubermag/badges/version.svg
-   :target: https://anaconda.org/conda-forge/ubermag
+With ``ubermag`` you can drive your micromagnetic simulations from the Jupyter
+notebook. A single notebook can contain problem description, numerical solving,
+and data analysis in a self-consistent fashion. Using Python ``ubermag`` defines
+a domain-specific language to describe micromagnetic problems and automatically
+communicates with low-level simulation tools such as OOMMF.
 
-.. image:: https://anaconda.org/conda-forge/ubermag/badges/latest_release_date.svg
-   :target: https://anaconda.org/conda-forge/ubermag
+.. button-link:: https://mybinder.org/v2/gh/ubermag/tutorials/latest?urlpath=lab/tree/demo.ipynb
+   :color: warning
+
+   **Try it in your browser**
 
 Features and packages
 =====================
 
+.. image:: https://anaconda.org/conda-forge/ubermag/badges/version.svg
+    :target: https://anaconda.org/conda-forge/ubermag
+
+.. image:: https://anaconda.org/conda-forge/ubermag/badges/latest_release_date.svg
+    :target: https://anaconda.org/conda-forge/ubermag
+
 Ubermag is a collection of several independent Python packages that can be used
 independently as well as in combination. The whole set of packages -- the
-``ubermag`` meta-package -- is tight to micromagnetic simulations. The
+``ubermag`` meta-package -- is taylored to micromagnetic simulations. The
 individual sub-packages can be used in other fields, e.g. fluid dynamics.
 
 .. grid:: 1 1 2 2
