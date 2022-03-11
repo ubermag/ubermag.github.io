@@ -1,3 +1,16 @@
+.. meta::
+   :description: Ubermag drives micromagnetic simulations described in Python
+                 from the Jupyter notebook, including problem description,
+                 numerical solving (using existing packages such as OOMMF), and
+                 data analysis.
+   :keywords: micromagnetics, micromagnetism, micromagnetic simulation, ubermag,
+              ubermagutil, ubermagtable, discretisedfield, micromagneticmodel,
+              micromagneticdata, micromagnetictests, oommfc, oommf, mag2exp,
+              magnetism, finite differences, Lorentz transmission electron
+              microscopy, LTEM, small-angle Neutron scattering, SANS, small
+              angle x-ray scattering, SAXS, magnetic force microscopy, MFM,
+              torque magnetometry, DC magnetometry X-ray holography
+
 =======
 Ubermag
 =======
