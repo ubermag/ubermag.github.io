@@ -2,6 +2,18 @@
 Changelog
 =========
 
+0.61.2 (Mar 17, 2022)
+=====================
+
+Bug fixes
+---------
+
+``oommfc``
+  - The old docker image of oommf (2.0a2 was used by default (`#84
+    <https://github.com/ubermag/oommfc/pull/84>`__).
+  - Two time-dependent Zeeman terms have the same time dependence and/or result
+    in a runtime error (`#198 <https://github.com/ubermag/help/issues/198>`__).
+
 0.61.0 (Feb 22, 2022)
 =====================
 
