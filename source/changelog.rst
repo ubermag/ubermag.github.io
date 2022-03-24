@@ -2,6 +2,20 @@
 Changelog
 =========
 
+New version (in progress)
+=========================
+
+New functionality
+-----------------
+
+``discretisedfield``
+  - Support for exporting ``Field`` object to the ``xarray.DataArray`` with
+    ``to_xarray`` instance method (`#123
+    <https://github.com/ubermag/discretisedfield/pull/123>`__).
+  - Support for initiating ``Field`` object from the ``xarray.DataArray`` with
+    ``from_xarray`` class method (`#123
+    <https://github.com/ubermag/discretisedfield/pull/123>__`).
+
 0.61.2 (Mar 17, 2022)
 =====================
 
