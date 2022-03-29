@@ -15,6 +15,45 @@ New functionality
   - Support for initiating ``Field`` object from the ``xarray.DataArray`` with
     ``from_xarray`` class method (`#123
     <https://github.com/ubermag/discretisedfield/pull/123>__`).
+  - New implementation for initialising a field from an other field with much
+    better performance (example: initial field with ``n=(100, 100, 10)``, new
+    field with ``n=(10, 10, 10)``, speedup ~1000). This method does e.g. also
+    speed up the ``Field.plane`` method (`#135
+    <https://github.com/ubermag/discretisedfield/pull/135>`__).
+  - The ``__contains__`` operator for the region (the `in` operator ``region1 in
+    region2``) uses a new method to calculate the distance between the points to
+    improve stability when edge points of the regions are very close and
+    differences are mainly related to floating-point inaccuracies. This is done
+    by introducing a new region property ``tolerance_factor`` (with a default
+    value ``1e-12``) that is internally multiplied with the minimum of the edge
+    lengths to obtain values for relative and absolute tolerance (`#135
+    <https://github.com/ubermag/discretisedfield/pull/135>`__).
+  - Refactoring of the matplotlib-based plotting methods for ``df.Field``
+    (``df.Field.mpl...``) improve performance of the plot creation (`#133
+    <https://github.com/ubermag/discretisedfield/pull/133>`__).
+  - Refactoring of ``df.Region.mpl`` to show the correct aspect ratio of the
+    region. This automatically also applies to the matplotlib-based plotting
+    methods of ``df.Mesh``. A new keyword ``box_aspect`` (default
+    ``box_aspect='auto'``) can be used to set an arbitrary aspect ratio by
+    passing a tuple. For the default value ``'auto'`` the aspect of the region
+    is used. You may run into problems with overlapping ticks or axis labels.
+    These cannot currently be dealt with easily in an automatic fashion and
+    require manual adjustment after the plot is created (by passing an axis
+    object) if proper axis ticks and labels are required (`#134
+    <https://github.com/ubermag/discretisedfield/pull/134>`__).
+  - New implementation for reading and writing ``vtk`` files. Files can now be
+    written in textual (``txt``), binary (``bin``) or xml (``xml``)
+    representation. The field data is now stored to vtk cell data (previously:
+    point data). Some subsequent plotting operations in other tools (e.g.
+    plotting isosurfaces) typically requires a conversion from cell data to
+    point data in that tools first (e.g. by using a filter in Paraview).
+    ``discretisedfield`` can still read the old vtk files (with the values
+    stored as point data) and tries to do that automatically when the provided
+    file can't be read with the new method. In particular for writing huge
+    speedups compared to the old implementation are possible (example: ``n=(200,
+    200, 100)`` written in binary representation, speedup > 1000). By default
+    data is written in binary format. (`#129
+    <https://github.com/ubermag/discretisedfield/pull/129>`__)
 
 0.61.2 (Mar 17, 2022)
 =====================
