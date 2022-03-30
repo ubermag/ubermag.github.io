@@ -14,7 +14,7 @@ New functionality
     <https://github.com/ubermag/discretisedfield/pull/123>`__).
   - Support for initiating ``Field`` object from the ``xarray.DataArray`` with
     ``from_xarray`` class method (`#123
-    <https://github.com/ubermag/discretisedfield/pull/123>__`).
+    <https://github.com/ubermag/discretisedfield/pull/123>`__).
   - New implementation for initialising a field from an other field with much
     better performance (example: initial field with ``n=(100, 100, 10)``, new
     field with ``n=(10, 10, 10)``, speedup ~1000). This method does e.g. also
