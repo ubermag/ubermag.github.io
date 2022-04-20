@@ -54,6 +54,14 @@ New functionality
     200, 100)`` written in binary representation, speedup > 1000). By default
     data is written in binary format. (`#129
     <https://github.com/ubermag/discretisedfield/pull/129>`__)
+    
+Bug fixes
+---------
+
+``discretisedfield``
+  - Changes in the calculation of the demag tensor to avoid zero-division problems
+    and ``nan`` values in the demag field. (`#137
+    <https://github.com/ubermag/discretisedfield/pull/137>`__)
 
 0.61.2 (Mar 17, 2022)
 =====================
