@@ -197,7 +197,7 @@ Bug fixes
   ``discretisedfield.Field`` objects.
 - New integration syntax.
 
-Compatibility ``ubermag`` -- ``OOMMF``
+Compatibility ``ubermag`` - ``OOMMF``
 ======================================
 
 +---------+--------+-------+--------------------+
