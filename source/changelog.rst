@@ -196,3 +196,15 @@ Bug fixes
 - New subpackage ``discretisedfield.tools`` containing functions to operate on
   ``discretisedfield.Field`` objects.
 - New integration syntax.
+
+Compatibility ``ubermag`` -- ``OOMMF``
+======================================
+
++---------+--------+-------+--------------------+
+| Ubermag | oommfc | OOMMF | OOMMF Docker image |
++---------+--------+-------+--------------------+
+| 0.61.2  | 0.61.1 | 2.0a3 | oommf/oommf:20a3   |
+| 0.61.0  | 0.61.0 | 2.0a3 | oommf/oommf:20a3   |
+| 0.60.0  | 0.60.0 | 2.0a2 | oommf/oommf:20a2   |
+| 0.51    | 0.10.1 | 2.0a1 | ubermag/oommf      |
++---------+--------+-------+--------------------+
