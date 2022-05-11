@@ -55,6 +55,16 @@ New functionality
     data is written in binary format. (`#129
     <https://github.com/ubermag/discretisedfield/pull/129>`__)
 
+Bug fixes
+---------
+
+``oommfc``
+  - Using the ``DockerOOMMFRunner`` did not work in combination with SELinux
+    because the directiories inside the docker image were not readable/writable.
+    The ``DockerOOMMFRunner`` now has an additional optional argument to enable
+    read/write access with SELinux (`#95
+    <https://github.com/ubermag/oommfc/issues/95>`__).
+
 0.61.2 (Mar 17, 2022)
 =====================
 
