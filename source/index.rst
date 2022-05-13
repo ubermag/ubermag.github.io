@@ -48,7 +48,7 @@ individual sub-packages can be used in other fields, e.g. fluid dynamics.
    .. grid-item-card:: ``discretisedfield``
       :img-top: _static/field-examples.svg
 
-      Finite-differenc scalar and vector fields
+      Finite-difference scalar and vector fields
 
       - common mathematical operations
       - domain-specific tools (e.g. topological charge)
