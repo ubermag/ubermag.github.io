@@ -54,6 +54,13 @@ New functionality
     200, 100)`` written in binary representation, speedup > 1000). By default
     data is written in binary format. (`#129
     <https://github.com/ubermag/discretisedfield/pull/129>`__)
+
+``oommfc``
+  - When using the ``TimeDriver`` with ``verbose=2`` a simple status bar is
+    displayed to show the simulation progress. Note, that the shown information
+    is only a rough hint as the progress is measured based on the total number
+    of steps ``n`` and the number of files already written to disk. (`#100
+    <https://github.com/ubermag/oommfc/pull/100>`__)
     
 Bug fixes
 ---------

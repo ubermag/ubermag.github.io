@@ -16,3 +16,4 @@ oommfc
     notebooks/oommfc/dirname
     notebooks/oommfc/controlling-default-runner
     notebooks/oommfc/parallel
+    notebooks/oommfc/verbosity_levels
