@@ -54,6 +54,16 @@ New functionality
     200, 100)`` written in binary representation, speedup > 1000). By default
     data is written in binary format. (`#129
     <https://github.com/ubermag/discretisedfield/pull/129>`__)
+  - A ``units`` property has been added to the ``Field`` class to store the
+    units of the field values. Note, that units are mostly used for plotting and
+    are removed during all mathematical operations. Units are automatically read
+    from ``ovf`` files if present. (`#141
+    <https://github.com/ubermag/discretisedfield/pull/141>`__)
+
+``micromagneticdata``
+  - Support for converting all magnetisation data of a ``Drive`` into an
+    ``xarray.DataArray`` with ``to_xarray`` instance method. (`#18
+    <https://github.com/ubermag/micromagneticdata/pull/18>`__)
 
 ``oommfc``
   - When using the ``TimeDriver`` with ``verbose=2`` a simple status bar is
