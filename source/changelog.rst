@@ -80,9 +80,6 @@ Bug fixes
     and ``nan`` values in the demag field. (`#137
     <https://github.com/ubermag/discretisedfield/pull/137>`__)
 
-Bug fixes
----------
-
 ``oommfc``
   - Using the ``DockerOOMMFRunner`` did not work in combination with SELinux
     because the directiories inside the docker image were not readable/writable.
