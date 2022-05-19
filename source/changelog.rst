@@ -76,15 +76,15 @@ New functionality
     of steps ``n`` and the number of files already written to disk. (`#100
     <https://github.com/ubermag/oommfc/pull/100>`__)
 
-Changes
--------
-
-``ubermag``
+``ubermagutil``
   - Utility functionality for setting up basic logging moved to ``ubermagutil``
     from ``ubermag``. (`#27 <https://github.com/ubermag/ubermagutil/pull/27>`__,
     `#133 <https://github.com/ubermag/ubermag/pull/133>`__)
 
-``ubermagutil``
+Removed
+-------
+
+``ubermag``
   - Utility functionality for setting up basic logging moved to ``ubermagutil``
     from ``ubermag``. (`#27 <https://github.com/ubermag/ubermagutil/pull/27>`__,
     `#133 <https://github.com/ubermag/ubermag/pull/133>`__)
