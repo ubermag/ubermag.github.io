@@ -59,6 +59,10 @@ New functionality
     are removed during all mathematical operations. Units are automatically read
     from ``ovf`` files if present. (`#141
     <https://github.com/ubermag/discretisedfield/pull/141>`__)
+  - An additional class method ``coordinate_field`` has been added to the
+    ``Field`` class. It takes a mesh and creates a 3d vector field with values
+    equal to the coordinates of the respective cell midpoints. (`#144
+    <https://github.com/ubermag/discretisedfield/pull/144>`__)
 
 ``micromagneticdata``
   - Support for converting all magnetisation data of a ``Drive`` into an
@@ -71,7 +75,20 @@ New functionality
     is only a rough hint as the progress is measured based on the total number
     of steps ``n`` and the number of files already written to disk. (`#100
     <https://github.com/ubermag/oommfc/pull/100>`__)
-    
+
+Changes
+-------
+
+``ubermag``
+  - Utility functionality for setting up basic logging moved to ``ubermagutil``
+    from ``ubermag``. (`#27 <https://github.com/ubermag/ubermagutil/pull/27>`__,
+    `#133 <https://github.com/ubermag/ubermag/pull/133>`__)
+
+``ubermagutil``
+  - Utility functionality for setting up basic logging moved to ``ubermagutil``
+    from ``ubermag``. (`#27 <https://github.com/ubermag/ubermagutil/pull/27>`__,
+    `#133 <https://github.com/ubermag/ubermag/pull/133>`__)
+
 Bug fixes
 ---------
 
