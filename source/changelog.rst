@@ -68,6 +68,12 @@ New functionality
   - Support for converting all magnetisation data of a ``Drive`` into an
     ``xarray.DataArray`` with ``to_xarray`` instance method. (`#18
     <https://github.com/ubermag/micromagneticdata/pull/18>`__)
+  - Multiple drives of the same type (with the same independent variable
+    ``drive.x`` can be combined into a new ``micromagneticdata.CombinedDrive``.
+    Combining is also supported via ``drive1 << drive2`` which "appends"
+    ``drive2`` to ``drive2``. The combined drive allows iteration over all
+    magnetisation snapshots of the individual drives. (`#22
+    <https://github.com/ubermag/micromagneticdata/pull/22>`__)
 
 ``oommfc``
   - When using the ``TimeDriver`` with ``verbose=2`` a simple status bar is
