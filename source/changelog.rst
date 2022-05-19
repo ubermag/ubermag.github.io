@@ -2,8 +2,8 @@
 Changelog
 =========
 
-New version (in progress)
-=========================
+0.62.0 (in progress)
+====================
 
 New functionality
 -----------------
