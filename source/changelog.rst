@@ -71,7 +71,7 @@ New functionality
   - Multiple drives of the same type (with the same independent variable
     ``drive.x`` can be combined into a new ``micromagneticdata.CombinedDrive``.
     Combining is also supported via ``drive1 << drive2`` which "appends"
-    ``drive2`` to ``drive2``. The combined drive allows iteration over all
+    ``drive1`` to ``drive2``. The combined drive allows iteration over all
     magnetisation snapshots of the individual drives. (`#22
     <https://github.com/ubermag/micromagneticdata/pull/22>`__)
 
