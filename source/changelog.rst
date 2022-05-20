@@ -5,8 +5,8 @@ Changelog
 0.62.0 (in progress)
 ====================
 
-New functionality
------------------
+Added
+-----
 
 ``discretisedfield``
   - Support for exporting ``Field`` object to the ``xarray.DataArray`` with
@@ -95,8 +95,8 @@ Removed
     from ``ubermag``. (`#27 <https://github.com/ubermag/ubermagutil/pull/27>`__,
     `#133 <https://github.com/ubermag/ubermag/pull/133>`__)
 
-Bug fixes
----------
+Fixed
+-----
 
 ``discretisedfield``
   - Changes in the calculation of the demag tensor to avoid zero-division problems
@@ -116,8 +116,8 @@ Bug fixes
 0.61.2 (Mar 17, 2022)
 =====================
 
-Bug fixes
----------
+Fixed
+-----
 
 ``oommfc``
   - The old docker image of oommf (2.0a2) was used by default (`#84
@@ -135,8 +135,8 @@ General
   (MEL) extensions in conda-installed Ubermag on Windows, in addition to MacOS
   and Linux.
 
-New functionality
------------------
+Added
+-----
 
 ``discretisedfield``
   - Support for ``filter_field`` in plotting method ``Field.mpl.lighness``.
@@ -185,8 +185,8 @@ New functionality
     which prints one summary line about the used runner and the runtime. This is
     the old behaviour. (`#80 <https://github.com/ubermag/oommfc/pull/80>`__).
 
-Backwards-incompatible changes
-------------------------------
+Changed
+-------
 
 ``discretisedfield``
   - Keywords for ``Field.mpl()`` renamed to ``scalar_kw`` and ``vector_kw``
@@ -196,8 +196,8 @@ Backwards-incompatible changes
   - Variable names for time-dependent fields and currents changed (for
     consistency reasons).
 
-Bug fixes
----------
+Fixed
+-----
 
 ``discretisedfield``
   - Simultaneous use of ``filter_field`` and ``symmetric_clim`` in
@@ -222,8 +222,8 @@ General
 - Versions in sync across all packages
 - Switch to Jupyter lab 3 (should improve situation with ``K3d`` inside Jupyter lab).
 
-New functionality
------------------
+Added
+-----
 
 ``discretisedfield``
   - Fourier transform for ``discretisedfield.Field`` (`reference
@@ -274,8 +274,8 @@ New functionality
   - Fourier transform for ``ubermagtable`` (`documentation
     <https://ubermag.github.io/documentation/ipynb/ubermagtable/table-fft.html>`__).
 
-Bug fixes
----------
+Fixed
+-----
 
 ``discretisedfield``
   - Wrong colourbar positioning in ``discretisedfield.mpl*`` in figures containing
