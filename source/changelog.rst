@@ -102,6 +102,9 @@ Bug fixes
   - Changes in the calculation of the demag tensor to avoid zero-division problems
     and ``nan`` values in the demag field. (`#137
     <https://github.com/ubermag/discretisedfield/pull/137>`__)
+  - Wrong normalisation of the lightness component in lightness plots if not all
+    angles are covered. (`commit 2de6360
+    <https://github.com/ubermag/discretisedfield/pull/140/commits/2de6360ee23a2d59c4c710cbdb677794c4d44e31>`__)
 
 ``oommfc``
   - Using the ``DockerOOMMFRunner`` did not work in combination with SELinux
