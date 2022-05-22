@@ -24,6 +24,7 @@ discretisedfield
     notebooks/discretisedfield/field-matplotlib-visualisation
     notebooks/discretisedfield/field-k3d-visualisation
     notebooks/discretisedfield/field-read-write
+    notebooks/discretisedfield/xarray-usage
     notebooks/discretisedfield/field-rotations
     notebooks/discretisedfield/field-tools
     notebooks/discretisedfield/line

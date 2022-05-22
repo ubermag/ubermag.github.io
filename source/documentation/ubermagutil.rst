@@ -13,3 +13,4 @@ ubermagutil
     notebooks/ubermagutil/si-prefix
     notebooks/ubermagutil/inherit-docs
     notebooks/ubermagutil/hysteresis
+    notebooks/ubermagutil/logging

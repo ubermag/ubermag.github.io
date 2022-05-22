@@ -6,4 +6,4 @@ micromagneticdata
     :maxdepth: 1
     :caption: micromagneticdata
 
-    notebooks/micromagneticdata/dev-test
+    notebooks/micromagneticdata/documentation
