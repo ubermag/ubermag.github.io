@@ -8,6 +8,10 @@ upcoming
 Added
 -----
 
+``micromagneticmodel``
+  - User-defined name for a Zeeman energy term is displayed in its LaTex
+    representation in the Jupyter notebook.
+
 ``oommfc``
   - The input for OOMMF (``mif`` file and related files) can now be created
     without starting the actual simulation using ``Driver.write_mif(...)``.
@@ -30,10 +34,6 @@ Added
   - Context manager to change directories. (`#29
     <https://github.com/ubermag/ubermagutil/pull/29>`__)
     
-``micromagneticmodel``
-  - User defined name for a Zeeman energy term is displyaed in its LaTex
-    represntation in the Jupyter Notebook.
-
 Fixed
 -----
 
