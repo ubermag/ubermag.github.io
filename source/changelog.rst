@@ -2,6 +2,42 @@
 Changelog
 =========
 
+upcoming
+========
+
+Added
+-----
+
+``oommfc``
+  - The input for OOMMF (``mif`` file and related files) can now be created
+    without starting the actual simulation using ``Driver.write_mif(...)``.
+    (`#104 <https://github.com/ubermag/oommfc/pull/104>`__)
+  - A drive (call to OOMMF) can be sent to a scheduling system such as Slurm
+    using ``Drive.schedule(...)``. All input files (``mif`` file and related
+    files) are created from the running Python program. The user must pass the
+    submission command of the scheduling system and a "header" file that defines
+    system resources as required for the scheduling system. Furthermore, it is
+    the user's responsibility to ensure that OOMMF is available inside the
+    scheduled job (e.g. by loading the correct conda environment in the header
+    file). The command line to call OOMMF is added to the header file, the file
+    is saved to the drive directory and subsequently a job is submitted to the
+    scheduling system. (`#104 <https://github.com/ubermag/oommfc/pull/104>`__)
+  - The ``OOMMFRunner`` classes take an additional argument ``dry_run`` to
+    return the OOMMF command call instead of calling OOMMF from a subprocess.
+    (`#104 <https://github.com/ubermag/oommfc/pull/104>`__)
+
+``ubermagutil``
+  - Context manager to change directories. (`#29
+    <https://github.com/ubermag/ubermagutil/pull/29>`__)
+
+Fixed
+-----
+
+``discretisedfield``
+  - Wrong normalisation of the lightness component in lightness plots if not all
+    angles are covered. (`commit 2de6360
+    <https://github.com/ubermag/discretisedfield/pull/140/commits/2de6360ee23a2d59c4c710cbdb677794c4d44e31>`__)
+
 0.62.0 (May 22, 2022)
 =====================
 
@@ -102,9 +138,6 @@ Fixed
   - Changes in the calculation of the demag tensor to avoid zero-division problems
     and ``nan`` values in the demag field. (`#137
     <https://github.com/ubermag/discretisedfield/pull/137>`__)
-  - Wrong normalisation of the lightness component in lightness plots if not all
-    angles are covered. (`commit 2de6360
-    <https://github.com/ubermag/discretisedfield/pull/140/commits/2de6360ee23a2d59c4c710cbdb677794c4d44e31>`__)
 
 ``oommfc``
   - Using the ``DockerOOMMFRunner`` did not work in combination with SELinux
