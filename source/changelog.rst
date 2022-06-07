@@ -10,7 +10,8 @@ Added
 
 ``micromagneticmodel``
   - User-defined name for a Zeeman energy term is displayed in its LaTex
-    representation in the Jupyter notebook.
+    representation in the Jupyter notebook. (`#45
+    <https://github.com/ubermag/micromagneticmodel/pull/45>`__)
 
 ``oommfc``
   - The input for OOMMF (``mif`` file and related files) can now be created
