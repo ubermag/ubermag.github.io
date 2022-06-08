@@ -2,6 +2,16 @@
 Changelog
 =========
 
+0.62.1 (June 09, 2022)
+======================
+
+Fixed
+-----
+
+``discretisedfield``
+  - Importing ``discretisedfield`` fails on some platforms when ``openh264`` is
+    missing.
+
 0.62.0 (May 22, 2022)
 =====================
 
