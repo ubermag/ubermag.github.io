@@ -9,7 +9,7 @@ Fixed
 -----
 
 ``discretisedfield``
-  - Importing ``discretisedfield`` fails on some platforms when ``openh264`` is
+  - Importing ``discretisedfield`` fails on some platforms because ``openh264`` is
     missing. (`#146 <https://github.com/ubermag/discretisedfield/pull/146>`__)
 
 0.62.0 (May 22, 2022)
