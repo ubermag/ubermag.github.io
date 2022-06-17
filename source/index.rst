@@ -46,11 +46,15 @@ Additionally, Ubermag users can use the mailing list to ask questions and help o
 Features and packages
 =====================
 
-.. image:: https://anaconda.org/conda-forge/ubermag/badges/version.svg
-    :target: https://anaconda.org/conda-forge/ubermag
+.. grid:: 1 2 2 2
 
-.. image:: https://anaconda.org/conda-forge/ubermag/badges/latest_release_date.svg
-    :target: https://anaconda.org/conda-forge/ubermag
+   .. grid-item::
+
+      .. image:: https://anaconda.org/conda-forge/ubermag/badges/version.svg
+         :target: https://anaconda.org/conda-forge/ubermag
+
+      .. image:: https://anaconda.org/conda-forge/ubermag/badges/latest_release_date.svg
+         :target: https://anaconda.org/conda-forge/ubermag
 
 Ubermag is a collection of several independent Python packages that can be used
 independently as well as in combination. The whole set of packages -- the
