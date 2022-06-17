@@ -22,20 +22,41 @@ and data analysis in a self-consistent fashion. Using Python ``ubermag`` defines
 a domain-specific language to describe micromagnetic problems and automatically
 communicates with low-level simulation tools such as OOMMF.
 
-.. button-link:: https://mybinder.org/v2/gh/ubermag/tutorials/latest?urlpath=lab/tree/demo.ipynb
-   :color: warning
-   :shadow:
+On the `Ubermag mailing list
+<https://listserv.gwdg.de/mailman/listinfo/ubermag-users>`__ we announce new
+versions of ``ubermag`` and new features. Additionally, Ubermag users can use
+the mailing list to ask questions and help others.
 
-   **Try it in your browser**
+.. grid:: 1 1 2 2
+
+   .. grid-item::
+
+      .. button-link:: https://mybinder.org/v2/gh/ubermag/tutorials/latest?urlpath=lab/tree/demo.ipynb
+         :color: warning
+         :shadow:
+
+         **Try it in your browser**
+
+   .. grid-item::
+
+      .. button-link:: https://listserv.gwdg.de/mailman/listinfo/ubermag-users
+         :color: warning
+         :shadow:
+
+         **Subscribe to mailing list**
 
 Features and packages
 =====================
 
-.. image:: https://anaconda.org/conda-forge/ubermag/badges/version.svg
-    :target: https://anaconda.org/conda-forge/ubermag
+.. grid:: 1 2 2 2
 
-.. image:: https://anaconda.org/conda-forge/ubermag/badges/latest_release_date.svg
-    :target: https://anaconda.org/conda-forge/ubermag
+   .. grid-item::
+
+      .. image:: https://anaconda.org/conda-forge/ubermag/badges/version.svg
+         :target: https://anaconda.org/conda-forge/ubermag
+
+      .. image:: https://anaconda.org/conda-forge/ubermag/badges/latest_release_date.svg
+         :target: https://anaconda.org/conda-forge/ubermag
 
 Ubermag is a collection of several independent Python packages that can be used
 independently as well as in combination. The whole set of packages -- the
