@@ -22,8 +22,10 @@ and data analysis in a self-consistent fashion. Using Python ``ubermag`` defines
 a domain-specific language to describe micromagnetic problems and automatically
 communicates with low-level simulation tools such as OOMMF.
 
-On the `Ubermag mailing list <https://listserv.gwdg.de/mailman/listinfo/ubermag-users>`__ we announce new versions of ``ubermag`` and new features.
-Additionally, Ubermag users can use the mailing list to ask questions and help others.
+On the `Ubermag mailing list
+<https://listserv.gwdg.de/mailman/listinfo/ubermag-users>`__ we announce new
+versions of ``ubermag`` and new features. Additionally, Ubermag users can use
+the mailing list to ask questions and help others.
 
 .. grid:: 1 1 2 2
 
