@@ -111,6 +111,16 @@ Fixed
     value instead of the maximum value. (`#101
     <https://github.com/ubermag/oommfc/pull/101>`__)
 
+0.62.1 (Jun 09, 2022)
+=====================
+
+Fixed
+-----
+
+``discretisedfield``
+  - Importing ``discretisedfield`` fails on some platforms because ``openh264`` is
+    missing. (`#146 <https://github.com/ubermag/discretisedfield/pull/146>`__)
+
 0.62.0 (May 22, 2022)
 =====================
 
