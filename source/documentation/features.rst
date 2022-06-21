@@ -1,6 +1,6 @@
-=============
-Compatibility
-=============
+================================================
+Compatibility: Ubermag - OOMMF - mumax\ :sup:`3`
+================================================
 
 ------------------
 Supported features
@@ -50,9 +50,9 @@ The following table summarises the available features in Ubermag, OOMMF an
      - ``oc.TimeDriver``
      - ``mc.TimeDriver``
 
---------------------------------------------------
-Compatibility ``ubermag`` - ``OOMMF`` - ``mumax3``
---------------------------------------------------
+-------------------
+Compatible versions
+-------------------
 
 .. list-table::
    :header-rows: 1
