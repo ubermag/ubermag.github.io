@@ -74,7 +74,7 @@ individual sub-packages can be used in other fields, e.g. fluid dynamics.
       - common mathematical operations
       - domain-specific tools (e.g. topological charge)
       - reading and writing ``vtk``, ``ovf``, and ``hdf5``
-      - Visualisation with ``matplotlib`` and ``k3d``
+      - Visualisation with ``matplotlib``, ``k3d``, and ``holoviews``
 
    .. grid-item-card:: ``micromagneticmodel``
       :img-top: _static/micromagneticmodel.png
@@ -84,11 +84,16 @@ individual sub-packages can be used in other fields, e.g. fluid dynamics.
       - Energy equation (Exchange, Zeeman, DMI, ...)
       - Dynamics equation (damping, precession, ...)
 
-   .. grid-item-card:: ``oommfc``
-      :img-top: _static/oommfc-examples.svg
+   .. grid-item-card:: Data analysis
+      :img-top: _static/analysis-examples.svg
 
-      An Object Oriented MicroMagnetic Framework OOMMF calculator for computational
-      magnetism models defined with ``micromagneticmodel``
+      ``micromagneticdata``
+         Analysis and visualisation of spatially resolved simulation data
+         (magnetisation snapshots)
+
+      ``ubermagtable``
+         Analysis and visualisation of scalar data (reads OOMMF ``odt`` and
+         mumax3 ``txt``)
 
    .. grid-item-card:: ``mag2exp``
       :img-top: _static/mag2exp-examples.svg
@@ -100,27 +105,24 @@ individual sub-packages can be used in other fields, e.g. fluid dynamics.
       - X-ray Holography
       - Small Angle Neutron Scattering
 
-   .. grid-item-card:: ``micromagneticdata``
-      :img-top: _static/analysis-examples.svg
+   .. grid-item-card:: Calculators
 
-      Analysis of micromagnetic simulations
+      Numerically solve micromagnetic models
 
-   .. grid-item-card:: ``ubermagtable``
-      :img-top: _static/ubermagtable.png
+      ``oommfc``
+         Calculator for Object Oriented MicroMagnetic Framework `OOMMF
+         <https://math.nist.gov/oommf/>`__
 
-      - Reading scalar data files (OOMMF ``odt`` and mumax3 ``txt``)
-      - Merging multiple tables
-      - Visualisation of scalar table data
+      ``mumax3c`` 
+        Calculator for `mumax3 <https://mumax3.github.io>`__
 
-   .. grid-item-card:: ``micromagnetictests``
+   .. grid-item-card:: Utilities
 
-      Tests for micromagnetic calculators in ``ubermag`` (currently only ``oommfc``)
+      ``micromagnetictests``
+         Tests for micromagnetic calculators in ``ubermag``
 
-   .. grid-item-card:: ``ubermagutil``
-
-      - Definition of typesystem descriptors and decorators
-      - Determining SI prefixes
-      - Various convenience functions
+      ``ubermagutil``
+        Definition of typesystem descriptors, decorators and shared internal utilities
 
 What is ``ubermag``?
 --------------------
