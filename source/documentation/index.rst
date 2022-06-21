@@ -9,7 +9,7 @@ introduction into all the packages inside ``ubermag``.
 
 Different calculators (OOMMF and mumax\ :sup:`3`) support different feature sets. The
 :doc:`features` page gives an overview over the different features. It also
-lists compatible versions for `ubermag` and `OOMMF`
+lists compatible versions for Ubermag, and OOMMF, and mumax\ :sup:`3`.
 
 .. toctree::
     :maxdepth: 1
@@ -25,7 +25,7 @@ lists compatible versions for `ubermag` and `OOMMF`
     ubermagtable
     ubermagutil
     ubermag
-    features
+    Compatibility <features>
 
 All packages are licensed under: |license|
 
