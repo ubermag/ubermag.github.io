@@ -8,7 +8,7 @@ first looking at :doc:`../getting-started/index` which will give a gentle
 introduction into all the packages inside ``ubermag``.
 
 Different calculators (OOMMF and mumax\ :sup:`3`) support different feature sets. The
-:doc:`features` page gives an overview over the different features. It also
+:doc:`compatibility` page gives an overview over the different features. It also
 lists compatible versions for Ubermag, and OOMMF, and mumax\ :sup:`3`.
 
 .. toctree::
@@ -21,11 +21,12 @@ lists compatible versions for Ubermag, and OOMMF, and mumax\ :sup:`3`.
     micromagneticdata
     micromagneticmodel
     micromagnetictests
+    mumax3c
     oommfc
     ubermagtable
     ubermagutil
     ubermag
-    Compatibility <features>
+    Compatibility <compatibility>
 
 All packages are licensed under: |license|
 
