@@ -2,16 +2,39 @@
 Changelog
 =========
 
-upcoming
-========
+0.63.0
+======
 
 Added
 -----
+
+``discretisedfield``
+  - Support for interactive plots based on Holoviews with ``Field.hv``
+    convenience method, ``Field.hv.scalar``, ``Field.hv.vector``, and
+    ``Field.hv.contour``. Refer to the package documentation for details. (`#140
+    <https://github.com/ubermag/discretisedfield/pull/140>`__)
+
+``micromagneticdata``
+  - Two new drive classes ``OOMMFDrive`` and ``Mumax3Drive`` have been added.
+    Users should not create these directly. Instead the generic ``Drive`` class
+    should be used which automatically creates an object of the correct sub-type
+    depending on the information found for the respective drive. (`#29
+    <https://github.com/ubermag/micromagneticdata/pull/29>`__)
+  - Interactive Holoviews-based plotting for drives with ``drive.hv`` property.
+    It provides the same functionality as ``Field.hv``. (`#26
+    <https://github.com/ubermag/micromagneticdata/pull/26>`__)
 
 ``micromagneticmodel``
   - User-defined name for a Zeeman energy term is displayed in its LaTex
     representation in the Jupyter notebook. (`#45
     <https://github.com/ubermag/micromagneticmodel/pull/45>`__)
+  - Containers (``system.energy`` and ``system.dynamics``) have a new method
+    ``get(type=...)`` to get all terms in the container that have the specified
+    type. (`# 50
+    <https://github.com/ubermag/micromagneticmodel/pull/50/files>`__)
+  - Containers (``system.energy`` and ``system.dynacmics``) now support
+    ``container[index]`` (``__getitem__``) to obtain a term by its index. (`#50
+    <https://github.com/ubermag/micromagneticmodel/pull/50/files>`__)
 
 ``oommfc``
   - The input for OOMMF (``mif`` file and related files) can now be created
@@ -34,7 +57,35 @@ Added
 ``ubermagutil``
   - Context manager to change directories. (`#29
     <https://github.com/ubermag/ubermagutil/pull/29>`__)
-    
+  - Generic utilities to show progress information for calculators. Users
+    generally don't use any of this functionality directly. (`#31
+    <https://github.com/ubermag/ubermagutil/pull/31>`__)
+
+Changed
+-------
+
+``discretisedfield``
+  - Vector fields with zero values can now be normalised. The rescaling of the
+    vectors is only done for non-zero values. (`#149
+    <https://github.com/ubermag/discretisedfield/pull/149/files>`__)
+
+``mag2exp``
+  - All functions do now operate on ``discretisedfield.Field`` objects instead
+    of ``micromagneticmodel.System`` objects. Therefore, measurements can be
+    simulated for data that has not been created with a micromagnetic simulation
+    as long as the data can be represented as a ``discretisedfield.Field``
+    object. (`#31 <https://github.com/ubermag/mag2exp/pull/31>`__)
+
+``micromagneticmodel``
+  - Comparison of ``micromagneticmodel.Term`` objects (e.g.
+    ``micromagneticmodel.Exchange``) now takes into account all attributes of
+    the two terms. Previously, only the names of the two terms were compared.
+    (`#46 <https://github.com/ubermag/micromagneticmodel/pull/46>`__)
+
+``oommfc``
+  - The ``overhead`` function now runs the simulations in a temporary directory.
+    (`#110 <https://github.com/ubermag/oommfc/pull/110>`__)
+
 Fixed
 -----
 
@@ -42,6 +93,23 @@ Fixed
   - Wrong normalisation of the lightness component in lightness plots if not all
     angles are covered. (`commit 2de6360
     <https://github.com/ubermag/discretisedfield/pull/140/commits/2de6360ee23a2d59c4c710cbdb677794c4d44e31>`__)
+  - Checks if a point is inside a ``Region`` (``point in region``) give wrong
+    results if the points are inside the region in some spatial direction and at
+    the region boundary (outside within the numerical precision) in the other
+    spatial directions failed despite the point being in the region. (`#153
+    <https://github.com/ubermag/discretisedfield/pull/153>`__)
+
+``micromagneticdata``
+  - ``data[index]`` would always return a drive even if a drive with number
+    ``index`` does not exist (by computing module of index). <`#24
+    <https://github.com/ubermag/micromagneticdata/pull/24>`__)
+
+``oommfc``
+  - The progress bar did not stop on ``KeyboardInterrupt``. (`#103
+    <https://github.com/ubermag/oommfc/pull/103>`__)
+  - Upon completion (interrupt) the progress bar counter is set to the correct
+    value instead of the maximum value. (`#101
+    <https://github.com/ubermag/oommfc/pull/101>`__)
 
 0.62.0 (May 22, 2022)
 =====================
