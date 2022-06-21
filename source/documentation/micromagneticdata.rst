@@ -7,3 +7,4 @@ micromagneticdata
     :caption: micromagneticdata
 
     notebooks/micromagneticdata/documentation
+    notebooks/micromagneticdata/interactive_plotting
