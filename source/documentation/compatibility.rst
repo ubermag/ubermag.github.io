@@ -26,11 +26,11 @@ The following table summarises the available features in Ubermag, OOMMF an
      - |yes|
      - |yes|
    * - bulk DMI
-     - ``mm.DMI(crystalclass='T')``
+     - ``mm.DMI`` ``crystalclass='T'``
      - |yes|
      - |partly| [not between subregions]
    * - interfacial DMI
-     - ``mm.DMI(crystalclass='Cnv')``
+     - ``mm.DMI`` ``crystalclass='Cnv'``
      - |yes|
      - |yes|
    * - RKKY interaction
