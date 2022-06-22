@@ -33,8 +33,8 @@ The following table summarises the available features in Ubermag, OOMMF an
      - ``mm.DMI(crystalclass='Cnv')``
      - |yes|
      - |yes|
-   * - RKKW interaction
-     - ``mm.RKKW``
+   * - RKKY interaction
+     - ``mm.RKKY``
      - |yes|
      - |no|
    * - Energy minimisation
