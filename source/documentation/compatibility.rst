@@ -10,6 +10,12 @@ The following table summarises the available features in Ubermag, OOMMF an
 |mumax3|. We abbreviate ``micromagneticmodel=mm``, ``oommfc=oc`` and
 ``mumax3c=mc``.
 
+- Available in the calculator and implemented in Ubermag: |yes|
+- Partly implemented in Ubermag: |partly| [explanation]
+- Partly available in the calculator: |partly| [explanation]
+- Available in the calculator but missing in Ubermag: |missing|
+- Not available in the calculator: |no|
+
 .. list-table::
    :header-rows: 2
 
@@ -25,6 +31,10 @@ The following table summarises the available features in Ubermag, OOMMF an
      - ``mm.Exchange``
      - |yes|
      - |yes|
+   * - Zeeman energy / time dependent
+     - ``mm.Zeeman``
+     - |yes| / |yes|
+     - |yes| / |missing|
    * - bulk DMI
      - ``mm.DMI`` ``crystalclass='T'``
      - |yes|
@@ -37,10 +47,6 @@ The following table summarises the available features in Ubermag, OOMMF an
      - ``mm.RKKY``
      - |yes|
      - |no|
-   * - Magnetic fields / time dependent
-     - ``mm.Zeeman``
-     - |yes| / |yes|
-     - |yes| / |missing|
    * - Energy minimisation
      - ``mm.Energy``
      - ``oc.MinDriver``
@@ -72,27 +78,27 @@ Compatible versions
    * - 0.62.1
      - 2022-06-09
      - 2.0a3 (oommf/oommf:20a3)
-     - |no|
+     - ✘
    * - 0.62.0
      - 2022-05-22
      - 2.0a3 (oommf/oommf:20a3)
-     - |no|
+     - ✘
    * - 0.61.2
      - 2022-03-17
      - 2.0a3 (oommf/oommf:20a3)
-     - |no|
+     - ✘
    * - 0.61.0
      - 2022-02-22
      - 2.0a3 (oommf/oommf:20a3)
-     - |no|
+     - ✘
    * - 0.60.0
      - 2021-10-01
      - 2.0a2 (oommf/oommf:20a2)
-     - |no|
+     - ✘
    * - 0.51
      - 2021-02-10
      - 2.0a1 (ubermag/oommf)
-     - |no|
+     - ✘
 
 .. |mumax3| replace:: mumax\ :sup:`3`
 
@@ -103,5 +109,5 @@ Compatible versions
 
 .. |yes| replace:: :green:`✔`
 .. |partly| replace:: :orangepartly:`(✔)`
-.. |missing| replace:: :orangemissing:`✘`
+.. |missing| replace:: :orangemissing:`(✘)`
 .. |no| replace:: :red:`✘`
