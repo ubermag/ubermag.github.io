@@ -6,6 +6,11 @@
     color: red;
 }
 
-.orange {
+.orangepartly {
     color: orange;
 }
+
+.orangemissing {
+    color: #FF7500;
+}
+

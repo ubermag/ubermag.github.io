@@ -37,6 +37,10 @@ The following table summarises the available features in Ubermag, OOMMF an
      - ``mm.RKKY``
      - |yes|
      - |no|
+   * - Magnetic fields / time dependent
+     - ``mm.Zeeman``
+     - |yes| / |yes|
+     - |yes| / |missing|
    * - Energy minimisation
      - ``mm.Energy``
      - ``oc.MinDriver``
@@ -92,10 +96,12 @@ Compatible versions
 
 .. |mumax3| replace:: mumax\ :sup:`3`
 
-.. role:: red
 .. role:: green
-.. role:: orange
+.. role:: red
+.. role:: orangepartly
+.. role:: orangemissing
 
 .. |yes| replace:: :green:`✔`
+.. |partly| replace:: :orangepartly:`(✔)`
+.. |missing| replace:: :orangemissing:`✘`
 .. |no| replace:: :red:`✘`
-.. |partly| replace:: :orange:`(✔)`
