@@ -374,6 +374,9 @@ Added
     (``micromagneticmodel.Slonczewski`` and ``micromagneticmodel.ZhangLi``)
     (`documentation <https://ubermag.github.io/documentation/ipynb/oommfc/time-dependent-field-current.html>`__).
 
+``mumax3c``
+  A new package ``mumax3c`` has been added and allows users to use Mumax\ :sup:`3` as a new calculator in addition to OOMMF.
+
 ``oommfc``
   - Support for OOMMF extension ``Xf_ThermHeunEvolver``,
     ``Xf_ThermSpinXferEvolver``, and ``UHH_ThetaEvolve`` for simulations at finite
