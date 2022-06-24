@@ -13,6 +13,7 @@ API
     micromagneticdata
     micromagneticmodel
     micromagnetictests
+    mumax3c
     oommfc
     ubermag
     ubermagtable
