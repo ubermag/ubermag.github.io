@@ -2,8 +2,8 @@
 Changelog
 =========
 
-0.64.0 (due for release)
-========================
+0.64.0 (Jul 03, 2022)
+=====================
 
 ``mumax3c``
   A new package ``mumax3c`` has been added and allows users to use
