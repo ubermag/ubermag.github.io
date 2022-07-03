@@ -107,8 +107,8 @@ Fixed
     <https://github.com/ubermag/discretisedfield/pull/153>`__)
 
 ``micromagneticdata``
-  - ``data[index]`` would always return a drive even if a drive with number
-    ``index`` does not exist (by computing module of index). <`#24
+  - ``data[index]`` returns a drive for drive numbers ``index`` larger than the
+    maximum drive number on disk (by computing module of index). (`#24
     <https://github.com/ubermag/micromagneticdata/pull/24>`__)
 
 ``oommfc``
