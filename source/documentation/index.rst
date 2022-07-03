@@ -2,10 +2,14 @@
 Package documentation
 =====================
 
-The notebooks show here contain “technical” documentation for specific features
+The notebooks shown here contain “technical” documentation for specific features
 of the different packages. If you are new to ``ubermag`` you should consider
 first looking at :doc:`../getting-started/index` which will give a gentle
 introduction into all the packages inside ``ubermag``.
+
+Different calculators (OOMMF and mumax\ :sup:`3`) support different feature sets. The
+:doc:`compatibility` page gives an overview over the different features. It also
+lists compatible versions for Ubermag, and OOMMF, and mumax\ :sup:`3`.
 
 .. toctree::
     :maxdepth: 1
@@ -17,10 +21,12 @@ introduction into all the packages inside ``ubermag``.
     micromagneticdata
     micromagneticmodel
     micromagnetictests
+    mumax3c
     oommfc
     ubermagtable
     ubermagutil
     ubermag
+    Compatibility <compatibility>
 
 All packages are licensed under: |license|
 
@@ -72,6 +78,13 @@ All packages are licensed under: |license|
        |mt_conda|
      - |mt_coverage|
      - |mt_binder|
+   * - :doc:`mumax3c`
+     - |mc_pypi|
+       |mc_anaconda|
+     - |mc_workflow|
+       |mc_conda|
+     - |mc_coverage|
+     - |mc_binder|
    * - :doc:`oommfc`
      - |oc_pypi|
        |oc_anaconda|
@@ -199,6 +212,26 @@ All packages are licensed under: |license|
                          :height: 18px
 .. |mt_binder| image:: https://mybinder.org/badge_logo.svg
                        :target: https://mybinder.org/v2/gh/ubermag/micromagnetictests/latest?urlpath=lab/tree/docs
+                       :height: 18px
+
+.. mumax3c
+.. |mc_pypi| image:: https://badge.fury.io/py/mumax3c.svg
+                     :target: https://badge.fury.io/py/mumax3c
+                     :height: 18px
+.. |mc_anaconda| image:: https://anaconda.org/conda-forge/mumax3c/badges/version.svg
+                         :target: https://anaconda.org/conda-forge/mumax3c
+                         :height: 18px
+.. |mc_workflow| image:: https://github.com/ubermag/mumax3c/workflows/workflow/badge.svg
+                         :target: https://github.com/ubermag/mumax3c/actions?query=workflow%3Aworkflow
+                         :height: 18px
+.. |mc_conda| image:: https://github.com/ubermag/mumax3c/workflows/conda/badge.svg
+                      :target: https://github.com/ubermag/mumax3c/actions?query=workflow%3Aconda
+                      :height: 18px
+.. |mc_coverage| image:: https://codecov.io/gh/ubermag/mumax3c/branch/master/graph/badge.svg?token=hcK4fofmrL       
+                         :target: https://codecov.io/gh/ubermag/mumax3c
+                         :height: 18px
+.. |mc_binder| image:: https://mybinder.org/badge_logo.svg
+                       :target: https://mybinder.org/v2/gh/ubermag/mumax3c/latest?urlpath=lab/tree/dmcs
                        :height: 18px
 
 .. oommfc

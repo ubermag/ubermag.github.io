@@ -17,7 +17,7 @@
 # -- Project information -----------------------------------------------------
 
 project = 'ubermag'
-copyright = '2021, Marijan Beg and Hans Fangohr'
+copyright = '2022, Marijan Beg and Hans Fangohr'
 author = ('Marijan Beg, Martin Lang, Ryan A. Pepper, Thomas Kluyver, '
           'Jeroen Mulkers, Jonathan Leliaert, and Hans Fangohr')
 
@@ -97,6 +97,7 @@ html_theme_options = {
 # relative to this directory. They are copied after the builtin static files,
 # so a file named "default.css" will overwrite the builtin "default.css".
 html_static_path = ['_static']
+html_css_files = ['css/colours.css']
 html_extra_path = ['./quickstart.html']
 
 # -- Custom configuration ----------------------------------------------------
@@ -125,6 +126,7 @@ autosummary_context = {
                             'micromagneticmodel.consts',
                             'micromagneticmodel.examples',
                             'micromagnetictests.calculatortests',
+                            'mumax3c.mumax3',
                             'oommfc.oommf',
                             'ubermagtable.util',
                             'ubermagutil.typesystem',
