@@ -11,3 +11,6 @@ dependencies:
   - sphinx-design
   - ubermag==0.62.1
   - astropy  # for the unit conversion tutorial in mag2exp
+  - pip
+  - pip:
+      - mumax3c
