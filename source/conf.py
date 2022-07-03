@@ -17,7 +17,7 @@
 # -- Project information -----------------------------------------------------
 
 project = 'ubermag'
-copyright = '2021, Marijan Beg and Hans Fangohr'
+copyright = '2022, Marijan Beg and Hans Fangohr'
 author = ('Marijan Beg, Martin Lang, Ryan A. Pepper, Thomas Kluyver, '
           'Jeroen Mulkers, Jonathan Leliaert, and Hans Fangohr')
 
@@ -126,6 +126,7 @@ autosummary_context = {
                             'micromagneticmodel.consts',
                             'micromagneticmodel.examples',
                             'micromagnetictests.calculatortests',
+                            'mumax3c.mumax3',
                             'oommfc.oommf',
                             'ubermagtable.util',
                             'ubermagutil.typesystem',
