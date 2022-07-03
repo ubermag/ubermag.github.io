@@ -267,11 +267,12 @@ through Project No. G098917N (Jeroen Mulkers) and with a postdoctoral fellowship
 
    installation
    demo
-   documentation
+   getting-started/index
+   examples/index
+   documentation/index
    api/index
    changelog
    help
-   contributing
 
 
 
