@@ -2,8 +2,15 @@
 Changelog
 =========
 
-0.63.0
-======
+0.64.0 (due for release)
+========================
+
+``mumax3c``
+  A new package ``mumax3c`` has been added and allows users to use
+  Mumax\ :sup:`3` as a new calculator in addition to OOMMF.
+
+0.63.0 (Jun 29, 2022)
+=====================
 
 Added
 -----
@@ -35,9 +42,6 @@ Added
   - Containers (``system.energy`` and ``system.dynacmics``) now support
     ``container[index]`` (``__getitem__``) to obtain a term by its index. (`#50
     <https://github.com/ubermag/micromagneticmodel/pull/50/files>`__)
-
-``mumax3c``
-  A new package ``mumax3c`` has been added and allows users to use Mumax\ :sup:`3` as a new calculator in addition to OOMMF.
 
 ``oommfc``
   - The input for OOMMF (``mif`` file and related files) can now be created
