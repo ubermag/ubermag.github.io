@@ -27,6 +27,10 @@ The following table summarises the available features in Ubermag, OOMMF an
      - ``micromagneticmodel``
      - ``oommfc``
      - ``mumax3c``
+   * -
+     - Multiple energy terms of the same type
+     - |yes|
+     - |partly| [Only Zeeman energy]
    * - Exchange energy
      - ``mm.Exchange``
      - |yes|
@@ -59,6 +63,10 @@ The following table summarises the available features in Ubermag, OOMMF an
      - ``mm.Dynamics``
      - ``oc.TimeDriver``
      - ``mc.TimeDriver``
+   * - Evolvers
+     - ``mm.Evolver``
+     - |yes|
+     - |missing|
 
 -------------------
 Compatible versions
@@ -72,7 +80,7 @@ Compatible versions
      - OOMMF (Docker image)
      - Mumax3
    * - 0.63.0
-     - 
+     -
      - 2.0a3 (oommf/oommf:20a3)
      - 3.10
    * - 0.62.1
