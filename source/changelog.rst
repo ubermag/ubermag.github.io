@@ -2,6 +2,19 @@
 Changelog
 =========
 
+In progress
+===========
+
+Changed
+-------
+
+``micromagneticdata``
+  - Rewrite of the ``to_xarray`` method to improve performance and reduced
+    memory consumption. The maximum memory consumption is now roughly equivalent
+    to the on-disk size of the data. The old method had aroughly doubled peak
+    memory consumption. (`#33
+    <https://github.com/ubermag/micromagneticdata/pull/33>`__)
+
 0.64.0 (Jul 03, 2022)
 =====================
 
