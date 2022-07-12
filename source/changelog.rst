@@ -11,9 +11,16 @@ Changed
 ``micromagneticdata``
   - Rewrite of the ``to_xarray`` method to improve performance and reduced
     memory consumption. The maximum memory consumption is now roughly equivalent
-    to the on-disk size of the data. The old method had aroughly doubled peak
+    to the on-disk size of the data. The old method had a roughly doubled peak
     memory consumption. (`#33
     <https://github.com/ubermag/micromagneticdata/pull/33>`__)
+
+``discretisedfield``
+  - import ``discretisedfield.tools`` into ``discretisedfield``. (`#159
+    <https://github.com/ubermag/discretisedfield/pull/159>`__)
+  - Scale the size and shape of the colorbar on `mpl` plots so the colorbar
+    dynamically changes with axes size (`#159
+    <https://github.com/ubermag/discretisedfield/pull/159>`__)
 
 0.64.0 (Jul 03, 2022)
 =====================
@@ -302,7 +309,7 @@ Added
     +------+----------+---------+--------+---------+----------+---------+---------+
     | text | 15M      | 4920 ms | 401 ms |      12 | 69000 ms | 4510 ms |      15 |
     +------+----------+---------+--------+---------+----------+---------+---------+
-    
+
     The new default is ``bin8`` (binary represenation with double precision)
     instead of ``txt`` (`#121
     <https://github.com/ubermag/discretisedfield/pull/121>`__).
@@ -327,7 +334,7 @@ Changed
 ``discretisedfield``
   - Keywords for ``Field.mpl()`` renamed to ``scalar_kw`` and ``vector_kw``
     (`#108 <https://github.com/ubermag/discretisedfield/pull/108>`__).
-  
+
 ``micromagneticmodel``
   - Variable names for time-dependent fields and currents changed (for
     consistency reasons).
