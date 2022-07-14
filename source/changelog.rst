@@ -8,19 +8,19 @@ In progress
 Changed
 -------
 
+``discretisedfield``
+  - Import ``discretisedfield.tools`` into ``discretisedfield``. (`#159
+    <https://github.com/ubermag/discretisedfield/pull/159>`__)
+  - Scale the size and shape of the colorbar on `mpl` plots so the colorbar
+    dynamically changes with axes size (`#159
+    <https://github.com/ubermag/discretisedfield/pull/159>`__)
+
 ``micromagneticdata``
   - Rewrite of the ``to_xarray`` method to improve performance and reduced
     memory consumption. The maximum memory consumption is now roughly equivalent
     to the on-disk size of the data. The old method had a roughly doubled peak
     memory consumption. (`#33
     <https://github.com/ubermag/micromagneticdata/pull/33>`__)
-
-``discretisedfield``
-  - import ``discretisedfield.tools`` into ``discretisedfield``. (`#159
-    <https://github.com/ubermag/discretisedfield/pull/159>`__)
-  - Scale the size and shape of the colorbar on `mpl` plots so the colorbar
-    dynamically changes with axes size (`#159
-    <https://github.com/ubermag/discretisedfield/pull/159>`__)
 
 0.64.0 (Jul 03, 2022)
 =====================
