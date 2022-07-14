@@ -2,15 +2,15 @@
 Getting started
 ===============
 
-If you are new to ``Ubermag`` this is the correct place to start learning it.
-The following set of tutorials will introduce all basic concepts of ``Ubermag``
-and its subpackages.
-
 .. toctree::
-   :hidden:
    :maxdepth: 1
 
    notebooks/python-basics
+   jupyter-basics
+
+If you are new to ``Ubermag`` this is the correct place to start learning it.
+The following set of tutorials will introduce all basic concepts of ``Ubermag``
+and its subpackages.
 
 .. toctree::
    :maxdepth: 1
