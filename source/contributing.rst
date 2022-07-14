@@ -7,7 +7,7 @@ We highly welcome all sorts of contributions. There are many ways of contributin
 - answering questions in the GitHub help repository or on the mailing list
 - writing/extending the documentation
 - reporting bugs
-- ... 
+- contributing code
 
 .. _bugs:
 
