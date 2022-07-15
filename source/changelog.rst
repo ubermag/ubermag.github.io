@@ -15,15 +15,17 @@ Changed
     dynamically changes with axes size (`#159
     <https://github.com/ubermag/discretisedfield/pull/159>`__)
     
-``micromagneticmodel``
-  - Fix the LaTex representation of Landau-Lifshitz-Gilbert equation in the presence of Zhang-Li and Slonczewski torque terms.
-
 ``micromagneticdata``
   - Rewrite of the ``to_xarray`` method to improve performance and reduced
     memory consumption. The maximum memory consumption is now roughly equivalent
     to the on-disk size of the data. The old method had a roughly doubled peak
     memory consumption. (`#33
     <https://github.com/ubermag/micromagneticdata/pull/33>`__)
+
+``micromagneticmodel``
+  - Fix the LaTex representation of Landau-Lifshitz-Gilbert equation in the
+    presence of Zhang-Li and Slonczewski torque terms. (`#52
+    <https://github.com/ubermag/micromagneticmodel/pull/52>`__)
 
 0.64.0 (Jul 03, 2022)
 =====================
