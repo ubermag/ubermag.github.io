@@ -11,7 +11,7 @@ Changed
 ``discretisedfield``
   - Import ``discretisedfield.tools`` into ``discretisedfield``. (`#159
     <https://github.com/ubermag/discretisedfield/pull/159>`__)
-  - Scale the size and shape of the colorbar on `mpl` plots so the colorbar
+  - Scale the size and shape of the colorbar on ``mpl`` plots so the colorbar
     dynamically changes with axes size (`#159
     <https://github.com/ubermag/discretisedfield/pull/159>`__)
 
