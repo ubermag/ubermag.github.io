@@ -14,6 +14,9 @@ Changed
   - Scale the size and shape of the colorbar on ``mpl`` plots so the colorbar
     dynamically changes with axes size (`#159
     <https://github.com/ubermag/discretisedfield/pull/159>`__)
+    
+``micromagneticmodel``
+  - Fix the LaTex representation of Landau-Lifshitz-Gilbert equation in the presence of Zhang-Li and Slonczewski torque terms.
 
 ``micromagneticdata``
   - Rewrite of the ``to_xarray`` method to improve performance and reduced
