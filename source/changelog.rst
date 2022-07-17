@@ -2,8 +2,8 @@
 Changelog
 =========
 
-In progress
-===========
+0.65.0 (Jul 17, 2022)
+=====================
 
 Changed
 -------
@@ -14,7 +14,7 @@ Changed
   - Scale the size and shape of the colorbar on ``mpl`` plots so the colorbar
     dynamically changes with axes size (`#159
     <https://github.com/ubermag/discretisedfield/pull/159>`__)
-    
+
 ``micromagneticdata``
   - Rewrite of the ``to_xarray`` method to improve performance and reduced
     memory consumption. The maximum memory consumption is now roughly equivalent
