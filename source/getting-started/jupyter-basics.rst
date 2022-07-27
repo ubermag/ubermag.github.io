@@ -4,8 +4,8 @@ Jupyter lab quickstart
 
 We use Jupyter notebooks for all our examples and highly recommend using
 Jupyter notebooks for interactive simulations. For details please refer to
-https://jupyter.org. Here, we give a minimal introduction in how to start and
-use a Jupyter notebook. We will use the newer interface, called Jupyter lab. We
+https://jupyter.org. Here, we provide a minimal introduction to starting and
+using a Jupyter notebook. We will use the newer interface, called "Jupyter lab". We
 assume that you have locally installed Ubermag or any of its subpackages as
 explained in :doc:`../installation`. Jupyter lab is automatically installed as a
 dependency of ``discretisedfield``.
@@ -31,7 +31,7 @@ dependency of ``discretisedfield``.
       it. Jupyter lab gives you full access to your files in the directory (and
       all subdirectories) from where you start it.
 
-Once you have started jupyter lab, you will see a browser tab similar to this
+Once you have started Jupyter lab, you will see a browser tab similar to this
 one (note that the UI might change over time).
 
 .. image:: ../_static/jupyter-lab.png
