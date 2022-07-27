@@ -18,12 +18,12 @@ mailing list and help others. We also announce releases on the mailing list.
 
 Please first have a look at the `existing issues
 <https://github.com/ubermag/help/issues?q=is%3Aissue+>`__ and the `mailing list
-archive <https://listserv.gwdg.de/pipermail/ubermag-users/>`__, maybe your
+archive <https://listserv.gwdg.de/pipermail/ubermag-users/>`__: perhaps your
 question has been answered already.
 
-----------
-How to ask
-----------
+------------------------------------
+How to prepare your request for help
+------------------------------------
 
 Please provide:
 
@@ -81,9 +81,10 @@ Please provide:
        # e.g. mif-file excerpt
 
 By providing the above listed information you greatly enhance the chance to get
-help. Please be patient if we do not reply immediately.
+help. (Your careful documentation of the issue may also help others who run into the same problem.)
+Please be patient if we do not reply immediately.
 
-For more details on how to ask good questions please refer to:
+For more suggestions on how to phrase your questions please refer to:
 https://fangohr.github.io/computing/smartquestion.html
 
 -----------
@@ -91,5 +92,8 @@ Help others
 -----------
 
 If you have more experience in using ``ubermag`` or any of its sub-packages and
-want to help others we very much welcome anyone answering open questions in the
-help repository.
+want to help others, we very much welcome anyone answering open questions in the
+help repository: You may not be able to contribute to the ``ubermag`` software, 
+but if you can help fellow ``ubermag`` users, you contribute to the ``ubermag`` 
+project and community buiding, and you create time for the ``ubermag`` developers 
+to focus on the tasks you would like them to work on.
