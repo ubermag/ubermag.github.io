@@ -115,12 +115,12 @@ and mumax\ :sup:`3`).
 
    .. tab-item:: OOMMF
 
-      When you install `ubermag` using `conda` OOMMF will be automatically
-      installed and `ubermag` (more precisely `oommfc`) knows how to find it. If
-      you install `ubermag` using `pip` you have to install OOMMF manually and
-      make sure that `ubermag` can find it. This also allows you to use a custom
+      When you install ``ubermag`` using ``conda`` OOMMF will be automatically
+      installed and ``ubermag`` (more precisely ``oommfc``) knows how to find it. If
+      you install ``ubermag`` using ``/pip`` you have to install OOMMF manually and
+      make sure that ``ubermag`` can find it. This also allows you to use a custom
       version of OOMMF. If you have no OOMMF installed but Docker is available
-      `ubermag` will automatically attempt to download and use a Docker image
+      ``ubermag`` will automatically attempt to download and use a Docker image
       that contains OOMMF.
 
       For detailed instructions how to use a non-default OOMMF installation
@@ -129,15 +129,15 @@ and mumax\ :sup:`3`).
 
    .. tab-item:: mumax\ :sup:`3`
 
-      Mumax\ :sup:`3` does not directly come with `ubermag` and you have to
+      Mumax\ :sup:`3` does not directly come with ``ubermag`` and you have to
       install it manually (following the instructions on the mumax\ :sup:`3`
-      website). There are two different options how `ubermag` (more precisely
-      `mumax3c`) can use your custom mumax\ :sup:`3` installation.
+      website). There are two different options how ``ubermag`` (more precisely
+      ``mumax3c``) can use your custom mumax\ :sup:`3` installation.
 
       1. You can add the directory containing the mumax\ :sup:`3` executable to
-         your PATH variable. `ubermag` by default looks for an executable called
-         `mumax3` on PATH.
-      2. You can change the name of the default executable in `mumax3c` when you
+         your PATH variable. ``ubermag`` by default looks for an executable called
+         ``mumax3`` on PATH.
+      2. You can change the name of the default executable in ``mumax3c`` when you
          import it as follows:
 
          .. tab-set::
