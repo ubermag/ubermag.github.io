@@ -2,7 +2,9 @@
 Contributing
 ============
 
-We highly welcome all sorts of contributions. There are many ways of contributing and several of these do not require programming skills. We list a few (in alphabetic order) here:
+We highly welcome all sorts of contributions. There are many ways of
+contributing and several of these do not require programming skills. We list a
+few here:
 
 - answering questions in the GitHub help repository or on the mailing list
 - writing/extending the documentation
