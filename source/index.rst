@@ -268,7 +268,6 @@ through Project No. G098917N (Jeroen Mulkers) and with a postdoctoral fellowship
    demo
    installation
    documentation
-   api/index
    changelog
    help
    contributing

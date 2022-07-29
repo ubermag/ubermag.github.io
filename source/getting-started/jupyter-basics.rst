@@ -1,6 +1,6 @@
-======================
-Jupyter lab quickstart
-======================
+===========
+Jupyter lab
+===========
 
 We use Jupyter notebooks for all our examples and recommend using Jupyter
 notebooks for interactive simulations where the computation time is tolerable.

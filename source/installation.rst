@@ -2,8 +2,9 @@
 Installation
 ============
 
-All packages in Ubermag are available on both ``conda-forge`` and ``PyPI``. All
-packages can be installed independently using ``conda`` or ``pip``. To simplify the
+All packages in Ubermag are available on both `conda forge
+<https://conda-forge.org>`__ and `PyPI <https://pypi.org>`__. All packages can
+be installed independently using ``conda`` or ``pip``. To simplify the
 installation for users doing micromagnetic simulations we provide a meta-package
 called ``ubermag``. During installation of this packages all individual
 subpackages and additionally `OOMMF <https://math.nist.gov/oommf/>`__ are
@@ -104,6 +105,9 @@ install.
       .. code-block::
 
          $ pip install ubermag
+
+If you want to use ``ubermag`` in a Jupyter notebook we provide a short summary
+of how to run :doc:`getting-started/jupyter-basics`.
 
 Installing a calculator
 -----------------------
