@@ -2,6 +2,15 @@
 Changelog
 =========
 
+0.66.0
+======
+
+``discretisedfield``
+  - Subregions are saved in a json file
+    (``<field-name>.<extension>.subregions.json``) when saving a field and
+    automatically loaded when a field is loaded from disk and the json file
+    exists. (`#158 <https://github.com/ubermag/discretisedfield/pull/158>`__)
+
 0.65.0 (Jul 17, 2022)
 =====================
 
