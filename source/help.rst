@@ -32,8 +32,8 @@ Please provide:
 - Explain what you have tried already
 - Ideally, upload a ``Jupyter notebook`` (zipped for GitHub issues) containing
   what you have achieved so far (**NOTE: remove any confidential information**)
-- On GitHub, please enclose inline-code snippets with single backticks and
-  multi-line (code) blocks with lines containing three backticks (optionally
+- On GitHub and Zulip, please enclose inline-code snippets with single backticks
+  and multi-line (code) blocks with lines containing three backticks (optionally
   specifying the programming language) as shown in the following examples::
 
     Here is some `inline_code`.
