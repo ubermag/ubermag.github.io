@@ -27,7 +27,7 @@ On the `Ubermag mailing list
 versions of ``ubermag`` and new features. Additionally, Ubermag users can use
 the mailing list to ask questions and help others.
 
-.. grid:: 1 1 2 2
+.. grid:: 1 1 3 3
 
    .. grid-item::
 
@@ -36,6 +36,14 @@ the mailing list to ask questions and help others.
          :shadow:
 
          **Try it in your browser**
+
+   .. grid-item::
+
+      .. button-link:: https://ubermag.zulipchat.com
+         :color: warning
+         :shadow:
+
+         **Public Zulip chat**
 
    .. grid-item::
 
