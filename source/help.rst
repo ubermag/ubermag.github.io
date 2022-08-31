@@ -9,7 +9,7 @@ If you encounter a problem that is not explained in the `workshop
 <workshop/index.html>`__ or the `documentation <documentation/index.html>`__ you
 can raise an issue in our `help repository <https://github.com/ubermag/help>`__
 or ask on the public `Ubermag Zulip chat <https://ubermag.zulipchat.com>`__
-instance on our `mailing list
+instance, or on our `mailing list
 <https://listserv.gwdg.de/mailman/listinfo/ubermag-users>`__. We encourage
 everyone using ``ubermag`` to `sign up
 <https://ubermag.zulipchat.com/register/>`__ to the Ubermag Zulip chat instance
