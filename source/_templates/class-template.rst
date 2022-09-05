@@ -17,10 +17,10 @@
    .. autosummary::
       :nosignatures:
    {% for item in all_methods %}
-      {% if not item.startswith('_') or
+      {%- if not item.startswith('_') or
          (item.startswith('__') and item not in excluded_members) %}
          ~{{ name }}.{{ item }}
-      {% endif %}
+      {%- endif %}
    {%- endfor %}
    {% endif %}
    {% endblock %}
