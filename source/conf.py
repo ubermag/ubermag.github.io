@@ -90,7 +90,7 @@ html_theme_options = {
         },
     ],
     "show_toc_level": 1,
-    "navbar_end": ["navbar-icon-links.html", "search-field.html"]
+    "navbar_end": ["navbar-icon-links.html"]
 }
 
 # Add any paths that contain custom static files (such as style sheets) here,
