@@ -138,30 +138,33 @@ and mumax\ :sup:`3`).
       website). There are two different options how ``ubermag`` (more precisely
       ``mumax3c``) can use your custom mumax\ :sup:`3` installation.
 
-      1. You can add the directory containing the mumax\ :sup:`3` executable to
-         your PATH variable. ``ubermag`` by default looks for an executable called
-         ``mumax3`` on PATH.
-      2. You can change the name of the default executable in ``mumax3c`` when you
-         import it as follows:
+      - You can add the directory containing the mumax\ :sup:`3` executable to
+        your PATH variable. ``ubermag`` by default looks for an executable called
+        ``mumax3`` on PATH.
 
-         .. tab-set::
+      **or**
 
-            .. tab-item:: Linux
+      - You can change the name of the default executable in ``mumax3c`` when you
+        import it as follows:
 
-               .. code-block:: python
+        .. tab-set::
 
-                   import mumax3c
-                   mumax3c.runner.mumax3_exe = '/full/path/to/mumax/executable'
+           .. tab-item:: Linux
 
-            .. tab-item:: Windows
+              .. code-block:: python
 
-               .. code-block:: python
+                 import mumax3c
+                 mumax3c.runner.mumax3_exe = '/full/path/to/mumax/executable'
 
-                   import mumax3c
-                   mumax3c.runner.mumax3_exe = r'C:\full\path\to\mumax\executable.exe'
+           .. tab-item:: Windows
 
-               A raw string is required to avoid that backslash + next character are
-               interpreted as escape sequences in the Python string.
+              .. code-block:: python
+
+                 import mumax3c
+                 mumax3c.runner.mumax3_exe = r'C:\full\path\to\mumax\executable.exe'
+
+              A raw string is required to avoid that backslash + next character are
+              interpreted as escape sequences in the Python string.
 
 Testing
 -------
