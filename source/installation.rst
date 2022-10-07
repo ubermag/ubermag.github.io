@@ -61,26 +61,26 @@ Installation environment
       ``ubermag`` via ``pip``. You have to manually install Python and pip for
       your operating system.
 
-      First, we create a new virtual environment, here called ``ubermag_dev``.
-      To use a different name, replace ``ubermag_dev`` with your desired name. A
+      First, we create a new virtual environment, here called ``ubermag_venv``.
+      To use a different name, replace ``ubermag_venv`` with your desired name. A
       new folder with the given environment name will be created in the current
       directory.
 
       .. code-block::
 
-         $ python3 -m venv ubermag_env
+         $ python3 -m venv ubermag_venv
 
       To activate the environment on Windows, run:
 
       .. code-block::
 
-         $ ubermag_env\Scripts\activate.bat
+         $ ubermag_venv\Scripts\activate.bat
 
       On Linux or MacOS, run:
 
       .. code-block::
 
-         $ source ubermag_env/bin/activate
+         $ source ubermag_venv/bin/activate
 
 Installation
 ------------
