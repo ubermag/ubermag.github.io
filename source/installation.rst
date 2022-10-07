@@ -46,13 +46,13 @@ Installation environment
       (Windows), create a new environment and activate it.
 
       Here, we show how to create and activate a new conda environment called
-      ``ubermag_dev``. To use a different name, replace ``ubermag_dev`` with
+      ``ubermag_env``. To use a different name, replace ``ubermag_env`` with
       your desired name.
 
       .. code-block::
 
          $ conda create -n ubermag_env python=3.8
-         $ conda activate ubermag
+         $ conda activate ubermag_env
 
    .. tab-item:: pip + venv
       :sync: pip_install
