@@ -12,7 +12,7 @@ News
   - Modify discretisedfield internally to allow n-dimensional fields
   - Dissemination activities
 
-- Date: December 9th - December 15th 2022
+- Date: December 8th - December 15th 2022
 - Location: University of Southampton, UK
 - all current and future contributers to Ubermag are welcome; please contact
   fangohr@soton.ac.uk for details.
