@@ -2,6 +2,58 @@
 Changelog
 =========
 
+0.66.0 (Oct 20, 2022)
+=====================
+
+Added
+-----
+
+``discretisedfield``
+  - Reading and writing for ``Field`` objects now supports ``pathlib.Path``
+    objects. Furthermore, the code has been reorganised (mostly invisible for
+    end users, a new ``io`` submodule has been added). (`#158
+    <https://github.com/ubermag/discretisedfield/pull/158>`__)
+  - Subregions are saved in a json file
+    (``<field-name>.<extension>.subregions.json``) when saving a field and
+    automatically loaded when a field is loaded from disk and the json file
+    exists. (`#158 <https://github.com/ubermag/discretisedfield/pull/158>`__,
+    `#163 <https://github.com/ubermag/discretisedfield/pull/163>`__)
+
+``micromagneticdata``
+  - Subregion information is loaded when accessing magnetisation fields (if
+    available). (`#35 <https://github.com/ubermag/micromagneticdata/pull/35>`__)
+  - Callbacks can be registered in the drive object to apply any sort of
+    processing (e.g. calculating the normalised field or topological charge
+    density) before returning individual fields in a drive. (`#35
+    <https://github.com/ubermag/micromagneticdata/pull/35>`__)
+  - Support for slicing in getitem in Drive, e.g. ``drive[::2]`` will return a
+    new drive object that only contains every second magnetisation file. (`#35
+    <https://github.com/ubermag/micromagneticdata/pull/35>`__)
+
+``oommfc``
+  - Subregion information is loaded when using ``compute`` (if available).
+    (`#116 <https://github.com/ubermag/oommfc/pull/116>`__)
+
+Changed
+-------
+
+``discretisedfield``
+  - Plotting for ``Mesh`` class moved to new submodule similar to ``Region`` and
+    ``Field``. Therefore ``mesh.mpl_subregions`` has to be replaced with
+    ``mesh.mpl.subregions``. (`#164
+    <https://github.com/ubermag/discretisedfield/pull/164>`__)
+  - New implementation for Holoviews-based plotting to improve creation speed
+    for large objects. (`#194
+    <https://github.com/ubermag/discretisedfield/pull/194>`__, `#196
+    <https://github.com/ubermag/discretisedfield/pull/196>`__)
+
+``micromagneticdata``
+  - Holoviews plotting now reads data from disk when it is accessed in the plot.
+    This greatly improves the initial rendering of the plot and can avoid memory
+    problems. Note that on slow file systems updating the plot when moving a
+    slider might take more time. (`#35
+    <https://github.com/ubermag/micromagneticdata/pull/35>`__)
+
 0.65.0 (Jul 17, 2022)
 =====================
 

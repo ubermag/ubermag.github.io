@@ -90,7 +90,8 @@ html_theme_options = {
         },
     ],
     "show_toc_level": 1,
-    "navbar_end": ["navbar-icon-links.html"]
+    "navbar_end": ["navbar-icon-links.html"],
+    "header_links_before_dropdown": 7,
 }
 
 # Add any paths that contain custom static files (such as style sheets) here,
