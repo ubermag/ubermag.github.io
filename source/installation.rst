@@ -46,13 +46,13 @@ Installation environment
       (Windows), create a new environment and activate it.
 
       Here, we show how to create and activate a new conda environment called
-      ``ubermag_dev``. To use a different name, replace ``ubermag_dev`` with
+      ``ubermag_env``. To use a different name, replace ``ubermag_env`` with
       your desired name.
 
       .. code-block::
 
          $ conda create -n ubermag_env python=3.8
-         $ conda activate ubermag
+         $ conda activate ubermag_env
 
    .. tab-item:: pip + venv
       :sync: pip_install
@@ -61,26 +61,26 @@ Installation environment
       ``ubermag`` via ``pip``. You have to manually install Python and pip for
       your operating system.
 
-      First, we create a new virtual environment, here called ``ubermag_dev``.
-      To use a different name, replace ``ubermag_dev`` with your desired name. A
+      First, we create a new virtual environment, here called ``ubermag_venv``.
+      To use a different name, replace ``ubermag_venv`` with your desired name. A
       new folder with the given environment name will be created in the current
       directory.
 
       .. code-block::
 
-         $ python3 -m venv ubermag_env
+         $ python3 -m venv ubermag_venv
 
       To activate the environment on Windows, run:
 
       .. code-block::
 
-         $ ubermag_env\Scripts\activate.bat
+         $ ubermag_venv\Scripts\activate.bat
 
       On Linux or MacOS, run:
 
       .. code-block::
 
-         $ source ubermag_env/bin/activate
+         $ source ubermag_venv/bin/activate
 
 Installation
 ------------
@@ -138,30 +138,33 @@ and mumax\ :sup:`3`).
       website). There are two different options how ``ubermag`` (more precisely
       ``mumax3c``) can use your custom mumax\ :sup:`3` installation.
 
-      1. You can add the directory containing the mumax\ :sup:`3` executable to
-         your PATH variable. ``ubermag`` by default looks for an executable called
-         ``mumax3`` on PATH.
-      2. You can change the name of the default executable in ``mumax3c`` when you
-         import it as follows:
+      - You can add the directory containing the mumax\ :sup:`3` executable to
+        your PATH variable. ``ubermag`` by default looks for an executable called
+        ``mumax3`` on PATH.
 
-         .. tab-set::
+      **or**
 
-            .. tab-item:: Linux
+      - You can change the name of the default executable in ``mumax3c`` when you
+        import it as follows:
 
-               .. code-block:: python
+        .. tab-set::
 
-                   import mumax3c
-                   mumax3c.runner.mumax3_exe = '/full/path/to/mumax/executable'
+           .. tab-item:: Linux
 
-            .. tab-item:: Windows
+              .. code-block:: python
 
-               .. code-block:: python
+                 import mumax3c
+                 mumax3c.runner.mumax3_exe = '/full/path/to/mumax/executable'
 
-                   import mumax3c
-                   mumax3c.runner.mumax3_exe = r'C:\full\path\to\mumax\executable.exe'
+           .. tab-item:: Windows
 
-               A raw string is required to avoid that backslash + next character are
-               interpreted as escape sequences in the Python string.
+              .. code-block:: python
+
+                 import mumax3c
+                 mumax3c.runner.mumax3_exe = r'C:\full\path\to\mumax\executable.exe'
+
+              A raw string is required to avoid that backslash + next character are
+              interpreted as escape sequences in the Python string.
 
 Testing
 -------

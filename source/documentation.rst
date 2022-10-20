@@ -35,3 +35,10 @@ packages, e.g. details about plotting or mathematical operations.
 
 Detailed documentation of all classes and functions of the different
 subpackages.
+
+.. toctree::
+   :maxdepth: 1
+
+   faq
+
+Short answers to common questions that might otherwise be difficult to find in the documentation.

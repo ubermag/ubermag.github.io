@@ -8,11 +8,14 @@ relevant sections in :doc:`contributing` (:ref:`bugs`, :ref:`feature-requests`).
 If you encounter a problem that is not explained in the `workshop
 <workshop/index.html>`__ or the `documentation <documentation/index.html>`__ you
 can raise an issue in our `help repository <https://github.com/ubermag/help>`__
-or ask on our `mailing list
+or ask on the public `Ubermag Zulip chat <https://ubermag.zulipchat.com>`__
+instance, or on our `mailing list
 <https://listserv.gwdg.de/mailman/listinfo/ubermag-users>`__. We encourage
-everyone using ``ubermag`` to `subscribe
-<https://listserv.gwdg.de/mailman/listinfo/ubermag-users>`__ to the mailing list
-and help others. We also announce new releases on the mailing list.
+everyone using ``ubermag`` to `sign up
+<https://ubermag.zulipchat.com/register/>`__ to the Ubermag Zulip chat instance
+or to `subscribe <https://listserv.gwdg.de/mailman/listinfo/ubermag-users>`__ to
+the mailing list and help others. We also announce new releases on the mailing
+list.
 
 ..  MABYE THIS LINK COULD DIRECTLY OPEN A NEW ISSUE BASED ON A (YET TO BE CREATED) TEMPLATE
 
@@ -31,8 +34,8 @@ Please provide:
 - Explain what you have tried already
 - Ideally, upload a ``Jupyter notebook`` (zipped for GitHub issues) containing
   what you have achieved so far (**NOTE: remove any confidential information**)
-- On GitHub, please enclose inline-code snippets with single backticks and
-  multi-line (code) blocks with lines containing three backticks (optionally
+- On GitHub and Zulip, please enclose inline-code snippets with single backticks
+  and multi-line (code) blocks with lines containing three backticks (optionally
   specifying the programming language) as shown in the following examples::
 
     Here is some `inline_code`.
