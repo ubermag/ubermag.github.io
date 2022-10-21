@@ -54,6 +54,14 @@ Changed
     slider might take more time. (`#35
     <https://github.com/ubermag/micromagneticdata/pull/35>`__)
 
+Fixed
+-----
+
+``discretisedfield``
+  - Missing initialisation when computing ``field.orientation`` for a field with
+    zero norm in some cells. (`commit 4a8fca4
+    <https://github.com/ubermag/discretisedfield/commit/ee26389c5768f092aa358701ba409014d01bbc6e>`__)
+
 0.65.0 (Jul 17, 2022)
 =====================
 
