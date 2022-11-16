@@ -10,7 +10,8 @@ Added
 
 ``ubermag``
   - Debug function to show versions of all ubermag subpackages and related
-    information. (`#147 <https://github.com/ubermag/ubermag/pull/147>`__)
+    information. (`#147 <https://github.com/ubermag/ubermag/pull/147>`__, `#148
+    <https://github.com/ubermag/ubermag/pull/148>`__)
 
 0.66.0 (Oct 20, 2022)
 =====================
