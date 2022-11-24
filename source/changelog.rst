@@ -15,12 +15,20 @@ Added
 
 Changed
 -------
+
 ``ubermagutil``
   - An additional summary line is printed for the progress bar context manager.
     Users will see the additional line when using ``oommfc`` or ``mumax3c`` time
     drives or min drives with ``verbose=2``. This was added because the progress
     bar in the notebook is not persistent across sessions. (`#39
     <https://github.com/ubermag/ubermagutil/pull/39>`__)
+
+Fixed
+-----
+
+``discretisedfield``
+  - The ``ovf2vtk`` command line tool was not directly accessible. (`#219
+    <https://github.com/ubermag/discretisedfield/pull/219>`__)
 
 0.66.0 (Oct 20, 2022)
 =====================
