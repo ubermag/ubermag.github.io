@@ -46,7 +46,7 @@ Please provide:
 
   ::
 
-    To get the current Ubermag version, we can use:
+    To get the current ``ubermag`` version, we can use:
     ```python
     # multi-line python
     import ubermag
