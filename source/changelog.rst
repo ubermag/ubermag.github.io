@@ -92,7 +92,7 @@ Changed
 
 ``mumax3c``
   A new package ``mumax3c`` has been added and allows users to use
-  Mumax\ :sup:`3` as a new calculator in addition to OOMMF.
+  mumax\ :sup:`3` as a new calculator in addition to OOMMF.
 
 0.63.0 (Jun 29, 2022)
 =====================
