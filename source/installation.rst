@@ -121,7 +121,7 @@ and mumax\ :sup:`3`).
 
       When you install ``ubermag`` using ``conda`` OOMMF will be automatically
       installed and ``ubermag`` (more precisely ``oommfc``) knows how to find it. If
-      you install ``ubermag`` using ``/pip`` you have to install OOMMF manually and
+      you install ``ubermag`` using ``pip`` you have to install OOMMF manually and
       make sure that ``ubermag`` can find it. This also allows you to use a custom
       version of OOMMF. If you have no OOMMF installed but Docker is available
       ``ubermag`` will automatically attempt to download and use a Docker image
