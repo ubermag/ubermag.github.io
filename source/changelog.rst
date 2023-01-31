@@ -2,8 +2,67 @@
 Changelog
 =========
 
-in progress
-===========
+in progress (0.70.0)
+====================
+
+Breaking changes in ``discretisedfield``
+----------------------------------------
+
+``discretisedfield`` has been refactored to support scalar and (n-dimensional)
+vector fields on n-dimensional meshes. As part of this refactoring several
+inconsistencies and ambiguities have been removed. These changes break existing
+code! The following summary lists all user-facing changes (removed, renamed, added functionality).
+
+The shape of the domain (i.e. the shape of the region/mesh) is now referred to
+as ``dim``, the shape of the field values as ``vdim`` (vector/value dimension).
+
+``Region``
+  - Modified: scaling a region is now done with the method ``scale``, the option to scale a region by multiply it with a number has been removed.
+  - New: regions can be translated in space with ``translate``.
+  - Modified: a new method ``allclose`` checks if two regions are the same within numerical accuracy, the operator now ``==`` checks for exact equality.
+  - Renamed: the operator ``|`` has been renamed to ``facing_surface``
+  - Removed: properties ``p1`` and ``p2``, use ``pmin`` and ``pmax``
+  - Changed: the return type of points (e.g. ``pmin``, ``pmax``, ``centre``) is now a ``numpy.ndarray``
+  - Changed: ``unit`` has been renamed to ``units`` and is a tuple to supports different units along different directions (only used as labels, not for calculations).
+  - New: property ``ndim`` to get the number of dimensions of the space.
+  - New: property ``dims``, names of the spatial dimensions
+
+``Mesh``
+  - Modified: a new method ``allclose`` checks if two regions are the same
+    within numerical accuracy, the operator now ``==`` checks for exact
+    equality.
+  - Modified: inconsistent behaviour of ``mesh[subregion]``; this operator will
+    now always use closed intervals, i.e. the returned submesh is now always
+    inclusive of endpoints.
+  - Renamed: the operator ``|`` is now a method called ``is_aligned``.
+  - Removed: ``axispoints`` (was deprecated), use ``points`` instead.
+  - Removed: ``neighbours``
+  - Renamed and modified: ``plane`` has been replaced with a new ``sel`` method. Refer to the documentation for more details.
+  - Removed: ``attributes``
+  - Removed: ``dS`` (used for integrals) because a new syntax for integrals is used
+  - Renamed: ``midpoints`` to ``points``
+  - Modified: new method ``coordinate_field`` that was previous part of the ``Field`` class.
+  - New: ``scale`` and ``translate`` similar to the ``Region`` class.
+
+``Field``
+  - Modified: getting the value at a point (``field(...)``) now returns a ``numpy.ndarray``.
+  - Modified: only field values are returned when iterating over a field.
+  - Modified: ``coordinate_field`` is now part of the ``Mesh`` class.
+  - Renamed and modified: ``derivative`` -> ``diff``; now supports holes inside the field, refer to the documentation for details.
+  - Modified: new integration syntax, refer to the documentation for details.
+  - Renamed: ``fromfile`` -> ``from_file``
+  - Renamed and modified: ``plane`` has been replaced with a new ``sel`` method. Refer to the documentation for more details.
+  - Removed: ``project`` has been removed, use ``mean`` with the ``axis`` argument instead.
+  - Renamed: ``write`` -> ``to_file``
+  - Modified: ``angle`` now takes a vector as reference and does not anymore require sliced fields.
+  - Renamed: ``dim`` -> ``nvdim`` to avoid ambiguities, the new name is also required as an argument when creating a field.
+  - Renamed: ``components`` -> ``vdims``
+  - Renamed: ``units`` -> ``unit``
+  - Removed: ``value``, to update field values use the new method ``update_field_values`` instead, to read data use the ``array`` property.
+  - Removed: ``zero`` class method; omit the ``value`` argument to create a field filled with zeros.
+  - New: method ``resample`` to compute field values on a new mesh; the nearest points will be used, interpolation is not supported.
+  - New: property ``valid`` to define parts that contain material; this can be set to the field norm on init using the optional ``valid='norm'`` argument.
+  - Modified: new hdf5 format to store all field information (e.g. subregions were missing before).
 
 Added
 -----
