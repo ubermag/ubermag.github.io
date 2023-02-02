@@ -51,7 +51,7 @@ Installation environment
 
       .. code-block::
 
-         $ conda create -n ubermag_env python=3.8
+         $ conda create -n ubermag_env python=3.10
          $ conda activate ubermag_env
 
    .. tab-item:: pip + venv
