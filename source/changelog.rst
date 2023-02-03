@@ -2,6 +2,19 @@
 Changelog
 =========
 
+0.66.1 (Feb 3, 2023)
+====================
+
+Fixed
+-----
+
+``discretisedfield``
+  - The ``ovf2vtk`` command line tool was not directly accessible. (`#219
+    <https://github.com/ubermag/discretisedfield/pull/219>`__)
+  - OVF files saved with the option ``extend_scalar=True`` did not contain all
+    data when the mesh size exceeded 100,000 elements. (`#337
+    <https://github.com/ubermag/discretisedfield/pull/337>`__)
+
 0.66.0 (Oct 20, 2022)
 =====================
 
