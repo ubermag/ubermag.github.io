@@ -2,13 +2,13 @@
 Package documentation
 =====================
 
-The notebooks shown here contain “technical” documentation for specific features
-of the different packages. If you are new to ``ubermag`` you should consider
+The notebooks shown here provide “technical” documentation for specific features
+of the different packages. If you are new to Ubermag you should consider
 first looking at :doc:`../getting-started/index` which will give a gentle
-introduction into all the packages inside ``ubermag``.
+introduction into all the packages and concepts of Ubermag.
 
 Different calculators (OOMMF and mumax\ :sup:`3`) support different feature sets. The
-:doc:`compatibility` page gives an overview over the different features. It also
+:doc:`compatibility` page gives an overview of the different features. It also
 lists compatible versions for Ubermag, and OOMMF, and mumax\ :sup:`3`.
 
 .. toctree::

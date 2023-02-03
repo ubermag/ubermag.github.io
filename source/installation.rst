@@ -10,22 +10,22 @@ called ``ubermag``. During installation of this packages all individual
 subpackages and additionally `OOMMF <https://math.nist.gov/oommf/>`__ are
 installed.
 
-If you want to run simulations using Mumax\ :sup:`3` you have to install it
+If you want to run simulations using mumax\ :sup:`3` you have to install it
 manually and make sure that it can be found on the command line (i.e. adding it
 to the PATH variable).
 
 To install any of the packages please follow the guidelines below and replace
 ``PACKAGE`` with one of the actual package names:
 
-- ubermag (includes all packages listed below + OOMMF)
-- discretisedfield
-- micromagneticmodel
-- micromagneticdata
-- micromagnetictests
-- oommfc
-- ubermagtable
-- ubermagdata
-- ubermagutil
+- ``ubermag`` (includes all packages listed below + OOMMF)
+- ``discretisedfield``
+- ``micromagneticmodel``
+- ``micromagneticdata``
+- ``micromagnetictests``
+- ``oommfc``
+- ``ubermagtable``
+- ``ubermagdata``
+- ``ubermagutil``
 
 Standard installation -- recommended
 ====================================
@@ -51,7 +51,7 @@ Installation environment
 
       .. code-block::
 
-         $ conda create -n ubermag_env python=3.8
+         $ conda create -n ubermag_env python=3.10
          $ conda activate ubermag_env
 
    .. tab-item:: pip + venv

@@ -2,7 +2,7 @@
 Changelog
 =========
 
-in progress (0.70.0)
+in progress (0.70.0 or date-based versioning?)
 ====================
 
 Breaking changes in ``discretisedfield``
@@ -81,6 +81,9 @@ Changed
     drives or min drives with ``verbose=2``. This was added because the progress
     bar in the notebook is not persistent across sessions. (`#39
     <https://github.com/ubermag/ubermagutil/pull/39>`__)
+
+0.66.1 (Feb 3, 2023)
+====================
 
 Fixed
 -----
@@ -182,7 +185,7 @@ Changed
 
 ``mumax3c``
   A new package ``mumax3c`` has been added and allows users to use
-  Mumax\ :sup:`3` as a new calculator in addition to OOMMF.
+  mumax\ :sup:`3` as a new calculator in addition to OOMMF.
 
 0.63.0 (Jun 29, 2022)
 =====================
