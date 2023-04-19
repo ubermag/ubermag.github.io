@@ -68,7 +68,7 @@ Features and packages
 
 Ubermag is a collection of several independent Python packages that can be used
 independently as well as in combination. The whole set of packages -- the
-``ubermag`` meta-package -- is taylored to micromagnetic simulations. The
+``ubermag`` meta-package -- is tailored to micromagnetic simulations. The
 individual sub-packages can be used in other fields, e.g. fluid dynamics.
 
 .. grid:: 1 1 2 2
