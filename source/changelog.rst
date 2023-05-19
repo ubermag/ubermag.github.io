@@ -82,6 +82,14 @@ Changed
     bar in the notebook is not persistent across sessions. (`#39
     <https://github.com/ubermag/ubermagutil/pull/39>`__)
 
+Fixed
+-----
+
+``mumax3c``
+  - Bug in mumax3 detection when passing the full path to the mumax3 executable.
+    (`commit
+    b2c334d<https://github.com/ubermag/mumax3c/commit/b2c334d53657599ff6144da5771abc92810e9350>`__)
+
 0.66.1 (Feb 3, 2023)
 ====================
 
