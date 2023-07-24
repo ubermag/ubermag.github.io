@@ -90,6 +90,10 @@ Fixed
     (`commit
     b2c334d<https://github.com/ubermag/mumax3c/commit/b2c334d53657599ff6144da5771abc92810e9350>`__)
 
+``oommfc``
+  - Bug in RKKY energy script when not defining sigma2. (`#142
+    <https://github.com/ubermag/oommfc/pull/142>`__)
+
 0.66.1 (Feb 3, 2023)
 ====================
 
