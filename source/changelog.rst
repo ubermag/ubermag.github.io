@@ -93,6 +93,8 @@ Fixed
 ``oommfc``
   - Bug in RKKY energy script when not defining sigma2. (`#142
     <https://github.com/ubermag/oommfc/pull/142>`__)
+  - Bug in time varying J and tcl injection script of Xf_ThermSpinXferEvolver. (`#136
+    <https://github.com/ubermag/oommfc/pull/136>`__)
 
 0.66.1 (Feb 3, 2023)
 ====================
