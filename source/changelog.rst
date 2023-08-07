@@ -63,6 +63,8 @@ as ``dim``, the shape of the field values as ``vdim`` (vector/value dimension).
   - New: method ``resample`` to compute field values on a new mesh; the nearest points will be used, interpolation is not supported.
   - New: property ``valid`` to define parts that contain material; this can be set to the field norm on init using the optional ``valid='norm'`` argument.
   - Modified: new hdf5 format to store all field information (e.g. subregions were missing before).
+  - New: Documentation for performing FFT on the ``Field`` class (`documentation
+    <https://ubermag.github.io/documentation/ipynb/discretisedfield/field-fft.html>`__).
 
 Added
 -----
