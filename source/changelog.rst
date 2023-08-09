@@ -25,7 +25,8 @@ as ``dim``, the shape of the field values as ``vdim`` (vector/value dimension).
   - Changed: the return type of points (e.g. ``pmin``, ``pmax``, ``centre``) is now a ``numpy.ndarray``
   - Changed: ``unit`` has been renamed to ``units`` and is a tuple to supports different units along different directions (only used as labels, not for calculations).
   - New: property ``ndim`` to get the number of dimensions of the space.
-  - New: property ``dims``, names of the spatial dimensions
+  - New: property ``dims``, names of the spatial dimensions.
+  - New: method ``rotate90`` to perform 90 degree rotations of the region.
 
 ``Mesh``
   - Modified: a new method ``allclose`` checks if two regions are the same
@@ -43,6 +44,7 @@ as ``dim``, the shape of the field values as ``vdim`` (vector/value dimension).
   - Renamed: ``midpoints`` to ``points``
   - Modified: new method ``coordinate_field`` that was previous part of the ``Field`` class.
   - New: ``scale`` and ``translate`` similar to the ``Region`` class.
+  - New: method ``rotate90`` to perform 90 degree rotations of the mesh.
 
 ``Field``
   - Modified: getting the value at a point (``field(...)``) now returns a ``numpy.ndarray``.
@@ -65,6 +67,9 @@ as ``dim``, the shape of the field values as ``vdim`` (vector/value dimension).
   - Modified: new hdf5 format to store all field information (e.g. subregions were missing before).
   - New: Documentation for performing FFT on the ``Field`` class (`documentation
     <https://ubermag.github.io/documentation/ipynb/discretisedfield/field-fft.html>`__).
+  - New: method ``rotate90`` to perform 90 degree rotations of the field.
+  - Modified: Added ``rotate90`` for documentation for performing rotations on the ``Field`` class (`documentation
+    <https://ubermag.github.io/documentation/ipynb/discretisedfield/field-rotations.html>`__).
 
 Added
 -----
