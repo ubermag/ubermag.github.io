@@ -70,6 +70,8 @@ as ``dim``, the shape of the field values as ``vdim`` (vector/value dimension).
   - New: method ``rotate90`` to perform 90 degree rotations of the field.
   - Modified: Added ``rotate90`` for documentation for performing rotations on the ``Field`` class (`documentation
     <https://ubermag.github.io/documentation/ipynb/discretisedfield/field-rotations.html>`__).
+  - Modified: Differential operators ``grad``, ``div``, ``curl``, and ``Laplacian`` have been generalised to n 
+    dimensions.
 
 Added
 -----
