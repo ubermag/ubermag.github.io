@@ -31,8 +31,8 @@ Energy Terms
      - ``micromagneticmodel``
      - ``oommfc``
      - ``mumax3c``
-   * -
-     - Multiple energy terms of the same type
+   * - Multiple energy terms of the same type
+     - User has to specify unique ``name``s
      - |yes|
      - |partly| [Only Zeeman energy]
    * - Cubic anisotropy
