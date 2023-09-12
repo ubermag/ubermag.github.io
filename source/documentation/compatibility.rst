@@ -152,9 +152,21 @@ Compatible versions
    * - Ubermag
      - Release date
      - OOMMF (Docker image)
-     - Mumax3
+     - mumax\ :sup:`3`
+   * - 0.66.0
+     - 2022-10-20
+     - 2.0b0 (oommf/oommf:20a3)
+     - 3.10
+   * - 0.65.0
+     - 2022-07-17
+     - 2.0a3 (oommf/oommf:20a3)
+     - 3.10
+   * - 0.64.0
+     - 2022-07-03
+     - 2.0a3 (oommf/oommf:20a3)
+     - 3.10
    * - 0.63.0
-     -
+     - 2022-06-29
      - 2.0a3 (oommf/oommf:20a3)
      - 3.10
    * - 0.62.1

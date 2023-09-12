@@ -90,7 +90,8 @@ html_theme_options = {
         },
     ],
     "show_toc_level": 1,
-    "navbar_end": ["navbar-icon-links.html", "search-field.html"]
+    "navbar_end": ["navbar-icon-links.html"],
+    "header_links_before_dropdown": 7,
 }
 
 # Add any paths that contain custom static files (such as style sheets) here,
@@ -113,9 +114,10 @@ autosummary_context = {
                          '__setattr__', '__sizeof__', '__str__',
                          '__subclasshook__', '__hash__'],
     'excluded_classes': ['Rotation'],  # hide mag2exp.sans.Rotation (from scipy)
-    'included_submodules': ['discretisedfield.plotting',
+    'included_submodules': ['discretisedfield.io',
+                            'discretisedfield.plotting',
                             'discretisedfield.tools',
-                            'discretisedfield.ovf2vtk',
+                            'discretisedfield.io.ovf2vtk',
                             'mag2exp.ltem',
                             'mag2exp.x_ray',
                             'mag2exp.sans',

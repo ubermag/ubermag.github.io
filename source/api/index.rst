@@ -1,10 +1,9 @@
-===
-API
-===
+=============
+API Reference
+=============
 
 .. autosummary::
     :toctree: _autosummary
-    :caption: packages
     :template: module-template.rst
     :recursive:
 

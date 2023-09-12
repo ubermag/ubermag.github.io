@@ -25,9 +25,9 @@ communicates with low-level simulation tools such as OOMMF.
 On the `Ubermag mailing list
 <https://listserv.gwdg.de/mailman/listinfo/ubermag-users>`__ we announce new
 versions of ``ubermag`` and new features. Additionally, Ubermag users can use
-the mailing list to ask questions and help others.
+the mailing list or the Ubermag Zulip chat to ask questions and help others.
 
-.. grid:: 1 1 2 2
+.. grid:: 1 1 3 3
 
    .. grid-item::
 
@@ -36,6 +36,14 @@ the mailing list to ask questions and help others.
          :shadow:
 
          **Try it in your browser**
+
+   .. grid-item::
+
+      .. button-link:: https://ubermag.zulipchat.com
+         :color: warning
+         :shadow:
+
+         **Public Zulip chat**
 
    .. grid-item::
 
@@ -60,7 +68,7 @@ Features and packages
 
 Ubermag is a collection of several independent Python packages that can be used
 independently as well as in combination. The whole set of packages -- the
-``ubermag`` meta-package -- is taylored to micromagnetic simulations. The
+``ubermag`` meta-package -- is tailored to micromagnetic simulations. The
 individual sub-packages can be used in other fields, e.g. fluid dynamics.
 
 .. grid:: 1 1 2 2
@@ -265,14 +273,13 @@ through Project No. G098917N (Jeroen Mulkers) and with a postdoctoral fellowship
    :hidden:
    :maxdepth: 1
 
-   installation
    demo
-   getting-started/index
-   examples/index
-   documentation/index
-   api/index
+   installation
+   documentation
    changelog
    help
+   contributing
+   news
 
 
 

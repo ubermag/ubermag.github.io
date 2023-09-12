@@ -2,12 +2,110 @@
 Changelog
 =========
 
+0.66.1 (Feb 3, 2023)
+====================
+
+Fixed
+-----
+
+``discretisedfield``
+  - The ``ovf2vtk`` command line tool was not directly accessible. (`#219
+    <https://github.com/ubermag/discretisedfield/pull/219>`__)
+  - OVF files saved with the option ``extend_scalar=True`` did not contain all
+    data when the mesh size exceeded 100,000 elements. (`#337
+    <https://github.com/ubermag/discretisedfield/pull/337>`__)
+
+0.66.0 (Oct 20, 2022)
+=====================
+
+Added
+-----
+
+``discretisedfield``
+  - Reading and writing for ``Field`` objects now supports ``pathlib.Path``
+    objects. Furthermore, the code has been reorganised (mostly invisible for
+    end users, a new ``io`` submodule has been added). (`#158
+    <https://github.com/ubermag/discretisedfield/pull/158>`__)
+  - Subregions are saved in a json file
+    (``<field-name>.<extension>.subregions.json``) when saving a field and
+    automatically loaded when a field is loaded from disk and the json file
+    exists. (`#158 <https://github.com/ubermag/discretisedfield/pull/158>`__,
+    `#163 <https://github.com/ubermag/discretisedfield/pull/163>`__)
+
+``micromagneticdata``
+  - Subregion information is loaded when accessing magnetisation fields (if
+    available). (`#35 <https://github.com/ubermag/micromagneticdata/pull/35>`__)
+  - Callbacks can be registered in the drive object to apply any sort of
+    processing (e.g. calculating the normalised field or topological charge
+    density) before returning individual fields in a drive. (`#35
+    <https://github.com/ubermag/micromagneticdata/pull/35>`__)
+  - Support for slicing in getitem in Drive, e.g. ``drive[::2]`` will return a
+    new drive object that only contains every second magnetisation file. (`#35
+    <https://github.com/ubermag/micromagneticdata/pull/35>`__)
+
+``oommfc``
+  - Subregion information is loaded when using ``compute`` (if available).
+    (`#116 <https://github.com/ubermag/oommfc/pull/116>`__)
+
+Changed
+-------
+
+``discretisedfield``
+  - Plotting for ``Mesh`` class moved to new submodule similar to ``Region`` and
+    ``Field``. Therefore ``mesh.mpl_subregions`` has to be replaced with
+    ``mesh.mpl.subregions``. (`#164
+    <https://github.com/ubermag/discretisedfield/pull/164>`__)
+  - New implementation for Holoviews-based plotting to improve creation speed
+    for large objects. (`#194
+    <https://github.com/ubermag/discretisedfield/pull/194>`__, `#196
+    <https://github.com/ubermag/discretisedfield/pull/196>`__)
+
+``micromagneticdata``
+  - Holoviews plotting now reads data from disk when it is accessed in the plot.
+    This greatly improves the initial rendering of the plot and can avoid memory
+    problems. Note that on slow file systems updating the plot when moving a
+    slider might take more time. (`#35
+    <https://github.com/ubermag/micromagneticdata/pull/35>`__)
+
+Fixed
+-----
+
+``discretisedfield``
+  - Missing initialisation when computing ``field.orientation`` for a field with
+    zero norm in some cells. (`commit 4a8fca4
+    <https://github.com/ubermag/discretisedfield/commit/ee26389c5768f092aa358701ba409014d01bbc6e>`__)
+
+0.65.0 (Jul 17, 2022)
+=====================
+
+Changed
+-------
+
+``discretisedfield``
+  - Import ``discretisedfield.tools`` into ``discretisedfield``. (`#159
+    <https://github.com/ubermag/discretisedfield/pull/159>`__)
+  - Scale the size and shape of the colorbar on ``mpl`` plots so the colorbar
+    dynamically changes with axes size (`#159
+    <https://github.com/ubermag/discretisedfield/pull/159>`__)
+
+``micromagneticdata``
+  - Rewrite of the ``to_xarray`` method to improve performance and reduced
+    memory consumption. The maximum memory consumption is now roughly equivalent
+    to the on-disk size of the data. The old method had a roughly doubled peak
+    memory consumption. (`#33
+    <https://github.com/ubermag/micromagneticdata/pull/33>`__)
+
+``micromagneticmodel``
+  - Fix the LaTex representation of Landau-Lifshitz-Gilbert equation in the
+    presence of Zhang-Li and Slonczewski torque terms. (`#52
+    <https://github.com/ubermag/micromagneticmodel/pull/52>`__)
+
 0.64.0 (Jul 03, 2022)
 =====================
 
 ``mumax3c``
   A new package ``mumax3c`` has been added and allows users to use
-  Mumax\ :sup:`3` as a new calculator in addition to OOMMF.
+  mumax\ :sup:`3` as a new calculator in addition to OOMMF.
 
 0.63.0 (Jun 29, 2022)
 =====================
@@ -289,7 +387,7 @@ Added
     +------+----------+---------+--------+---------+----------+---------+---------+
     | text | 15M      | 4920 ms | 401 ms |      12 | 69000 ms | 4510 ms |      15 |
     +------+----------+---------+--------+---------+----------+---------+---------+
-    
+
     The new default is ``bin8`` (binary represenation with double precision)
     instead of ``txt`` (`#121
     <https://github.com/ubermag/discretisedfield/pull/121>`__).
@@ -314,7 +412,7 @@ Changed
 ``discretisedfield``
   - Keywords for ``Field.mpl()`` renamed to ``scalar_kw`` and ``vector_kw``
     (`#108 <https://github.com/ubermag/discretisedfield/pull/108>`__).
-  
+
 ``micromagneticmodel``
   - Variable names for time-dependent fields and currents changed (for
     consistency reasons).

@@ -2,29 +2,30 @@
 Installation
 ============
 
-All packages in Ubermag are available on both ``conda-forge`` and ``PyPI``. All
-packages can be installed independently using ``conda`` or ``pip``. To simplify the
+All packages in Ubermag are available on both `conda forge
+<https://conda-forge.org>`__ and `PyPI <https://pypi.org>`__. All packages can
+be installed independently using ``conda`` or ``pip``. To simplify the
 installation for users doing micromagnetic simulations we provide a meta-package
 called ``ubermag``. During installation of this packages all individual
 subpackages and additionally `OOMMF <https://math.nist.gov/oommf/>`__ are
 installed.
 
-If you want to run simulations using Mumax\ :sup:`3` you have to install it
+If you want to run simulations using mumax\ :sup:`3` you have to install it
 manually and make sure that it can be found on the command line (i.e. adding it
 to the PATH variable).
 
 To install any of the packages please follow the guidelines below and replace
 ``PACKAGE`` with one of the actual package names:
 
-- ubermag (includes all packages listed below + OOMMF)
-- discretisedfield
-- micromagneticmodel
-- micromagneticdata
-- micromagnetictests
-- oommfc
-- ubermagtable
-- ubermagdata
-- ubermagutil
+- ``ubermag`` (includes all packages listed below + OOMMF)
+- ``discretisedfield``
+- ``micromagneticmodel``
+- ``micromagneticdata``
+- ``micromagnetictests``
+- ``oommfc``
+- ``ubermagtable``
+- ``ubermagdata``
+- ``ubermagutil``
 
 Standard installation -- recommended
 ====================================
@@ -45,13 +46,13 @@ Installation environment
       (Windows), create a new environment and activate it.
 
       Here, we show how to create and activate a new conda environment called
-      ``ubermag_dev``. To use a different name, replace ``ubermag_dev`` with
+      ``ubermag_env``. To use a different name, replace ``ubermag_env`` with
       your desired name.
 
       .. code-block::
 
-         $ conda create -n ubermag_env python=3.8
-         $ conda activate ubermag
+         $ conda create -n ubermag_env python=3.10
+         $ conda activate ubermag_env
 
    .. tab-item:: pip + venv
       :sync: pip_install
@@ -60,26 +61,26 @@ Installation environment
       ``ubermag`` via ``pip``. You have to manually install Python and pip for
       your operating system.
 
-      First, we create a new virtual environment, here called ``ubermag_dev``.
-      To use a different name, replace ``ubermag_dev`` with your desired name. A
+      First, we create a new virtual environment, here called ``ubermag_venv``.
+      To use a different name, replace ``ubermag_venv`` with your desired name. A
       new folder with the given environment name will be created in the current
       directory.
 
       .. code-block::
 
-         $ python3 -m venv ubermag_env
+         $ python3 -m venv ubermag_venv
 
       To activate the environment on Windows, run:
 
       .. code-block::
 
-         $ ubermag_env\Scripts\activate.bat
+         $ ubermag_venv\Scripts\activate.bat
 
       On Linux or MacOS, run:
 
       .. code-block::
 
-         $ source ubermag_env/bin/activate
+         $ source ubermag_venv/bin/activate
 
 Installation
 ------------
@@ -104,6 +105,66 @@ install.
       .. code-block::
 
          $ pip install ubermag
+
+If you want to use ``ubermag`` in a Jupyter notebook we provide a short summary
+of how to run :doc:`getting-started/jupyter-basics`.
+
+Installing a calculator
+-----------------------
+
+Ubermag can use different existing micromagnetic calculators (currently OOMMF
+and mumax\ :sup:`3`).
+
+.. tab-set::
+
+   .. tab-item:: OOMMF
+
+      When you install ``ubermag`` using ``conda`` OOMMF will be automatically
+      installed and ``ubermag`` (more precisely ``oommfc``) knows how to find it. If
+      you install ``ubermag`` using ``pip`` you have to install OOMMF manually and
+      make sure that ``ubermag`` can find it. This also allows you to use a custom
+      version of OOMMF. If you have no OOMMF installed but Docker is available
+      ``ubermag`` will automatically attempt to download and use a Docker image
+      that contains OOMMF.
+
+      For detailed instructions how to use a non-default OOMMF installation
+      please refer to
+      :doc:`documentation/notebooks/oommfc/controlling-default-runner`.
+
+   .. tab-item:: mumax\ :sup:`3`
+
+      Mumax\ :sup:`3` does not directly come with ``ubermag`` and you have to
+      install it manually (following the instructions on the mumax\ :sup:`3`
+      website). There are two different options how ``ubermag`` (more precisely
+      ``mumax3c``) can use your custom mumax\ :sup:`3` installation.
+
+      - You can add the directory containing the mumax\ :sup:`3` executable to
+        your PATH variable. ``ubermag`` by default looks for an executable called
+        ``mumax3`` on PATH.
+
+      **or**
+
+      - You can change the name of the default executable in ``mumax3c`` when you
+        import it as follows:
+
+        .. tab-set::
+
+           .. tab-item:: Linux
+
+              .. code-block:: python
+
+                 import mumax3c
+                 mumax3c.runner.mumax3_exe = '/full/path/to/mumax/executable'
+
+           .. tab-item:: Windows
+
+              .. code-block:: python
+
+                 import mumax3c
+                 mumax3c.runner.mumax3_exe = r'C:\full\path\to\mumax\executable.exe'
+
+              A raw string is required to avoid that backslash + next character are
+              interpreted as escape sequences in the Python string.
 
 Testing
 -------
