@@ -6,7 +6,7 @@ Compatibility: Ubermag - OOMMF - mumax\ :sup:`3`
 Supported features
 ------------------
 
-The following table summarises the available features in Ubermag, OOMMF an
+The following table summarises the available features in Ubermag, OOMMF and
 |mumax3|. We abbreviate ``micromagneticmodel=mm``, ``oommfc=oc`` and
 ``mumax3c=mc``.
 
@@ -15,6 +15,10 @@ The following table summarises the available features in Ubermag, OOMMF an
 - Partly available in the calculator: |partly| [explanation]
 - Available in the calculator but missing in Ubermag: |missing|
 - Not available in the calculator: |no|
+
+-------------------
+Energy Terms
+-------------------
 
 .. list-table::
    :header-rows: 2
@@ -27,31 +31,104 @@ The following table summarises the available features in Ubermag, OOMMF an
      - ``micromagneticmodel``
      - ``oommfc``
      - ``mumax3c``
-   * - Exchange energy
+   * - Multiple energy terms of the same type
+     - User has to specify unique ``name``s
+     - |yes|
+     - |partly| [Only Zeeman energy]
+   * - Cubic anisotropy
+     - ``mm.CubicAnisotropy``
+     - |yes|
+     - |yes|
+   * - Demagnetisation
+     - ``mm.Demag``
+     - |yes|
+     - |yes|
+   * - DMI
+     - ``mm.DMI``
+     - | |yes|
+       | ``T``
+       | ``O``
+       | ``Cnv``
+       | ``D2d``
+     - |yes| [cannot be used without exchange]
+       | ``T`` [not between subregions]
+       | ``O`` [not between subregions]
+       | ``Cnv``
+   * - Exchange
      - ``mm.Exchange``
+     - |yes|
+     - |yes|
+   * - Magneto-elastic
+     - ``mm.MagnetoElastic``
+     - |yes|
+     - |missing|
+   * - RKKY interaction - between regions
+     - ``mm.RKKY``
+     - |yes|
+     - |no|
+   * - Uniaxial anisotropy
+     - ``mm.UniaxialAnisotropy``
      - |yes|
      - |yes|
    * - Zeeman energy / time dependent
      - ``mm.Zeeman``
      - |yes| / |yes|
      - |yes| / |missing|
-   * - bulk DMI
-     - ``mm.DMI`` ``crystalclass='T'``
+
+
+-------------------
+Dynamics Terms
+-------------------
+
+.. list-table::
+   :header-rows: 2
+
+   * - Feature
+     - Ubermag
+     - OOMMF
+     - |mumax3|
+   * -
+     - ``micromagneticmodel``
+     - ``oommfc``
+     - ``mumax3c``
+   * - Damping
+     - ``mm.Damping``
      - |yes|
-     - |partly| [not between subregions]
-   * - interfacial DMI
-     - ``mm.DMI`` ``crystalclass='Cnv'``
+     - |yes|
+   * - Precession
+     - ``mm.Precession``
      - |yes|
      - |yes|
-   * - RKKY interaction
-     - ``mm.RKKY``
+   * - Slonczewski
+     - ``mm.Slonczewski``
      - |yes|
-     - |no|
+     - |missing|
+   * - Zhang-Li
+     - ``mm.ZhangLi``
+     - |yes|
+     - |yes|
+
+
+-------------------
+Drivers & Evolvers
+-------------------
+
+.. list-table::
+   :header-rows: 2
+
+   * - Feature
+     - Ubermag
+     - OOMMF
+     - |mumax3|
+   * -
+     - ``micromagneticmodel``
+     - ``oommfc``
+     - ``mumax3c``
    * - Energy minimisation
      - ``mm.Energy``
      - ``oc.MinDriver``
      - ``mc.MinDriver``
-   * - [Energy relaxation]
+   * - Energy relaxation
      - ``mm.Dynamics``
      - ``oc.TimeDriver`` [dynamics equation without precession]
      - ``mc.RelaxDriver``
@@ -59,6 +136,11 @@ The following table summarises the available features in Ubermag, OOMMF an
      - ``mm.Dynamics``
      - ``oc.TimeDriver``
      - ``mc.TimeDriver``
+   * - Evolvers
+     - ``mm.Evolver``
+     - |yes|
+     - |missing|
+
 
 -------------------
 Compatible versions
