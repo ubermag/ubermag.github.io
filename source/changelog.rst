@@ -70,8 +70,12 @@ as ``dim``, the shape of the field values as ``vdim`` (vector/value dimension).
   - New: method ``rotate90`` to perform 90 degree rotations of the field.
   - Modified: Added ``rotate90`` for documentation for performing rotations on the ``Field`` class (`documentation
     <https://ubermag.github.io/documentation/ipynb/discretisedfield/field-rotations.html>`__).
-  - Modified: Differential operators ``grad``, ``div``, ``curl``, and ``Laplacian`` have been generalised to n 
+  - Modified: Differential operators ``grad``, ``div``, ``curl``, and ``Laplacian`` have been generalised to n
     dimensions.
+  - Plotting with holoviews now uses ``field.valid`` to hide data (e.g. based on
+    their norm). The ``norm_filter`` property as well as the ``Defaults`` class
+    for plotting have been removed. Use ``valid="norm"`` when initialising the
+    field. (`#475 <https://github.com/ubermag/discretisedfield/pull/475>`__)
 
 Added
 -----
