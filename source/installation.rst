@@ -368,13 +368,13 @@ commands in a Python prompt on any operating system:
 .. code-block:: python
 
     import oommfc
-    oommfc.oommf.status()
+    oommfc.runner.runner.status
 
 or from the command line:
 
 .. code-block:: bash
 
-   python3 -c "import oommfc; oommfc.oommf.status()
+   python3 -c "import oommfc; oommfc.runner.runner.status"
 
 This will attempt to run a small simulation using OOMMF.
 
