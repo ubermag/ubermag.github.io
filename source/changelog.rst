@@ -98,6 +98,9 @@ Changed
 Fixed
 -----
 
+``micromagneticmodel``
+  - Wrong value of :math:`\mu_B`. (`#79 <https://github.com/ubermag/micromagneticmodel/pull/79>`__)
+
 ``mumax3c``
   - Bug in mumax3 detection when passing the full path to the mumax3 executable.
     (`commit
