@@ -2,16 +2,28 @@
 Changelog
 =========
 
-in progress (0.70.0 or date-based versioning?)
-====================
+2023.10 (<release date>)
+========================
+
+The meta-package ``ubermag`` now uses calendar-based versioning. We use a style
+that is broadly inspired by Ubuntu: we use the year and the month and optionally
+a patch (``YYYY.0M[.patch]``). We omit the number for patch ``0`` and only add
+and increase ``patch`` when there are two releases in a month. The versioning is
+not related to the type of changes (and a ``patch`` does not necessarily mean a
+bug fix). For the type of changes please refer to this changelog or the versions
+of the individual packages, which follow semantic versioning.
 
 Breaking changes in ``discretisedfield``
 ----------------------------------------
 
 ``discretisedfield`` has been refactored to support scalar and (n-dimensional)
-vector fields on n-dimensional meshes. As part of this refactoring several
+vector fields on n-dimensional meshes. As part of this refactoring, several
 inconsistencies and ambiguities have been removed. These changes break existing
-code! The following summary lists all user-facing changes (removed, renamed, added functionality).
+code! The following summary lists all user-facing changes (removed, renamed,
+added functionality). Even though the list below is fairly long, most notebooks
+only require a few changes. The most common ones are the switch ``dim -> nvdim``
+and adding ``valid='norm'`` when creating a field, and the replacement
+``plane -> sel``.
 
 The shape of the domain (i.e. the shape of the region/mesh) is now referred to
 as ``dim``, the shape of the field values as ``vdim`` (vector/value dimension).
