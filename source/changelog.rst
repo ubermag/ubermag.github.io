@@ -16,7 +16,7 @@ of the individual packages, which follow semantic versioning.
 Breaking changes in ``discretisedfield``
 ----------------------------------------
 
-``discretisedfield`` has been refactored to support scalar and (n-dimensional)
+``discretisedfield`` has been refactored to support scalar and (m-dimensional)
 vector fields on n-dimensional meshes. As part of this refactoring, several
 inconsistencies and ambiguities have been removed. These changes break existing
 code! The following summary lists all user-facing changes (removed, renamed,
