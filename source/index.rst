@@ -267,7 +267,9 @@ Ubermag is a part of the Horizon 2020 European Research Infrastructure
 `OpenDreamKit <https://opendreamkit.org>`__ project (Project ID 676541). This
 work was supported by the Fonds Wetenschappelijk Onderzoek (FWO-Vlaanderen)
 through Project No. G098917N (Jeroen Mulkers) and with a postdoctoral fellowship
-(Jonathan Leliaert).
+(Jonathan Leliaert). We also acknowledge support from the Engineering and
+Physical Scienes Research Council (EPSRC/UKRI) Programme Grant on Skyrmionics
+(EP/N032128/1).
 
 .. toctree::
    :hidden:
