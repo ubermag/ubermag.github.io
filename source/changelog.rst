@@ -17,13 +17,13 @@ The shape of the domain (i.e. the shape of the region/mesh) is now referred to
 as ``dim``, the shape of the field values as ``vdim`` (vector/value dimension).
 
 ``Region``
-  - Modified: scaling a region is now done with the method ``scale``, the option to scale a region by multiply it with a number has been removed.
-  - New: regions can be translated in space with ``translate``.
+  - Modified: scaling a region is now done with the method ``scale``, the option to scale a region by multiply it with a number has been removed. Scaling can optionally be done in-place.
+  - New: regions can be translated in space with ``translate``.  Translating can optionally be done in-place.
   - Modified: a new method ``allclose`` checks if two regions are the same within numerical accuracy, the operator now ``==`` checks for exact equality.
-  - Renamed: the operator ``|`` has been renamed to ``facing_surface``
+  - Modified: the operator ``|`` has been replaced with the new method ``facing_surface``
   - Removed: properties ``p1`` and ``p2``, use ``pmin`` and ``pmax``
   - Changed: the return type of points (e.g. ``pmin``, ``pmax``, ``centre``) is now a ``numpy.ndarray``
-  - Changed: ``unit`` has been renamed to ``units`` and is a tuple to supports different units along different directions (only used as labels, not for calculations).
+  - Changed: ``unit`` has been renamed to ``units`` and is a tuple to supports different units along different directions (only used as labels on plots, not for calculations).
   - New: property ``ndim`` to get the number of dimensions of the space.
   - New: property ``dims``, names of the spatial dimensions.
   - New: method ``rotate90`` to perform 90 degree rotations of the region.
@@ -35,7 +35,7 @@ as ``dim``, the shape of the field values as ``vdim`` (vector/value dimension).
   - Modified: inconsistent behaviour of ``mesh[subregion]``; this operator will
     now always use closed intervals, i.e. the returned submesh is now always
     inclusive of endpoints.
-  - Renamed: the operator ``|`` is now a method called ``is_aligned``.
+  - Modified: the operator ``|`` has been replaced with a new method called ``is_aligned``.
   - Removed: ``axispoints`` (was deprecated), use ``points`` instead.
   - Removed: ``neighbours``
   - Renamed and modified: ``plane`` has been replaced with a new ``sel`` method. Refer to the documentation for more details.
@@ -49,7 +49,7 @@ as ``dim``, the shape of the field values as ``vdim`` (vector/value dimension).
 ``Field``
   - Modified: getting the value at a point (``field(...)``) now returns a ``numpy.ndarray``.
   - Modified: only field values are returned when iterating over a field.
-  - Modified: ``coordinate_field`` is now part of the ``Mesh`` class.
+  - Removed: ``coordinate_field`` is now part of the ``Mesh`` class.
   - Renamed and modified: ``derivative`` -> ``diff``; now supports holes inside the field, refer to the documentation for details.
   - Modified: new integration syntax, refer to the documentation for details.
   - Renamed: ``fromfile`` -> ``from_file``
@@ -61,7 +61,7 @@ as ``dim``, the shape of the field values as ``vdim`` (vector/value dimension).
   - Renamed: ``components`` -> ``vdims``
   - Renamed: ``units`` -> ``unit``
   - Removed: ``value``, to update field values use the new method ``update_field_values`` instead, to read data use the ``array`` property.
-  - Removed: ``zero`` class method; omit the ``value`` argument to create a field filled with zeros.
+  - Removed: ``zero`` class method; omit the ``value`` argument to create a field filled with zeros (was already supported before).
   - New: method ``resample`` to compute field values on a new mesh; the nearest points will be used, interpolation is not supported.
   - New: property ``valid`` to define parts that contain material; this can be set to the field norm on init using the optional ``valid='norm'`` argument.
   - Modified: new hdf5 format to store all field information (e.g. subregions were missing before).
