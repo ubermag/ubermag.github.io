@@ -1,6 +1,7 @@
 ..
   This webpage has to remain at the current address
-  as the UUM paper which points here.
+  (or a redirect has to be added)
+  as the UUM paper points here.
 
 ================================================
 Compatibility: Ubermag - OOMMF - mumax\ :sup:`3`
