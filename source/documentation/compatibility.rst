@@ -1,3 +1,8 @@
+..
+  This webpage has to remain at the current address
+  (or a redirect has to be added)
+  as the UUM paper points here.
+
 ================================================
 Compatibility: Ubermag - OOMMF - mumax\ :sup:`3`
 ================================================
