@@ -18,4 +18,5 @@ The meta-package can also be used to run the tests of all Ubermag subpackages:
     :caption: ubermag
     :glob:
 
+    notebooks/ubermag/ubermag-version
     notebooks/ubermag/hdf5-file-specification
