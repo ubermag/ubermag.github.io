@@ -29,13 +29,22 @@ The shape of the domain (i.e. the shape of the region/mesh) is now referred to
 as ``dim``, the shape of the field values as ``vdim`` (vector/value dimension).
 
 ``Region``
-  - Modified: scaling a region is now done with the method ``scale``, the option to scale a region by multiply it with a number has been removed. Scaling can optionally be done in-place.
-  - New: regions can be translated in space with ``translate``.  Translating can optionally be done in-place.
-  - Modified: a new method ``allclose`` checks if two regions are the same within numerical accuracy, the operator now ``==`` checks for exact equality.
-  - Modified: the operator ``|`` has been replaced with the new method ``facing_surface``
+  - Modified: scaling a region is now done with the method ``scale``, the option
+    to scale a region by multiply it with a number has been removed. Scaling can
+    optionally be done in-place.
+  - New: regions can be translated in space with ``translate``. Translating can
+    optionally be done in-place.
+  - Modified: a new method ``allclose`` checks if two regions are the same
+    within numerical accuracy, the operator now ``==`` checks for exact
+    equality.
+  - Modified: the operator ``|`` has been replaced with the new method
+    ``facing_surface``
   - Removed: properties ``p1`` and ``p2``, use ``pmin`` and ``pmax``
-  - Changed: the return type of points (e.g. ``pmin``, ``pmax``, ``centre``) is now a ``numpy.ndarray``
-  - Changed: ``unit`` has been renamed to ``units`` and is a tuple to supports different units along different directions (only used as labels on plots, not for calculations).
+  - Changed: the return type of points (e.g. ``pmin``, ``pmax``, ``centre``) is
+    now a ``numpy.ndarray``
+  - Changed: ``unit`` has been renamed to ``units`` and is a tuple to supports
+    different units along different directions (only used as labels on plots,
+    not for calculations).
   - New: property ``ndim`` to get the number of dimensions of the space.
   - New: property ``dims``, names of the spatial dimensions.
   - New: method ``rotate90`` to perform 90 degree rotations of the region.
@@ -47,43 +56,67 @@ as ``dim``, the shape of the field values as ``vdim`` (vector/value dimension).
   - Modified: inconsistent behaviour of ``mesh[subregion]``; this operator will
     now always use closed intervals, i.e. the returned submesh is now always
     inclusive of endpoints.
-  - Modified: the operator ``|`` has been replaced with a new method called ``is_aligned``.
+  - Modified: the operator ``|`` has been replaced with a new method called
+    ``is_aligned``.
   - Removed: ``axispoints`` (was deprecated), use ``points`` instead.
   - Removed: ``neighbours``
-  - Renamed and modified: ``plane`` has been replaced with a new ``sel`` method. Refer to the documentation for more details.
+  - Renamed and modified: ``plane`` has been replaced with a new ``sel`` method.
+    (for details refer to the Field `documentation
+    <https://ubermag.github.io/documentation/notebooks/discretisedfield/field-operations.html#Intersecting-the-field-with-a-plane>`__)
   - Removed: ``attributes``
-  - Removed: ``dS`` (used for integrals) because a new syntax for integrals is used
+  - Removed: ``dS``; was used for integrals; the new syntax for integrals does
+    not any longer use it (see below).
   - Renamed: ``midpoints`` to ``points``
-  - Modified: new method ``coordinate_field`` that was previous part of the ``Field`` class.
+  - Modified: new method ``coordinate_field`` that was previous part of the
+    ``Field`` class.
   - New: ``scale`` and ``translate`` similar to the ``Region`` class.
   - New: method ``rotate90`` to perform 90 degree rotations of the mesh.
 
 ``Field``
-  - Modified: getting the value at a point (``field(...)``) now returns a ``numpy.ndarray``.
+  - Modified: getting the value at a point (``field(...)``) now returns a
+    ``numpy.ndarray``.
   - Modified: only field values are returned when iterating over a field.
+    (`documentation
+    <https://ubermag.github.io/documentation/notebooks/discretisedfield/field-operations.html#Iterating-through-the-field>`__)
   - Removed: ``coordinate_field`` is now part of the ``Mesh`` class.
-  - Renamed and modified: ``derivative`` -> ``diff``; now supports holes inside the field, refer to the documentation for details.
-  - Modified: new integration syntax, refer to the documentation for details.
+  - Renamed and modified: ``derivative`` -> ``diff``; now supports holes inside
+    the field. (`documentation
+    <https://ubermag.github.io/documentation/notebooks/discretisedfield/field-operations.html#Vector-calculus>`__)
+  - Modified: new integration syntax. (`documentation
+    <https://ubermag.github.io/documentation/notebooks/discretisedfield/field-operations.html#Integrals>`__)
   - Renamed: ``fromfile`` -> ``from_file``
-  - Renamed and modified: ``plane`` has been replaced with a new ``sel`` method. Refer to the documentation for more details.
-  - Removed: ``project`` has been removed, use ``mean`` with the ``axis`` argument instead.
+  - Renamed and modified: ``plane`` has been replaced with a new ``sel`` method.
+    (`documentation
+    <https://ubermag.github.io/documentation/notebooks/discretisedfield/field-operations.html#Intersecting-the-field-with-a-plane>`__)
+  - Removed: ``project`` has been removed, use ``mean`` with the ``axis``
+    argument instead.
   - Renamed: ``write`` -> ``to_file``
-  - Modified: ``angle`` now takes a vector as reference and does not anymore require sliced fields.
-  - Renamed: ``dim`` -> ``nvdim`` to avoid ambiguities, the new name is also required as an argument when creating a field.
+  - Modified: ``angle`` now takes a vector as reference and does not anymore
+    require sliced fields.
+  - Renamed: ``dim`` -> ``nvdim`` to avoid ambiguities, the new name is also
+    required as an argument when creating a field.
   - Renamed: ``components`` -> ``vdims``
   - Renamed: ``units`` -> ``unit``
-  - Removed: ``value``, to update field values use the new method ``update_field_values`` instead, to read data use the ``array`` property.
-  - Removed: ``zero`` class method; omit the ``value`` argument to create a field filled with zeros (was already supported before).
-  - New: method ``resample`` to compute field values on a new mesh; the nearest points will be used, interpolation is not supported.
-  - New: property ``valid`` to define parts that contain material; this can be set to the field norm on init using the optional ``valid='norm'`` argument.
-  - Modified: new hdf5 format to store all field information (e.g. subregions were missing before).
+  - Removed: ``value``, to update field values use the new method
+    ``update_field_values`` instead, to read data use the ``array`` property.
+  - Removed: ``zero`` class method; omit the ``value`` argument to create a
+    field filled with zeros (was already supported before).
+  - New: method ``resample`` to compute field values on a new mesh; the nearest
+    points will be used, interpolation is not supported. (`documentation
+    <https://ubermag.github.io/notebooks/discretisedfield/field-operations.html#Resampling-the-field.html>`__)
+  - New: property ``valid`` to define parts that contain material; this can be
+    set to the field norm on init using the optional ``valid='norm'`` argument.
+    (`documentation <https://ubermag.github.io/documentation/notebooks/discretisedfield/field-valid.html>`__)
+  - Modified: new hdf5 format to store all field information (e.g. subregions
+    were missing before). (`documentation
+    <https://ubermag.github.io/documentation/notebooks/ubermag/hdf5-file-specification.html>`__)
   - New: Documentation for performing FFT on the ``Field`` class (`documentation
-    <https://ubermag.github.io/documentation/ipynb/discretisedfield/field-fft.html>`__).
+    <https://ubermag.github.io/documentation/notebooks/discretisedfield/field-fft.html>`__).
   - New: method ``rotate90`` to perform 90 degree rotations of the field.
-  - Modified: Added ``rotate90`` for documentation for performing rotations on the ``Field`` class (`documentation
-    <https://ubermag.github.io/documentation/ipynb/discretisedfield/field-rotations.html>`__).
-  - Modified: Differential operators ``grad``, ``div``, ``curl``, and ``Laplacian`` have been generalised to n
-    dimensions.
+    (`documentation
+    <https://ubermag.github.io/documentation/notebooks/discretisedfield/field-rotations.html#Rotations-by-multiples-of-90°>`__).
+  - Modified: Differential operators ``grad``, ``div``, ``curl``, and
+    ``Laplacian`` have been generalised to n dimensions.
   - Plotting with holoviews now uses ``field.valid`` to hide data (e.g. based on
     their norm). The ``norm_filter`` property as well as the ``Defaults`` class
     for plotting have been removed. Use ``valid="norm"`` when initialising the
@@ -111,12 +144,13 @@ Fixed
 -----
 
 ``micromagneticmodel``
-  - Wrong value of :math:`\mu_B`. (`#79 <https://github.com/ubermag/micromagneticmodel/pull/79>`__)
+  - Wrong value of :math:`\mu_B`. (`#79
+    <https://github.com/ubermag/micromagneticmodel/pull/79>`__)
 
 ``mumax3c``
   - Bug in mumax3 detection when passing the full path to the mumax3 executable.
-    (`commit
-    b2c334d<https://github.com/ubermag/mumax3c/commit/b2c334d53657599ff6144da5771abc92810e9350>`__)
+    (`commit b2c334d
+    <https://github.com/ubermag/mumax3c/commit/b2c334d53657599ff6144da5771abc92810e9350>`__)
 
 ``oommfc``
   - Bug in RKKY energy script when not defining sigma2. (`#142
