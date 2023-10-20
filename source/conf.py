@@ -99,7 +99,11 @@ html_theme_options = {
 # so a file named "default.css" will overwrite the builtin "default.css".
 html_static_path = ['_static']
 html_css_files = ['css/colours.css']
-html_extra_path = ['./quickstart.html']
+# add redirects as additional pages
+html_additional_pages = {
+    'quickstart': 'redirects/quickstart.html',
+    'documentation/notebooks/mag2exp/Unit_converter': 'redirects/Unit_converter.html'
+}
 
 # -- Custom configuration ----------------------------------------------------
 
