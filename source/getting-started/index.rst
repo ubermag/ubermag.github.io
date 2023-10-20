@@ -23,6 +23,7 @@ and its subpackages.
    notebooks/dynamics-equation
    notebooks/driving-dw
    notebooks/dw-pair-conversion
+   notebooks/Unit_converter
 
 .. We should think about adding an additional tutorial for:
 
