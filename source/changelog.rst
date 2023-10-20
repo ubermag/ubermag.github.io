@@ -130,6 +130,10 @@ Added
     information. (`#147 <https://github.com/ubermag/ubermag/pull/147>`__, `#148
     <https://github.com/ubermag/ubermag/pull/148>`__)
 
+``mumax3c``
+  - Support for multiple Zeeman fields in the energy equation. (`#49
+    <https://github.com/ubermag/mumax3c/pull/49>`__)
+
 Changed
 -------
 
@@ -151,6 +155,8 @@ Fixed
   - Bug in mumax3 detection when passing the full path to the mumax3 executable.
     (`commit b2c334d
     <https://github.com/ubermag/mumax3c/commit/b2c334d53657599ff6144da5771abc92810e9350>`__)
+  - Bug in current conversion for Zhang-Li. (`#73
+    <https://github.com/ubermag/mumax3c/pull/73>`__)
 
 ``oommfc``
   - Bug in RKKY energy script when not defining sigma2. (`#142
