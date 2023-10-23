@@ -12,3 +12,11 @@ The meta-package can also be used to run the tests of all Ubermag subpackages:
 
    import ubermag
    ubermag.test()
+
+.. toctree::
+    :maxdepth: 1
+    :caption: ubermag
+    :glob:
+
+    notebooks/ubermag/ubermag-version
+    notebooks/ubermag/hdf5-file-specification
