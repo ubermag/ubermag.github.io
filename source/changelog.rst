@@ -2,8 +2,8 @@
 Changelog
 =========
 
-2023.10 (<release date>)
-========================
+2023.10 (Oct 23, 2023)
+======================
 
 The meta-package ``ubermag`` now uses calendar-based versioning. We use a style
 that is broadly inspired by Ubuntu: we use the year and the month and optionally

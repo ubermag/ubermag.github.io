@@ -2,12 +2,12 @@ channels:
   - conda-forge
 
 dependencies:
-  - python=3.8
+  - python=3.10
   - matplotlib>=3.3
   - nbsphinx>=0.8.5
   - pydata-sphinx-theme>=0.6.3
   - sphinx>=4.1
   - sphinx-copybutton>=0.4
   - sphinx-design
-  - ubermag==0.66.1
-  - astropy  # for the unit conversion tutorial in mag2exp
+  - ubermag==2023.10
+  - astropy  # for the unit conversion tutorial in getting started (previously mag2exp)
