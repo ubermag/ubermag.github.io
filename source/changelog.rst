@@ -2,6 +2,17 @@
 Changelog
 =========
 
+in progress
+===========
+
+fixed
+-----
+
+``micromagneticdata``
+  - Reading magnetisation output from Mumax3 fails when ``region.pmin`` is not
+    defined at the origin and subregions are defined for ``system.m``. (`#60
+    <https://github.com/ubermag/micromagneticdata/pull/60>`__)
+
 2023.10 (Oct 23, 2023)
 ======================
 
