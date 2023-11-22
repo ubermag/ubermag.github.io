@@ -5,6 +5,13 @@ Changelog
 in progress
 ===========
 
+modified
+--------
+
+``discretisedfield``
+  - The property ``mesh.points`` has been renamed to ``mesh.cells`` to avoid
+    ambiguity. (`#508 <https://github.com/ubermag/discretisedfield/pull/508>`__)
+
 fixed
 -----
 
