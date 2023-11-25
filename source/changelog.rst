@@ -15,6 +15,11 @@ modified
 fixed
 -----
 
+``discretisedfield``
+  - Reading OVF files failed when the header used lowercase letters in the
+    "Begin: data" section. (`#513
+    <https://github.com/ubermag/discretisedfield/pull/513>`__)
+
 ``micromagneticdata``
   - Reading magnetisation output from Mumax3 fails when ``region.pmin`` is not
     defined at the origin and subregions are defined for ``system.m``. (`#60
