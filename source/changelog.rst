@@ -2,6 +2,29 @@
 Changelog
 =========
 
+2023.11 (Nov 25, 2023)
+======================
+
+modified
+--------
+
+``discretisedfield``
+  - The property ``mesh.points`` has been renamed to ``mesh.cells`` to avoid
+    ambiguity. (`#508 <https://github.com/ubermag/discretisedfield/pull/508>`__)
+
+fixed
+-----
+
+``discretisedfield``
+  - Reading OVF files failed when the header used lowercase letters in the
+    "Begin: data" section. (`#513
+    <https://github.com/ubermag/discretisedfield/pull/513>`__)
+
+``micromagneticdata``
+  - Reading magnetisation output from Mumax3 fails when ``region.pmin`` is not
+    defined at the origin and subregions are defined for ``system.m``. (`#60
+    <https://github.com/ubermag/micromagneticdata/pull/60>`__)
+
 2023.10 (Oct 23, 2023)
 ======================
 
