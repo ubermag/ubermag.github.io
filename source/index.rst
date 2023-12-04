@@ -56,15 +56,22 @@ the mailing list or the Ubermag Zulip chat to ask questions and help others.
 Features and packages
 =====================
 
-.. grid:: 1 2 2 2
+.. grid:: 1 3 3 3
 
    .. grid-item::
 
       .. image:: https://anaconda.org/conda-forge/ubermag/badges/version.svg
          :target: https://anaconda.org/conda-forge/ubermag
 
+   .. grid-item::
+
       .. image:: https://anaconda.org/conda-forge/ubermag/badges/latest_release_date.svg
          :target: https://anaconda.org/conda-forge/ubermag
+
+   .. grid-item::
+
+      .. image:: https://github.com/ubermag/ubermag/actions/workflows/conda.yml/badge.svg
+         :target: https://github.com/ubermag/ubermag/actions/workflows/conda.yml
 
 Ubermag is a collection of several independent Python packages that can be used
 independently as well as in combination. The whole set of packages -- the
