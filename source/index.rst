@@ -70,8 +70,8 @@ Features and packages
 
    .. grid-item::
 
-      .. image:: https://github.com/ubermag/ubermag/workflows/conda/badge.svg
-         :target: https://github.com/ubermag/ubermag/actions?query=workflow%3Aconda
+      .. image:: https://github.com/ubermag/ubermag/actions/workflows/conda.yml/badge.svg
+         :target: https://github.com/ubermag/ubermag/actions/workflows/conda.yml
 
 Ubermag is a collection of several independent Python packages that can be used
 independently as well as in combination. The whole set of packages -- the
