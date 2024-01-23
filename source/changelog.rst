@@ -1,6 +1,16 @@
 =========
 Changelog
 =========
+Upcoming
+======================
+
+Changed
+-------
+
+``micromagneticmodel``
+  - Require the name when initialising the ``system``.
+    (`#85 <https://github.com/ubermag/micromagneticmodel/pull/85>`__)
+
 
 2023.11 (Nov 25, 2023)
 ======================
