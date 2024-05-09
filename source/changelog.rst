@@ -4,13 +4,18 @@ Changelog
 Upcoming
 ======================
 
+Added
+-----
+``discretisedfield``
+  - Added support for visualisations using ``pyvista``.
+  (`#463 <https://github.com/ubermag/discretisedfield/pull/463>`__)
+
 Changed
 -------
 
 ``micromagneticmodel``
   - Require the name when initialising the ``system``.
     (`#85 <https://github.com/ubermag/micromagneticmodel/pull/85>`__)
-
 
 2023.11 (Nov 25, 2023)
 ======================
