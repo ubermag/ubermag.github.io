@@ -10,6 +10,10 @@ Added
   - Added support for visualisations using ``pyvista``.
   (`#463 <https://github.com/ubermag/discretisedfield/pull/463>`__)
 
+``mumax3c``
+  - Added support for simulation with temperature for mumax3. Use system.T property for this. No additional changes are required.
+  (`#81 <https://github.com/ubermag/mumax3c/pull/81>`__)
+
 Changed
 -------
 
