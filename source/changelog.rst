@@ -22,6 +22,13 @@ Changed
   - Require the name when initialising the ``system``.
     (`#85 <https://github.com/ubermag/micromagneticmodel/pull/85>`__)
 
+Fixed
+-----
+
+``micromagneticdata``
+  - Set ``valid="norm"`` when loading the initial magnetisation ``drive.m0``.
+    (`#69 <https://github.com/ubermag/micromagneticdata/pull/69>`__)
+
 2023.11 (Nov 25, 2023)
 ======================
 
