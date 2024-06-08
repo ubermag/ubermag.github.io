@@ -8,7 +8,12 @@ Added
 -----
 ``discretisedfield``
   - Added support for visualisations using ``pyvista``.
-  (`#463 <https://github.com/ubermag/discretisedfield/pull/463>`__)
+    (`#463 <https://github.com/ubermag/discretisedfield/pull/463>`__)
+
+``oommfc``
+  - Support for tunable (non-symmetric) Hysteresis simulations with multiple
+    segments (with variable step size) between user-defined field extrema.
+    (`#138 <https://github.com/ubermag/oommfc/pull/138>`__)
 
 Changed
 -------
