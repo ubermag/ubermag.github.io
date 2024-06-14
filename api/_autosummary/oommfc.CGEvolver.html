@@ -14,19 +14,19 @@
   
   <script data-cfasync="false">
     document.documentElement.dataset.mode = localStorage.getItem("mode") || "";
-    document.documentElement.dataset.theme = localStorage.getItem("theme") || "light";
+    document.documentElement.dataset.theme = localStorage.getItem("theme") || "";
   </script>
   
   <!-- Loaded before other Sphinx assets -->
-  <link href="../../_static/styles/theme.css?digest=5b4479735964841361fd" rel="stylesheet" />
-<link href="../../_static/styles/bootstrap.css?digest=5b4479735964841361fd" rel="stylesheet" />
-<link href="../../_static/styles/pydata-sphinx-theme.css?digest=5b4479735964841361fd" rel="stylesheet" />
+  <link href="../../_static/styles/theme.css?digest=3ee479438cf8b5e0d341" rel="stylesheet" />
+<link href="../../_static/styles/bootstrap.css?digest=3ee479438cf8b5e0d341" rel="stylesheet" />
+<link href="../../_static/styles/pydata-sphinx-theme.css?digest=3ee479438cf8b5e0d341" rel="stylesheet" />
 
   
-  <link href="../../_static/vendor/fontawesome/6.1.2/css/all.min.css?digest=5b4479735964841361fd" rel="stylesheet" />
-  <link rel="preload" as="font" type="font/woff2" crossorigin href="../../_static/vendor/fontawesome/6.1.2/webfonts/fa-solid-900.woff2" />
-<link rel="preload" as="font" type="font/woff2" crossorigin href="../../_static/vendor/fontawesome/6.1.2/webfonts/fa-brands-400.woff2" />
-<link rel="preload" as="font" type="font/woff2" crossorigin href="../../_static/vendor/fontawesome/6.1.2/webfonts/fa-regular-400.woff2" />
+  <link href="../../_static/vendor/fontawesome/6.5.2/css/all.min.css?digest=3ee479438cf8b5e0d341" rel="stylesheet" />
+  <link rel="preload" as="font" type="font/woff2" crossorigin href="../../_static/vendor/fontawesome/6.5.2/webfonts/fa-solid-900.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="../../_static/vendor/fontawesome/6.5.2/webfonts/fa-brands-400.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="../../_static/vendor/fontawesome/6.5.2/webfonts/fa-regular-400.woff2" />
 
     <link rel="stylesheet" type="text/css" href="../../_static/pygments.css?v=a746c00c" />
     <link rel="stylesheet" type="text/css" href="../../_static/plot_directive.css" />
@@ -35,12 +35,12 @@
     <link rel="stylesheet" type="text/css" href="../../_static/css/colours.css?v=f1e252c1" />
   
   <!-- Pre-loaded scripts that we'll load fully later -->
-  <link rel="preload" as="script" href="../../_static/scripts/bootstrap.js?digest=5b4479735964841361fd" />
-<link rel="preload" as="script" href="../../_static/scripts/pydata-sphinx-theme.js?digest=5b4479735964841361fd" />
-  <script src="../../_static/vendor/fontawesome/6.1.2/js/all.min.js?digest=5b4479735964841361fd"></script>
+  <link rel="preload" as="script" href="../../_static/scripts/bootstrap.js?digest=3ee479438cf8b5e0d341" />
+<link rel="preload" as="script" href="../../_static/scripts/pydata-sphinx-theme.js?digest=3ee479438cf8b5e0d341" />
+  <script src="../../_static/vendor/fontawesome/6.5.2/js/all.min.js?digest=3ee479438cf8b5e0d341"></script>
 
     <script src="../../_static/documentation_options.js?v=5929fcd5"></script>
-    <script src="../../_static/doctools.js?v=888ff710"></script>
+    <script src="../../_static/doctools.js?v=9a2dae69"></script>
     <script src="../../_static/sphinx_highlight.js?v=dc90522c"></script>
     <script src="../../_static/clipboard.min.js?v=a7894cd8"></script>
     <script src="../../_static/copybutton.js?v=fd10adb8"></script>
@@ -62,28 +62,23 @@
 
   
   
-  <a class="skip-link" href="#main-content">Skip to main content</a>
+  <div id="pst-skip-link" class="skip-link d-print-none"><a href="#main-content">Skip to main content</a></div>
   
   <div id="pst-scroll-pixel-helper"></div>
-
   
   <button type="button" class="btn rounded-pill" id="pst-back-to-top">
-    <i class="fa-solid fa-arrow-up"></i>
-    Back to top
-  </button>
+    <i class="fa-solid fa-arrow-up"></i>Back to top</button>
 
   
   <input type="checkbox"
           class="sidebar-toggle"
-          name="__primary"
-          id="__primary"/>
-  <label class="overlay overlay-primary" for="__primary"></label>
+          id="pst-primary-sidebar-checkbox"/>
+  <label class="overlay overlay-primary" for="pst-primary-sidebar-checkbox"></label>
   
   <input type="checkbox"
           class="sidebar-toggle"
-          name="__secondary"
-          id="__secondary"/>
-  <label class="overlay overlay-secondary" for="__secondary"></label>
+          id="pst-secondary-sidebar-checkbox"/>
+  <label class="overlay overlay-secondary" for="pst-secondary-sidebar-checkbox"></label>
   
   <div class="search-button__wrapper">
     <div class="search-button__overlay"></div>
@@ -105,12 +100,17 @@
   <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd>K</kbd></span>
 </form></div>
   </div>
+
+  <div class="pst-async-banner-revealer d-none">
+  <aside id="bd-header-version-warning" class="d-none d-print-none" aria-label="Version warning"></aside>
+</div>
+
   
-    <nav class="bd-header navbar navbar-expand-lg bd-navbar">
+    <header class="bd-header navbar navbar-expand-lg bd-navbar d-print-none">
 <div class="bd-header__inner bd-page-width">
-  <label class="sidebar-toggle primary-toggle" for="__primary">
+  <button class="sidebar-toggle primary-toggle" aria-label="Site navigation">
     <span class="fa-solid fa-bars"></span>
-  </label>
+  </button>
   
   
   <div class="col-lg-3 navbar-header-items__start">
@@ -144,62 +144,56 @@
       
         <div class="navbar-item">
 <nav class="navbar-nav">
-  <p class="sidebar-header-items__title"
-     role="heading"
-     aria-level="1"
-     aria-label="Site Navigation">
-    Site Navigation
-  </p>
   <ul class="bd-navbar-elements navbar-nav">
     
-                    <li class="nav-item">
-                      <a class="nav-link nav-internal" href="../../demo.html">
-                        Demo
-                      </a>
-                    </li>
-                
+<li class="nav-item pst-header-nav-item">
+  <a class="nav-link nav-internal" href="../../demo.html">
+    Demo
+  </a>
+</li>
 
-                    <li class="nav-item">
-                      <a class="nav-link nav-internal" href="../../installation.html">
-                        Installation
-                      </a>
-                    </li>
-                
 
-                    <li class="nav-item current active">
-                      <a class="nav-link nav-internal" href="../../documentation.html">
-                        Documentation
-                      </a>
-                    </li>
-                
+<li class="nav-item pst-header-nav-item">
+  <a class="nav-link nav-internal" href="../../installation.html">
+    Installation
+  </a>
+</li>
 
-                    <li class="nav-item">
-                      <a class="nav-link nav-internal" href="../../changelog.html">
-                        Changelog
-                      </a>
-                    </li>
-                
 
-                    <li class="nav-item">
-                      <a class="nav-link nav-internal" href="../../help.html">
-                        Help
-                      </a>
-                    </li>
-                
+<li class="nav-item pst-header-nav-item current active">
+  <a class="nav-link nav-internal" href="../../documentation.html">
+    Documentation
+  </a>
+</li>
 
-                    <li class="nav-item">
-                      <a class="nav-link nav-internal" href="../../contributing.html">
-                        Contributing
-                      </a>
-                    </li>
-                
 
-                    <li class="nav-item">
-                      <a class="nav-link nav-internal" href="../../news.html">
-                        News
-                      </a>
-                    </li>
-                
+<li class="nav-item pst-header-nav-item">
+  <a class="nav-link nav-internal" href="../../changelog.html">
+    Changelog
+  </a>
+</li>
+
+
+<li class="nav-item pst-header-nav-item">
+  <a class="nav-link nav-internal" href="../../help.html">
+    Help
+  </a>
+</li>
+
+
+<li class="nav-item pst-header-nav-item">
+  <a class="nav-link nav-internal" href="../../contributing.html">
+    Contributing
+  </a>
+</li>
+
+
+<li class="nav-item pst-header-nav-item">
+  <a class="nav-link nav-internal" href="../../news.html">
+    News
+  </a>
+</li>
+
   </ul>
 </nav></div>
       
@@ -259,16 +253,19 @@
   
 
   
-    <label class="sidebar-toggle secondary-toggle" for="__secondary" tabindex="0">
+    <button class="sidebar-toggle secondary-toggle" aria-label="On this page">
       <span class="fa-solid fa-outdent"></span>
-    </label>
+    </button>
   
 </div>
 
-    </nav>
+    </header>
   
+
   <div class="bd-container">
     <div class="bd-container__inner bd-page-width">
+      
+      
       
       <div class="bd-sidebar-primary bd-sidebar">
         
@@ -279,66 +276,63 @@
     
       <div class="sidebar-header-items__center">
         
-          <div class="navbar-item">
+          
+          
+            <div class="navbar-item">
 <nav class="navbar-nav">
-  <p class="sidebar-header-items__title"
-     role="heading"
-     aria-level="1"
-     aria-label="Site Navigation">
-    Site Navigation
-  </p>
   <ul class="bd-navbar-elements navbar-nav">
     
-                    <li class="nav-item">
-                      <a class="nav-link nav-internal" href="../../demo.html">
-                        Demo
-                      </a>
-                    </li>
-                
+<li class="nav-item pst-header-nav-item">
+  <a class="nav-link nav-internal" href="../../demo.html">
+    Demo
+  </a>
+</li>
 
-                    <li class="nav-item">
-                      <a class="nav-link nav-internal" href="../../installation.html">
-                        Installation
-                      </a>
-                    </li>
-                
 
-                    <li class="nav-item current active">
-                      <a class="nav-link nav-internal" href="../../documentation.html">
-                        Documentation
-                      </a>
-                    </li>
-                
+<li class="nav-item pst-header-nav-item">
+  <a class="nav-link nav-internal" href="../../installation.html">
+    Installation
+  </a>
+</li>
 
-                    <li class="nav-item">
-                      <a class="nav-link nav-internal" href="../../changelog.html">
-                        Changelog
-                      </a>
-                    </li>
-                
 
-                    <li class="nav-item">
-                      <a class="nav-link nav-internal" href="../../help.html">
-                        Help
-                      </a>
-                    </li>
-                
+<li class="nav-item pst-header-nav-item current active">
+  <a class="nav-link nav-internal" href="../../documentation.html">
+    Documentation
+  </a>
+</li>
 
-                    <li class="nav-item">
-                      <a class="nav-link nav-internal" href="../../contributing.html">
-                        Contributing
-                      </a>
-                    </li>
-                
 
-                    <li class="nav-item">
-                      <a class="nav-link nav-internal" href="../../news.html">
-                        News
-                      </a>
-                    </li>
-                
+<li class="nav-item pst-header-nav-item">
+  <a class="nav-link nav-internal" href="../../changelog.html">
+    Changelog
+  </a>
+</li>
+
+
+<li class="nav-item pst-header-nav-item">
+  <a class="nav-link nav-internal" href="../../help.html">
+    Help
+  </a>
+</li>
+
+
+<li class="nav-item pst-header-nav-item">
+  <a class="nav-link nav-internal" href="../../contributing.html">
+    Contributing
+  </a>
+</li>
+
+
+<li class="nav-item pst-header-nav-item">
+  <a class="nav-link nav-internal" href="../../news.html">
+    News
+  </a>
+</li>
+
   </ul>
 </nav></div>
+          
         
       </div>
     
@@ -372,7 +366,7 @@
      aria-label="Section Navigation">
   <p class="bd-links__title" role="heading" aria-level="1">Section Navigation</p>
   <div class="bd-toc-item navbar-nav"><ul class="nav bd-sidenav">
-<li class="toctree-l1 has-children"><a class="reference internal" href="../../getting-started/index.html">Getting started</a><input class="toctree-checkbox" id="toctree-checkbox-1" name="toctree-checkbox-1" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-1"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../../getting-started/index.html">Getting started</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
 <li class="toctree-l2"><a class="reference internal" href="../../getting-started/notebooks/python-basics.html">Python basics</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../../getting-started/jupyter-basics.html">Jupyter lab</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../../getting-started/notebooks/first-ubermag-simulation.html">Our first ubermag simulation</a></li>
@@ -382,10 +376,10 @@
 <li class="toctree-l2"><a class="reference internal" href="../../getting-started/notebooks/dw-pair-conversion.html">Exercise: Domain wall pair conversion</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../../getting-started/notebooks/unit-converter.html">Unit Conversions</a></li>
 </ul>
-</li>
+</details></li>
 </ul>
 <ul class="nav bd-sidenav">
-<li class="toctree-l1 has-children"><a class="reference internal" href="../../examples/index.html">Examples</a><input class="toctree-checkbox" id="toctree-checkbox-2" name="toctree-checkbox-2" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-2"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../../examples/index.html">Examples</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
 <li class="toctree-l2"><a class="reference internal" href="../../examples/notebooks/07-tutorial-standard-problem3.html">Standard problem 3</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../../examples/notebooks/08-tutorial-standard-problem4.html">Standard problem 4</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../../examples/notebooks/09-tutorial-standard-problem5.html">Standard problem 5</a></li>
@@ -411,11 +405,11 @@
 <li class="toctree-l2"><a class="reference internal" href="../../examples/notebooks/time-dependent-field.html">Time-varying field</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../../examples/notebooks/time-dependent-field-current.html">Time-dependent fields and currents</a></li>
 </ul>
-</li>
+</details></li>
 </ul>
 <ul class="nav bd-sidenav">
-<li class="toctree-l1 has-children"><a class="reference internal" href="../../documentation/index.html">Package documentation</a><input class="toctree-checkbox" id="toctree-checkbox-3" name="toctree-checkbox-3" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-3"><i class="fa-solid fa-chevron-down"></i></label><ul>
-<li class="toctree-l2 has-children"><a class="reference internal" href="../../documentation/discretisedfield.html">discretisedfield</a><input class="toctree-checkbox" id="toctree-checkbox-4" name="toctree-checkbox-4" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-4"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../../documentation/index.html">Package documentation</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l2 has-children"><a class="reference internal" href="../../documentation/discretisedfield.html">discretisedfield</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
 <li class="toctree-l3"><a class="reference internal" href="../../documentation/notebooks/discretisedfield/region-basics.html">Region basics</a></li>
 <li class="toctree-l3"><a class="reference internal" href="../../documentation/notebooks/discretisedfield/region-visualisation.html">Region visualisation</a></li>
 <li class="toctree-l3"><a class="reference internal" href="../../documentation/notebooks/discretisedfield/region-facing-surfaces.html">Region facing surfaces</a></li>
@@ -443,8 +437,8 @@
 <li class="toctree-l3"><a class="reference internal" href="../../documentation/notebooks/discretisedfield/line.html">Line object</a></li>
 <li class="toctree-l3"><a class="reference internal" href="../../documentation/notebooks/discretisedfield/ovf2vtk.html"><code class="docutils literal notranslate"><span class="pre">ovf2vtk</span></code> tool</a></li>
 </ul>
-</li>
-<li class="toctree-l2 has-children"><a class="reference internal" href="../../documentation/mag2exp.html">mag2exp</a><input class="toctree-checkbox" id="toctree-checkbox-5" name="toctree-checkbox-5" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-5"><i class="fa-solid fa-chevron-down"></i></label><ul>
+</details></li>
+<li class="toctree-l2 has-children"><a class="reference internal" href="../../documentation/mag2exp.html">mag2exp</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
 <li class="toctree-l3"><a class="reference internal" href="../../documentation/notebooks/mag2exp/DC_magnetometry.html">DC magnetometry</a></li>
 <li class="toctree-l3"><a class="reference internal" href="../../documentation/notebooks/mag2exp/Torque_magnetometry.html">Torque magnetometry</a></li>
 <li class="toctree-l3"><a class="reference internal" href="../../documentation/notebooks/mag2exp/Lorentz_TEM.html">Lorentz Transmission Electron Microscopy</a></li>
@@ -454,13 +448,13 @@
 <li class="toctree-l3"><a class="reference internal" href="../../documentation/notebooks/mag2exp/SAXS.html">Small Angle X-ray Scattering</a></li>
 <li class="toctree-l3"><a class="reference internal" href="../../documentation/notebooks/mag2exp/SANS.html">Small Angle Neutron Scattering</a></li>
 </ul>
-</li>
-<li class="toctree-l2 has-children"><a class="reference internal" href="../../documentation/micromagneticdata.html">micromagneticdata</a><input class="toctree-checkbox" id="toctree-checkbox-6" name="toctree-checkbox-6" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-6"><i class="fa-solid fa-chevron-down"></i></label><ul>
+</details></li>
+<li class="toctree-l2 has-children"><a class="reference internal" href="../../documentation/micromagneticdata.html">micromagneticdata</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
 <li class="toctree-l3"><a class="reference internal" href="../../documentation/notebooks/micromagneticdata/documentation.html">Analysing simulation results</a></li>
 <li class="toctree-l3"><a class="reference internal" href="../../documentation/notebooks/micromagneticdata/interactive_plotting.html">Interactive plots</a></li>
 </ul>
-</li>
-<li class="toctree-l2 has-children"><a class="reference internal" href="../../documentation/micromagneticmodel.html">micromagneticmodel</a><input class="toctree-checkbox" id="toctree-checkbox-7" name="toctree-checkbox-7" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-7"><i class="fa-solid fa-chevron-down"></i></label><ul>
+</details></li>
+<li class="toctree-l2 has-children"><a class="reference internal" href="../../documentation/micromagneticmodel.html">micromagneticmodel</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
 <li class="toctree-l3"><a class="reference internal" href="../../documentation/notebooks/micromagneticmodel/deriving-energy-term.html">Deriving an energy term</a></li>
 <li class="toctree-l3"><a class="reference internal" href="../../documentation/notebooks/micromagneticmodel/deriving-dynamics-term.html">Deriving a dynamics term</a></li>
 <li class="toctree-l3"><a class="reference internal" href="../../documentation/notebooks/micromagneticmodel/term-parameters.html">Term parameters</a></li>
@@ -471,13 +465,13 @@
 <li class="toctree-l3"><a class="reference internal" href="../../documentation/notebooks/micromagneticmodel/system.html">Defining micromagnetic system</a></li>
 <li class="toctree-l3"><a class="reference internal" href="../../documentation/notebooks/micromagneticmodel/constants.html">Constants</a></li>
 </ul>
-</li>
-<li class="toctree-l2 has-children"><a class="reference internal" href="../../documentation/micromagnetictests.html">micromagnetictests</a><input class="toctree-checkbox" id="toctree-checkbox-8" name="toctree-checkbox-8" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-8"><i class="fa-solid fa-chevron-down"></i></label><ul>
+</details></li>
+<li class="toctree-l2 has-children"><a class="reference internal" href="../../documentation/micromagnetictests.html">micromagnetictests</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
 <li class="toctree-l3"><a class="reference internal" href="../../documentation/notebooks/micromagnetictests/usage.html">Usage</a></li>
 </ul>
-</li>
+</details></li>
 <li class="toctree-l2"><a class="reference internal" href="../../documentation/mumax3c.html">mumax3c</a></li>
-<li class="toctree-l2 has-children"><a class="reference internal" href="../../documentation/oommfc.html">oommfc</a><input class="toctree-checkbox" id="toctree-checkbox-9" name="toctree-checkbox-9" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-9"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l2 has-children"><a class="reference internal" href="../../documentation/oommfc.html">oommfc</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
 <li class="toctree-l3"><a class="reference internal" href="../../documentation/notebooks/oommfc/zeeman.html">Tutorial 01: Zeeman energy term</a></li>
 <li class="toctree-l3"><a class="reference internal" href="../../documentation/notebooks/oommfc/exchange.html">Tutorial 02: Exchange energy term</a></li>
 <li class="toctree-l3"><a class="reference internal" href="../../documentation/notebooks/oommfc/uniaxialanisotropy.html">Tutorial 03: Uniaxial anisotropy energy term</a></li>
@@ -489,8 +483,8 @@
 <li class="toctree-l3"><a class="reference internal" href="../../documentation/notebooks/oommfc/parallel.html">Running simulations in parallel</a></li>
 <li class="toctree-l3"><a class="reference internal" href="../../documentation/notebooks/oommfc/verbosity_levels.html">Verbosity levels</a></li>
 </ul>
-</li>
-<li class="toctree-l2 has-children"><a class="reference internal" href="../../documentation/ubermagtable.html">ubermagtable</a><input class="toctree-checkbox" id="toctree-checkbox-10" name="toctree-checkbox-10" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-10"><i class="fa-solid fa-chevron-down"></i></label><ul>
+</details></li>
+<li class="toctree-l2 has-children"><a class="reference internal" href="../../documentation/ubermagtable.html">ubermagtable</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
 <li class="toctree-l3"><a class="reference internal" href="../../documentation/notebooks/ubermagtable/table-basics.html">Table basics</a></li>
 <li class="toctree-l3"><a class="reference internal" href="../../documentation/notebooks/ubermagtable/table-merge.html">Table merge</a></li>
 <li class="toctree-l3"><a class="reference internal" href="../../documentation/notebooks/ubermagtable/table-visualisation.html">Table visualisation</a></li>
@@ -498,8 +492,8 @@
 <li class="toctree-l3"><a class="reference internal" href="../../documentation/notebooks/ubermagtable/table-interactive-plot.html">Table interactive plot</a></li>
 <li class="toctree-l3"><a class="reference internal" href="../../documentation/notebooks/ubermagtable/table-fft.html">Table FFT</a></li>
 </ul>
-</li>
-<li class="toctree-l2 has-children"><a class="reference internal" href="../../documentation/ubermagutil.html">ubermagutil</a><input class="toctree-checkbox" id="toctree-checkbox-11" name="toctree-checkbox-11" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-11"><i class="fa-solid fa-chevron-down"></i></label><ul>
+</details></li>
+<li class="toctree-l2 has-children"><a class="reference internal" href="../../documentation/ubermagutil.html">ubermagutil</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
 <li class="toctree-l3"><a class="reference internal" href="../../documentation/notebooks/ubermagutil/imposing-typesystem.html">Imposing <code class="docutils literal notranslate"><span class="pre">typesystem</span></code> on a class</a></li>
 <li class="toctree-l3"><a class="reference internal" href="../../documentation/notebooks/ubermagutil/constant-attributes.html">Constant attributes</a></li>
 <li class="toctree-l3"><a class="reference internal" href="../../documentation/notebooks/ubermagutil/parameter-descriptor.html"><code class="docutils literal notranslate"><span class="pre">Parameter</span></code> descriptor</a></li>
@@ -509,19 +503,19 @@
 <li class="toctree-l3"><a class="reference internal" href="../../documentation/notebooks/ubermagutil/hysteresis.html">Hysteresis values</a></li>
 <li class="toctree-l3"><a class="reference internal" href="../../documentation/notebooks/ubermagutil/logging.html">Logging control</a></li>
 </ul>
-</li>
-<li class="toctree-l2 has-children"><a class="reference internal" href="../../documentation/ubermag.html">ubermag</a><input class="toctree-checkbox" id="toctree-checkbox-12" name="toctree-checkbox-12" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-12"><i class="fa-solid fa-chevron-down"></i></label><ul>
+</details></li>
+<li class="toctree-l2 has-children"><a class="reference internal" href="../../documentation/ubermag.html">ubermag</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
 <li class="toctree-l3"><a class="reference internal" href="../../documentation/notebooks/ubermag/ubermag-version.html">Collecting debug information</a></li>
 <li class="toctree-l3"><a class="reference internal" href="../../documentation/notebooks/ubermag/hdf5-file-specification.html">HDF5 specification in Ubermag</a></li>
 </ul>
-</li>
+</details></li>
 <li class="toctree-l2"><a class="reference internal" href="../../documentation/compatibility.html">Compatibility</a></li>
 </ul>
-</li>
+</details></li>
 </ul>
 <ul class="current nav bd-sidenav">
-<li class="toctree-l1 current active has-children"><a class="reference internal" href="../index.html">API Reference</a><input checked="" class="toctree-checkbox" id="toctree-checkbox-13" name="toctree-checkbox-13" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-13"><i class="fa-solid fa-chevron-down"></i></label><ul class="current">
-<li class="toctree-l2 has-children"><a class="reference internal" href="discretisedfield.html">discretisedfield</a><input class="toctree-checkbox" id="toctree-checkbox-14" name="toctree-checkbox-14" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-14"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l1 current active has-children"><a class="reference internal" href="../index.html">API Reference</a><details open="open"><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul class="current">
+<li class="toctree-l2 has-children"><a class="reference internal" href="discretisedfield.html">discretisedfield</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
 <li class="toctree-l3"><a class="reference internal" href="discretisedfield.Field.html">Field</a></li>
 <li class="toctree-l3"><a class="reference internal" href="discretisedfield.FieldRotator.html">FieldRotator</a></li>
 <li class="toctree-l3"><a class="reference internal" href="discretisedfield.Line.html">Line</a></li>
@@ -530,11 +524,11 @@
 <li class="toctree-l3"><a class="reference internal" href="discretisedfield.integrate.html">discretisedfield.integrate</a></li>
 <li class="toctree-l3"><a class="reference internal" href="discretisedfield.interact.html">discretisedfield.interact</a></li>
 <li class="toctree-l3"><a class="reference internal" href="discretisedfield.test.html">discretisedfield.test</a></li>
-<li class="toctree-l3 has-children"><a class="reference internal" href="discretisedfield.io.html">discretisedfield.io</a><input class="toctree-checkbox" id="toctree-checkbox-15" name="toctree-checkbox-15" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-15"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l3 has-children"><a class="reference internal" href="discretisedfield.io.html">discretisedfield.io</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
 <li class="toctree-l4"><a class="reference internal" href="discretisedfield.io.ovf2vtk.html">discretisedfield.io.ovf2vtk</a></li>
 </ul>
-</li>
-<li class="toctree-l3 has-children"><a class="reference internal" href="discretisedfield.plotting.html">discretisedfield.plotting</a><input class="toctree-checkbox" id="toctree-checkbox-16" name="toctree-checkbox-16" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-16"><i class="fa-solid fa-chevron-down"></i></label><ul>
+</details></li>
+<li class="toctree-l3 has-children"><a class="reference internal" href="discretisedfield.plotting.html">discretisedfield.plotting</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
 <li class="toctree-l4"><a class="reference internal" href="discretisedfield.plotting.Hv.html">Hv</a></li>
 <li class="toctree-l4"><a class="reference internal" href="discretisedfield.plotting.K3dField.html">K3dField</a></li>
 <li class="toctree-l4"><a class="reference internal" href="discretisedfield.plotting.K3dMesh.html">K3dMesh</a></li>
@@ -544,8 +538,8 @@
 <li class="toctree-l4"><a class="reference internal" href="discretisedfield.plotting.MplRegion.html">MplRegion</a></li>
 <li class="toctree-l4"><a class="reference internal" href="discretisedfield.plotting.add_colorwheel.html">discretisedfield.plotting.add_colorwheel</a></li>
 </ul>
-</li>
-<li class="toctree-l3 has-children"><a class="reference internal" href="discretisedfield.tools.html">discretisedfield.tools</a><input class="toctree-checkbox" id="toctree-checkbox-17" name="toctree-checkbox-17" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-17"><i class="fa-solid fa-chevron-down"></i></label><ul>
+</details></li>
+<li class="toctree-l3 has-children"><a class="reference internal" href="discretisedfield.tools.html">discretisedfield.tools</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
 <li class="toctree-l4"><a class="reference internal" href="discretisedfield.tools.count_bps.html">discretisedfield.tools.count_bps</a></li>
 <li class="toctree-l4"><a class="reference internal" href="discretisedfield.tools.count_large_cell_angle_regions.html">discretisedfield.tools.count_large_cell_angle_regions</a></li>
 <li class="toctree-l4"><a class="reference internal" href="discretisedfield.tools.demag_field.html">discretisedfield.tools.demag_field</a></li>
@@ -556,28 +550,28 @@
 <li class="toctree-l4"><a class="reference internal" href="discretisedfield.tools.topological_charge.html">discretisedfield.tools.topological_charge</a></li>
 <li class="toctree-l4"><a class="reference internal" href="discretisedfield.tools.topological_charge_density.html">discretisedfield.tools.topological_charge_density</a></li>
 </ul>
-</li>
+</details></li>
 </ul>
-</li>
-<li class="toctree-l2 has-children"><a class="reference internal" href="mag2exp.html">mag2exp</a><input class="toctree-checkbox" id="toctree-checkbox-18" name="toctree-checkbox-18" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-18"><i class="fa-solid fa-chevron-down"></i></label><ul>
+</details></li>
+<li class="toctree-l2 has-children"><a class="reference internal" href="mag2exp.html">mag2exp</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
 <li class="toctree-l3"><a class="reference internal" href="mag2exp.test.html">mag2exp.test</a></li>
-<li class="toctree-l3 has-children"><a class="reference internal" href="mag2exp.ltem.html">mag2exp.ltem</a><input class="toctree-checkbox" id="toctree-checkbox-19" name="toctree-checkbox-19" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-19"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l3 has-children"><a class="reference internal" href="mag2exp.ltem.html">mag2exp.ltem</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
 <li class="toctree-l4"><a class="reference internal" href="mag2exp.ltem.defocus_image.html">mag2exp.ltem.defocus_image</a></li>
 <li class="toctree-l4"><a class="reference internal" href="mag2exp.ltem.integrated_magnetic_flux_density.html">mag2exp.ltem.integrated_magnetic_flux_density</a></li>
 <li class="toctree-l4"><a class="reference internal" href="mag2exp.ltem.phase.html">mag2exp.ltem.phase</a></li>
 <li class="toctree-l4"><a class="reference internal" href="mag2exp.ltem.relativistic_wavelength.html">mag2exp.ltem.relativistic_wavelength</a></li>
 </ul>
-</li>
-<li class="toctree-l3 has-children"><a class="reference internal" href="mag2exp.magnetometry.html">mag2exp.magnetometry</a><input class="toctree-checkbox" id="toctree-checkbox-20" name="toctree-checkbox-20" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-20"><i class="fa-solid fa-chevron-down"></i></label><ul>
+</details></li>
+<li class="toctree-l3 has-children"><a class="reference internal" href="mag2exp.magnetometry.html">mag2exp.magnetometry</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
 <li class="toctree-l4"><a class="reference internal" href="mag2exp.magnetometry.magnetisation.html">mag2exp.magnetometry.magnetisation</a></li>
 <li class="toctree-l4"><a class="reference internal" href="mag2exp.magnetometry.torque.html">mag2exp.magnetometry.torque</a></li>
 </ul>
-</li>
-<li class="toctree-l3 has-children"><a class="reference internal" href="mag2exp.mfm.html">mag2exp.mfm</a><input class="toctree-checkbox" id="toctree-checkbox-21" name="toctree-checkbox-21" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-21"><i class="fa-solid fa-chevron-down"></i></label><ul>
+</details></li>
+<li class="toctree-l3 has-children"><a class="reference internal" href="mag2exp.mfm.html">mag2exp.mfm</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
 <li class="toctree-l4"><a class="reference internal" href="mag2exp.mfm.phase_shift.html">mag2exp.mfm.phase_shift</a></li>
 </ul>
-</li>
-<li class="toctree-l3 has-children"><a class="reference internal" href="mag2exp.quick_plots.html">mag2exp.quick_plots</a><input class="toctree-checkbox" id="toctree-checkbox-22" name="toctree-checkbox-22" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-22"><i class="fa-solid fa-chevron-down"></i></label><ul>
+</details></li>
+<li class="toctree-l3 has-children"><a class="reference internal" href="mag2exp.quick_plots.html">mag2exp.quick_plots</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
 <li class="toctree-l4"><a class="reference internal" href="mag2exp.quick_plots.ltem_defocus.html">mag2exp.quick_plots.ltem_defocus</a></li>
 <li class="toctree-l4"><a class="reference internal" href="mag2exp.quick_plots.ltem_ft_phase.html">mag2exp.quick_plots.ltem_ft_phase</a></li>
 <li class="toctree-l4"><a class="reference internal" href="mag2exp.quick_plots.ltem_integrated_mfd.html">mag2exp.quick_plots.ltem_integrated_mfd</a></li>
@@ -588,20 +582,20 @@
 <li class="toctree-l4"><a class="reference internal" href="mag2exp.quick_plots.saxs.html">mag2exp.quick_plots.saxs</a></li>
 <li class="toctree-l4"><a class="reference internal" href="mag2exp.quick_plots.x_ray_holography.html">mag2exp.quick_plots.x_ray_holography</a></li>
 </ul>
-</li>
-<li class="toctree-l3 has-children"><a class="reference internal" href="mag2exp.sans.html">mag2exp.sans</a><input class="toctree-checkbox" id="toctree-checkbox-23" name="toctree-checkbox-23" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-23"><i class="fa-solid fa-chevron-down"></i></label><ul>
+</details></li>
+<li class="toctree-l3 has-children"><a class="reference internal" href="mag2exp.sans.html">mag2exp.sans</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
 <li class="toctree-l4"><a class="reference internal" href="mag2exp.sans.chiral_function.html">mag2exp.sans.chiral_function</a></li>
 <li class="toctree-l4"><a class="reference internal" href="mag2exp.sans.cross_section.html">mag2exp.sans.cross_section</a></li>
 </ul>
-</li>
-<li class="toctree-l3 has-children"><a class="reference internal" href="mag2exp.x_ray.html">mag2exp.x_ray</a><input class="toctree-checkbox" id="toctree-checkbox-24" name="toctree-checkbox-24" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-24"><i class="fa-solid fa-chevron-down"></i></label><ul>
+</details></li>
+<li class="toctree-l3 has-children"><a class="reference internal" href="mag2exp.x_ray.html">mag2exp.x_ray</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
 <li class="toctree-l4"><a class="reference internal" href="mag2exp.x_ray.holography.html">mag2exp.x_ray.holography</a></li>
 <li class="toctree-l4"><a class="reference internal" href="mag2exp.x_ray.saxs.html">mag2exp.x_ray.saxs</a></li>
 </ul>
-</li>
+</details></li>
 </ul>
-</li>
-<li class="toctree-l2 has-children"><a class="reference internal" href="micromagneticdata.html">micromagneticdata</a><input class="toctree-checkbox" id="toctree-checkbox-25" name="toctree-checkbox-25" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-25"><i class="fa-solid fa-chevron-down"></i></label><ul>
+</details></li>
+<li class="toctree-l2 has-children"><a class="reference internal" href="micromagneticdata.html">micromagneticdata</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
 <li class="toctree-l3"><a class="reference internal" href="micromagneticdata.AbstractDrive.html">AbstractDrive</a></li>
 <li class="toctree-l3"><a class="reference internal" href="micromagneticdata.CombinedDrive.html">CombinedDrive</a></li>
 <li class="toctree-l3"><a class="reference internal" href="micromagneticdata.Data.html">Data</a></li>
@@ -610,8 +604,8 @@
 <li class="toctree-l3"><a class="reference internal" href="micromagneticdata.OOMMFDrive.html">OOMMFDrive</a></li>
 <li class="toctree-l3"><a class="reference internal" href="micromagneticdata.test.html">micromagneticdata.test</a></li>
 </ul>
-</li>
-<li class="toctree-l2 has-children"><a class="reference internal" href="micromagneticmodel.html">micromagneticmodel</a><input class="toctree-checkbox" id="toctree-checkbox-26" name="toctree-checkbox-26" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-26"><i class="fa-solid fa-chevron-down"></i></label><ul>
+</details></li>
+<li class="toctree-l2 has-children"><a class="reference internal" href="micromagneticmodel.html">micromagneticmodel</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
 <li class="toctree-l3"><a class="reference internal" href="micromagneticmodel.CubicAnisotropy.html">CubicAnisotropy</a></li>
 <li class="toctree-l3"><a class="reference internal" href="micromagneticmodel.DMI.html">DMI</a></li>
 <li class="toctree-l3"><a class="reference internal" href="micromagneticmodel.Damping.html">Damping</a></li>
@@ -634,13 +628,13 @@
 <li class="toctree-l3"><a class="reference internal" href="micromagneticmodel.Zeeman.html">Zeeman</a></li>
 <li class="toctree-l3"><a class="reference internal" href="micromagneticmodel.ZhangLi.html">ZhangLi</a></li>
 <li class="toctree-l3"><a class="reference internal" href="micromagneticmodel.test.html">micromagneticmodel.test</a></li>
-<li class="toctree-l3 has-children"><a class="reference internal" href="micromagneticmodel.abstract.html">micromagneticmodel.abstract</a><input class="toctree-checkbox" id="toctree-checkbox-27" name="toctree-checkbox-27" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-27"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l3 has-children"><a class="reference internal" href="micromagneticmodel.abstract.html">micromagneticmodel.abstract</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
 <li class="toctree-l4"><a class="reference internal" href="micromagneticmodel.abstract.Abstract.html">Abstract</a></li>
 <li class="toctree-l4"><a class="reference internal" href="micromagneticmodel.abstract.Container.html">Container</a></li>
 <li class="toctree-l4"><a class="reference internal" href="micromagneticmodel.abstract.Term.html">Term</a></li>
 </ul>
-</li>
-<li class="toctree-l3 has-children"><a class="reference internal" href="micromagneticmodel.consts.html">micromagneticmodel.consts</a><input class="toctree-checkbox" id="toctree-checkbox-28" name="toctree-checkbox-28" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-28"><i class="fa-solid fa-chevron-down"></i></label><ul>
+</details></li>
+<li class="toctree-l3 has-children"><a class="reference internal" href="micromagneticmodel.consts.html">micromagneticmodel.consts</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
 <li class="toctree-l4"><a class="reference internal" href="micromagneticmodel.consts.mu0.html">micromagneticmodel.consts.mu0</a></li>
 <li class="toctree-l4"><a class="reference internal" href="micromagneticmodel.consts.e.html">micromagneticmodel.consts.e</a></li>
 <li class="toctree-l4"><a class="reference internal" href="micromagneticmodel.consts.me.html">micromagneticmodel.consts.me</a></li>
@@ -652,17 +646,17 @@
 <li class="toctree-l4"><a class="reference internal" href="micromagneticmodel.consts.muB.html">micromagneticmodel.consts.muB</a></li>
 <li class="toctree-l4"><a class="reference internal" href="micromagneticmodel.consts.gamma0.html">micromagneticmodel.consts.gamma0</a></li>
 </ul>
-</li>
-<li class="toctree-l3 has-children"><a class="reference internal" href="micromagneticmodel.examples.html">micromagneticmodel.examples</a><input class="toctree-checkbox" id="toctree-checkbox-29" name="toctree-checkbox-29" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-29"><i class="fa-solid fa-chevron-down"></i></label><ul>
+</details></li>
+<li class="toctree-l3 has-children"><a class="reference internal" href="micromagneticmodel.examples.html">micromagneticmodel.examples</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
 <li class="toctree-l4"><a class="reference internal" href="micromagneticmodel.examples.macrospin.html">micromagneticmodel.examples.macrospin</a></li>
 </ul>
-</li>
+</details></li>
 </ul>
-</li>
-<li class="toctree-l2 has-children"><a class="reference internal" href="micromagnetictests.html">micromagnetictests</a><input class="toctree-checkbox" id="toctree-checkbox-30" name="toctree-checkbox-30" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-30"><i class="fa-solid fa-chevron-down"></i></label><ul>
+</details></li>
+<li class="toctree-l2 has-children"><a class="reference internal" href="micromagnetictests.html">micromagnetictests</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
 <li class="toctree-l3"><a class="reference internal" href="micromagnetictests.get_tests.html">micromagnetictests.get_tests</a></li>
 <li class="toctree-l3"><a class="reference internal" href="micromagnetictests.test.html">micromagnetictests.test</a></li>
-<li class="toctree-l3 has-children"><a class="reference internal" href="micromagnetictests.calculatortests.html">micromagnetictests.calculatortests</a><input class="toctree-checkbox" id="toctree-checkbox-31" name="toctree-checkbox-31" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-31"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l3 has-children"><a class="reference internal" href="micromagnetictests.calculatortests.html">micromagnetictests.calculatortests</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
 <li class="toctree-l4"><a class="reference internal" href="micromagnetictests.calculatortests.TestCompute.html">TestCompute</a></li>
 <li class="toctree-l4"><a class="reference internal" href="micromagnetictests.calculatortests.TestCubicAnisotropy.html">TestCubicAnisotropy</a></li>
 <li class="toctree-l4"><a class="reference internal" href="micromagnetictests.calculatortests.TestDMI.html">TestDMI</a></li>
@@ -694,10 +688,10 @@
 <li class="toctree-l4"><a class="reference internal" href="micromagnetictests.calculatortests.test_stdprob4.html">micromagnetictests.calculatortests.test_stdprob4</a></li>
 <li class="toctree-l4"><a class="reference internal" href="micromagnetictests.calculatortests.test_stdprob5.html">micromagnetictests.calculatortests.test_stdprob5</a></li>
 </ul>
-</li>
+</details></li>
 </ul>
-</li>
-<li class="toctree-l2 has-children"><a class="reference internal" href="mumax3c.html">mumax3c</a><input class="toctree-checkbox" id="toctree-checkbox-32" name="toctree-checkbox-32" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-32"><i class="fa-solid fa-chevron-down"></i></label><ul>
+</details></li>
+<li class="toctree-l2 has-children"><a class="reference internal" href="mumax3c.html">mumax3c</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
 <li class="toctree-l3"><a class="reference internal" href="mumax3c.runner.html">mumax3c.runner</a></li>
 <li class="toctree-l3"><a class="reference internal" href="mumax3c.MinDriver.html">MinDriver</a></li>
 <li class="toctree-l3"><a class="reference internal" href="mumax3c.RelaxDriver.html">RelaxDriver</a></li>
@@ -705,16 +699,16 @@
 <li class="toctree-l3"><a class="reference internal" href="mumax3c.delete.html">mumax3c.delete</a></li>
 <li class="toctree-l3"><a class="reference internal" href="mumax3c.test.html">mumax3c.test</a></li>
 <li class="toctree-l3"><a class="reference internal" href="mumax3c.test_docker.html">mumax3c.test_docker</a></li>
-<li class="toctree-l3 has-children"><a class="reference internal" href="mumax3c.mumax3.html">mumax3c.mumax3</a><input class="toctree-checkbox" id="toctree-checkbox-33" name="toctree-checkbox-33" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-33"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l3 has-children"><a class="reference internal" href="mumax3c.mumax3.html">mumax3c.mumax3</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
 <li class="toctree-l4"><a class="reference internal" href="mumax3c.mumax3.ExeMumax3Runner.html">ExeMumax3Runner</a></li>
 <li class="toctree-l4"><a class="reference internal" href="mumax3c.mumax3.Mumax3Runner.html">Mumax3Runner</a></li>
 <li class="toctree-l4"><a class="reference internal" href="mumax3c.mumax3.Runner.html">Runner</a></li>
 <li class="toctree-l4"><a class="reference internal" href="mumax3c.mumax3.overhead.html">mumax3c.mumax3.overhead</a></li>
 </ul>
-</li>
+</details></li>
 </ul>
-</li>
-<li class="toctree-l2 current active has-children"><a class="reference internal" href="oommfc.html">oommfc</a><input checked="" class="toctree-checkbox" id="toctree-checkbox-34" name="toctree-checkbox-34" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-34"><i class="fa-solid fa-chevron-down"></i></label><ul class="current">
+</details></li>
+<li class="toctree-l2 current active has-children"><a class="reference internal" href="oommfc.html">oommfc</a><details open="open"><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul class="current">
 <li class="toctree-l3"><a class="reference internal" href="oommfc.runner.html">oommfc.runner</a></li>
 <li class="toctree-l3 current active"><a class="current reference internal" href="#">CGEvolver</a></li>
 <li class="toctree-l3"><a class="reference internal" href="oommfc.Driver.html">Driver</a></li>
@@ -732,7 +726,7 @@
 <li class="toctree-l3"><a class="reference internal" href="oommfc.delete.html">oommfc.delete</a></li>
 <li class="toctree-l3"><a class="reference internal" href="oommfc.test.html">oommfc.test</a></li>
 <li class="toctree-l3"><a class="reference internal" href="oommfc.test_docker.html">oommfc.test_docker</a></li>
-<li class="toctree-l3 has-children"><a class="reference internal" href="oommfc.oommf.html">oommfc.oommf</a><input class="toctree-checkbox" id="toctree-checkbox-35" name="toctree-checkbox-35" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-35"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l3 has-children"><a class="reference internal" href="oommfc.oommf.html">oommfc.oommf</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
 <li class="toctree-l4"><a class="reference internal" href="oommfc.oommf.DockerOOMMFRunner.html">DockerOOMMFRunner</a></li>
 <li class="toctree-l4"><a class="reference internal" href="oommfc.oommf.ExeOOMMFRunner.html">ExeOOMMFRunner</a></li>
 <li class="toctree-l4"><a class="reference internal" href="oommfc.oommf.OOMMFRunner.html">OOMMFRunner</a></li>
@@ -740,33 +734,33 @@
 <li class="toctree-l4"><a class="reference internal" href="oommfc.oommf.TclOOMMFRunner.html">TclOOMMFRunner</a></li>
 <li class="toctree-l4"><a class="reference internal" href="oommfc.oommf.overhead.html">oommfc.oommf.overhead</a></li>
 </ul>
-</li>
+</details></li>
 </ul>
-</li>
-<li class="toctree-l2 has-children"><a class="reference internal" href="ubermag.html">ubermag</a><input class="toctree-checkbox" id="toctree-checkbox-36" name="toctree-checkbox-36" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-36"><i class="fa-solid fa-chevron-down"></i></label><ul>
+</details></li>
+<li class="toctree-l2 has-children"><a class="reference internal" href="ubermag.html">ubermag</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
 <li class="toctree-l3"><a class="reference internal" href="ubermag.debug_info.html">ubermag.debug_info</a></li>
 <li class="toctree-l3"><a class="reference internal" href="ubermag.test.html">ubermag.test</a></li>
 </ul>
-</li>
-<li class="toctree-l2 has-children"><a class="reference internal" href="ubermagtable.html">ubermagtable</a><input class="toctree-checkbox" id="toctree-checkbox-37" name="toctree-checkbox-37" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-37"><i class="fa-solid fa-chevron-down"></i></label><ul>
+</details></li>
+<li class="toctree-l2 has-children"><a class="reference internal" href="ubermagtable.html">ubermagtable</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
 <li class="toctree-l3"><a class="reference internal" href="ubermagtable.Table.html">Table</a></li>
 <li class="toctree-l3"><a class="reference internal" href="ubermagtable.interact.html">ubermagtable.interact</a></li>
 <li class="toctree-l3"><a class="reference internal" href="ubermagtable.test.html">ubermagtable.test</a></li>
-<li class="toctree-l3 has-children"><a class="reference internal" href="ubermagtable.util.html">ubermagtable.util</a><input class="toctree-checkbox" id="toctree-checkbox-38" name="toctree-checkbox-38" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-38"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l3 has-children"><a class="reference internal" href="ubermagtable.util.html">ubermagtable.util</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
 <li class="toctree-l4"><a class="reference internal" href="ubermagtable.util.columns.html">ubermagtable.util.columns</a></li>
 <li class="toctree-l4"><a class="reference internal" href="ubermagtable.util.data.html">ubermagtable.util.data</a></li>
 <li class="toctree-l4"><a class="reference internal" href="ubermagtable.util.units.html">ubermagtable.util.units</a></li>
 </ul>
-</li>
+</details></li>
 </ul>
-</li>
-<li class="toctree-l2 has-children"><a class="reference internal" href="ubermagutil.html">ubermagutil</a><input class="toctree-checkbox" id="toctree-checkbox-39" name="toctree-checkbox-39" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-39"><i class="fa-solid fa-chevron-down"></i></label><ul>
+</details></li>
+<li class="toctree-l2 has-children"><a class="reference internal" href="ubermagutil.html">ubermagutil</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
 <li class="toctree-l3"><a class="reference internal" href="ubermagutil.changedir.html">ubermagutil.changedir</a></li>
 <li class="toctree-l3"><a class="reference internal" href="ubermagutil.hysteresis_values.html">ubermagutil.hysteresis_values</a></li>
 <li class="toctree-l3"><a class="reference internal" href="ubermagutil.inherit_docs.html">ubermagutil.inherit_docs</a></li>
 <li class="toctree-l3"><a class="reference internal" href="ubermagutil.setup_logging.html">ubermagutil.setup_logging</a></li>
 <li class="toctree-l3"><a class="reference internal" href="ubermagutil.test.html">ubermagutil.test</a></li>
-<li class="toctree-l3 has-children"><a class="reference internal" href="ubermagutil.typesystem.html">ubermagutil.typesystem</a><input class="toctree-checkbox" id="toctree-checkbox-40" name="toctree-checkbox-40" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-40"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l3 has-children"><a class="reference internal" href="ubermagutil.typesystem.html">ubermagutil.typesystem</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
 <li class="toctree-l4"><a class="reference internal" href="ubermagutil.typesystem.Descriptor.html">Descriptor</a></li>
 <li class="toctree-l4"><a class="reference internal" href="ubermagutil.typesystem.Dictionary.html">Dictionary</a></li>
 <li class="toctree-l4"><a class="reference internal" href="ubermagutil.typesystem.Name.html">Name</a></li>
@@ -777,16 +771,16 @@
 <li class="toctree-l4"><a class="reference internal" href="ubermagutil.typesystem.Vector.html">Vector</a></li>
 <li class="toctree-l4"><a class="reference internal" href="ubermagutil.typesystem.typesystem.html">ubermagutil.typesystem.typesystem</a></li>
 </ul>
-</li>
-<li class="toctree-l3 has-children"><a class="reference internal" href="ubermagutil.units.html">ubermagutil.units</a><input class="toctree-checkbox" id="toctree-checkbox-41" name="toctree-checkbox-41" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-41"><i class="fa-solid fa-chevron-down"></i></label><ul>
+</details></li>
+<li class="toctree-l3 has-children"><a class="reference internal" href="ubermagutil.units.html">ubermagutil.units</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
 <li class="toctree-l4"><a class="reference internal" href="ubermagutil.units.si_max_multiplier.html">ubermagutil.units.si_max_multiplier</a></li>
 <li class="toctree-l4"><a class="reference internal" href="ubermagutil.units.si_multiplier.html">ubermagutil.units.si_multiplier</a></li>
 </ul>
-</li>
+</details></li>
 </ul>
-</li>
+</details></li>
 </ul>
-</li>
+</details></li>
 </ul>
 <ul class="nav bd-sidenav">
 <li class="toctree-l1"><a class="reference internal" href="../../faq.html">FAQ</a></li>
@@ -804,13 +798,13 @@
 
       </div>
       
-      <main id="main-content" class="bd-main">
+      <main id="main-content" class="bd-main" role="main">
         
         
           <div class="bd-content">
             <div class="bd-article-container">
               
-              <div class="bd-header-article">
+              <div class="bd-header-article d-print-none">
 <div class="header-article-items header-article__inner">
   
     <div class="header-article-items__start">
@@ -821,7 +815,7 @@
 
 
 
-<nav aria-label="Breadcrumb">
+<nav aria-label="Breadcrumb" class="d-print-none">
   <ul class="bd-breadcrumbs">
     
     <li class="breadcrumb-item breadcrumb-home">
@@ -853,7 +847,7 @@
               
                 
 <div id="searchbox"></div>
-                <article class="bd-article" role="main">
+                <article class="bd-article">
                   
   <section id="cgevolver">
 <h1>CGEvolver<a class="headerlink" href="#cgevolver" title="Link to this heading">#</a></h1>
@@ -895,7 +889,7 @@ refer to <code class="docutils literal notranslate"><span class="pre">Oxs_CGEvol
 </pre></div>
 </div>
 <hr><p class="rubric">Methods</p>
-<table class="autosummary longtable table autosummary">
+<div class="pst-scrollable-table-container"><table class="autosummary longtable table autosummary">
 <tbody>
 <tr class="row-odd"><td><p><code class="xref py py-obj docutils literal notranslate"><span class="pre">__dir__</span></code></p></td>
 <td><p>Default dir() implementation.</p></td>
@@ -911,14 +905,16 @@ refer to <code class="docutils literal notranslate"><span class="pre">Oxs_CGEvol
 </tr>
 </tbody>
 </table>
+</div>
 <p class="rubric">Properties</p>
-<table class="autosummary longtable table autosummary">
+<div class="pst-scrollable-table-container"><table class="autosummary longtable table autosummary">
 <tbody>
 <tr class="row-odd"><td><p><code class="xref py py-obj docutils literal notranslate"><span class="pre">name</span></code></p></td>
 <td><p>Name.</p></td>
 </tr>
 </tbody>
 </table>
+</div>
 <hr></dd></dl>
 
 </section>
@@ -930,7 +926,7 @@ refer to <code class="docutils literal notranslate"><span class="pre">Oxs_CGEvol
               
               
               
-                <footer class="prev-next-footer">
+                <footer class="prev-next-footer d-print-none">
                   
 <div class="prev-next-area">
     <a class="left-prev"
@@ -959,6 +955,7 @@ refer to <code class="docutils literal notranslate"><span class="pre">Oxs_CGEvol
             
               
                 <div class="bd-sidebar-secondary bd-toc"><div class="sidebar-secondary-items sidebar-secondary__inner">
+
 
   <div class="sidebar-secondary-item">
 <div class="tocsection onthispage pt-5 pb-3">
@@ -995,8 +992,8 @@ refer to <code class="docutils literal notranslate"><span class="pre">Oxs_CGEvol
   </div>
   
   <!-- Scripts loaded after <body> so the DOM is not blocked -->
-  <script src="../../_static/scripts/bootstrap.js?digest=5b4479735964841361fd"></script>
-<script src="../../_static/scripts/pydata-sphinx-theme.js?digest=5b4479735964841361fd"></script>
+  <script src="../../_static/scripts/bootstrap.js?digest=3ee479438cf8b5e0d341"></script>
+<script src="../../_static/scripts/pydata-sphinx-theme.js?digest=3ee479438cf8b5e0d341"></script>
 
   <footer class="bd-footer">
 <div class="bd-footer__inner bd-page-width">
@@ -1007,7 +1004,7 @@ refer to <code class="docutils literal notranslate"><span class="pre">Oxs_CGEvol
 
   <p class="copyright">
     
-      © Copyright 2022, Marijan Beg and Hans Fangohr.
+      © Copyright 2016–2024, Ubermag developers.
       <br/>
     
   </p>
@@ -1016,7 +1013,7 @@ refer to <code class="docutils literal notranslate"><span class="pre">Oxs_CGEvol
         <div class="footer-item">
 
   <p class="sphinx-version">
-    Created using <a href="https://www.sphinx-doc.org/">Sphinx</a> 7.2.6.
+    Created using <a href="https://www.sphinx-doc.org/">Sphinx</a> 7.3.7.
     <br/>
   </p>
 </div>
@@ -1029,7 +1026,7 @@ refer to <code class="docutils literal notranslate"><span class="pre">Oxs_CGEvol
       
         <div class="footer-item">
 <p class="theme-version">
-  Built with the <a href="https://pydata-sphinx-theme.readthedocs.io/en/stable/index.html">PyData Sphinx Theme</a> 0.14.4.
+  Built with the <a href="https://pydata-sphinx-theme.readthedocs.io/en/stable/index.html">PyData Sphinx Theme</a> 0.15.3.
 </p></div>
       
     </div>
