@@ -17,7 +17,7 @@
 # -- Project information -----------------------------------------------------
 
 project = 'ubermag'
-copyright = '2016–2024, Ubermag Developers'
+copyright = '2016–2024, Ubermag developers'
 author = ('Marijan Beg, Martin Lang, Ryan A. Pepper, Thomas Kluyver, '
           'Jeroen Mulkers, Jonathan Leliaert, and Hans Fangohr')
 
