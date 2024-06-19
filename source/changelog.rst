@@ -2,6 +2,15 @@
 Changelog
 =========
 
+2024.06 (Jun 19, 2024)
+======================
+
+Fixed
+-----
+
+Restricted ``numpy`` version to be less than ``2.0`` due to incompatibilities with
+the current code base.
+
 2023.11 (Nov 25, 2023)
 ======================
 
