@@ -31,7 +31,7 @@
     <link rel="stylesheet" type="text/css" href="_static/pygments.css?v=a746c00c" />
     <link rel="stylesheet" type="text/css" href="_static/plot_directive.css" />
     <link rel="stylesheet" type="text/css" href="_static/copybutton.css?v=76b2166b" />
-    <link rel="stylesheet" type="text/css" href="_static/design-style.1e8bd061cd6da7fc9cf755528e8ffc24.min.css?v=0a3b3ea7" />
+    <link rel="stylesheet" type="text/css" href="_static/sphinx-design.min.css?v=87e54e7c" />
     <link rel="stylesheet" type="text/css" href="_static/css/colours.css?v=f1e252c1" />
   
   <!-- Pre-loaded scripts that we'll load fully later -->
@@ -44,7 +44,7 @@
     <script src="_static/sphinx_highlight.js?v=dc90522c"></script>
     <script src="_static/clipboard.min.js?v=a7894cd8"></script>
     <script src="_static/copybutton.js?v=fd10adb8"></script>
-    <script src="_static/design-tabs.js?v=36754332"></script>
+    <script src="_static/design-tabs.js?v=f930bc37"></script>
     <script crossorigin="anonymous" integrity="sha256-Ae2Vz/4ePdIu6ZyI/5ZGsYnb+m0JlOmKPjt6XZ9JJkA=" src="https://cdnjs.cloudflare.com/ajax/libs/require.js/2.3.4/require.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/@jupyter-widgets/html-manager@^1.0.1/dist/embed-amd.js"></script>
     <script>DOCUMENTATION_OPTIONS.pagename = 'installation';</script>
@@ -439,7 +439,7 @@ to the PATH variable).</p>
 <h3>Installation environment<a class="headerlink" href="#installation-environment" title="Link to this heading">#</a></h3>
 <div class="sd-tab-set docutils">
 <input checked="checked" id="sd-tab-item-0" name="sd-tab-set-0" type="radio">
-</input><label class="sd-tab-label" data-sync-id="conda_install" for="sd-tab-item-0">
+<label class="sd-tab-label" data-sync-group="tab" data-sync-id="conda_install" for="sd-tab-item-0">
 conda (recommended)</label><div class="sd-tab-content docutils">
 <p>We recommend installation using <code class="docutils literal notranslate"><span class="pre">conda</span></code> package manager. If you do not
 already have it installed, download <a class="reference external" href="https://www.anaconda.com/download">Anaconda</a> Python 3.8+ for your operating
@@ -455,7 +455,7 @@ $ conda activate ubermag_env
 </div>
 </div>
 <input id="sd-tab-item-1" name="sd-tab-set-0" type="radio">
-</input><label class="sd-tab-label" data-sync-id="pip_install" for="sd-tab-item-1">
+<label class="sd-tab-label" data-sync-group="tab" data-sync-id="pip_install" for="sd-tab-item-1">
 pip + venv</label><div class="sd-tab-content docutils">
 <p>If you do not want to use or cannot use <code class="docutils literal notranslate"><span class="pre">conda</span></code> you can also install
 <code class="docutils literal notranslate"><span class="pre">ubermag</span></code> via <code class="docutils literal notranslate"><span class="pre">pip</span></code>. You have to manually install Python and pip for
@@ -486,14 +486,14 @@ packages, replace <code class="docutils literal notranslate"><span class="pre">u
 install.</p>
 <div class="sd-tab-set docutils">
 <input checked="checked" id="sd-tab-item-2" name="sd-tab-set-1" type="radio">
-</input><label class="sd-tab-label" data-sync-id="conda_install" for="sd-tab-item-2">
+<label class="sd-tab-label" data-sync-group="tab" data-sync-id="conda_install" for="sd-tab-item-2">
 conda (recommended)</label><div class="sd-tab-content docutils">
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span>$ conda install --channel conda-forge ubermag
 </pre></div>
 </div>
 </div>
 <input id="sd-tab-item-3" name="sd-tab-set-1" type="radio">
-</input><label class="sd-tab-label" data-sync-id="pip_install" for="sd-tab-item-3">
+<label class="sd-tab-label" data-sync-group="tab" data-sync-id="pip_install" for="sd-tab-item-3">
 pip + venv</label><div class="sd-tab-content docutils">
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span>$ pip install ubermag
 </pre></div>
@@ -509,7 +509,7 @@ of how to run <a class="reference internal" href="getting-started/jupyter-basics
 and mumax<sup>3</sup>).</p>
 <div class="sd-tab-set docutils">
 <input checked="checked" id="sd-tab-item-4" name="sd-tab-set-2" type="radio">
-</input><label class="sd-tab-label" for="sd-tab-item-4">
+<label class="sd-tab-label" for="sd-tab-item-4">
 OOMMF</label><div class="sd-tab-content docutils">
 <p>When you install <code class="docutils literal notranslate"><span class="pre">ubermag</span></code> using <code class="docutils literal notranslate"><span class="pre">conda</span></code> OOMMF will be automatically
 installed and <code class="docutils literal notranslate"><span class="pre">ubermag</span></code> (more precisely <code class="docutils literal notranslate"><span class="pre">oommfc</span></code>) knows how to find it. If
@@ -523,7 +523,7 @@ please refer to
 <a class="reference internal" href="documentation/notebooks/oommfc/controlling-default-runner.html"><span class="doc">Controlling the default runner</span></a>.</p>
 </div>
 <input id="sd-tab-item-5" name="sd-tab-set-2" type="radio">
-</input><label class="sd-tab-label" for="sd-tab-item-5">
+<label class="sd-tab-label" for="sd-tab-item-5">
 mumax<sup>3</sup></label><div class="sd-tab-content docutils">
 <p>Mumax<sup>3</sup> does not directly come with <code class="docutils literal notranslate"><span class="pre">ubermag</span></code> and you have to
 install it manually (following the instructions on the mumax<sup>3</sup>
@@ -540,7 +540,7 @@ your PATH variable. <code class="docutils literal notranslate"><span class="pre"
 import it as follows:</p>
 <div class="sd-tab-set docutils">
 <input checked="checked" id="sd-tab-item-6" name="sd-tab-set-3" type="radio">
-</input><label class="sd-tab-label" for="sd-tab-item-6">
+<label class="sd-tab-label" for="sd-tab-item-6">
 Linux</label><div class="sd-tab-content docutils">
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">mumax3c</span>
 <span class="n">mumax3c</span><span class="o">.</span><span class="n">runner</span><span class="o">.</span><span class="n">mumax3_exe</span> <span class="o">=</span> <span class="s1">&#39;/full/path/to/mumax/executable&#39;</span>
@@ -548,7 +548,7 @@ Linux</label><div class="sd-tab-content docutils">
 </div>
 </div>
 <input id="sd-tab-item-7" name="sd-tab-set-3" type="radio">
-</input><label class="sd-tab-label" for="sd-tab-item-7">
+<label class="sd-tab-label" for="sd-tab-item-7">
 Windows</label><div class="sd-tab-content docutils">
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">mumax3c</span>
 <span class="n">mumax3c</span><span class="o">.</span><span class="n">runner</span><span class="o">.</span><span class="n">mumax3_exe</span> <span class="o">=</span> <span class="sa">r</span><span class="s1">&#39;C:\full\path\to\mumax\executable.exe&#39;</span>
@@ -578,14 +578,14 @@ the meta-package. If no errors are reported, the installation was successful.</p
 with the name of your package):</p>
 <div class="sd-tab-set docutils">
 <input checked="checked" id="sd-tab-item-8" name="sd-tab-set-4" type="radio">
-</input><label class="sd-tab-label" data-sync-id="conda_install" for="sd-tab-item-8">
+<label class="sd-tab-label" data-sync-group="tab" data-sync-id="conda_install" for="sd-tab-item-8">
 conda (recommended)</label><div class="sd-tab-content docutils">
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span>$ conda update ubermag
 </pre></div>
 </div>
 </div>
 <input id="sd-tab-item-9" name="sd-tab-set-4" type="radio">
-</input><label class="sd-tab-label" data-sync-id="pip_install" for="sd-tab-item-9">
+<label class="sd-tab-label" data-sync-group="tab" data-sync-id="pip_install" for="sd-tab-item-9">
 pip + venv</label><div class="sd-tab-content docutils">
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span>$ pip install --upgrade ubermag
 </pre></div>
@@ -608,7 +608,7 @@ choosing the computational backend, please follow the steps explained
 subsequently for your operating system.</p>
 <div class="sd-tab-set docutils">
 <input checked="checked" id="sd-tab-item-10" name="sd-tab-set-5" type="radio">
-</input><label class="sd-tab-label" for="sd-tab-item-10">
+<label class="sd-tab-label" for="sd-tab-item-10">
 Windows</label><div class="sd-tab-content docutils">
 <ol class="arabic">
 <li><p>Before we install <code class="docutils literal notranslate"><span class="pre">ubermag</span></code>, we need to install <code class="docutils literal notranslate"><span class="pre">Python3</span></code> Anaconda
@@ -640,7 +640,7 @@ select <code class="docutils literal notranslate"><span class="pre">System</span
 </ol>
 </div>
 <input id="sd-tab-item-11" name="sd-tab-set-5" type="radio">
-</input><label class="sd-tab-label" for="sd-tab-item-11">
+<label class="sd-tab-label" for="sd-tab-item-11">
 MacOS</label><div class="sd-tab-content docutils">
 <ol class="arabic">
 <li><p>Before we install <code class="docutils literal notranslate"><span class="pre">ubermag</span></code>, we need to install <code class="docutils literal notranslate"><span class="pre">Python3</span></code> Anaconda
@@ -681,7 +681,7 @@ window.</strong></p>
 </ol>
 </div>
 <input id="sd-tab-item-12" name="sd-tab-set-5" type="radio">
-</input><label class="sd-tab-label" for="sd-tab-item-12">
+<label class="sd-tab-label" for="sd-tab-item-12">
 Linux (Ubuntu)</label><div class="sd-tab-content docutils">
 <ol class="arabic">
 <li><p>To install Ubermag, we first have to make sure you have <code class="docutils literal notranslate"><span class="pre">pip</span></code> installed.

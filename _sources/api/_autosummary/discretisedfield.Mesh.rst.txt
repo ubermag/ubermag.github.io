@@ -55,12 +55,12 @@ Mesh
    
       ~Mesh.bc
       ~Mesh.cell
+      ~Mesh.cells
       ~Mesh.dV
       ~Mesh.indices
       ~Mesh.k3d
       ~Mesh.mpl
       ~Mesh.n
-      ~Mesh.points
       ~Mesh.region
       ~Mesh.subregions
       ~Mesh.vertices
