@@ -1,6 +1,33 @@
 =========
 Changelog
 =========
+Upcoming
+======================
+
+Added
+-----
+``discretisedfield``
+  - Added support for visualisations using ``pyvista``.
+    (`#463 <https://github.com/ubermag/discretisedfield/pull/463>`__)
+
+``oommfc``
+  - Support for tunable (non-symmetric) Hysteresis simulations with multiple
+    segments (with variable step size) between user-defined field extrema.
+    (`#138 <https://github.com/ubermag/oommfc/pull/138>`__)
+
+Changed
+-------
+
+``micromagneticmodel``
+  - Require the name when initialising the ``system``.
+    (`#85 <https://github.com/ubermag/micromagneticmodel/pull/85>`__)
+
+Fixed
+-----
+
+``micromagneticdata``
+  - Set ``valid="norm"`` when loading the initial magnetisation ``drive.m0``.
+    (`#69 <https://github.com/ubermag/micromagneticdata/pull/69>`__)
 
 2024.06 (Jun 19, 2024)
 ======================
