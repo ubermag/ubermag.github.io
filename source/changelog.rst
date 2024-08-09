@@ -14,6 +14,18 @@ Added
   - Support for tunable (non-symmetric) Hysteresis simulations with multiple
     segments (with variable step size) between user-defined field extrema.
     (`#138 <https://github.com/ubermag/oommfc/pull/138>`__)
+  - Support for current in an arbitary direction when using the Zhang Li term.
+    (`#133 <https://github.com/ubermag/oommfc/pull/133>`__)
+
+``mumax3c``
+  - Support for current in an arbitary direction when using the Zhang Li term.
+    (`#88 <https://github.com/ubermag/mumax3c/pull/88>`__)
+  - Support for simulations at a finite temperature.
+    (`#81 <https://github.com/ubermag/mumax3c/pull/81>`__)
+
+``micromagneticmodel``
+  - Support for current in an arbitary direction when using the Zhang Li term.
+    (`#75 <https://github.com/ubermag/micromagneticmodel/pull/75>`__)
 
 Changed
 -------
