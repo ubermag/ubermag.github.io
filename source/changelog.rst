@@ -27,6 +27,10 @@ Added
   - Support for current in an arbitary direction when using the Zhang Li term.
     (`#75 <https://github.com/ubermag/micromagneticmodel/pull/75>`__)
 
+``mumax3c``
+  - Added support for simulation with temperature for mumax3. Use system.T property for this. No additional changes are required.
+  (`#81 <https://github.com/ubermag/mumax3c/pull/81>`__)
+
 Changed
 -------
 
