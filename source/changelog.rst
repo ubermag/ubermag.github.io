@@ -43,7 +43,17 @@ Fixed
   - Set ``valid="norm"`` when loading the initial magnetisation ``drive.m0``.
     (`#69 <https://github.com/ubermag/micromagneticdata/pull/69>`__)
 
-Full compatibility with ``numpy >= 2.0``.
+all packages
+  - Full compatibility with ``numpy >= 2.0``.
+
+2024.06 (Jun 19, 2024)
+======================
+
+Fixed
+-----
+
+Restricted ``numpy`` version to be less than ``2.0`` due to incompatibilities with
+the current code base.
 
 2023.11 (Nov 25, 2023)
 ======================
