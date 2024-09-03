@@ -1,21 +1,20 @@
 =========
 Changelog
 =========
-Upcoming
+
+2024.08 (Sep 03, 2024)
 ======================
 
 Added
 -----
+
 ``discretisedfield``
   - Added support for visualisations using ``pyvista``.
     (`#463 <https://github.com/ubermag/discretisedfield/pull/463>`__)
 
-``oommfc``
-  - Support for tunable (non-symmetric) Hysteresis simulations with multiple
-    segments (with variable step size) between user-defined field extrema.
-    (`#138 <https://github.com/ubermag/oommfc/pull/138>`__)
+``micromagneticmodel``
   - Support for current in an arbitary direction when using the Zhang Li term.
-    (`#133 <https://github.com/ubermag/oommfc/pull/133>`__)
+    (`#75 <https://github.com/ubermag/micromagneticmodel/pull/75>`__)
 
 ``mumax3c``
   - Support for current in an arbitary direction when using the Zhang Li term.
@@ -23,13 +22,12 @@ Added
   - Support for simulations at a finite temperature.
     (`#81 <https://github.com/ubermag/mumax3c/pull/81>`__)
 
-``micromagneticmodel``
+``oommfc``
+  - Support for tunable (non-symmetric) Hysteresis simulations with multiple
+    segments (with variable step size) between user-defined field extrema.
+    (`#138 <https://github.com/ubermag/oommfc/pull/138>`__)
   - Support for current in an arbitary direction when using the Zhang Li term.
-    (`#75 <https://github.com/ubermag/micromagneticmodel/pull/75>`__)
-
-``mumax3c``
-  - Added support for simulation with temperature for mumax3. Use system.T property for this. No additional changes are required.
-  (`#81 <https://github.com/ubermag/mumax3c/pull/81>`__)
+    (`#133 <https://github.com/ubermag/oommfc/pull/133>`__)
 
 Changed
 -------
@@ -44,6 +42,8 @@ Fixed
 ``micromagneticdata``
   - Set ``valid="norm"`` when loading the initial magnetisation ``drive.m0``.
     (`#69 <https://github.com/ubermag/micromagneticdata/pull/69>`__)
+
+Full compatibility with ``numpy >= 2.0``.
 
 2023.11 (Nov 25, 2023)
 ======================
