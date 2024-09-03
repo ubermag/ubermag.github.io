@@ -378,7 +378,7 @@
 <li class="toctree-l2"><a class="reference internal" href="../../getting-started/notebooks/magnetisation-field.html">Magnetisation field</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../../getting-started/notebooks/energy-equation.html">Energy equation</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../../getting-started/notebooks/dynamics-equation.html">Dynamics equation</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../../getting-started/notebooks/dw-pair-conversion.html">Exercise: Domain wall pair conversion</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../getting-started/notebooks/dw-pair-conversion.html">Analysing simulation results: Domain wall pair conversion</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../../getting-started/notebooks/unit-converter.html">Unit Conversions</a></li>
 </ul>
 </details></li>
@@ -726,17 +726,16 @@
 <div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[3]:
 </pre></div>
 </div>
-<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">system</span> <span class="o">=</span> <span class="n">mm</span><span class="o">.</span><span class="n">System</span><span class="p">(</span><span class="n">name</span><span class="o">=</span><span class="s1">&#39;energy_computations&#39;</span><span class="p">)</span>
+<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">system</span> <span class="o">=</span> <span class="n">mm</span><span class="o">.</span><span class="n">System</span><span class="p">(</span><span class="n">name</span><span class="o">=</span><span class="s2">&quot;energy_computations&quot;</span><span class="p">)</span>
 
 <span class="n">A</span> <span class="o">=</span> <span class="mf">1e-11</span>  <span class="c1"># exchange energy constant (J/m)</span>
-<span class="n">H</span> <span class="o">=</span> <span class="p">(</span><span class="mf">0.1</span><span class="o">/</span><span class="n">mm</span><span class="o">.</span><span class="n">consts</span><span class="o">.</span><span class="n">mu0</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">)</span>  <span class="c1"># external magnetic field (A/m)</span>
+<span class="n">H</span> <span class="o">=</span> <span class="p">(</span><span class="mf">0.1</span> <span class="o">/</span> <span class="n">mm</span><span class="o">.</span><span class="n">consts</span><span class="o">.</span><span class="n">mu0</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">)</span>  <span class="c1"># external magnetic field (A/m)</span>
 <span class="n">K</span> <span class="o">=</span> <span class="mf">1e3</span>  <span class="c1"># uniaxial anisotropy constant (J/m3)</span>
 <span class="n">u</span> <span class="o">=</span> <span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">1</span><span class="p">)</span>  <span class="c1"># uniaxial anisotropy axis</span>
 
-<span class="n">system</span><span class="o">.</span><span class="n">energy</span> <span class="o">=</span> <span class="p">(</span><span class="n">mm</span><span class="o">.</span><span class="n">Exchange</span><span class="p">(</span><span class="n">A</span><span class="o">=</span><span class="n">A</span><span class="p">)</span> <span class="o">+</span>
-                 <span class="n">mm</span><span class="o">.</span><span class="n">Demag</span><span class="p">()</span> <span class="o">+</span>
-                 <span class="n">mm</span><span class="o">.</span><span class="n">Zeeman</span><span class="p">(</span><span class="n">H</span><span class="o">=</span><span class="n">H</span><span class="p">)</span> <span class="o">+</span>
-                 <span class="n">mm</span><span class="o">.</span><span class="n">UniaxialAnisotropy</span><span class="p">(</span><span class="n">K</span><span class="o">=</span><span class="n">K</span><span class="p">,</span> <span class="n">u</span><span class="o">=</span><span class="n">u</span><span class="p">))</span>
+<span class="n">system</span><span class="o">.</span><span class="n">energy</span> <span class="o">=</span> <span class="p">(</span>
+    <span class="n">mm</span><span class="o">.</span><span class="n">Exchange</span><span class="p">(</span><span class="n">A</span><span class="o">=</span><span class="n">A</span><span class="p">)</span> <span class="o">+</span> <span class="n">mm</span><span class="o">.</span><span class="n">Demag</span><span class="p">()</span> <span class="o">+</span> <span class="n">mm</span><span class="o">.</span><span class="n">Zeeman</span><span class="p">(</span><span class="n">H</span><span class="o">=</span><span class="n">H</span><span class="p">)</span> <span class="o">+</span> <span class="n">mm</span><span class="o">.</span><span class="n">UniaxialAnisotropy</span><span class="p">(</span><span class="n">K</span><span class="o">=</span><span class="n">K</span><span class="p">,</span> <span class="n">u</span><span class="o">=</span><span class="n">u</span><span class="p">)</span>
+<span class="p">)</span>
 
 <span class="n">system</span><span class="o">.</span><span class="n">energy</span>
 </pre></div>
@@ -755,7 +754,7 @@ $- A \mathbf{m} \cdot \nabla^{2} \mathbf{m}-\frac{1}{2}\mu_{0}M_\text{s}\mathbf{
 <div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[4]:
 </pre></div>
 </div>
-<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">Ms</span> <span class="o">=</span> <span class="mf">8e5</span>  <span class="c1"># saturation magnetisation (A/m)</span>
+<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">Ms</span> <span class="o">=</span> <span class="mf">8e5</span>  <span class="c1"># saturation magnetisation (A/m)</span>
 
 <span class="n">system</span><span class="o">.</span><span class="n">m</span> <span class="o">=</span> <span class="n">df</span><span class="o">.</span><span class="n">Field</span><span class="p">(</span><span class="n">mesh</span><span class="p">,</span> <span class="n">nvdim</span><span class="o">=</span><span class="mi">3</span><span class="p">,</span> <span class="n">value</span><span class="o">=</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">1</span><span class="p">),</span> <span class="n">norm</span><span class="o">=</span><span class="n">Ms</span><span class="p">)</span>
 </pre></div>
@@ -772,7 +771,7 @@ $- A \mathbf{m} \cdot \nabla^{2} \mathbf{m}-\frac{1}{2}\mu_{0}M_\text{s}\mathbf{
 </pre></div>
 </div>
 <div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">Heff</span> <span class="o">=</span> <span class="n">mc</span><span class="o">.</span><span class="n">compute</span><span class="p">(</span><span class="n">system</span><span class="o">.</span><span class="n">energy</span><span class="o">.</span><span class="n">effective_field</span><span class="p">,</span> <span class="n">system</span><span class="p">)</span>
-<span class="n">Heff</span><span class="o">.</span><span class="n">sel</span><span class="p">(</span><span class="s1">&#39;x&#39;</span><span class="p">)</span><span class="o">.</span><span class="n">mpl</span><span class="p">()</span>
+<span class="n">Heff</span><span class="o">.</span><span class="n">sel</span><span class="p">(</span><span class="s2">&quot;x&quot;</span><span class="p">)</span><span class="o">.</span><span class="n">mpl</span><span class="p">()</span>
 </pre></div>
 </div>
 </div>
@@ -832,7 +831,7 @@ array([0., 0., 0.])
 </pre></div>
 </div>
 <div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">w</span> <span class="o">=</span> <span class="n">mc</span><span class="o">.</span><span class="n">compute</span><span class="p">(</span><span class="n">system</span><span class="o">.</span><span class="n">energy</span><span class="o">.</span><span class="n">density</span><span class="p">,</span> <span class="n">system</span><span class="p">)</span>
-<span class="n">w</span><span class="o">.</span><span class="n">sel</span><span class="p">(</span><span class="s1">&#39;x&#39;</span><span class="p">)</span><span class="o">.</span><span class="n">mpl</span><span class="p">()</span>
+<span class="n">w</span><span class="o">.</span><span class="n">sel</span><span class="p">(</span><span class="s2">&quot;x&quot;</span><span class="p">)</span><span class="o">.</span><span class="n">mpl</span><span class="p">()</span>
 </pre></div>
 </div>
 </div>
@@ -857,7 +856,7 @@ Running OOMMF (ExeOOMMFRunner)[2023/10/23 16:08]... (0.2 s)
 </pre></div>
 </div>
 <div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">E</span> <span class="o">=</span> <span class="n">mc</span><span class="o">.</span><span class="n">compute</span><span class="p">(</span><span class="n">system</span><span class="o">.</span><span class="n">energy</span><span class="o">.</span><span class="n">energy</span><span class="p">,</span> <span class="n">system</span><span class="p">)</span>
-<span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s1">&#39;The energy of the system is </span><span class="si">{</span><span class="n">E</span><span class="si">}</span><span class="s1"> J.&#39;</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;The energy of the system is </span><span class="si">{</span><span class="n">E</span><span class="si">}</span><span class="s2"> J.&quot;</span><span class="p">)</span>
 </pre></div>
 </div>
 </div>
@@ -894,7 +893,7 @@ Running OOMMF (ExeOOMMFRunner)[2023/10/23 16:08]... (0.5 s)
 </pre></div>
 </div>
 <div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">E</span> <span class="o">=</span> <span class="n">mc</span><span class="o">.</span><span class="n">compute</span><span class="p">(</span><span class="n">system</span><span class="o">.</span><span class="n">energy</span><span class="o">.</span><span class="n">energy</span><span class="p">,</span> <span class="n">system</span><span class="p">)</span>
-<span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s1">&#39;The energy of the system is </span><span class="si">{</span><span class="n">E</span><span class="si">}</span><span class="s1"> J.&#39;</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;The energy of the system is </span><span class="si">{</span><span class="n">E</span><span class="si">}</span><span class="s2"> J.&quot;</span><span class="p">)</span>
 </pre></div>
 </div>
 </div>
@@ -912,7 +911,7 @@ The energy of the system is 5.35285533145e-20 J.
 <div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[12]:
 </pre></div>
 </div>
-<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">system</span><span class="o">.</span><span class="n">m</span><span class="o">.</span><span class="n">sel</span><span class="p">(</span><span class="s1">&#39;x&#39;</span><span class="p">)</span><span class="o">.</span><span class="n">mpl</span><span class="p">()</span>
+<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">system</span><span class="o">.</span><span class="n">m</span><span class="o">.</span><span class="n">sel</span><span class="p">(</span><span class="s2">&quot;x&quot;</span><span class="p">)</span><span class="o">.</span><span class="n">mpl</span><span class="p">()</span>
 </pre></div>
 </div>
 </div>
@@ -962,8 +961,8 @@ Running OOMMF (ExeOOMMFRunner)[2023/10/23 16:08]... (0.2 s)
 <span class="c1"># A simpler way:</span>
 <span class="c1"># E = sum([mc.compute(getattr(term, &#39;energy&#39;), system) for term in system.energy])</span>
 
-<span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s1">&#39;The sum of energy terms is </span><span class="si">{</span><span class="n">total_energy</span><span class="si">}</span><span class="s1"> J.&#39;</span><span class="p">)</span>
-<span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s1">&#39;The energy of the system is </span><span class="si">{</span><span class="n">E</span><span class="si">}</span><span class="s1"> J.&#39;</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;The sum of energy terms is </span><span class="si">{</span><span class="n">total_energy</span><span class="si">}</span><span class="s2"> J.&quot;</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;The energy of the system is </span><span class="si">{</span><span class="n">E</span><span class="si">}</span><span class="s2"> J.&quot;</span><span class="p">)</span>
 </pre></div>
 </div>
 </div>

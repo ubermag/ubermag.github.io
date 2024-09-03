@@ -378,7 +378,7 @@
 <li class="toctree-l2"><a class="reference internal" href="../../../getting-started/notebooks/magnetisation-field.html">Magnetisation field</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../../../getting-started/notebooks/energy-equation.html">Energy equation</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../../../getting-started/notebooks/dynamics-equation.html">Dynamics equation</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../../../getting-started/notebooks/dw-pair-conversion.html">Exercise: Domain wall pair conversion</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../getting-started/notebooks/dw-pair-conversion.html">Analysing simulation results: Domain wall pair conversion</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../../../getting-started/notebooks/unit-converter.html">Unit Conversions</a></li>
 </ul>
 </details></li>
@@ -701,7 +701,7 @@
 <section id="SANS-Reference-frame">
 <h2>SANS Reference frame<a class="headerlink" href="#SANS-Reference-frame" title="Link to this heading">#</a></h2>
 <p>In <code class="docutils literal notranslate"><span class="pre">mag2exp</span></code> the experimental SANS reference frame is the same as that defined to be congruent with the sample reference frame. The neutron polarisation direction can then be defined relative to the sample reference frame along with the desired scattering plane.</p>
-<p><img alt="2639100054c14927a34bff3987654f79" class="no-scaled-link" src="../../../_images/SANS.png" style="width: 900px; height: 600px;" /></p>
+<p><img alt="8359af89a4c544c58ab7151b87d044f0" class="no-scaled-link" src="../../../_images/SANS.png" style="width: 900px; height: 600px;" /></p>
 <p>There are common scattering geometries defined in SANS, namely with a magnetic field applied to the incoming neutron beam in either a perpendicular or and parallel geometry to polarise the neutrons. The <code class="docutils literal notranslate"><span class="pre">mag2exp</span></code> package gives a more general set up with the ability to have the polarisation pointing in any arbitrary direction. We can recreate the standard scattering geometries</p>
 <p><strong>Perpendicular geometry</strong>: the magnetic field is applied along the <span class="math notranslate nohighlight">\(z\)</span> direction while the incoming neutron beam propagates along the <span class="math notranslate nohighlight">\(x\)</span> direction. This is the same as <code class="docutils literal notranslate"><span class="pre">polarisation=(0,</span> <span class="pre">0,</span> <span class="pre">1)</span></code> and cutting the scattering plane along <code class="docutils literal notranslate"><span class="pre">x=0</span></code>.</p>
 <p><strong>Parallel geometry</strong>: both the magnetic field and the incoming neutron beam are along the <span class="math notranslate nohighlight">\(z\)</span> direction. This is the same as <code class="docutils literal notranslate"><span class="pre">polarisation=(0,</span> <span class="pre">0,</span> <span class="pre">1)</span></code> and cutting the scattering plane along <code class="docutils literal notranslate"><span class="pre">z=0</span></code>.</p>

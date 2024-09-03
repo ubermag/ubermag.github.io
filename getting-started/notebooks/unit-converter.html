@@ -55,7 +55,7 @@
     <link rel="index" title="Index" href="../../genindex.html" />
     <link rel="search" title="Search" href="../../search.html" />
     <link rel="next" title="Examples" href="../../examples/index.html" />
-    <link rel="prev" title="Exercise: Domain wall pair conversion" href="dw-pair-conversion.html" />
+    <link rel="prev" title="Analysing simulation results: Domain wall pair conversion" href="dw-pair-conversion.html" />
   <meta name="viewport" content="width=device-width, initial-scale=1"/>
   <meta name="docsearch:language" content="en"/>
   </head>
@@ -378,7 +378,7 @@
 <li class="toctree-l2"><a class="reference internal" href="magnetisation-field.html">Magnetisation field</a></li>
 <li class="toctree-l2"><a class="reference internal" href="energy-equation.html">Energy equation</a></li>
 <li class="toctree-l2"><a class="reference internal" href="dynamics-equation.html">Dynamics equation</a></li>
-<li class="toctree-l2"><a class="reference internal" href="dw-pair-conversion.html">Exercise: Domain wall pair conversion</a></li>
+<li class="toctree-l2"><a class="reference internal" href="dw-pair-conversion.html">Analysing simulation results: Domain wall pair conversion</a></li>
 <li class="toctree-l2 current active"><a class="current reference internal" href="#">Unit Conversions</a></li>
 </ul>
 </details></li>
@@ -694,7 +694,7 @@
 <p>Micromagnetic simulations provide a method of simulating the magnetic structure in real materials. However, in order to do this we need to be able to convert the information we have about the system into the parameters that micromagnetics use.</p>
 <section id="CGS-to-SI">
 <h2>CGS to SI<a class="headerlink" href="#CGS-to-SI" title="Link to this heading">#</a></h2>
-<p><code class="docutils literal notranslate"><span class="pre">Ubermag</span></code> uses SI units for all of the system parameters. Experimentally, material parameters are can often be measured in CGS units SI units, or a mixture of the two. Firstly, we show a convinent way of converting from CGS to SI units and other useful quantities.</p>
+<p><code class="docutils literal notranslate"><span class="pre">Ubermag</span></code> uses SI units for all of the system parameters. Experimentally, material parameters can often be measured in CGS units, SI units, or a mixture of the two. Firstly, we show a convenient way of converting from CGS to SI units and other useful quantities.</p>
 <p>To do this, we make use of <code class="docutils literal notranslate"><span class="pre">astropy.units</span></code>, a package aimed at the astrophysics community for its unit converting functionality. <code class="docutils literal notranslate"><span class="pre">astropy</span></code> is not installed by default. We can install it (e.g. with <code class="docutils literal notranslate"><span class="pre">pip</span></code>) directly from the notebook. Generally, you will not install <code class="docutils literal notranslate"><span class="pre">astropy</span></code> from inside the notebook (using either <code class="docutils literal notranslate"><span class="pre">pip</span></code> or <code class="docutils literal notranslate"><span class="pre">conda</span></code>) but for the sake of demonstration we run the command in here.</p>
 <div class="nbinput docutils container">
 <div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[1]:
@@ -709,11 +709,22 @@
 </div>
 <div class="output_area docutils container">
 <div class="highlight"><pre>
-Requirement already satisfied: astropy in /home/mlang/miniconda3/envs/ubermagdev310/lib/python3.10/site-packages (5.3.4)
-Requirement already satisfied: numpy&lt;2,&gt;=1.21 in /home/mlang/miniconda3/envs/ubermagdev310/lib/python3.10/site-packages (from astropy) (1.26.0)
-Requirement already satisfied: pyerfa&gt;=2.0 in /home/mlang/miniconda3/envs/ubermagdev310/lib/python3.10/site-packages (from astropy) (2.0.1)
-Requirement already satisfied: PyYAML&gt;=3.13 in /home/mlang/miniconda3/envs/ubermagdev310/lib/python3.10/site-packages (from astropy) (6.0.1)
-Requirement already satisfied: packaging&gt;=19.0 in /home/mlang/miniconda3/envs/ubermagdev310/lib/python3.10/site-packages (from astropy) (23.1)
+Collecting astropy
+  Downloading astropy-6.1.2-cp311-cp311-manylinux_2_17_x86_64.manylinux2014_x86_64.whl.metadata (10 kB)
+Requirement already satisfied: numpy&gt;=1.23 in /home/sam/miniconda3/envs/ubermagdev311/lib/python3.11/site-packages (from astropy) (2.0.0)
+Collecting pyerfa&gt;=2.0.1.1 (from astropy)
+  Using cached pyerfa-2.0.1.4-cp39-abi3-manylinux_2_17_x86_64.manylinux2014_x86_64.whl.metadata (5.7 kB)
+Collecting astropy-iers-data&gt;=0.2024.7.1.0.34.3 (from astropy)
+  Downloading astropy_iers_data-0.2024.8.5.0.32.23-py3-none-any.whl.metadata (5.1 kB)
+Requirement already satisfied: PyYAML&gt;=3.13 in /home/sam/miniconda3/envs/ubermagdev311/lib/python3.11/site-packages (from astropy) (6.0.1)
+Requirement already satisfied: packaging&gt;=19.0 in /home/sam/miniconda3/envs/ubermagdev311/lib/python3.11/site-packages (from astropy) (24.1)
+Downloading astropy-6.1.2-cp311-cp311-manylinux_2_17_x86_64.manylinux2014_x86_64.whl (10.2 MB)
+   <span class="ansi-black-intense-fg">━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━</span> <span class="ansi-green-fg">10.2/10.2 MB</span> <span class="ansi-red-fg">49.0 MB/s</span> eta <span class="ansi-cyan-fg">0:00:00</span>00:010:01
+Downloading astropy_iers_data-0.2024.8.5.0.32.23-py3-none-any.whl (1.9 MB)
+   <span class="ansi-black-intense-fg">━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━</span> <span class="ansi-green-fg">1.9/1.9 MB</span> <span class="ansi-red-fg">70.4 MB/s</span> eta <span class="ansi-cyan-fg">0:00:00</span>
+Using cached pyerfa-2.0.1.4-cp39-abi3-manylinux_2_17_x86_64.manylinux2014_x86_64.whl (738 kB)
+Installing collected packages: pyerfa, astropy-iers-data, astropy
+Successfully installed astropy-6.1.2 astropy-iers-data-0.2024.8.5.0.32.23 pyerfa-2.0.1.4
 </pre></div></div>
 </div>
 <p>Now we can import <code class="docutils literal notranslate"><span class="pre">astropy</span></code>.</p>
@@ -814,7 +825,7 @@ $1 \; \mathrm{\frac{erg}{G}}$</div></div>
 <div class="math notranslate nohighlight">
 $0.001 \; \mathrm{m^{2}\,A}$</div></div>
 </div>
-<p>If we wish to detach the numervical value for its units, we can do this using <code class="docutils literal notranslate"><span class="pre">.value</span></code></p>
+<p>If we wish to detach the numerical value for its units, we can do this using <code class="docutils literal notranslate"><span class="pre">.value</span></code></p>
 <div class="nbinput docutils container">
 <div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[8]:
 </pre></div>
@@ -829,12 +840,12 @@ $0.001 \; \mathrm{m^{2}\,A}$</div></div>
 </div>
 <div class="output_area docutils container">
 <div class="highlight"><pre>
-0.001
+np.float64(0.001)
 </pre></div></div>
 </div>
 <section id="Equivalencies">
 <h3>Equivalencies<a class="headerlink" href="#Equivalencies" title="Link to this heading">#</a></h3>
-<p>The <code class="docutils literal notranslate"><span class="pre">astropy.units</span></code> also enables conversions of units with different equivalencies i.e. temperature and energy. To use this we can create a variable with the relevant units of temperature and use the <code class="docutils literal notranslate"><span class="pre">to</span></code> function to convert to the relevant units with the relevant equivalency.</p>
+<p><code class="docutils literal notranslate"><span class="pre">astropy.units</span></code> also enables conversions of units with different equivalencies such as temperature and energy. To use this we can create a variable with the relevant units of temperature and use the <code class="docutils literal notranslate"><span class="pre">to</span></code> function to convert to the relevant units with the relevant equivalency.</p>
 <p>For example, if an exchange interaction has a temperature of 4.15 K we can calculate the equivalent energy in J.</p>
 <div class="nbinput docutils container">
 <div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[9]:
@@ -853,7 +864,7 @@ $0.001 \; \mathrm{m^{2}\,A}$</div></div>
 <div class="math notranslate nohighlight">
 $5.7296934 \times 10^{-23} \; \mathrm{J}$</div></div>
 </div>
-<p>While <code class="docutils literal notranslate"><span class="pre">astropy</span></code> handles a variety of units and conversions, it does not currently have an equivalency for magnetic induction and magnetic field strength i.e. B to H . As this is a very useful for the magnetism community, we have provided the conversion here.</p>
+<p>While <code class="docutils literal notranslate"><span class="pre">astropy</span></code> handles a variety of units and conversions, it does not currently have an equivalency for magnetic induction and magnetic field strength i.e. B to H . As this is very useful for the magnetism community, we have provided the conversion here.</p>
 <div class="nbinput nblast docutils container">
 <div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[10]:
 </pre></div>
@@ -895,7 +906,7 @@ $7957.7472 \; \mathrm{\frac{A}{m}}$</div></div>
 <h4>Atomistic<a class="headerlink" href="#Atomistic" title="Link to this heading">#</a></h4>
 <p>The atomistic exchange <span class="math notranslate nohighlight">\(J\)</span> can be obtained from the Curie temperature <span class="math notranslate nohighlight">\(T_\text{C}\)</span> of a material by using <span class="math">\begin{equation}
 J = \frac{3k_\text{B}T_\text{C}}{\epsilon z},
-\end{equation}</span> where <span class="math notranslate nohighlight">\(k_\text{B}\)</span> is the Boltzmann constant, <span class="math notranslate nohighlight">\(z\)</span> is the number of nearest neighbours, and <span class="math notranslate nohighlight">\(\epsilon\)</span> is a structural depended correction factor. The values of this correction factor has been calculated in Table I of <a class="reference external" href="https://doi.org/10.1103/PhysRevB.53.11593">Garanin 1996</a>.</p>
+\end{equation}</span> where <span class="math notranslate nohighlight">\(k_\text{B}\)</span> is the Boltzmann constant, <span class="math notranslate nohighlight">\(z\)</span> is the number of nearest neighbours, and <span class="math notranslate nohighlight">\(\epsilon\)</span> is a structurally dependent correction factor. The values of this correction factor have been calculated in Table I of <a class="reference external" href="https://doi.org/10.1103/PhysRevB.53.11593">Garanin 1996</a>.</p>
 <div class="nbinput nblast docutils container">
 <div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[12]:
 </pre></div>
@@ -934,14 +945,14 @@ J = \frac{3k_\text{B}T_\text{C}}{\epsilon z},
 <section id="Micromagnetic">
 <h4>Micromagnetic<a class="headerlink" href="#Micromagnetic" title="Link to this heading">#</a></h4>
 <p>The micromagnetic exchange correlation constant <span class="math notranslate nohighlight">\(A\)</span> can be related to atomistic exchange using <span class="math">\begin{equation}
-A = \frac{zJl^2}{12V},
-\end{equation}</span> where <span class="math notranslate nohighlight">\(J\)</span> is the Heisenberg exchange, <span class="math notranslate nohighlight">\(z\)</span> is the number of nearest neighbour atoms, and <span class="math notranslate nohighlight">\(l\)</span> is the distance between neighbor atoms and <span class="math notranslate nohighlight">\(V\)</span> is the crystal volume per magnetic atom.</p>
+A = \frac{zJL^2}{12V},
+\end{equation}</span> where <span class="math notranslate nohighlight">\(J\)</span> is the Heisenberg exchange, <span class="math notranslate nohighlight">\(z\)</span> is the number of nearest neighbour atoms, and <span class="math notranslate nohighlight">\(L\)</span> is the distance between neighbouring atoms, and <span class="math notranslate nohighlight">\(V\)</span> is the crystal volume per magnetic atom.</p>
 <div class="nbinput nblast docutils container">
 <div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[14]:
 </pre></div>
 </div>
-<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">J_to_A</span><span class="p">(</span><span class="n">J</span><span class="p">,</span> <span class="n">z</span><span class="p">,</span> <span class="n">l</span><span class="p">,</span> <span class="n">V</span><span class="p">):</span>
-    <span class="k">return</span> <span class="n">J</span> <span class="o">*</span> <span class="n">l</span> <span class="o">*</span> <span class="n">l</span> <span class="o">*</span> <span class="n">z</span> <span class="o">/</span> <span class="p">(</span><span class="mi">12</span> <span class="o">*</span> <span class="n">V</span><span class="p">)</span>
+<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">J_to_A</span><span class="p">(</span><span class="n">J</span><span class="p">,</span> <span class="n">z</span><span class="p">,</span> <span class="n">L</span><span class="p">,</span> <span class="n">V</span><span class="p">):</span>
+    <span class="k">return</span> <span class="n">J</span> <span class="o">*</span> <span class="n">L</span> <span class="o">*</span> <span class="n">L</span> <span class="o">*</span> <span class="n">z</span> <span class="o">/</span> <span class="p">(</span><span class="mi">12</span> <span class="o">*</span> <span class="n">V</span><span class="p">)</span>
 </pre></div>
 </div>
 </div>
@@ -949,9 +960,9 @@ A = \frac{zJl^2}{12V},
 <div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[15]:
 </pre></div>
 </div>
-<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">l</span> <span class="o">=</span> <span class="mf">6.84e-10</span>
+<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">L</span> <span class="o">=</span> <span class="mf">6.84e-10</span>
 <span class="n">V</span> <span class="o">=</span> <span class="mf">2.24e-28</span>
-<span class="n">A</span> <span class="o">=</span> <span class="n">J_to_A</span><span class="p">(</span><span class="n">J</span><span class="p">,</span> <span class="n">z</span><span class="p">,</span> <span class="n">l</span><span class="p">,</span> <span class="n">V</span><span class="p">)</span>
+<span class="n">A</span> <span class="o">=</span> <span class="n">J_to_A</span><span class="p">(</span><span class="n">J</span><span class="p">,</span> <span class="n">z</span><span class="p">,</span> <span class="n">L</span><span class="p">,</span> <span class="n">V</span><span class="p">)</span>
 <span class="n">A</span>
 </pre></div>
 </div>
@@ -966,14 +977,14 @@ A = \frac{zJl^2}{12V},
 </pre></div></div>
 </div>
 <p>The micromagnetic exchange correlation constant can be obtained directly from <span class="math notranslate nohighlight">\(T_c\)</span> using <span class="math">\begin{equation}
-A = \frac{k_\text{B}T_\text{C}l^2}{4\epsilon V}.
+A = \frac{k_\text{B}T_\text{C}L^2}{4\epsilon V}.
 \end{equation}</span></p>
 <div class="nbinput nblast docutils container">
 <div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[16]:
 </pre></div>
 </div>
-<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">Tc_to_A</span><span class="p">(</span><span class="n">Tc</span><span class="p">,</span> <span class="n">e</span><span class="p">,</span> <span class="n">l</span><span class="p">,</span> <span class="n">V</span><span class="p">):</span>
-    <span class="k">return</span> <span class="n">Tc</span> <span class="o">*</span> <span class="n">constants</span><span class="o">.</span><span class="n">k</span> <span class="o">*</span> <span class="n">l</span> <span class="o">*</span> <span class="n">l</span> <span class="o">/</span> <span class="p">(</span><span class="mi">4</span> <span class="o">*</span> <span class="n">e</span> <span class="o">*</span> <span class="n">V</span><span class="p">)</span>
+<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">Tc_to_A</span><span class="p">(</span><span class="n">Tc</span><span class="p">,</span> <span class="n">e</span><span class="p">,</span> <span class="n">L</span><span class="p">,</span> <span class="n">V</span><span class="p">):</span>
+    <span class="k">return</span> <span class="n">Tc</span> <span class="o">*</span> <span class="n">constants</span><span class="o">.</span><span class="n">k</span> <span class="o">*</span> <span class="n">L</span> <span class="o">*</span> <span class="n">L</span> <span class="o">/</span> <span class="p">(</span><span class="mi">4</span> <span class="o">*</span> <span class="n">e</span> <span class="o">*</span> <span class="n">V</span><span class="p">)</span>
 </pre></div>
 </div>
 </div>
@@ -981,7 +992,7 @@ A = \frac{k_\text{B}T_\text{C}l^2}{4\epsilon V}.
 <div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[17]:
 </pre></div>
 </div>
-<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">A</span> <span class="o">=</span> <span class="n">Tc_to_A</span><span class="p">(</span><span class="n">Tc</span><span class="p">,</span> <span class="n">e</span><span class="p">,</span> <span class="n">l</span><span class="p">,</span> <span class="n">V</span><span class="p">)</span>
+<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">A</span> <span class="o">=</span> <span class="n">Tc_to_A</span><span class="p">(</span><span class="n">Tc</span><span class="p">,</span> <span class="n">e</span><span class="p">,</span> <span class="n">L</span><span class="p">,</span> <span class="n">V</span><span class="p">)</span>
 <span class="n">A</span>
 </pre></div>
 </div>
@@ -1008,14 +1019,14 @@ A = \frac{k_\text{B}T_\text{C}l^2}{4\epsilon V}.
 <section id="Micromagentic">
 <h4>Micromagentic<a class="headerlink" href="#Micromagentic" title="Link to this heading">#</a></h4>
 <p>The micromagnetic DMI constant <span class="math notranslate nohighlight">\(D\)</span> can be related to atomistic DMI using <span class="math">\begin{equation}
-D = \frac{zdl}{12V},
-\end{equation}</span> where <span class="math notranslate nohighlight">\(d\)</span> is the atomistic DMI, <span class="math notranslate nohighlight">\(z\)</span> is the number of nearest neighbour atoms, and <span class="math notranslate nohighlight">\(l\)</span> is the distance between neighbor atoms and <span class="math notranslate nohighlight">\(V\)</span> is the crystal volume per magnetic atom.</p>
+D = \frac{zdL}{12V},
+\end{equation}</span> where <span class="math notranslate nohighlight">\(d\)</span> is the atomistic DMI, <span class="math notranslate nohighlight">\(z\)</span> is the number of nearest neighbour atoms, and <span class="math notranslate nohighlight">\(L\)</span> is the distance between neighbouring atoms, and <span class="math notranslate nohighlight">\(V\)</span> is the crystal volume per magnetic atom.</p>
 <div class="nbinput nblast docutils container">
 <div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[18]:
 </pre></div>
 </div>
-<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">d_to_D</span><span class="p">(</span><span class="n">d</span><span class="p">,</span> <span class="n">z</span><span class="p">,</span> <span class="n">l</span><span class="p">,</span> <span class="n">V</span><span class="p">):</span>
-    <span class="k">return</span> <span class="n">d</span> <span class="o">*</span> <span class="n">l</span> <span class="o">*</span> <span class="n">z</span> <span class="o">/</span> <span class="p">(</span><span class="mi">12</span> <span class="o">*</span> <span class="n">V</span><span class="p">)</span>
+<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">d_to_D</span><span class="p">(</span><span class="n">d</span><span class="p">,</span> <span class="n">z</span><span class="p">,</span> <span class="n">L</span><span class="p">,</span> <span class="n">V</span><span class="p">):</span>
+    <span class="k">return</span> <span class="n">d</span> <span class="o">*</span> <span class="n">L</span> <span class="o">*</span> <span class="n">z</span> <span class="o">/</span> <span class="p">(</span><span class="mi">12</span> <span class="o">*</span> <span class="n">V</span><span class="p">)</span>
 </pre></div>
 </div>
 </div>
@@ -1024,7 +1035,7 @@ D = \frac{zdl}{12V},
 </pre></div>
 </div>
 <div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">d</span> <span class="o">=</span> <span class="mf">2.01e-23</span>
-<span class="n">D</span> <span class="o">=</span> <span class="n">d_to_D</span><span class="p">(</span><span class="n">d</span><span class="p">,</span> <span class="n">z</span><span class="p">,</span> <span class="n">l</span><span class="p">,</span> <span class="n">V</span><span class="p">)</span>
+<span class="n">D</span> <span class="o">=</span> <span class="n">d_to_D</span><span class="p">(</span><span class="n">d</span><span class="p">,</span> <span class="n">z</span><span class="p">,</span> <span class="n">L</span><span class="p">,</span> <span class="n">V</span><span class="p">)</span>
 <span class="n">D</span>
 </pre></div>
 </div>
@@ -1054,7 +1065,7 @@ P = \frac{4\pi A}{|D|},
 </pre></div>
 </div>
 </div>
-<p>For a system with a micromagentic exchange of <span class="math notranslate nohighlight">\(6\times 10^{-14}\)</span> Jm<span class="math notranslate nohighlight">\(^{-1}\)</span> and a helical period of 20 nm</p>
+<p>For a system with a micromagentic exchange of <span class="math notranslate nohighlight">\(6\times 10^{-14}\)</span> Jm <span class="math notranslate nohighlight">\(^{-1}\)</span> and a helical period of 20 nm.</p>
 <div class="nbinput docutils container">
 <div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[21]:
 </pre></div>
@@ -1075,17 +1086,17 @@ P = \frac{4\pi A}{|D|},
 </pre></div></div>
 </div>
 <p>For atomistic simulations, this can be converted into <span class="math">\begin{equation}
-P = \frac{4\pi J l}{|d|},
-\end{equation}</span> where <span class="math notranslate nohighlight">\(J\)</span> is the Heisenberg exchange, <span class="math notranslate nohighlight">\(d\)</span> is the atomistic DMI, and <span class="math notranslate nohighlight">\(l\)</span> is the distance between neighbor atoms.</p>
+P = \frac{4\pi J L}{|d|},
+\end{equation}</span> where <span class="math notranslate nohighlight">\(J\)</span> is the Heisenberg exchange, <span class="math notranslate nohighlight">\(d\)</span> is the atomistic DMI, and <span class="math notranslate nohighlight">\(L\)</span> is the distance between neighbouring atoms.</p>
 </section>
 </section>
 <section id="Saturation-Magnetisation">
 <h3>Saturation Magnetisation<a class="headerlink" href="#Saturation-Magnetisation" title="Link to this heading">#</a></h3>
 <section id="Micromagnetics">
 <h4>Micromagnetics<a class="headerlink" href="#Micromagnetics" title="Link to this heading">#</a></h4>
-<p>The saturation magnetisation is often measured in <span class="math notranslate nohighlight">\(\mu_\text{B}/f.u.\)</span> but is needed in A/m in micromagnetics. A simple converstion can be used <span class="math">\begin{equation}
+<p>The saturation magnetisation is often measured in <span class="math notranslate nohighlight">\(\mu_\text{B}/f.u.\)</span> but is needed in A/m in micromagnetics. A simple conversion can be used <span class="math">\begin{equation}
 M_s [ \text{A}/ \text{m}]= \frac{\mu_\text{B} M_s[\mu_\text{B}/f.u.]}{V},
-\end{equation}</span> where <span class="math notranslate nohighlight">\(M_s[\mu_\text{B}/f.u.]\)</span> is the saturation magnetisation in <span class="math notranslate nohighlight">\(\mu_B\)</span> per formula unit, <span class="math notranslate nohighlight">\(\mu_B\)</span> is the Bohr magneton in J/m, and <span class="math notranslate nohighlight">\(V\)</span> is the volume of the formula unit in m<span class="math notranslate nohighlight">\(^3\)</span>.</p>
+\end{equation}</span> where <span class="math notranslate nohighlight">\(M_s[\mu_\text{B}/f.u.]\)</span> is the saturation magnetisation in <span class="math notranslate nohighlight">\(\mu_B\)</span> per formula unit, <span class="math notranslate nohighlight">\(\mu_B\)</span> is the Bohr magneton in J/T, and <span class="math notranslate nohighlight">\(V\)</span> is the volume of the formula unit in m<span class="math notranslate nohighlight">\(^3\)</span>.</p>
 <div class="nbinput nblast docutils container">
 <div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[22]:
 </pre></div>
@@ -1115,7 +1126,7 @@ M_s [ \text{A}/ \text{m}]= \frac{\mu_\text{B} M_s[\mu_\text{B}/f.u.]}{V},
 </section>
 <section id="id2">
 <h4>Atomistic<a class="headerlink" href="#id2" title="Link to this heading">#</a></h4>
-<p>In atomistic simulations the saturation magnetisation <span class="math notranslate nohighlight">\(M_s\)</span> in micromagnetic simulations can be related to the magnetic moment <span class="math notranslate nohighlight">\(\mu\)</span> simply by <span class="math">\begin{equation}
+<p>In atomistic simulations, the saturation magnetisation <span class="math notranslate nohighlight">\(M_s\)</span> in micromagnetic simulations can be related to the magnetic moment <span class="math notranslate nohighlight">\(\mu\)</span> simply by <span class="math">\begin{equation}
 \mu = M_s V,
 \end{equation}</span> where <span class="math notranslate nohighlight">\(V\)</span> is the crystal volume per magnetic atom.</p>
 <div class="nbinput nblast docutils container">
@@ -1152,13 +1163,13 @@ M_s [ \text{A}/ \text{m}]= \frac{\mu_\text{B} M_s[\mu_\text{B}/f.u.]}{V},
 <h3>Anisotropy<a class="headerlink" href="#Anisotropy" title="Link to this heading">#</a></h3>
 <section id="id3">
 <h4>Micromagnetic<a class="headerlink" href="#id3" title="Link to this heading">#</a></h4>
-<p>Anisotropy can can be measured experimentally in a variety of different ways. The results torque magnetometry, for example, can give correct value for the anisotropy in units of Jm<span class="math notranslate nohighlight">\(^{-3}\)</span>.</p>
+<p>Anisotropy can be measured experimentally in a variety of different ways. The results torque magnetometry, for example, can give correct value for the anisotropy in units of Jm <span class="math notranslate nohighlight">\(^{-3}\)</span>.</p>
 </section>
 <section id="id4">
 <h4>Atomistic<a class="headerlink" href="#id4" title="Link to this heading">#</a></h4>
-<p>Similarly to the saturation magnetisation the conversion between micromagnetic <span class="math notranslate nohighlight">\(K\)</span> and atomistic anisotropy <span class="math notranslate nohighlight">\(k\)</span> is simply volume weighted <span class="math">\begin{equation}
+<p>Similarly to the saturation magnetisation, the conversion between micromagnetic <span class="math notranslate nohighlight">\(K\)</span> and atomistic anisotropy <span class="math notranslate nohighlight">\(k\)</span> is simply volume weighted <span class="math">\begin{equation}
 k = K V,
-\end{equation}</span> where <span class="math notranslate nohighlight">\(V\)</span> is the crystal volume per magnetic atom. This atomistic anisotropy <span class="math notranslate nohighlight">\(k\)</span> can also be calculated from the difference in energy of <span class="math notranslate nohighlight">\(J\)</span> in different directions. i.e. <span class="math notranslate nohighlight">\(J_{\perp} = 6\times 10^{-23}\)</span> J and <span class="math notranslate nohighlight">\(J_{\parallel} = 5 \times 10^{-23}\)</span> J gives an atomistic anisotropy <span class="math notranslate nohighlight">\(k=1\times 10^{-23}\)</span> J.</p>
+\end{equation}</span> where <span class="math notranslate nohighlight">\(V\)</span> is the crystal volume per magnetic atom. This atomistic anisotropy <span class="math notranslate nohighlight">\(k\)</span> can also be calculated from the difference in energy between <span class="math notranslate nohighlight">\(J\)</span> in different directions, i.e. <span class="math notranslate nohighlight">\(J_{\perp} = 6\times 10^{-23}\)</span> J and <span class="math notranslate nohighlight">\(J_{\parallel} = 5 \times 10^{-23}\)</span> J, gives an atomistic anisotropy <span class="math notranslate nohighlight">\(k=1\times 10^{-23}\)</span> J.</p>
 <div class="nbinput nblast docutils container">
 <div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[26]:
 </pre></div>
@@ -1192,14 +1203,14 @@ k = K V,
 </section>
 <section id="Worked-Example">
 <h2>Worked Example<a class="headerlink" href="#Worked-Example" title="Link to this heading">#</a></h2>
-<p>Here FeGe will be used as example for how to obtain micromagnetic parameters. FeGe has a cubic crystal structure with four Ge and four Fe atoms per unit cell with a lattice constant of <span class="math notranslate nohighlight">\(a=
-4.6995\)</span> Å and the distance between Fe atoms is 2.881 Å [<a class="reference external" href="http://doi.org/10.1016/j.stam.2007.04.004">Wilhelm 2007</a>]. The saturation magnetisation is <span class="math notranslate nohighlight">\(1.07 \mu_\text{B}/f.u.\)</span> [<a class="reference external" href="https://doi.org/10.1016%2FS0921-4526%2802%2902471-7">Yamada 2003</a>] and magnetic ordering temperature is 278 K [<a class="reference external" href="https://iopscience.iop.org/article/10.1088/0953-8984/1/35/010/meta">Lebech 1989</a>]. The helical period of FeGe is <span class="math notranslate nohighlight">\(\sim 70\)</span> nm [<a class="reference external" href="https://doi.org/10.1038/nmat2916">Yu 2011</a>].</p>
+<p>Here, FeGe will be used as example for how to obtain micromagnetic parameters. FeGe has a cubic crystal structure with four Ge and four Fe atoms per unit cell with a lattice constant of <span class="math notranslate nohighlight">\(a=
+4.6995\)</span> Å, and the distance between Fe atoms is 2.881 Å [<a class="reference external" href="http://doi.org/10.1016/j.stam.2007.04.004">Wilhelm 2007</a>]. The saturation magnetisation is <span class="math notranslate nohighlight">\(1.07 \mu_\text{B}/f.u.\)</span> [<a class="reference external" href="https://doi.org/10.1016%2FS0921-4526%2802%2902471-7">Yamada 2003</a>], and magnetic ordering temperature is 278 K [<a class="reference external" href="https://iopscience.iop.org/article/10.1088/0953-8984/1/35/010/meta">Lebech 1989</a>]. The helical period of FeGe is <span class="math notranslate nohighlight">\(\sim 70\)</span> nm [<a class="reference external" href="https://doi.org/10.1038/nmat2916">Yu 2011</a>].</p>
 <div class="nbinput nblast docutils container">
 <div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[28]:
 </pre></div>
 </div>
 <div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">a</span> <span class="o">=</span> <span class="mf">4.6995e-10</span>
-<span class="n">l</span> <span class="o">=</span> <span class="mf">2.881e-10</span>
+<span class="n">L</span> <span class="o">=</span> <span class="mf">2.881e-10</span>
 <span class="n">Ms_orig</span> <span class="o">=</span> <span class="mf">1.07</span>
 <span class="n">Tc</span> <span class="o">=</span> <span class="mi">278</span>
 <span class="n">P</span> <span class="o">=</span> <span class="mf">70e-9</span>
@@ -1250,7 +1261,7 @@ k = K V,
 </pre></div>
 </div>
 <div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">e</span> <span class="o">=</span> <span class="mf">0.644</span>
-<span class="n">A</span> <span class="o">=</span> <span class="n">Tc_to_A</span><span class="p">(</span><span class="n">Tc</span><span class="p">,</span> <span class="n">e</span><span class="p">,</span> <span class="n">l</span><span class="p">,</span> <span class="n">V</span><span class="p">)</span>
+<span class="n">A</span> <span class="o">=</span> <span class="n">Tc_to_A</span><span class="p">(</span><span class="n">Tc</span><span class="p">,</span> <span class="n">e</span><span class="p">,</span> <span class="n">L</span><span class="p">,</span> <span class="n">V</span><span class="p">)</span>
 <span class="n">A</span>
 </pre></div>
 </div>
@@ -1304,7 +1315,7 @@ k = K V,
       <i class="fa-solid fa-angle-left"></i>
       <div class="prev-next-info">
         <p class="prev-next-subtitle">previous</p>
-        <p class="prev-next-title">Exercise: Domain wall pair conversion</p>
+        <p class="prev-next-title">Analysing simulation results: Domain wall pair conversion</p>
       </div>
     </a>
     <a class="right-next"

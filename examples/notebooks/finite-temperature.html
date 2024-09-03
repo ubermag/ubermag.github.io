@@ -378,7 +378,7 @@
 <li class="toctree-l2"><a class="reference internal" href="../../getting-started/notebooks/magnetisation-field.html">Magnetisation field</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../../getting-started/notebooks/energy-equation.html">Energy equation</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../../getting-started/notebooks/dynamics-equation.html">Dynamics equation</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../../getting-started/notebooks/dw-pair-conversion.html">Exercise: Domain wall pair conversion</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../getting-started/notebooks/dw-pair-conversion.html">Analysing simulation results: Domain wall pair conversion</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../../getting-started/notebooks/unit-converter.html">Unit Conversions</a></li>
 </ul>
 </details></li>
@@ -717,7 +717,7 @@
 <div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[2]:
 </pre></div>
 </div>
-<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">system</span> <span class="o">=</span> <span class="n">mm</span><span class="o">.</span><span class="n">System</span><span class="p">(</span><span class="n">name</span><span class="o">=</span><span class="s1">&#39;thetaevolve&#39;</span><span class="p">,</span> <span class="n">T</span><span class="o">=</span><span class="mi">60</span><span class="p">)</span>
+<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">system</span> <span class="o">=</span> <span class="n">mm</span><span class="o">.</span><span class="n">System</span><span class="p">(</span><span class="n">name</span><span class="o">=</span><span class="s2">&quot;thetaevolve&quot;</span><span class="p">,</span> <span class="n">T</span><span class="o">=</span><span class="mi">60</span><span class="p">)</span>
 </pre></div>
 </div>
 </div>
@@ -726,8 +726,8 @@
 <div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[3]:
 </pre></div>
 </div>
-<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">mesh</span> <span class="o">=</span> <span class="n">df</span><span class="o">.</span><span class="n">Mesh</span><span class="p">(</span><span class="n">p1</span><span class="o">=</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span><span class="mi">0</span><span class="p">,</span><span class="mi">0</span><span class="p">),</span> <span class="n">p2</span><span class="o">=</span><span class="p">(</span><span class="mf">1e-7</span><span class="p">,</span><span class="mf">1e-7</span><span class="p">,</span><span class="mf">1e-9</span><span class="p">),</span> <span class="n">cell</span><span class="o">=</span><span class="p">(</span><span class="mf">1e-9</span><span class="p">,</span><span class="mf">1e-9</span><span class="p">,</span><span class="mf">1e-9</span><span class="p">))</span>
-<span class="n">system</span><span class="o">.</span><span class="n">m</span> <span class="o">=</span> <span class="n">df</span><span class="o">.</span><span class="n">Field</span><span class="p">(</span><span class="n">mesh</span><span class="p">,</span> <span class="n">nvdim</span><span class="o">=</span><span class="mi">3</span><span class="p">,</span> <span class="n">value</span><span class="o">=</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span><span class="mi">0</span><span class="p">,</span><span class="mi">0</span><span class="p">),</span> <span class="n">norm</span><span class="o">=</span><span class="mf">1700e3</span><span class="p">)</span>
+<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">mesh</span> <span class="o">=</span> <span class="n">df</span><span class="o">.</span><span class="n">Mesh</span><span class="p">(</span><span class="n">p1</span><span class="o">=</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">),</span> <span class="n">p2</span><span class="o">=</span><span class="p">(</span><span class="mf">1e-7</span><span class="p">,</span> <span class="mf">1e-7</span><span class="p">,</span> <span class="mf">1e-9</span><span class="p">),</span> <span class="n">cell</span><span class="o">=</span><span class="p">(</span><span class="mf">1e-9</span><span class="p">,</span> <span class="mf">1e-9</span><span class="p">,</span> <span class="mf">1e-9</span><span class="p">))</span>
+<span class="n">system</span><span class="o">.</span><span class="n">m</span> <span class="o">=</span> <span class="n">df</span><span class="o">.</span><span class="n">Field</span><span class="p">(</span><span class="n">mesh</span><span class="p">,</span> <span class="n">nvdim</span><span class="o">=</span><span class="mi">3</span><span class="p">,</span> <span class="n">value</span><span class="o">=</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">),</span> <span class="n">norm</span><span class="o">=</span><span class="mf">1700e3</span><span class="p">)</span>
 </pre></div>
 </div>
 </div>
@@ -735,7 +735,7 @@
 <div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[4]:
 </pre></div>
 </div>
-<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">system</span><span class="o">.</span><span class="n">m</span><span class="o">.</span><span class="n">sel</span><span class="p">(</span><span class="s1">&#39;z&#39;</span><span class="p">)</span><span class="o">.</span><span class="n">resample</span><span class="p">(</span><span class="n">n</span><span class="o">=</span><span class="p">(</span><span class="mi">20</span><span class="p">,</span><span class="mi">20</span><span class="p">))</span><span class="o">.</span><span class="n">mpl</span><span class="p">()</span>
+<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">system</span><span class="o">.</span><span class="n">m</span><span class="o">.</span><span class="n">sel</span><span class="p">(</span><span class="s2">&quot;z&quot;</span><span class="p">)</span><span class="o">.</span><span class="n">resample</span><span class="p">(</span><span class="n">n</span><span class="o">=</span><span class="p">(</span><span class="mi">20</span><span class="p">,</span> <span class="mi">20</span><span class="p">))</span><span class="o">.</span><span class="n">mpl</span><span class="p">()</span>
 </pre></div>
 </div>
 </div>
@@ -763,9 +763,17 @@
 <div class="math notranslate nohighlight">
 $-\frac{\gamma_{0} \alpha}{1 + \alpha^{2}} \mathbf{m} \times (\mathbf{m} \times \mathbf{H}_\text{eff})-\frac{\gamma_{0}}{1 + \alpha^{2}} \mathbf{m} \times \mathbf{H}_\text{eff}$</div></div>
 </div>
-<p>We must explicitely specify the correct evolver and specify the timestep. For more details on how to specify this timestep as well as other available options please refer to the official documentation of the OOMMF extension available at <a class="reference external" href="http://www.nanoscience.de/group_r/stm-spstm/projects/temperature/download.shtml">http://www.nanoscience.de/group_r/stm-spstm/projects/temperature/download.shtml</a>.</p>
 <div class="nbinput nblast docutils container">
 <div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[6]:
+</pre></div>
+</div>
+<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">system</span><span class="o">.</span><span class="n">energy</span> <span class="o">=</span> <span class="n">mm</span><span class="o">.</span><span class="n">Exchange</span><span class="p">(</span><span class="n">A</span><span class="o">=</span><span class="mf">1e-12</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<p>We must explicitely specify the correct evolver and specify the timestep. For more details on how to specify this timestep as well as other available options please refer to the official documentation of the OOMMF extension available at <a class="reference external" href="http://www.nanoscience.de/group_r/stm-spstm/projects/temperature/download.shtml">http://www.nanoscience.de/group_r/stm-spstm/projects/temperature/download.shtml</a>.</p>
+<div class="nbinput nblast docutils container">
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[7]:
 </pre></div>
 </div>
 <div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">evolver</span> <span class="o">=</span> <span class="n">mc</span><span class="o">.</span><span class="n">UHH_ThetaEvolver</span><span class="p">(</span><span class="n">fixed_timestep</span><span class="o">=</span><span class="mf">2e-13</span><span class="p">)</span>
@@ -774,7 +782,7 @@ $-\frac{\gamma_{0} \alpha}{1 + \alpha^{2}} \mathbf{m} \times (\mathbf{m} \times 
 </div>
 <p>We can now use the previously defined evolver as input for the time driver.</p>
 <div class="nbinput nblast docutils container">
-<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[7]:
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[8]:
 </pre></div>
 </div>
 <div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">td</span> <span class="o">=</span> <span class="n">mc</span><span class="o">.</span><span class="n">TimeDriver</span><span class="p">(</span><span class="n">evolver</span><span class="o">=</span><span class="n">evolver</span><span class="p">)</span>
@@ -783,7 +791,7 @@ $-\frac{\gamma_{0} \alpha}{1 + \alpha^{2}} \mathbf{m} \times (\mathbf{m} \times 
 </div>
 <p>We drive the system for 0.5 ns and store the output in 50 steps.</p>
 <div class="nbinput docutils container">
-<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[8]:
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[9]:
 </pre></div>
 </div>
 <div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">td</span><span class="o">.</span><span class="n">drive</span><span class="p">(</span><span class="n">system</span><span class="p">,</span> <span class="n">t</span><span class="o">=</span><span class="mf">5e-10</span><span class="p">,</span> <span class="n">n</span><span class="o">=</span><span class="mi">50</span><span class="p">)</span>
@@ -795,15 +803,15 @@ $-\frac{\gamma_{0} \alpha}{1 + \alpha^{2}} \mathbf{m} \times (\mathbf{m} \times 
 </div>
 <div class="output_area docutils container">
 <div class="highlight"><pre>
-Running OOMMF (ExeOOMMFRunner)[2023/10/23 16:08]... (3.7 s)
+Running OOMMF (ExeOOMMFRunner)[2024/08/09 17:20]... (3.6 s)
 </pre></div></div>
 </div>
 <p>We can now plot the magnetisation after time driving.</p>
 <div class="nbinput docutils container">
-<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[9]:
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[10]:
 </pre></div>
 </div>
-<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">system</span><span class="o">.</span><span class="n">m</span><span class="o">.</span><span class="n">sel</span><span class="p">(</span><span class="s1">&#39;z&#39;</span><span class="p">)</span><span class="o">.</span><span class="n">resample</span><span class="p">(</span><span class="n">n</span><span class="o">=</span><span class="p">(</span><span class="mi">20</span><span class="p">,</span> <span class="mi">20</span><span class="p">))</span><span class="o">.</span><span class="n">mpl</span><span class="p">()</span>
+<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">system</span><span class="o">.</span><span class="n">m</span><span class="o">.</span><span class="n">sel</span><span class="p">(</span><span class="s2">&quot;z&quot;</span><span class="p">)</span><span class="o">.</span><span class="n">resample</span><span class="p">(</span><span class="n">n</span><span class="o">=</span><span class="p">(</span><span class="mi">20</span><span class="p">,</span> <span class="mi">20</span><span class="p">))</span><span class="o">.</span><span class="n">mpl</span><span class="p">()</span>
 </pre></div>
 </div>
 </div>
@@ -811,12 +819,12 @@ Running OOMMF (ExeOOMMFRunner)[2023/10/23 16:08]... (3.7 s)
 <div class="prompt empty docutils container">
 </div>
 <div class="output_area docutils container">
-<img alt="../../_images/examples_notebooks_finite-temperature_15_0.png" src="../../_images/examples_notebooks_finite-temperature_15_0.png" />
+<img alt="../../_images/examples_notebooks_finite-temperature_16_0.png" src="../../_images/examples_notebooks_finite-temperature_16_0.png" />
 </div>
 </div>
 <p>Information about the individual steps is available from the table object.</p>
 <div class="nbinput docutils container">
-<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[10]:
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[11]:
 </pre></div>
 </div>
 <div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">system</span><span class="o">.</span><span class="n">table</span><span class="o">.</span><span class="n">data</span><span class="o">.</span><span class="n">head</span><span class="p">()</span>
@@ -824,7 +832,7 @@ Running OOMMF (ExeOOMMFRunner)[2023/10/23 16:08]... (3.7 s)
 </div>
 </div>
 <div class="nboutput nblast docutils container">
-<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[10]:
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[11]:
 </pre></div>
 </div>
 <div class="output_area rendered_html docutils container">
@@ -852,6 +860,10 @@ Running OOMMF (ExeOOMMFRunner)[2023/10/23 16:08]... (3.7 s)
       <th>dE/dt</th>
       <th>delta_E</th>
       <th>T</th>
+      <th>E_exchange</th>
+      <th>max_spin_ang_exchange</th>
+      <th>stage_max_spin_ang_exchange</th>
+      <th>run_max_spin_ang_exchange</th>
       <th>iteration</th>
       <th>stage_iteration</th>
       <th>stage</th>
@@ -865,86 +877,106 @@ Running OOMMF (ExeOOMMFRunner)[2023/10/23 16:08]... (3.7 s)
   <tbody>
     <tr>
       <th>0</th>
-      <td>0.0</td>
+      <td>1.120473e-17</td>
       <td>51.0</td>
-      <td>68871.265081</td>
-      <td>0.0</td>
-      <td>0.0</td>
+      <td>94556.924744</td>
+      <td>-0.000002</td>
+      <td>1.424474e-19</td>
       <td>60.0</td>
+      <td>1.120473e-17</td>
+      <td>139.657090</td>
+      <td>139.657090</td>
+      <td>139.657090</td>
       <td>50.0</td>
       <td>50.0</td>
       <td>0.0</td>
-      <td>0.842372</td>
-      <td>-0.002361</td>
-      <td>0.003408</td>
+      <td>0.858284</td>
+      <td>-0.000984</td>
+      <td>0.004200</td>
       <td>2.000000e-13</td>
       <td>1.000000e-11</td>
     </tr>
     <tr>
       <th>1</th>
-      <td>0.0</td>
+      <td>1.659172e-17</td>
       <td>102.0</td>
-      <td>69924.226300</td>
-      <td>0.0</td>
-      <td>0.0</td>
+      <td>111424.756023</td>
+      <td>-0.000002</td>
+      <td>7.302315e-20</td>
       <td>60.0</td>
+      <td>1.659172e-17</td>
+      <td>165.993223</td>
+      <td>177.321519</td>
+      <td>177.321519</td>
       <td>101.0</td>
       <td>50.0</td>
       <td>1.0</td>
-      <td>0.710945</td>
-      <td>-0.001004</td>
-      <td>-0.001404</td>
+      <td>0.779396</td>
+      <td>-0.000714</td>
+      <td>0.008684</td>
       <td>2.000000e-13</td>
       <td>2.000000e-11</td>
     </tr>
     <tr>
       <th>2</th>
-      <td>0.0</td>
+      <td>1.886557e-17</td>
       <td>153.0</td>
-      <td>78886.820644</td>
-      <td>0.0</td>
-      <td>0.0</td>
+      <td>97915.624174</td>
+      <td>-0.000002</td>
+      <td>3.477843e-20</td>
       <td>60.0</td>
+      <td>1.886557e-17</td>
+      <td>170.565176</td>
+      <td>177.967891</td>
+      <td>177.967891</td>
       <td>152.0</td>
       <td>50.0</td>
       <td>2.0</td>
-      <td>0.600855</td>
-      <td>-0.002175</td>
-      <td>-0.005869</td>
+      <td>0.738897</td>
+      <td>0.000991</td>
+      <td>0.004611</td>
       <td>2.000000e-13</td>
       <td>3.000000e-11</td>
     </tr>
     <tr>
       <th>3</th>
-      <td>0.0</td>
+      <td>2.001070e-17</td>
       <td>204.0</td>
-      <td>67798.361453</td>
-      <td>0.0</td>
-      <td>0.0</td>
+      <td>97996.465424</td>
+      <td>-0.000002</td>
+      <td>3.091047e-20</td>
       <td>60.0</td>
+      <td>2.001070e-17</td>
+      <td>176.614042</td>
+      <td>179.480712</td>
+      <td>179.480712</td>
       <td>203.0</td>
       <td>50.0</td>
       <td>3.0</td>
-      <td>0.502902</td>
-      <td>-0.003426</td>
-      <td>-0.002623</td>
+      <td>0.714047</td>
+      <td>-0.002506</td>
+      <td>0.006134</td>
       <td>2.000000e-13</td>
       <td>4.000000e-11</td>
     </tr>
     <tr>
       <th>4</th>
-      <td>0.0</td>
+      <td>2.038523e-17</td>
       <td>255.0</td>
-      <td>75905.774117</td>
-      <td>0.0</td>
-      <td>0.0</td>
+      <td>97941.958430</td>
+      <td>-0.000002</td>
+      <td>3.478005e-20</td>
       <td>60.0</td>
+      <td>2.038523e-17</td>
+      <td>175.466903</td>
+      <td>179.097395</td>
+      <td>179.480712</td>
       <td>254.0</td>
       <td>50.0</td>
       <td>4.0</td>
-      <td>0.425940</td>
-      <td>-0.003645</td>
-      <td>-0.007141</td>
+      <td>0.700108</td>
+      <td>-0.004356</td>
+      <td>0.002749</td>
       <td>2.000000e-13</td>
       <td>5.000000e-11</td>
     </tr>
@@ -954,10 +986,10 @@ Running OOMMF (ExeOOMMFRunner)[2023/10/23 16:08]... (3.7 s)
 </div>
 <p>We can plot the average magnetisation as a function of time.</p>
 <div class="nbinput docutils container">
-<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[11]:
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[12]:
 </pre></div>
 </div>
-<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">system</span><span class="o">.</span><span class="n">table</span><span class="o">.</span><span class="n">data</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">x</span><span class="o">=</span><span class="s1">&#39;t&#39;</span><span class="p">,</span> <span class="n">y</span><span class="o">=</span><span class="p">[</span><span class="s1">&#39;mx&#39;</span><span class="p">,</span> <span class="s1">&#39;my&#39;</span><span class="p">,</span> <span class="s1">&#39;mz&#39;</span><span class="p">],</span> <span class="n">grid</span><span class="o">=</span><span class="kc">True</span><span class="p">);</span>
+<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">system</span><span class="o">.</span><span class="n">table</span><span class="o">.</span><span class="n">data</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">x</span><span class="o">=</span><span class="s2">&quot;t&quot;</span><span class="p">,</span> <span class="n">y</span><span class="o">=</span><span class="p">[</span><span class="s2">&quot;mx&quot;</span><span class="p">,</span> <span class="s2">&quot;my&quot;</span><span class="p">,</span> <span class="s2">&quot;mz&quot;</span><span class="p">],</span> <span class="n">grid</span><span class="o">=</span><span class="kc">True</span><span class="p">);</span>
 </pre></div>
 </div>
 </div>
@@ -965,7 +997,7 @@ Running OOMMF (ExeOOMMFRunner)[2023/10/23 16:08]... (3.7 s)
 <div class="prompt empty docutils container">
 </div>
 <div class="output_area docutils container">
-<img alt="../../_images/examples_notebooks_finite-temperature_19_0.png" src="../../_images/examples_notebooks_finite-temperature_19_0.png" />
+<img alt="../../_images/examples_notebooks_finite-temperature_20_0.png" src="../../_images/examples_notebooks_finite-temperature_20_0.png" />
 </div>
 </div>
 <script type="application/vnd.jupyter.widget-state+json">

@@ -54,7 +54,7 @@
     <link rel="icon" href="../../_static/favicon.ico"/>
     <link rel="index" title="Index" href="../../genindex.html" />
     <link rel="search" title="Search" href="../../search.html" />
-    <link rel="next" title="Exercise: Domain wall pair conversion" href="dw-pair-conversion.html" />
+    <link rel="next" title="Analysing simulation results: Domain wall pair conversion" href="dw-pair-conversion.html" />
     <link rel="prev" title="Energy equation" href="energy-equation.html" />
   <meta name="viewport" content="width=device-width, initial-scale=1"/>
   <meta name="docsearch:language" content="en"/>
@@ -378,7 +378,7 @@
 <li class="toctree-l2"><a class="reference internal" href="magnetisation-field.html">Magnetisation field</a></li>
 <li class="toctree-l2"><a class="reference internal" href="energy-equation.html">Energy equation</a></li>
 <li class="toctree-l2 current active"><a class="current reference internal" href="#">Dynamics equation</a></li>
-<li class="toctree-l2"><a class="reference internal" href="dw-pair-conversion.html">Exercise: Domain wall pair conversion</a></li>
+<li class="toctree-l2"><a class="reference internal" href="dw-pair-conversion.html">Analysing simulation results: Domain wall pair conversion</a></li>
 <li class="toctree-l2"><a class="reference internal" href="unit-converter.html">Unit Conversions</a></li>
 </ul>
 </details></li>
@@ -721,7 +721,7 @@
 <div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[2]:
 </pre></div>
 </div>
-<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">system</span> <span class="o">=</span> <span class="n">mm</span><span class="o">.</span><span class="n">System</span><span class="p">(</span><span class="n">name</span><span class="o">=</span><span class="s1">&#39;macrospin&#39;</span><span class="p">)</span>
+<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">system</span> <span class="o">=</span> <span class="n">mm</span><span class="o">.</span><span class="n">System</span><span class="p">(</span><span class="n">name</span><span class="o">=</span><span class="s2">&quot;macrospin&quot;</span><span class="p">)</span>
 </pre></div>
 </div>
 </div>
@@ -1049,7 +1049,7 @@ Running OOMMF (ExeOOMMFRunner)[2023/10/23 15:56]... (0.8 s)
 <div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[9]:
 </pre></div>
 </div>
-<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">system</span><span class="o">.</span><span class="n">table</span><span class="o">.</span><span class="n">mpl</span><span class="p">(</span><span class="n">y</span><span class="o">=</span><span class="p">[</span><span class="s1">&#39;mz&#39;</span><span class="p">])</span>
+<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">system</span><span class="o">.</span><span class="n">table</span><span class="o">.</span><span class="n">mpl</span><span class="p">(</span><span class="n">y</span><span class="o">=</span><span class="p">[</span><span class="s2">&quot;mz&quot;</span><span class="p">])</span>
 </pre></div>
 </div>
 </div>
@@ -1065,7 +1065,7 @@ Running OOMMF (ExeOOMMFRunner)[2023/10/23 15:56]... (0.8 s)
 <div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[10]:
 </pre></div>
 </div>
-<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">system</span><span class="o">.</span><span class="n">table</span><span class="o">.</span><span class="n">mpl</span><span class="p">(</span><span class="n">y</span><span class="o">=</span><span class="p">[</span><span class="s1">&#39;mx&#39;</span><span class="p">,</span> <span class="s1">&#39;my&#39;</span><span class="p">,</span> <span class="s1">&#39;mz&#39;</span><span class="p">])</span>
+<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">system</span><span class="o">.</span><span class="n">table</span><span class="o">.</span><span class="n">mpl</span><span class="p">(</span><span class="n">y</span><span class="o">=</span><span class="p">[</span><span class="s2">&quot;mx&quot;</span><span class="p">,</span> <span class="s2">&quot;my&quot;</span><span class="p">,</span> <span class="s2">&quot;mz&quot;</span><span class="p">])</span>
 </pre></div>
 </div>
 </div>
@@ -1090,7 +1090,7 @@ Running OOMMF (ExeOOMMFRunner)[2023/10/23 15:56]... (0.8 s)
 
 <span class="n">td</span><span class="o">.</span><span class="n">drive</span><span class="p">(</span><span class="n">system</span><span class="p">,</span> <span class="n">t</span><span class="o">=</span><span class="mf">0.1e-9</span><span class="p">,</span> <span class="n">n</span><span class="o">=</span><span class="mi">200</span><span class="p">)</span>
 
-<span class="n">system</span><span class="o">.</span><span class="n">table</span><span class="o">.</span><span class="n">mpl</span><span class="p">(</span><span class="n">y</span><span class="o">=</span><span class="p">[</span><span class="s1">&#39;mx&#39;</span><span class="p">,</span> <span class="s1">&#39;my&#39;</span><span class="p">,</span> <span class="s1">&#39;mz&#39;</span><span class="p">])</span>
+<span class="n">system</span><span class="o">.</span><span class="n">table</span><span class="o">.</span><span class="n">mpl</span><span class="p">(</span><span class="n">y</span><span class="o">=</span><span class="p">[</span><span class="s2">&quot;mx&quot;</span><span class="p">,</span> <span class="s2">&quot;my&quot;</span><span class="p">,</span> <span class="s2">&quot;mz&quot;</span><span class="p">])</span>
 </pre></div>
 </div>
 </div>
@@ -1124,7 +1124,7 @@ Running OOMMF (ExeOOMMFRunner)[2023/10/23 15:56]... (0.6 s)
 
 <span class="n">td</span><span class="o">.</span><span class="n">drive</span><span class="p">(</span><span class="n">system</span><span class="p">,</span> <span class="n">t</span><span class="o">=</span><span class="mf">0.1e-9</span><span class="p">,</span> <span class="n">n</span><span class="o">=</span><span class="mi">200</span><span class="p">)</span>
 
-<span class="n">system</span><span class="o">.</span><span class="n">table</span><span class="o">.</span><span class="n">mpl</span><span class="p">(</span><span class="n">y</span><span class="o">=</span><span class="p">[</span><span class="s1">&#39;mx&#39;</span><span class="p">,</span> <span class="s1">&#39;my&#39;</span><span class="p">,</span> <span class="s1">&#39;mz&#39;</span><span class="p">])</span>
+<span class="n">system</span><span class="o">.</span><span class="n">table</span><span class="o">.</span><span class="n">mpl</span><span class="p">(</span><span class="n">y</span><span class="o">=</span><span class="p">[</span><span class="s2">&quot;mx&quot;</span><span class="p">,</span> <span class="s2">&quot;my&quot;</span><span class="p">,</span> <span class="s2">&quot;mz&quot;</span><span class="p">])</span>
 </pre></div>
 </div>
 </div>
@@ -1155,7 +1155,7 @@ Running OOMMF (ExeOOMMFRunner)[2023/10/23 15:56]... (0.6 s)
 
 <span class="n">td</span><span class="o">.</span><span class="n">drive</span><span class="p">(</span><span class="n">system</span><span class="p">,</span> <span class="n">t</span><span class="o">=</span><span class="mf">0.1e-9</span><span class="p">,</span> <span class="n">n</span><span class="o">=</span><span class="mi">200</span><span class="p">)</span>
 
-<span class="n">system</span><span class="o">.</span><span class="n">table</span><span class="o">.</span><span class="n">mpl</span><span class="p">(</span><span class="n">y</span><span class="o">=</span><span class="p">[</span><span class="s1">&#39;mx&#39;</span><span class="p">,</span> <span class="s1">&#39;my&#39;</span><span class="p">,</span> <span class="s1">&#39;mz&#39;</span><span class="p">])</span>
+<span class="n">system</span><span class="o">.</span><span class="n">table</span><span class="o">.</span><span class="n">mpl</span><span class="p">(</span><span class="n">y</span><span class="o">=</span><span class="p">[</span><span class="s2">&quot;mx&quot;</span><span class="p">,</span> <span class="s2">&quot;my&quot;</span><span class="p">,</span> <span class="s2">&quot;mz&quot;</span><span class="p">])</span>
 </pre></div>
 </div>
 </div>
@@ -1204,7 +1204,7 @@ Running OOMMF (ExeOOMMFRunner)[2023/10/23 15:56]... (0.7 s)
        title="next page">
       <div class="prev-next-info">
         <p class="prev-next-subtitle">next</p>
-        <p class="prev-next-title">Exercise: Domain wall pair conversion</p>
+        <p class="prev-next-title">Analysing simulation results: Domain wall pair conversion</p>
       </div>
       <i class="fa-solid fa-angle-right"></i>
     </a>

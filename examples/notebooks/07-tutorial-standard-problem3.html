@@ -378,7 +378,7 @@
 <li class="toctree-l2"><a class="reference internal" href="../../getting-started/notebooks/magnetisation-field.html">Magnetisation field</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../../getting-started/notebooks/energy-equation.html">Energy equation</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../../getting-started/notebooks/dynamics-equation.html">Dynamics equation</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../../getting-started/notebooks/dw-pair-conversion.html">Exercise: Domain wall pair conversion</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../getting-started/notebooks/dw-pair-conversion.html">Analysing simulation results: Domain wall pair conversion</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../../getting-started/notebooks/unit-converter.html">Unit Conversions</a></li>
 </ul>
 </details></li>
@@ -723,24 +723,26 @@
 </div>
 <div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
 
+
 <span class="c1"># Function for initiaising the flower state.</span>
 <span class="k">def</span> <span class="nf">m_init_flower</span><span class="p">(</span><span class="n">pos</span><span class="p">):</span>
-    <span class="n">x</span><span class="p">,</span> <span class="n">y</span><span class="p">,</span> <span class="n">z</span> <span class="o">=</span> <span class="n">pos</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span><span class="o">/</span><span class="mf">1e-9</span><span class="p">,</span> <span class="n">pos</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span><span class="o">/</span><span class="mf">1e-9</span><span class="p">,</span> <span class="n">pos</span><span class="p">[</span><span class="mi">2</span><span class="p">]</span><span class="o">/</span><span class="mf">1e-9</span>
-    <span class="n">mx</span> <span class="o">=</span> <span class="mi">0</span>
-    <span class="n">my</span> <span class="o">=</span> <span class="mi">2</span><span class="o">*</span><span class="n">z</span> <span class="o">-</span> <span class="mi">1</span>
-    <span class="n">mz</span> <span class="o">=</span> <span class="o">-</span><span class="mi">2</span><span class="o">*</span><span class="n">y</span> <span class="o">+</span> <span class="mi">1</span>
+    <span class="n">x</span><span class="p">,</span> <span class="n">y</span><span class="p">,</span> <span class="n">z</span> <span class="o">=</span> <span class="n">pos</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span> <span class="o">/</span> <span class="mf">1e-9</span><span class="p">,</span> <span class="n">pos</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span> <span class="o">/</span> <span class="mf">1e-9</span><span class="p">,</span> <span class="n">pos</span><span class="p">[</span><span class="mi">2</span><span class="p">]</span> <span class="o">/</span> <span class="mf">1e-9</span>
+    <span class="n">mx</span> <span class="o">=</span> <span class="mi">0</span> <span class="o">*</span> <span class="n">x</span>
+    <span class="n">my</span> <span class="o">=</span> <span class="mi">2</span> <span class="o">*</span> <span class="n">z</span> <span class="o">-</span> <span class="mi">1</span>
+    <span class="n">mz</span> <span class="o">=</span> <span class="o">-</span><span class="mi">2</span> <span class="o">*</span> <span class="n">y</span> <span class="o">+</span> <span class="mi">1</span>
     <span class="n">norm_squared</span> <span class="o">=</span> <span class="n">mx</span><span class="o">**</span><span class="mi">2</span> <span class="o">+</span> <span class="n">my</span><span class="o">**</span><span class="mi">2</span> <span class="o">+</span> <span class="n">mz</span><span class="o">**</span><span class="mi">2</span>
     <span class="k">if</span> <span class="n">norm_squared</span> <span class="o">&lt;=</span> <span class="mf">0.05</span><span class="p">:</span>
         <span class="k">return</span> <span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">)</span>
     <span class="k">else</span><span class="p">:</span>
         <span class="k">return</span> <span class="p">(</span><span class="n">mx</span><span class="p">,</span> <span class="n">my</span><span class="p">,</span> <span class="n">mz</span><span class="p">)</span>
 
+
 <span class="c1"># Function for initialising the vortex state.</span>
 <span class="k">def</span> <span class="nf">m_init_vortex</span><span class="p">(</span><span class="n">pos</span><span class="p">):</span>
-    <span class="n">x</span><span class="p">,</span> <span class="n">y</span><span class="p">,</span> <span class="n">z</span> <span class="o">=</span> <span class="n">pos</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span><span class="o">/</span><span class="mf">1e-9</span><span class="p">,</span> <span class="n">pos</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span><span class="o">/</span><span class="mf">1e-9</span><span class="p">,</span> <span class="n">pos</span><span class="p">[</span><span class="mi">2</span><span class="p">]</span><span class="o">/</span><span class="mf">1e-9</span>
+    <span class="n">x</span><span class="p">,</span> <span class="n">_</span><span class="p">,</span> <span class="n">_</span> <span class="o">=</span> <span class="n">pos</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span> <span class="o">/</span> <span class="mf">1e-9</span><span class="p">,</span> <span class="n">pos</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span> <span class="o">/</span> <span class="mf">1e-9</span><span class="p">,</span> <span class="n">pos</span><span class="p">[</span><span class="mi">2</span><span class="p">]</span> <span class="o">/</span> <span class="mf">1e-9</span>
     <span class="n">mx</span> <span class="o">=</span> <span class="mi">0</span>
-    <span class="n">my</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">sin</span><span class="p">(</span><span class="n">np</span><span class="o">.</span><span class="n">pi</span><span class="o">/</span><span class="mi">2</span> <span class="o">*</span> <span class="p">(</span><span class="n">x</span><span class="o">-</span><span class="mf">0.5</span><span class="p">))</span>
-    <span class="n">mz</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">cos</span><span class="p">(</span><span class="n">np</span><span class="o">.</span><span class="n">pi</span><span class="o">/</span><span class="mi">2</span> <span class="o">*</span> <span class="p">(</span><span class="n">x</span><span class="o">-</span><span class="mf">0.5</span><span class="p">))</span>
+    <span class="n">my</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">sin</span><span class="p">(</span><span class="n">np</span><span class="o">.</span><span class="n">pi</span> <span class="o">/</span> <span class="mi">2</span> <span class="o">*</span> <span class="p">(</span><span class="n">x</span> <span class="o">-</span> <span class="mf">0.5</span><span class="p">))</span>
+    <span class="n">mz</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">cos</span><span class="p">(</span><span class="n">np</span><span class="o">.</span><span class="n">pi</span> <span class="o">/</span> <span class="mi">2</span> <span class="o">*</span> <span class="p">(</span><span class="n">x</span> <span class="o">-</span> <span class="mf">0.5</span><span class="p">))</span>
 
     <span class="k">return</span> <span class="p">(</span><span class="n">mx</span><span class="p">,</span> <span class="n">my</span><span class="p">,</span> <span class="n">mz</span><span class="p">)</span>
 </pre></div>
@@ -758,25 +760,28 @@
 </pre></div>
 </div>
 <div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">minimise_system_energy</span><span class="p">(</span><span class="n">L</span><span class="p">,</span> <span class="n">m_init</span><span class="p">):</span>
-    <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;L=</span><span class="si">{:7}</span><span class="s2">, </span><span class="si">{}</span><span class="s2"> &quot;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">L</span><span class="p">,</span> <span class="n">m_init</span><span class="o">.</span><span class="vm">__name__</span><span class="p">),</span> <span class="n">end</span><span class="o">=</span><span class="s2">&quot;&quot;</span><span class="p">)</span>
+    <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;L=</span><span class="si">{</span><span class="n">L</span><span class="si">:</span><span class="s2">7</span><span class="si">}</span><span class="s2">, </span><span class="si">{</span><span class="n">m_init</span><span class="o">.</span><span class="vm">__name__</span><span class="si">}</span><span class="s2"> &quot;</span><span class="p">,</span> <span class="n">end</span><span class="o">=</span><span class="s2">&quot;&quot;</span><span class="p">)</span>
     <span class="n">N</span> <span class="o">=</span> <span class="mi">16</span>  <span class="c1"># discretisation in one dimension</span>
     <span class="n">cubesize</span> <span class="o">=</span> <span class="mf">100e-9</span>  <span class="c1"># cube edge length (m)</span>
-    <span class="n">cellsize</span> <span class="o">=</span> <span class="n">cubesize</span><span class="o">/</span><span class="n">N</span>  <span class="c1"># discretisation in all three dimensions.</span>
-    <span class="n">lex</span> <span class="o">=</span> <span class="n">cubesize</span><span class="o">/</span><span class="n">L</span>  <span class="c1"># exchange length.</span>
+    <span class="n">cellsize</span> <span class="o">=</span> <span class="n">cubesize</span> <span class="o">/</span> <span class="n">N</span>  <span class="c1"># discretisation in all three dimensions.</span>
+    <span class="n">lex</span> <span class="o">=</span> <span class="n">cubesize</span> <span class="o">/</span> <span class="n">L</span>  <span class="c1"># exchange length.</span>
 
     <span class="n">Km</span> <span class="o">=</span> <span class="mf">1e6</span>  <span class="c1"># magnetostatic energy density (J/m**3)</span>
-    <span class="n">Ms</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">sqrt</span><span class="p">(</span><span class="mi">2</span><span class="o">*</span><span class="n">Km</span><span class="o">/</span><span class="n">mm</span><span class="o">.</span><span class="n">consts</span><span class="o">.</span><span class="n">mu0</span><span class="p">)</span>  <span class="c1"># magnetisation saturation (A/m)</span>
+    <span class="n">Ms</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">sqrt</span><span class="p">(</span><span class="mi">2</span> <span class="o">*</span> <span class="n">Km</span> <span class="o">/</span> <span class="n">mm</span><span class="o">.</span><span class="n">consts</span><span class="o">.</span><span class="n">mu0</span><span class="p">)</span>  <span class="c1"># magnetisation saturation (A/m)</span>
     <span class="n">A</span> <span class="o">=</span> <span class="mf">0.5</span> <span class="o">*</span> <span class="n">mm</span><span class="o">.</span><span class="n">consts</span><span class="o">.</span><span class="n">mu0</span> <span class="o">*</span> <span class="n">Ms</span><span class="o">**</span><span class="mi">2</span> <span class="o">*</span> <span class="n">lex</span><span class="o">**</span><span class="mi">2</span>  <span class="c1"># exchange energy constant</span>
-    <span class="n">K</span> <span class="o">=</span> <span class="mf">0.1</span><span class="o">*</span><span class="n">Km</span>  <span class="c1"># Uniaxial anisotropy constant</span>
+    <span class="n">K</span> <span class="o">=</span> <span class="mf">0.1</span> <span class="o">*</span> <span class="n">Km</span>  <span class="c1"># Uniaxial anisotropy constant</span>
     <span class="n">u</span> <span class="o">=</span> <span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">1</span><span class="p">)</span>  <span class="c1"># Uniaxial anisotropy easy-axis</span>
 
     <span class="n">p1</span> <span class="o">=</span> <span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">)</span>  <span class="c1"># Minimum sample coordinate.</span>
     <span class="n">p2</span> <span class="o">=</span> <span class="p">(</span><span class="n">cubesize</span><span class="p">,</span> <span class="n">cubesize</span><span class="p">,</span> <span class="n">cubesize</span><span class="p">)</span>  <span class="c1"># Maximum sample coordinate.</span>
     <span class="n">cell</span> <span class="o">=</span> <span class="p">(</span><span class="n">cellsize</span><span class="p">,</span> <span class="n">cellsize</span><span class="p">,</span> <span class="n">cellsize</span><span class="p">)</span>  <span class="c1"># Discretisation.</span>
-    <span class="n">mesh</span> <span class="o">=</span> <span class="n">df</span><span class="o">.</span><span class="n">Mesh</span><span class="p">(</span><span class="n">p1</span><span class="o">=</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">),</span> <span class="n">p2</span><span class="o">=</span><span class="p">(</span><span class="n">cubesize</span><span class="p">,</span> <span class="n">cubesize</span><span class="p">,</span> <span class="n">cubesize</span><span class="p">),</span>
-                   <span class="n">cell</span><span class="o">=</span><span class="p">(</span><span class="n">cellsize</span><span class="p">,</span> <span class="n">cellsize</span><span class="p">,</span> <span class="n">cellsize</span><span class="p">))</span>  <span class="c1"># Create a mesh object.</span>
+    <span class="n">mesh</span> <span class="o">=</span> <span class="n">df</span><span class="o">.</span><span class="n">Mesh</span><span class="p">(</span>
+        <span class="n">p1</span><span class="o">=</span><span class="n">p1</span><span class="p">,</span>
+        <span class="n">p2</span><span class="o">=</span><span class="n">p2</span><span class="p">,</span>
+        <span class="n">cell</span><span class="o">=</span><span class="n">cell</span><span class="p">,</span>
+    <span class="p">)</span>  <span class="c1"># Create a mesh object.</span>
 
-    <span class="n">system</span> <span class="o">=</span> <span class="n">mm</span><span class="o">.</span><span class="n">System</span><span class="p">(</span><span class="n">name</span><span class="o">=</span><span class="s1">&#39;stdprob3&#39;</span><span class="p">)</span>
+    <span class="n">system</span> <span class="o">=</span> <span class="n">mm</span><span class="o">.</span><span class="n">System</span><span class="p">(</span><span class="n">name</span><span class="o">=</span><span class="s2">&quot;stdprob3&quot;</span><span class="p">)</span>
     <span class="n">system</span><span class="o">.</span><span class="n">energy</span> <span class="o">=</span> <span class="n">mm</span><span class="o">.</span><span class="n">Exchange</span><span class="p">(</span><span class="n">A</span><span class="o">=</span><span class="n">A</span><span class="p">)</span> <span class="o">+</span> <span class="n">mm</span><span class="o">.</span><span class="n">UniaxialAnisotropy</span><span class="p">(</span><span class="n">K</span><span class="o">=</span><span class="n">K</span><span class="p">,</span> <span class="n">u</span><span class="o">=</span><span class="n">u</span><span class="p">)</span> <span class="o">+</span> <span class="n">mm</span><span class="o">.</span><span class="n">Demag</span><span class="p">()</span>
     <span class="n">system</span><span class="o">.</span><span class="n">m</span> <span class="o">=</span> <span class="n">df</span><span class="o">.</span><span class="n">Field</span><span class="p">(</span><span class="n">mesh</span><span class="p">,</span> <span class="n">nvdim</span><span class="o">=</span><span class="mi">3</span><span class="p">,</span> <span class="n">value</span><span class="o">=</span><span class="n">m_init</span><span class="p">,</span> <span class="n">norm</span><span class="o">=</span><span class="n">Ms</span><span class="p">)</span>
 
@@ -795,9 +800,8 @@
 <div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[4]:
 </pre></div>
 </div>
-<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># NBVAL_IGNORE_OUTPUT</span>
-<span class="n">system</span> <span class="o">=</span> <span class="n">minimise_system_energy</span><span class="p">(</span><span class="mi">8</span><span class="p">,</span> <span class="n">m_init_vortex</span><span class="p">)</span>
-<span class="n">system</span><span class="o">.</span><span class="n">m</span><span class="o">.</span><span class="n">sel</span><span class="p">(</span><span class="s1">&#39;y&#39;</span><span class="p">)</span><span class="o">.</span><span class="n">mpl</span><span class="p">()</span>
+<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">system</span> <span class="o">=</span> <span class="n">minimise_system_energy</span><span class="p">(</span><span class="mi">8</span><span class="p">,</span> <span class="n">m_init_vortex</span><span class="p">)</span>
+<span class="n">system</span><span class="o">.</span><span class="n">m</span><span class="o">.</span><span class="n">sel</span><span class="p">(</span><span class="s2">&quot;y&quot;</span><span class="p">)</span><span class="o">.</span><span class="n">mpl</span><span class="p">()</span>
 </pre></div>
 </div>
 </div>
@@ -806,7 +810,7 @@
 </div>
 <div class="output_area docutils container">
 <div class="highlight"><pre>
-L=      8, m_init_vortex Running OOMMF (ExeOOMMFRunner)[2023/10/23 15:56]... (1.6 s)
+L=      8, m_init_vortex Running OOMMF (ExeOOMMFRunner)[2024/08/09 17:41]... (2.8 s)
 </pre></div></div>
 </div>
 <div class="nboutput nblast docutils container">
@@ -821,9 +825,8 @@ L=      8, m_init_vortex Running OOMMF (ExeOOMMFRunner)[2023/10/23 15:56]... (1.
 <div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[5]:
 </pre></div>
 </div>
-<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># NBVAL_IGNORE_OUTPUT</span>
-<span class="n">system</span> <span class="o">=</span> <span class="n">minimise_system_energy</span><span class="p">(</span><span class="mi">8</span><span class="p">,</span> <span class="n">m_init_flower</span><span class="p">)</span>
-<span class="n">system</span><span class="o">.</span><span class="n">m</span><span class="o">.</span><span class="n">sel</span><span class="p">(</span><span class="s1">&#39;y&#39;</span><span class="p">)</span><span class="o">.</span><span class="n">mpl</span><span class="p">()</span>
+<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">system</span> <span class="o">=</span> <span class="n">minimise_system_energy</span><span class="p">(</span><span class="mi">8</span><span class="p">,</span> <span class="n">m_init_flower</span><span class="p">)</span>
+<span class="n">system</span><span class="o">.</span><span class="n">m</span><span class="o">.</span><span class="n">sel</span><span class="p">(</span><span class="s2">&quot;y&quot;</span><span class="p">)</span><span class="o">.</span><span class="n">mpl</span><span class="p">()</span>
 </pre></div>
 </div>
 </div>
@@ -832,7 +835,7 @@ L=      8, m_init_vortex Running OOMMF (ExeOOMMFRunner)[2023/10/23 15:56]... (1.
 </div>
 <div class="output_area docutils container">
 <div class="highlight"><pre>
-L=      8, m_init_flower Running OOMMF (ExeOOMMFRunner)[2023/10/23 15:56]... (0.4 s)
+L=      8, m_init_flower Running OOMMF (ExeOOMMFRunner)[2024/08/09 17:42]... (0.7 s)
 </pre></div></div>
 </div>
 <div class="nboutput nblast docutils container">
@@ -850,67 +853,74 @@ L=      8, m_init_flower Running OOMMF (ExeOOMMFRunner)[2023/10/23 15:56]... (0.
 <div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[6]:
 </pre></div>
 </div>
-<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># NBVAL_IGNORE_OUTPUT</span>
-<span class="n">L_array</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">linspace</span><span class="p">(</span><span class="mi">8</span><span class="p">,</span> <span class="mi">9</span><span class="p">,</span> <span class="mi">5</span><span class="p">)</span>
+<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">L_array</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">linspace</span><span class="p">(</span><span class="mi">8</span><span class="p">,</span> <span class="mi">9</span><span class="p">,</span> <span class="mi">5</span><span class="p">)</span>
 <span class="n">vortex_energies</span><span class="p">,</span> <span class="n">flower_energies</span> <span class="o">=</span> <span class="p">[],</span> <span class="p">[]</span>
 <span class="k">for</span> <span class="n">L</span> <span class="ow">in</span> <span class="n">L_array</span><span class="p">:</span>
     <span class="n">vortex</span> <span class="o">=</span> <span class="n">minimise_system_energy</span><span class="p">(</span><span class="n">L</span><span class="p">,</span> <span class="n">m_init_vortex</span><span class="p">)</span>
     <span class="n">flower</span> <span class="o">=</span> <span class="n">minimise_system_energy</span><span class="p">(</span><span class="n">L</span><span class="p">,</span> <span class="n">m_init_flower</span><span class="p">)</span>
-    <span class="n">vortex_energies</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">vortex</span><span class="o">.</span><span class="n">table</span><span class="o">.</span><span class="n">data</span><span class="o">.</span><span class="n">tail</span><span class="p">(</span><span class="mi">1</span><span class="p">)[</span><span class="s1">&#39;E&#39;</span><span class="p">][</span><span class="mi">0</span><span class="p">])</span>
-    <span class="n">flower_energies</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">flower</span><span class="o">.</span><span class="n">table</span><span class="o">.</span><span class="n">data</span><span class="o">.</span><span class="n">tail</span><span class="p">(</span><span class="mi">1</span><span class="p">)[</span><span class="s1">&#39;E&#39;</span><span class="p">][</span><span class="mi">0</span><span class="p">])</span>
-
-<span class="kn">import</span> <span class="nn">matplotlib.pyplot</span> <span class="k">as</span> <span class="nn">plt</span>
-<span class="n">plt</span><span class="o">.</span><span class="n">figure</span><span class="p">(</span><span class="n">figsize</span><span class="o">=</span><span class="p">(</span><span class="mi">8</span><span class="p">,</span> <span class="mi">4</span><span class="p">))</span>
-<span class="n">plt</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">L_array</span><span class="p">,</span> <span class="n">vortex_energies</span><span class="p">,</span> <span class="s1">&#39;o-&#39;</span><span class="p">,</span> <span class="n">label</span><span class="o">=</span><span class="s1">&#39;vortex&#39;</span><span class="p">)</span>
-<span class="n">plt</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">L_array</span><span class="p">,</span> <span class="n">flower_energies</span><span class="p">,</span> <span class="s1">&#39;o-&#39;</span><span class="p">,</span> <span class="n">label</span><span class="o">=</span><span class="s1">&#39;flower&#39;</span><span class="p">)</span>
-<span class="n">plt</span><span class="o">.</span><span class="n">xlabel</span><span class="p">(</span><span class="s1">&#39;L (lex)&#39;</span><span class="p">)</span>
-<span class="n">plt</span><span class="o">.</span><span class="n">ylabel</span><span class="p">(</span><span class="s1">&#39;E (J)&#39;</span><span class="p">)</span>
-<span class="n">plt</span><span class="o">.</span><span class="n">grid</span><span class="p">()</span>
-<span class="n">plt</span><span class="o">.</span><span class="n">legend</span><span class="p">();</span>
+    <span class="n">vortex_energies</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">vortex</span><span class="o">.</span><span class="n">table</span><span class="o">.</span><span class="n">data</span><span class="o">.</span><span class="n">tail</span><span class="p">(</span><span class="mi">1</span><span class="p">)[</span><span class="s2">&quot;E&quot;</span><span class="p">][</span><span class="mi">0</span><span class="p">])</span>
+    <span class="n">flower_energies</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">flower</span><span class="o">.</span><span class="n">table</span><span class="o">.</span><span class="n">data</span><span class="o">.</span><span class="n">tail</span><span class="p">(</span><span class="mi">1</span><span class="p">)[</span><span class="s2">&quot;E&quot;</span><span class="p">][</span><span class="mi">0</span><span class="p">])</span>
 </pre></div>
 </div>
-</div>
-<div class="nboutput docutils container">
-<div class="prompt empty docutils container">
-</div>
-<div class="output_area docutils container">
-<div class="highlight"><pre>
-L=    8.0, m_init_vortex Running OOMMF (ExeOOMMFRunner)[2023/10/23 15:56]... (1.2 s)
-L=    8.0, m_init_flower Running OOMMF (ExeOOMMFRunner)[2023/10/23 15:56]... (0.4 s)
-L=   8.25, m_init_vortex Running OOMMF (ExeOOMMFRunner)[2023/10/23 15:56]... (1.0 s)
-L=   8.25, m_init_flower Running OOMMF (ExeOOMMFRunner)[2023/10/23 15:56]... (0.4 s)
-L=    8.5, m_init_vortex Running OOMMF (ExeOOMMFRunner)[2023/10/23 15:56]... (0.8 s)
-L=    8.5, m_init_flower Running OOMMF (ExeOOMMFRunner)[2023/10/23 15:56]... (0.4 s)
-L=   8.75, m_init_vortex Running OOMMF (ExeOOMMFRunner)[2023/10/23 15:57]... (0.8 s)
-L=   8.75, m_init_flower Running OOMMF (ExeOOMMFRunner)[2023/10/23 15:57]... (0.4 s)
-L=    9.0, m_init_vortex Running OOMMF (ExeOOMMFRunner)[2023/10/23 15:57]... (0.8 s)
-L=    9.0, m_init_flower Running OOMMF (ExeOOMMFRunner)[2023/10/23 15:57]... (0.4 s)
-</pre></div></div>
 </div>
 <div class="nboutput nblast docutils container">
 <div class="prompt empty docutils container">
 </div>
 <div class="output_area docutils container">
-<img alt="../../_images/examples_notebooks_07-tutorial-standard-problem3_11_1.png" src="../../_images/examples_notebooks_07-tutorial-standard-problem3_11_1.png" />
+<div class="highlight"><pre>
+L=    8.0, m_init_vortex Running OOMMF (ExeOOMMFRunner)[2024/08/09 17:42]... (2.6 s)
+L=    8.0, m_init_flower Running OOMMF (ExeOOMMFRunner)[2024/08/09 17:42]... (0.6 s)
+L=   8.25, m_init_vortex Running OOMMF (ExeOOMMFRunner)[2024/08/09 17:42]... (1.9 s)
+L=   8.25, m_init_flower Running OOMMF (ExeOOMMFRunner)[2024/08/09 17:42]... (0.6 s)
+L=    8.5, m_init_vortex Running OOMMF (ExeOOMMFRunner)[2024/08/09 17:42]... (1.6 s)
+L=    8.5, m_init_flower Running OOMMF (ExeOOMMFRunner)[2024/08/09 17:42]... (0.6 s)
+L=   8.75, m_init_vortex Running OOMMF (ExeOOMMFRunner)[2024/08/09 17:42]... (1.4 s)
+L=   8.75, m_init_flower Running OOMMF (ExeOOMMFRunner)[2024/08/09 17:42]... (0.6 s)
+L=    9.0, m_init_vortex Running OOMMF (ExeOOMMFRunner)[2024/08/09 17:42]... (1.4 s)
+L=    9.0, m_init_flower Running OOMMF (ExeOOMMFRunner)[2024/08/09 17:42]... (0.6 s)
+</pre></div></div>
 </div>
-</div>
-<p>From the plot, we can see that the energy crossing occurrs between <span class="math notranslate nohighlight">\(8.4l_\text{ex}\)</span> and <span class="math notranslate nohighlight">\(8.6l_\text{ex}\)</span>, so we can employ a root-finding (e.g. bisection) algorithm to find the exact crossing.</p>
 <div class="nbinput docutils container">
 <div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[7]:
 </pre></div>
 </div>
-<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># NBVAL_IGNORE_OUTPUT</span>
-<span class="kn">from</span> <span class="nn">scipy.optimize</span> <span class="kn">import</span> <span class="n">bisect</span>
+<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">matplotlib.pyplot</span> <span class="k">as</span> <span class="nn">plt</span>
+
+<span class="n">plt</span><span class="o">.</span><span class="n">figure</span><span class="p">(</span><span class="n">figsize</span><span class="o">=</span><span class="p">(</span><span class="mi">8</span><span class="p">,</span> <span class="mi">4</span><span class="p">))</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">L_array</span><span class="p">,</span> <span class="n">vortex_energies</span><span class="p">,</span> <span class="s2">&quot;o-&quot;</span><span class="p">,</span> <span class="n">label</span><span class="o">=</span><span class="s2">&quot;vortex&quot;</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">L_array</span><span class="p">,</span> <span class="n">flower_energies</span><span class="p">,</span> <span class="s2">&quot;o-&quot;</span><span class="p">,</span> <span class="n">label</span><span class="o">=</span><span class="s2">&quot;flower&quot;</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">xlabel</span><span class="p">(</span><span class="s2">&quot;L (lex)&quot;</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">ylabel</span><span class="p">(</span><span class="s2">&quot;E (J)&quot;</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">grid</span><span class="p">()</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">legend</span><span class="p">()</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">show</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+<div class="nboutput nblast docutils container">
+<div class="prompt empty docutils container">
+</div>
+<div class="output_area docutils container">
+<img alt="../../_images/examples_notebooks_07-tutorial-standard-problem3_12_0.png" src="../../_images/examples_notebooks_07-tutorial-standard-problem3_12_0.png" />
+</div>
+</div>
+<p>From the plot, we can see that the energy crossing occurrs between <span class="math notranslate nohighlight">\(8.4l_\text{ex}\)</span> and <span class="math notranslate nohighlight">\(8.6l_\text{ex}\)</span>, so we can employ a root-finding (e.g. bisection) algorithm to find the exact crossing.</p>
+<div class="nbinput docutils container">
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[8]:
+</pre></div>
+</div>
+<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">scipy.optimize</span> <span class="kn">import</span> <span class="n">bisect</span>
+
 
 <span class="k">def</span> <span class="nf">energy_difference</span><span class="p">(</span><span class="n">L</span><span class="p">):</span>
     <span class="n">vortex</span> <span class="o">=</span> <span class="n">minimise_system_energy</span><span class="p">(</span><span class="n">L</span><span class="p">,</span> <span class="n">m_init_vortex</span><span class="p">)</span>
     <span class="n">flower</span> <span class="o">=</span> <span class="n">minimise_system_energy</span><span class="p">(</span><span class="n">L</span><span class="p">,</span> <span class="n">m_init_flower</span><span class="p">)</span>
-    <span class="k">return</span> <span class="p">(</span><span class="n">vortex</span><span class="o">.</span><span class="n">table</span><span class="o">.</span><span class="n">data</span><span class="o">.</span><span class="n">tail</span><span class="p">(</span><span class="mi">1</span><span class="p">)[</span><span class="s1">&#39;E&#39;</span><span class="p">][</span><span class="mi">0</span><span class="p">]</span> <span class="o">-</span>
-            <span class="n">flower</span><span class="o">.</span><span class="n">table</span><span class="o">.</span><span class="n">data</span><span class="o">.</span><span class="n">tail</span><span class="p">(</span><span class="mi">1</span><span class="p">)[</span><span class="s1">&#39;E&#39;</span><span class="p">][</span><span class="mi">0</span><span class="p">])</span>
+    <span class="k">return</span> <span class="n">vortex</span><span class="o">.</span><span class="n">table</span><span class="o">.</span><span class="n">data</span><span class="o">.</span><span class="n">tail</span><span class="p">(</span><span class="mi">1</span><span class="p">)[</span><span class="s2">&quot;E&quot;</span><span class="p">][</span><span class="mi">0</span><span class="p">]</span> <span class="o">-</span> <span class="n">flower</span><span class="o">.</span><span class="n">table</span><span class="o">.</span><span class="n">data</span><span class="o">.</span><span class="n">tail</span><span class="p">(</span><span class="mi">1</span><span class="p">)[</span><span class="s2">&quot;E&quot;</span><span class="p">][</span><span class="mi">0</span><span class="p">]</span>
+
 
 <span class="n">cross_section</span> <span class="o">=</span> <span class="n">bisect</span><span class="p">(</span><span class="n">energy_difference</span><span class="p">,</span> <span class="mf">8.4</span><span class="p">,</span> <span class="mf">8.6</span><span class="p">,</span> <span class="n">xtol</span><span class="o">=</span><span class="mf">0.02</span><span class="p">)</span>
 
-<span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s1">&#39;</span><span class="se">\n</span><span class="s1">The energy crossing occurs at </span><span class="si">{</span><span class="n">cross_section</span><span class="si">}</span><span class="s1">*lex&#39;</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;</span><span class="se">\n</span><span class="s2">The energy crossing occurs at </span><span class="si">{</span><span class="n">cross_section</span><span class="si">}</span><span class="s2">*lex&quot;</span><span class="p">)</span>
 </pre></div>
 </div>
 </div>
@@ -919,18 +929,18 @@ L=    9.0, m_init_flower Running OOMMF (ExeOOMMFRunner)[2023/10/23 15:57]... (0.
 </div>
 <div class="output_area docutils container">
 <div class="highlight"><pre>
-L=    8.4, m_init_vortex Running OOMMF (ExeOOMMFRunner)[2023/10/23 15:57]... (0.9 s)
-L=    8.4, m_init_flower Running OOMMF (ExeOOMMFRunner)[2023/10/23 15:57]... (0.4 s)
-L=    8.6, m_init_vortex Running OOMMF (ExeOOMMFRunner)[2023/10/23 15:57]... (0.8 s)
-L=    8.6, m_init_flower Running OOMMF (ExeOOMMFRunner)[2023/10/23 15:57]... (0.4 s)
-L=    8.5, m_init_vortex Running OOMMF (ExeOOMMFRunner)[2023/10/23 15:57]... (0.8 s)
-L=    8.5, m_init_flower Running OOMMF (ExeOOMMFRunner)[2023/10/23 15:57]... (0.4 s)
-L=   8.45, m_init_vortex Running OOMMF (ExeOOMMFRunner)[2023/10/23 15:57]... (0.9 s)
-L=   8.45, m_init_flower Running OOMMF (ExeOOMMFRunner)[2023/10/23 15:57]... (0.4 s)
-L=  8.425, m_init_vortex Running OOMMF (ExeOOMMFRunner)[2023/10/23 15:57]... (0.8 s)
-L=  8.425, m_init_flower Running OOMMF (ExeOOMMFRunner)[2023/10/23 15:57]... (0.4 s)
-L= 8.4375, m_init_vortex Running OOMMF (ExeOOMMFRunner)[2023/10/23 15:57]... (0.8 s)
-L= 8.4375, m_init_flower Running OOMMF (ExeOOMMFRunner)[2023/10/23 15:57]... (0.4 s)
+L=    8.4, m_init_vortex Running OOMMF (ExeOOMMFRunner)[2024/08/09 17:42]... (1.7 s)
+L=    8.4, m_init_flower Running OOMMF (ExeOOMMFRunner)[2024/08/09 17:42]... (0.6 s)
+L=    8.6, m_init_vortex Running OOMMF (ExeOOMMFRunner)[2024/08/09 17:42]... (1.6 s)
+L=    8.6, m_init_flower Running OOMMF (ExeOOMMFRunner)[2024/08/09 17:42]... (0.6 s)
+L=    8.5, m_init_vortex Running OOMMF (ExeOOMMFRunner)[2024/08/09 17:42]... (1.7 s)
+L=    8.5, m_init_flower Running OOMMF (ExeOOMMFRunner)[2024/08/09 17:42]... (0.6 s)
+L=   8.45, m_init_vortex Running OOMMF (ExeOOMMFRunner)[2024/08/09 17:42]... (1.7 s)
+L=   8.45, m_init_flower Running OOMMF (ExeOOMMFRunner)[2024/08/09 17:42]... (0.6 s)
+L=  8.425, m_init_vortex Running OOMMF (ExeOOMMFRunner)[2024/08/09 17:42]... (1.7 s)
+L=  8.425, m_init_flower Running OOMMF (ExeOOMMFRunner)[2024/08/09 17:42]... (0.6 s)
+L= 8.4375, m_init_vortex Running OOMMF (ExeOOMMFRunner)[2024/08/09 17:42]... (1.7 s)
+L= 8.4375, m_init_flower Running OOMMF (ExeOOMMFRunner)[2024/08/09 17:42]... (0.6 s)
 
 The energy crossing occurs at 8.4375*lex
 </pre></div></div>
