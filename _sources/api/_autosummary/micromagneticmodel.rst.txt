@@ -44,13 +44,3 @@
 
    
 
-.. rubric:: Submodules
-
-.. autosummary::
-    :toctree:
-    :template: module-template.rst
-    :recursive:
-
-    abstract
-    consts
-    examples

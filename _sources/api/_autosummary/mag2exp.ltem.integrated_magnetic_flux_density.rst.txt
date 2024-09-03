@@ -1,6 +1,0 @@
-mag2exp.ltem.integrated\_magnetic\_flux\_density
-================================================
-
-.. currentmodule:: mag2exp.ltem
-
-.. autofunction:: integrated_magnetic_flux_density

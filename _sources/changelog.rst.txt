@@ -2,6 +2,50 @@
 Changelog
 =========
 
+2024.08 (Sep 03, 2024)
+======================
+
+Added
+-----
+
+``discretisedfield``
+  - Added support for visualisations using ``pyvista``.
+    (`#463 <https://github.com/ubermag/discretisedfield/pull/463>`__)
+
+``micromagneticmodel``
+  - Support for current in an arbitary direction when using the Zhang Li term.
+    (`#75 <https://github.com/ubermag/micromagneticmodel/pull/75>`__)
+
+``mumax3c``
+  - Support for current in an arbitary direction when using the Zhang Li term.
+    (`#88 <https://github.com/ubermag/mumax3c/pull/88>`__)
+  - Support for simulations at a finite temperature.
+    (`#81 <https://github.com/ubermag/mumax3c/pull/81>`__)
+
+``oommfc``
+  - Support for tunable (non-symmetric) Hysteresis simulations with multiple
+    segments (with variable step size) between user-defined field extrema.
+    (`#138 <https://github.com/ubermag/oommfc/pull/138>`__)
+  - Support for current in an arbitary direction when using the Zhang Li term.
+    (`#133 <https://github.com/ubermag/oommfc/pull/133>`__)
+
+Changed
+-------
+
+``micromagneticmodel``
+  - Require the name when initialising the ``system``.
+    (`#85 <https://github.com/ubermag/micromagneticmodel/pull/85>`__)
+
+Fixed
+-----
+
+``micromagneticdata``
+  - Set ``valid="norm"`` when loading the initial magnetisation ``drive.m0``.
+    (`#69 <https://github.com/ubermag/micromagneticdata/pull/69>`__)
+
+all packages
+  - Full compatibility with ``numpy >= 2.0``.
+
 2024.06 (Jun 19, 2024)
 ======================
 

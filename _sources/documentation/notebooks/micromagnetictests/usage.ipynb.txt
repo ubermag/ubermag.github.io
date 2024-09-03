@@ -25,9 +25,7 @@
    "execution_count": 1,
    "metadata": {},
    "outputs": [],
-   "source": [
-    "from micromagnetictests.calculatortests import TestDMI, TestExchange"
-   ]
+   "source": []
   },
   {
    "cell_type": "markdown",
@@ -42,7 +40,7 @@
    "metadata": {},
    "outputs": [],
    "source": [
-    "from micromagnetictests.calculatortests import *"
+    "from micromagnetictests.calculatortests import *  # noqa: F403"
    ]
   },
   {

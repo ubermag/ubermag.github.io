@@ -61,6 +61,7 @@ Mesh
       ~Mesh.k3d
       ~Mesh.mpl
       ~Mesh.n
+      ~Mesh.pyvista
       ~Mesh.region
       ~Mesh.subregions
       ~Mesh.vertices

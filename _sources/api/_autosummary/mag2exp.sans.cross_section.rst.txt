@@ -1,6 +1,0 @@
-mag2exp.sans.cross\_section
-===========================
-
-.. currentmodule:: mag2exp.sans
-
-.. autofunction:: cross_section

@@ -1,6 +1,0 @@
-ubermagutil.units.si\_multiplier
-================================
-
-.. currentmodule:: ubermagutil.units
-
-.. autofunction:: si_multiplier

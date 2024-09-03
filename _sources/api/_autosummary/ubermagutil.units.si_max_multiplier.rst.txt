@@ -1,6 +1,0 @@
-ubermagutil.units.si\_max\_multiplier
-=====================================
-
-.. currentmodule:: ubermagutil.units
-
-.. autofunction:: si_max_multiplier

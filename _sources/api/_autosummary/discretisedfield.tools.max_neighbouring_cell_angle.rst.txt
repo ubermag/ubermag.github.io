@@ -1,6 +1,0 @@
-discretisedfield.tools.max\_neighbouring\_cell\_angle
-=====================================================
-
-.. currentmodule:: discretisedfield.tools
-
-.. autofunction:: max_neighbouring_cell_angle

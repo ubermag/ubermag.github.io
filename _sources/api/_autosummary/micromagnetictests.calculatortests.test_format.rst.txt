@@ -1,6 +1,0 @@
-micromagnetictests.calculatortests.test\_format
-===============================================
-
-.. currentmodule:: micromagnetictests.calculatortests
-
-.. autofunction:: test_format

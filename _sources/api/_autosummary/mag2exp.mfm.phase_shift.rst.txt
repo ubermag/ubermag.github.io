@@ -1,6 +1,0 @@
-mag2exp.mfm.phase\_shift
-========================
-
-.. currentmodule:: mag2exp.mfm
-
-.. autofunction:: phase_shift

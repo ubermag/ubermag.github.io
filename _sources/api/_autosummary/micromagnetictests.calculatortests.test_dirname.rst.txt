@@ -1,6 +1,0 @@
-micromagnetictests.calculatortests.test\_dirname
-================================================
-
-.. currentmodule:: micromagnetictests.calculatortests
-
-.. autofunction:: test_dirname

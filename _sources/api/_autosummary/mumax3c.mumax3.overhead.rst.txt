@@ -1,6 +1,0 @@
-mumax3c.mumax3.overhead
-=======================
-
-.. currentmodule:: mumax3c.mumax3
-
-.. autofunction:: overhead

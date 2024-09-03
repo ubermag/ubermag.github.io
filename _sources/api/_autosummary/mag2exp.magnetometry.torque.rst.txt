@@ -1,6 +1,0 @@
-mag2exp.magnetometry.torque
-===========================
-
-.. currentmodule:: mag2exp.magnetometry
-
-.. autofunction:: torque

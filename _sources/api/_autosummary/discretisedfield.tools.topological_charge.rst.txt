@@ -1,6 +1,0 @@
-discretisedfield.tools.topological\_charge
-==========================================
-
-.. currentmodule:: discretisedfield.tools
-
-.. autofunction:: topological_charge

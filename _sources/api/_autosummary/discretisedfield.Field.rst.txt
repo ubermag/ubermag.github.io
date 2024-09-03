@@ -87,6 +87,7 @@ Field
       ~Field.nvdim
       ~Field.orientation
       ~Field.phase
+      ~Field.pyvista
       ~Field.real
       ~Field.unit
       ~Field.valid

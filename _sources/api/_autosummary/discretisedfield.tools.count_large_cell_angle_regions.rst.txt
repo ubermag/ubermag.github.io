@@ -1,6 +1,0 @@
-discretisedfield.tools.count\_large\_cell\_angle\_regions
-=========================================================
-
-.. currentmodule:: discretisedfield.tools
-
-.. autofunction:: count_large_cell_angle_regions

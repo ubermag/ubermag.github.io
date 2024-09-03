@@ -1,6 +1,0 @@
-mag2exp.quick\_plots.sans\_chiral\_function
-===========================================
-
-.. currentmodule:: mag2exp.quick_plots
-
-.. autofunction:: sans_chiral_function

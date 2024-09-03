@@ -1,6 +1,0 @@
-mag2exp.ltem.phase
-==================
-
-.. currentmodule:: mag2exp.ltem
-
-.. autofunction:: phase

@@ -1,6 +1,0 @@
-mag2exp.quick\_plots.mfm\_phase\_shift
-======================================
-
-.. currentmodule:: mag2exp.quick_plots
-
-.. autofunction:: mfm_phase_shift

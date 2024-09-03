@@ -1,6 +1,0 @@
-mag2exp.sans.chiral\_function
-=============================
-
-.. currentmodule:: mag2exp.sans
-
-.. autofunction:: chiral_function

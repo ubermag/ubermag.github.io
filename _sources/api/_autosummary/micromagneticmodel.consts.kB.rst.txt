@@ -1,6 +1,0 @@
-micromagneticmodel.consts.kB
-============================
-
-.. currentmodule:: micromagneticmodel.consts
-
-.. autodata:: kB

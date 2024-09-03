@@ -43,11 +43,3 @@
 
    
 
-.. rubric:: Submodules
-
-.. autosummary::
-    :toctree:
-    :template: module-template.rst
-    :recursive:
-
-    oommf

@@ -1,6 +1,0 @@
-micromagneticmodel.consts.e
-===========================
-
-.. currentmodule:: micromagneticmodel.consts
-
-.. autodata:: e

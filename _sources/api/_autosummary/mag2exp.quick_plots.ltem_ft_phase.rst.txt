@@ -1,6 +1,0 @@
-mag2exp.quick\_plots.ltem\_ft\_phase
-====================================
-
-.. currentmodule:: mag2exp.quick_plots
-
-.. autofunction:: ltem_ft_phase

@@ -17,16 +17,3 @@
 
    
 
-.. rubric:: Submodules
-
-.. autosummary::
-    :toctree:
-    :template: module-template.rst
-    :recursive:
-
-    ltem
-    magnetometry
-    mfm
-    quick_plots
-    sans
-    x_ray

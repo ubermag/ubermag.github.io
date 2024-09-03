@@ -1,6 +1,0 @@
-discretisedfield.tools.demag\_tensor
-====================================
-
-.. currentmodule:: discretisedfield.tools
-
-.. autofunction:: demag_tensor

@@ -1,6 +1,0 @@
-mag2exp.ltem.relativistic\_wavelength
-=====================================
-
-.. currentmodule:: mag2exp.ltem
-
-.. autofunction:: relativistic_wavelength

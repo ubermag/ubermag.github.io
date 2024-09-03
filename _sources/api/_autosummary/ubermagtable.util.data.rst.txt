@@ -1,6 +1,0 @@
-ubermagtable.util.data
-======================
-
-.. currentmodule:: ubermagtable.util
-
-.. autofunction:: data

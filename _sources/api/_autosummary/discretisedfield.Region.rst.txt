@@ -49,6 +49,7 @@ Region
       ~Region.ndim
       ~Region.pmax
       ~Region.pmin
+      ~Region.pyvista
       ~Region.tolerance_factor
       ~Region.units
       ~Region.volume

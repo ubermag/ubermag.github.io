@@ -1,6 +1,0 @@
-micromagnetictests.calculatortests.test\_skyrmion
-=================================================
-
-.. currentmodule:: micromagnetictests.calculatortests
-
-.. autofunction:: test_skyrmion

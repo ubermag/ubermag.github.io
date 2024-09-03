@@ -1,6 +1,0 @@
-mag2exp.quick\_plots.ltem\_integrated\_mfd
-==========================================
-
-.. currentmodule:: mag2exp.quick_plots
-
-.. autofunction:: ltem_integrated_mfd

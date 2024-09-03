@@ -1,6 +1,0 @@
-mag2exp.x\_ray.saxs
-===================
-
-.. currentmodule:: mag2exp.x_ray
-
-.. autofunction:: saxs
