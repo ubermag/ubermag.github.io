@@ -22,8 +22,6 @@ jobs:
         environment-file: environment.yml
         auto-activate-base: false
         miniforge-version: latest
-        miniforge-variant: Mambaforge
-        use-mamba: true
 
     - name: Prepare sources
       run: make prepare
