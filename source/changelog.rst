@@ -2,6 +2,26 @@
 Changelog
 =========
 
+upcoming
+========
+
+Added
+-----
+
+``micromagneticmodel``
+  - Additional data in info.json: start and end time, duration, version of the
+    adapter package, indication of simulation result (success or failure).
+    (`#92 <https://github.com/ubermag/micromagneticmodel/pull/92>`__,
+    `#93 <https://github.com/ubermag/mumax3c/pull/93>`__,
+    `#161 <https://github.com/ubermag/oommfc/pull/161>`__)
+
+Changed
+-------
+
+``ubermagutil``
+  - Change timestamp format printed to stdout when starting a simulation to isoformat.
+    (`#55 <https://github.com/ubermag/ubermagutil/pull/55>`__)
+
 2024.08 (Sep 03, 2024)
 ======================
 
