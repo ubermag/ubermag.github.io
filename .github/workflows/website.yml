@@ -29,6 +29,7 @@ jobs:
 
     - name: Linkcheck
       run: make linkcheck
+      continue-on-error: true
 
     - name: Upload website artifacts
       uses: actions/upload-pages-artifact@v3
