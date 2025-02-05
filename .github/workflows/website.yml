@@ -5,9 +5,10 @@ on:
   push:
     branches:
       - master
+  pull_request:
 
 jobs:
-  publish:
+  build:
     runs-on: ubuntu-latest
     defaults:
       run:
@@ -29,8 +30,32 @@ jobs:
     - name: Build website
       run: make html
 
-    - name: Deploy changes
-      uses: JamesIves/github-pages-deploy-action@4.1.4
+    - name: Linkcheck
+      run: make linkcheck
+      continue-on-error: true
+
+    - name: Upload website artifacts
+      uses: actions/upload-pages-artifact@v3
       with:
-        branch: gh-pages
-        folder: build/html
+        path: build/html/
+
+
+  deploy:
+    if: ${{ github.ref == 'refs/heads/master' }}
+
+    needs: build
+
+    permissions:
+      pages: write
+      id-token: write
+
+    environment:
+      name: github-pages
+      url: ${{steps.deployment.outputs.page_url}}
+
+    runs-on: ubuntu-latest
+
+    steps:
+    - name: Deploy to GitHub Pages
+      id: deployment
+      uses: actions/deploy-pages@v4
