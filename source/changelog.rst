@@ -4,8 +4,8 @@ Changelog
 
 Format follows [keep a changelog](https://keepachangelog.com/en/)
 
-upcoming
-========
+2025.06 (upcoming)
+==================
 
 Added
 -----
