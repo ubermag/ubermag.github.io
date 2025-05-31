@@ -14,3 +14,4 @@ mag2exp
     notebooks/mag2exp/X_ray_Holography
     notebooks/mag2exp/SAXS
     notebooks/mag2exp/SANS
+    notebooks/mag2exp/FMR
