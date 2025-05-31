@@ -2,11 +2,27 @@
 Changelog
 =========
 
+Format follows [keep a changelog](https://keepachangelog.com/en/)
+
 upcoming
 ========
 
 Added
 -----
+
+``mag2exp``
+  - New submodule for ferromagnetic resonance (FMR) to compute FMR power and
+    phase using the ringown method. For more details refer to the new
+    :doc:`FMR notebook </documentation/notebooks/mag2exp/FMR>`.
+    (`#70 <https://github.com/ubermag/mag2exp/pull/70>`__)
+  - Additional parameter to control astigmatism in LTEM.
+    (`#73 <https://github.com/ubermag/mag2exp/pull/73>`__)
+
+``micromagneticdata``
+  - Allow setting ``Drive.dirname`` with ``pathlib.Path``.
+    (`#85 <https://github.com/ubermag/micromagneticdata/pull/85>`__)
+  - Option to initialise Data with path instead of name and dirname.
+    (`#75 <https://github.com/ubermag/micromagneticdata/pull/75>`__)
 
 ``micromagneticmodel``
   - Additional data in info.json: start and end time, duration, version of the
@@ -21,6 +37,17 @@ Changed
 ``ubermagutil``
   - Change timestamp format printed to stdout when starting a simulation to isoformat.
     (`#55 <https://github.com/ubermag/ubermagutil/pull/55>`__)
+
+Fixed
+-----
+
+``discretisedfield``
+  - Fix a bug in holoviews plotting when only a single cell is available in a slider directon.
+    (`#537 <https://github.com/ubermag/discretisedfield/pull/537>`__)
+
+``micromagneticdata``
+  - ``Data.info`` does no longer fail when ``drive-<number>/info.json`` files are missing/corrupt.
+    (`#84 <https://github.com/ubermag/micromagneticdata/pull/84>`__)
 
 2024.08 (Sep 03, 2024)
 ======================
