@@ -7,6 +7,8 @@ Format follows [keep a changelog](https://keepachangelog.com/en/)
 2025.06 (upcoming)
 ==================
 
+All packages now require ``python >= 3.9``.
+
 Added
 -----
 
