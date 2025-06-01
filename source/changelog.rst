@@ -2,7 +2,7 @@
 Changelog
 =========
 
-Format follows [keep a changelog](https://keepachangelog.com/en/)
+Format follows `keep a changelog <https://keepachangelog.com/en/>`__.
 
 2025.06 (upcoming)
 ==================
