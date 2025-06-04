@@ -4,8 +4,8 @@ Changelog
 
 Format follows `keep a changelog <https://keepachangelog.com/en/>`__.
 
-2025.06 (upcoming)
-==================
+2025.06 (Jun 04, 2025)
+======================
 
 All packages now require ``python >= 3.9``.
 
