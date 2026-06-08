@@ -44,61 +44,61 @@ All packages are licensed under: |license|
    * - :doc:`discretisedfield`
      - |df_pypi|
        |df_anaconda|
-     - |df_workflow|
+     - |df_ci|
        |df_coverage|
      - |df_binder|
    * - :doc:`mag2exp`
      - |m2_pypi|
        |m2_anaconda|
-     - |m2_workflow|
+     - |m2_ci|
        |m2_coverage|
      - |m2_binder|
    * - :doc:`micromagneticdata`
      - |md_pypi|
        |md_anaconda|
-     - |md_workflow|
+     - |md_ci|
        |md_coverage|
      - |md_binder|
    * - :doc:`micromagneticmodel`
      - |mm_pypi|
        |mm_anaconda|
-     - |mm_workflow|
+     - |mm_ci|
        |mm_coverage|
      - |mm_binder|
    * - :doc:`micromagnetictests`
      - |mt_pypi|
        |mt_anaconda|
-     - |mt_workflow|
+     - |mt_ci|
        |mt_coverage|
      - |mt_binder|
    * - :doc:`mumax3c`
      - |mc_pypi|
        |mc_anaconda|
-     - |mc_workflow|
+     - |mc_ci|
        |mc_coverage|
      - |mc_binder|
    * - :doc:`oommfc`
      - |oc_pypi|
        |oc_anaconda|
-     - |oc_workflow|
+     - |oc_ci|
        |oc_coverage|
      - |oc_binder|
    * - :doc:`ubermagtable`
      - |ut_pypi|
        |ut_anaconda|
-     - |ut_workflow|
+     - |ut_ci|
        |ut_coverage|
      - |ut_binder|
    * - :doc:`ubermagutil`
      - |uu_pypi|
        |uu_anaconda|
-     - |uu_workflow|
+     - |uu_ci|
        |uu_coverage|
      - |uu_binder|
    * - :doc:`ubermag`
      - |ub_pypi|
        |ub_anaconda|
-     - |ub_workflow|
+     - |ub_ci|
        |ub_coverage|
      - |ub_binder|
 
@@ -109,8 +109,8 @@ All packages are licensed under: |license|
 .. |df_anaconda| image:: https://anaconda.org/conda-forge/discretisedfield/badges/version.svg
                          :target: https://anaconda.org/conda-forge/discretisedfield
                          :height: 20px
-.. |df_workflow| image:: https://github.com/ubermag/discretisedfield/workflows/workflow/badge.svg
-                         :target: https://github.com/ubermag/discretisedfield/actions?query=workflow%3Aworkflow
+.. |df_ci| image:: https://github.com/ubermag/discretisedfield/actions/workflows/test.yml/badge.svg
+                         :target: https://github.com/ubermag/discretisedfield/actions/workflows/test.yml
                          :height: 20px
 .. |df_coverage| image:: https://codecov.io/gh/ubermag/discretisedfield/branch/master/graph/badge.svg?token=hcK4fofmrL
                          :target: https://codecov.io/gh/ubermag/discretisedfield
@@ -126,8 +126,8 @@ All packages are licensed under: |license|
 .. |m2_anaconda| image:: https://anaconda.org/conda-forge/mag2exp/badges/version.svg
                          :target: https://anaconda.org/conda-forge/mag2exp
                          :height: 20px
-.. |m2_workflow| image:: https://github.com/ubermag/mag2exp/workflows/workflow/badge.svg
-                         :target: https://github.com/ubermag/mag2exp/actions/workflows/workflow.yml
+.. |m2_ci| image:: https://github.com/ubermag/mag2exp/actions/workflows/test.yml/badge.svg
+                         :target: https://github.com/ubermag/mag2exp/actions/workflows/test.yml
                          :height: 20px
 .. |m2_coverage| image:: https://codecov.io/gh/ubermag/mag2exp/branch/master/graph/badge.svg?token=hcK4fofmrL
                          :target: https://codecov.io/gh/ubermag/mag2exp
@@ -143,8 +143,8 @@ All packages are licensed under: |license|
 .. |md_anaconda| image:: https://anaconda.org/conda-forge/micromagneticdata/badges/version.svg
                          :target: https://anaconda.org/conda-forge/micromagneticdata
                          :height: 20px
-.. |md_workflow| image:: https://github.com/ubermag/micromagneticdata/workflows/workflow/badge.svg
-                         :target: https://github.com/ubermag/micromagneticdata/actions?query=workflow%3Aworkflow
+.. |md_ci| image:: https://github.com/ubermag/micromagneticdata/actions/workflows/test.yml/badge.svg
+                         :target: https://github.com/ubermag/micromagneticdata/actions/workflows/test.yml
                          :height: 20px
 .. |md_coverage| image:: https://codecov.io/gh/ubermag/micromagneticdata/branch/master/graph/badge.svg?token=hcK4fofmrL       
                          :target: https://codecov.io/gh/ubermag/micromagneticdata
@@ -160,8 +160,8 @@ All packages are licensed under: |license|
 .. |mm_anaconda| image:: https://anaconda.org/conda-forge/micromagneticmodel/badges/version.svg
                          :target: https://anaconda.org/conda-forge/micromagneticmodel
                          :height: 20px
-.. |mm_workflow| image:: https://github.com/ubermag/micromagneticmodel/workflows/workflow/badge.svg
-                         :target: https://github.com/ubermag/micromagneticmodel/actions?query=workflow%3Aworkflow
+.. |mm_ci| image:: https://github.com/ubermag/micromagneticmodel/actions/workflows/test.yml/badge.svg
+                         :target: https://github.com/ubermag/micromagneticmodel/actions/workflows/test.yml
                          :height: 20px
 .. |mm_coverage| image:: https://codecov.io/gh/ubermag/micromagneticmodel/branch/master/graph/badge.svg?token=hcK4fofmrL       
                          :target: https://codecov.io/gh/ubermag/micromagneticmodel
@@ -177,8 +177,8 @@ All packages are licensed under: |license|
 .. |mt_anaconda| image:: https://anaconda.org/conda-forge/micromagnetictests/badges/version.svg
                          :target: https://anaconda.org/conda-forge/micromagnetictests
                          :height: 20px
-.. |mt_workflow| image:: https://github.com/ubermag/micromagnetictests/workflows/workflow/badge.svg
-                         :target: https://github.com/ubermag/micromagnetictests/actions?query=workflow%3Aworkflow
+.. |mt_ci| image:: https://github.com/ubermag/micromagnetictests/actions/workflows/test.yml/badge.svg
+                         :target: https://github.com/ubermag/micromagnetictests/actions/workflows/test.yml
                          :height: 20px
 .. |mt_coverage| image:: https://codecov.io/gh/ubermag/micromagnetictests/branch/master/graph/badge.svg?token=hcK4fofmrL       
                          :target: https://codecov.io/gh/ubermag/micromagnetictests
@@ -194,8 +194,8 @@ All packages are licensed under: |license|
 .. |mc_anaconda| image:: https://anaconda.org/conda-forge/mumax3c/badges/version.svg
                          :target: https://anaconda.org/conda-forge/mumax3c
                          :height: 20px
-.. |mc_workflow| image:: https://github.com/ubermag/mumax3c/workflows/workflow/badge.svg
-                         :target: https://github.com/ubermag/mumax3c/actions?query=workflow%3Aworkflow
+.. |mc_ci| image:: https://github.com/ubermag/mumax3c/actions/workflows/test.yml/badge.svg
+                         :target: https://github.com/ubermag/mumax3c/actions/workflows/test.yml
                          :height: 20px
 .. |mc_coverage| image:: https://codecov.io/gh/ubermag/mumax3c/branch/master/graph/badge.svg?token=hcK4fofmrL       
                          :target: https://codecov.io/gh/ubermag/mumax3c
@@ -211,8 +211,8 @@ All packages are licensed under: |license|
 .. |oc_anaconda| image:: https://anaconda.org/conda-forge/oommfc/badges/version.svg
                          :target: https://anaconda.org/conda-forge/oommfc
                          :height: 20px
-.. |oc_workflow| image:: https://github.com/ubermag/oommfc/workflows/workflow/badge.svg
-                         :target: https://github.com/ubermag/oommfc/actions?query=workflow%3Aworkflow
+.. |oc_ci| image:: https://github.com/ubermag/oommfc/actions/workflows/test.yml/badge.svg
+                         :target: https://github.com/ubermag/oommfc/actions/workflows/test.yml
                          :height: 20px
 .. |oc_coverage| image:: https://codecov.io/gh/ubermag/oommfc/branch/master/graph/badge.svg?token=hcK4fofmrL       
                          :target: https://codecov.io/gh/ubermag/oommfc
@@ -228,8 +228,8 @@ All packages are licensed under: |license|
 .. |ut_anaconda| image:: https://anaconda.org/conda-forge/ubermagtable/badges/version.svg
                          :target: https://anaconda.org/conda-forge/ubermagtable
                          :height: 20px
-.. |ut_workflow| image:: https://github.com/ubermag/ubermagtable/workflows/workflow/badge.svg
-                         :target: https://github.com/ubermag/ubermagtable/actions?query=workflow%3Aworkflow
+.. |ut_ci| image:: https://github.com/ubermag/ubermagtable/actions/workflows/test.yml/badge.svg
+                         :target: https://github.com/ubermag/ubermagtable/actions/workflows/test.yml
                          :height: 20px
 .. |ut_coverage| image:: https://codecov.io/gh/ubermag/ubermagtable/branch/master/graph/badge.svg?token=hcK4fofmrL       
                          :target: https://codecov.io/gh/ubermag/ubermagtable
@@ -245,8 +245,8 @@ All packages are licensed under: |license|
 .. |uu_anaconda| image:: https://anaconda.org/conda-forge/ubermagutil/badges/version.svg
                          :target: https://anaconda.org/conda-forge/ubermagutil
                          :height: 20px
-.. |uu_workflow| image:: https://github.com/ubermag/ubermagutil/workflows/workflow/badge.svg
-                         :target: https://github.com/ubermag/ubermagutil/actions?query=workflow%3Aworkflow
+.. |uu_ci| image:: https://github.com/ubermag/ubermagutil/actions/workflows/test.yml/badge.svg
+                         :target: https://github.com/ubermag/ubermagutil/actions/workflows/test.yml
                          :height: 20px
 .. |uu_coverage| image:: https://codecov.io/gh/ubermag/ubermagutil/branch/master/graph/badge.svg?token=hcK4fofmrL       
                          :target: https://codecov.io/gh/ubermag/ubermagutil
@@ -262,8 +262,8 @@ All packages are licensed under: |license|
 .. |ub_anaconda| image:: https://anaconda.org/conda-forge/ubermag/badges/version.svg
                          :target: https://anaconda.org/conda-forge/ubermag
                          :height: 20px
-.. |ub_workflow| image:: https://github.com/ubermag/ubermag/workflows/workflow/badge.svg
-                         :target: https://github.com/ubermag/ubermag/actions?query=workflow%3Aworkflow
+.. |ub_ci| image:: https://github.com/ubermag/ubermag/actions/workflows/test.yml/badge.svg
+                         :target: https://github.com/ubermag/ubermag/actions/workflows/test.yml
                          :height: 20px
 .. |ub_coverage| image:: https://codecov.io/gh/ubermag/ubermag/branch/master/graph/badge.svg?token=hcK4fofmrL       
                          :target: https://codecov.io/gh/ubermag/ubermag
