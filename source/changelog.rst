@@ -4,6 +4,21 @@ Changelog
 
 Format follows `keep a changelog <https://keepachangelog.com/en/>`__.
 
+Upcoming
+========
+
+Removed
+-------
+
+``discretisedfield``
+  - Custom matplotlib style.
+    (`#551 <https://github.com/ubermag/discretisedfield/pull/551/`__)
+
+``ubermagtable``
+  - Custom matplotlib style.
+    (`#69 <https://github.com/ubermag/ubermagtable/pull/69>`__)
+
+
 2025.06 (Jun 04, 2025)
 ======================
 
